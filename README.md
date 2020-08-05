@@ -1,3 +1,3 @@
-# cofccybersecurity.github.io
+# cofccybersecurityclub.github.io
 COFC Security Club Website
 edit
