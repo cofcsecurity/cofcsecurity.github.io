@@ -31,7 +31,7 @@ Resources:
 ## Linux: Getting Started
 
 1. [Command Line Commands](https://www.youtube.com/playlist?list=PLBf0hzazHTGMh2fe2MFf3lCgk0rKmS2by)
-2. []
+2. [Penetration Testing Tools](https://www.youtube.com/playlist?list=PLBf0hzazHTGOEuhPQSnq-Ej8jRyXxfYvl)
 
 ## Resources for Practice
 
@@ -40,6 +40,10 @@ Resources:
 3. [Hack The Box](https://www.hackthebox.eu/)
 4. [Over The Wire: Bandit (Bash)](https://overthewire.org/wargames/bandit/)
 5. [Under the Wire (Powershell)](https://underthewire.tech/)
+
+## Competitions
+1. [Sign up for NCL ($35.00 for the individual game and team game)](https://nationalcyberleague.org/)
+2. [PicoCTF (FREE)](https://picoctf.com/)
 
 ## Social Media
 
