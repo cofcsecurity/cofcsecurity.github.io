@@ -10,7 +10,7 @@
 * Presentations and Club Notes
 * Links to socials, youtube, twitter 
 * Industry professionals page of contacts 
-* Officers contact @wookiemonkeys page 
+* Officers contact page 
 
 
 Resources:
@@ -74,6 +74,8 @@ Youtube:
 * Email: waltermr@g.cofc.edu
 * [LinkedIn](https://www.linkedin.com/in/matt-walter-686912167/)
 * [Github](https://github.com/Walterm21)
+* [Twitter](https://twitter.com/WookieMonkeys)
+
 4. **Treasurer**: Vacant
 * Year: 
 * Major: 
