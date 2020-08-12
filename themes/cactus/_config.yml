@@ -16,20 +16,32 @@ direction: ltr
 nav:
   home: /
   about: /about/
-  articles: /archives/
+  Posts: /archives/
   projects: /projects/
+  Resources: /resources/
 
+# Homepage message - AJ
+homemsg:
+  text: "Welcome!" # Bold ontop
+  subtext: "Something goes here?" # Italic below
 
+# Disabled in favor of footer socials rather than homepage socials 
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
-social_links:
-  github: http://github.com/probberechts/cactus-dark
-  twitter: /
-  facebook: /
-  linkedin: /
-  mail: mailto:name@email.com
+#social_links:
+#  github: http://github.com/probberechts/cactus-dark
+#  twitter: /
+#  facebook: /
+#  linkedin: /
+#  mail: mailto:name@email.com
+
+footersocials:
+  twitter: ""
+  github: ""
+  instagram: ""
+  slack: "http://cofcsecurity.slack.com"
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
