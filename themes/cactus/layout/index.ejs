@@ -1,4 +1,12 @@
 <section id="about">
+  <% if (theme.homemsg) { %>
+  <p>
+    <b><%=theme.homemsg.text%></b>
+  </p>
+    <% if (theme.homemsg.subtext) { %>
+    <p><i><%=theme.homemsg.subtext%></i></p>
+    <% } %>
+  <% } %>
   <% if (config.description) { %>
     <%- markdown(config.description) %>
   <% } %>
