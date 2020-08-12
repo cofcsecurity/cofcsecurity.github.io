@@ -6,6 +6,12 @@
     <%= startYear >= endYear ? endYear : startYear + "-" + endYear %>
     <%= config.author || config.title %>
   </div>
+  <div class="footer-center">
+    <a href="<%=theme.footersocials.twitter%>"><i class="fab fa-twitter"></i></a>
+    <a href="<%=theme.footersocials.instagram%>"><i class="fab fa-instagram"></i></a>
+    <a href="<%=theme.footersocials.github%>"><i class="fab fa-github"></i></a>
+    <a href="<%=theme.footersocials.slack%>"><i class="fab fa-slack"></i></a>
+  </div>
   <div class="footer-right">
     <nav>
       <ul>
@@ -13,6 +19,7 @@
           <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
         <% } %>
       </ul>
+      <br>
     </nav>
   </div>
 </footer>
