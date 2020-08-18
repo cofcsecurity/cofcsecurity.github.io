@@ -1,5 +1,5 @@
 ---
-title: about
+title: About
 date: 2020-08-11 17:42:03
 ---
 ## What is the College of Charleston Cybersecurity Club?

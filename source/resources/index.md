@@ -3,8 +3,17 @@ title: Resources
 date: 2020-08-11 21:11:08
 ---
 
-**Here** are some helpful resources, we found them and wanted to share.
+
+**Club Notes / Presentations** [can be found here](/notes)
+
+Below are a collection of External Resources we found and wanted to share!
 ___
+
+## Training Materials
+- [Under The Wire](https://www.underthewire.tech/)
+- [Eli The Computer Guy 1](https://www.youtube.com/playlist?list=PLJcaPjxegjBUIkqq4aC-elec9HH37L0K5)
+- [Edureka](https://www.youtube.com/playlist?list=PL9ooVrP1hQOGPQVeapGsJCktzIO4DtI4_)
+
 ## Linux Distros
 
 1. [Parrot 64 Bit](https://download.parrot.sh/parrot/iso/4.9.1/Parrot-security-4.9.1_x64.iso)
