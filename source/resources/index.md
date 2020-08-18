@@ -3,7 +3,10 @@ title: Resources
 date: 2020-08-11 21:11:08
 ---
 
-**Here** are some helpful resources, we found them and wanted to share.
+
+**Club Notes / Presentations** [can be found here](/notes)
+
+Below are a collection of External Resources we found and wanted to share!
 ___
 
 ## Training Materials
