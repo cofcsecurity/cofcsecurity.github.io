@@ -9,7 +9,7 @@ College of Charleston’s Cybersecurity Club is a student-led, student-run group
 Our club meets each week in order to develop our skills, knowledge and understanding of the many different aspects of security, ranging from simpler topics such as network enumeration and command-line functions to more complex topics such as systems administration, hashing, steganography, and firewall policy. We hope by covering a wide range of topics within the overall cybersecurity umbrella we can cultivate new skilled professionals who are experts in these fields.
 
 ## Schedule
-Week | General Topic | Advanced Topic | Week | Notes
+Week | General Topic | Advanced Topic | Week | Special Notes
 :--:| :----------: | :-----------: | :-------------: | :--------:
 1 | Intro to club | none | Week of Aug. 31 - Sept. 4 | None
 2 | Inroduction to Virtualization and Bash| Docker | Week of Sept. 7 - 11 | None
