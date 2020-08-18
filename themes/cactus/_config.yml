@@ -22,8 +22,8 @@ nav:
 
 # Homepage message - AJ
 homemsg:
-  text: "Welcome!" # Bold ontop
-  subtext: "Something goes here?" # Italic below
+  text: "Upcoming Events!" # Bold ontop
+  subtext: "* First Meeting of the Semester: Setting up Virtual Machines and Docker Containers -- Fall Sept 2, 2020" # Italic below
 
 # Disabled in favor of footer socials rather than homepage socials 
 # Links to your social media accounts.
