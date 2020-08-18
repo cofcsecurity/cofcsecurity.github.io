@@ -8,7 +8,7 @@ Week | General Topic | Advanced Topic | Week | Notes
 6 | NCL Training | NCL Refresh | Week of Oct. 5 - Oct. 9 | None
 8 | Mini BSides | None | Week of Oct. 12 - Oct. 16 | NCL Preseason October 12 - 19
 9 | Scripting | Scapy | Week of Oct. 19 - Oct. 23 | NCL October 23 - 25
-10| Exploitation | None | Week of Oct. 26 - Oct. 30 |
-11| Web Apps| None | Week of Nov. 2 - 6 | NCL Postseason Nov. 6 - 8
-12| Zoom Party CTF | None | Week of Nov. 9 - 13
-13| Planning | None | Week of Nov. 16 - 20
+10| Exploitation | None | Week of Oct. 26 - Oct. 30 | None
+11| Web Apps| None | Week of Nov. 2 - 6 | NCL Postseason Nov. 6 - 8 | None
+12| Zoom Party CTF | None | Week of Nov. 9 - 13 | None 
+13| Planning | None | Week of Nov. 16 - 20 | None
