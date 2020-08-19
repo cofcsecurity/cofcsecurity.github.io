@@ -23,8 +23,8 @@ nav:
 # Homepage message - AJ
 homemsg:
   text: "Upcoming Events!" # Bold ontop
-  subtext: "* Meet the Club -- Fall Sept 2, 2020" # Italic below
-  subtext: "* Setting up Virtual Machines and Docker Containers -- Fall Sept 9, 2020"
+  subtext: "* Meet the Club -- Fall Sept 2, 2020"
+  subtext2: "* Setting up Virtual Machines and Docker Containers -- Fall Sept 9, 2020"
 
 # Disabled in favor of footer socials rather than homepage socials 
 # Links to your social media accounts.
