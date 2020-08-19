@@ -11,4 +11,4 @@ Week | General Topic | Advanced Topic | Week | Special Notes
 10| Exploitation | None | Week of Oct. 26 - Oct. 30 | None
 11| Web Apps| None | Week of Nov. 2 - 6 | NCL Postseason Nov. 6 - 8 
 12| Zoom Party CTF | None | Week of Nov. 9 - 13 | None 
-13| Planning | None | Week of Nov. 16 - 20 | Officers only
+13| Planning | None | Week of Nov. 16 - 20 | **Officers Only**
