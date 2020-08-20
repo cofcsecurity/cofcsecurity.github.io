@@ -98,7 +98,7 @@ Youtube:
 * [LinkedIn]
 * [Github]
 
-7. Asst. Range Admin: Vacant
+7. **Asst. Range Admin**: Vacant
 * Year: 
 * Major: 
 * Minor(s): 
