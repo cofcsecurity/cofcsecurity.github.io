@@ -10,17 +10,19 @@ Below are a collection of External Resources we found and wanted to share!
 ___
 
 ## Training Materials
-- [Under The Wire](https://www.underthewire.tech/)
-- [Eli The Computer Guy 1](https://www.youtube.com/playlist?list=PLJcaPjxegjBUIkqq4aC-elec9HH37L0K5)
+- [Under The Wire](https://www.underthewire.tech/):
+  Powershell training from the security and administrative perspective.
+- [Eli The Computer Guy](https://www.youtube.com/playlist?list=PLJcaPjxegjBUIkqq4aC-elec9HH37L0K5):
+  Lots of great videos about computer networks and security.
 - [Edureka](https://www.youtube.com/playlist?list=PL9ooVrP1hQOGPQVeapGsJCktzIO4DtI4_)
 
 ## Linux Distros
-
-1. [Parrot 64 Bit](https://download.parrot.sh/parrot/iso/4.9.1/Parrot-security-4.9.1_x64.iso)
-2. [Kali 64 Bit](https://cdimage.kali.org/kali-2020.2/kali-linux-2020.2-installer-amd64.iso)
-3. [Kali 32 Bit](https://cdimage.kali.org/kali-2020.2/kali-linux-2020.2-installer-i386.iso)
-4. [Black Arch](https://ftp.halifax.rwth-aachen.de/blackarch/iso/blackarch-linux-live-2020.06.01-x86_64.iso)
-5. [OS Boxes (Prebuilt Virtual Machines)](https://www.osboxes.org/)
+There are Linux distros specifically built with pentesting in mind. Here are some of our favorites. 
+If you are new to linux/cybersecurity we recommend you start with either Kali or Parrot.
+1. [Kali](https://www.kali.org/downloads/)
+2. [Parrot](https://parrotlinux.org/download/)
+3. [Black Arch](https://www.blackarch.org/downloads.html)
+4. [OS Boxes (Prebuilt Virtual Machines)](https://www.osboxes.org/)
 
 ## Virtualization
 
@@ -29,10 +31,16 @@ ___
 
 ## Linux: Getting Started
 
-1. [Command Line Commands](https://www.youtube.com/playlist?list=PLBf0hzazHTGMh2fe2MFf3lCgk0rKmS2by)
-2. [Penetration Testing Tools](https://www.youtube.com/playlist?list=PLBf0hzazHTGOEuhPQSnq-Ej8jRyXxfYvl)
+1. [Linux Command Line for Beginners by Ubuntu](https://ubuntu.com/tutorials/command-line-for-beginners)
+2. [Penetration Testing Tools Youtube Playlist](https://www.youtube.com/playlist?list=PLBf0hzazHTGOEuhPQSnq-Ej8jRyXxfYvl)
+3. [Linux Command Line Youtube Playlist](https://www.youtube.com/playlist?list=PLBf0hzazHTGMh2fe2MFf3lCgk0rKmS2by)
 
-## Resources for Practice
+## The Tools of The Trade
+
+1. [nmap](https://nmap.org/): **THE** network mapper.
+2. [Wireshark](https://www.wireshark.org/): Extremely powerful network packet analysis tool.
+
+## Practice
 
 1. [Metasploitable 2](https://sourceforge.net/projects/metasploitable/)
 2. [Vulnhub](https://www.vulnhub.com/)
