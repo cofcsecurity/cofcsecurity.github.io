@@ -81,7 +81,24 @@ Youtube:
 * Email: 
 * [LinkedIn]
 * [Github]
+
 5. **Outreach Coordinator**: AJ Nicoloff
+* Year: 
+* Major: 
+* Minor(s): 
+* Email: 
+* [LinkedIn]
+* [Github]
+
+6. **Range Admin**: Vacant
+* Year: 
+* Major: 
+* Minor(s): 
+* Email: 
+* [LinkedIn]
+* [Github]
+
+7. Asst. Range Admin: Vacant
 * Year: 
 * Major: 
 * Minor(s): 
