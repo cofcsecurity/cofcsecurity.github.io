@@ -1,4 +1,4 @@
-# [cofccybersecurityclub.github.io](cofccybersecurityclub.github.io)
+# [cofccybersecurityclub.github.io](https://cofccybersecurityclub.github.io/)
 
 `https://docs.github.com/en/github/working-with-github-pages/getting-started-with-github-pages`
 Club Discord - `https://discord.gg/yF8WCK`
