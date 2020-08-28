@@ -39,6 +39,11 @@ If you are new to linux/cybersecurity we recommend you start with either Kali or
 
 1. [nmap](https://nmap.org/): **THE** network mapper.
 2. [Wireshark](https://www.wireshark.org/): Extremely powerful network packet analysis tool.
+3. [hashcat](https://hashcat.net/hashcat/): password cracker if you have a decent GPU
+4. [john the ripper](https://www.openwall.com/john/): password cracker for computers that have plent of CPU and RAM
+5. [OpenVAS](https://www.openvas.org/): vulnerability scanner for machines on a network
+6. [Spunk](https://www.splunk.com/): data and log analysis tool
+7. [Netcat](http://netcat.sourceforge.net/): swiss army knife of network tools
 
 ## Practice
 
