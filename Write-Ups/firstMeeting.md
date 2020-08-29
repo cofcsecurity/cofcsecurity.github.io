@@ -117,4 +117,102 @@ To change the permissions, we can do this two different ways:
 * `sudo apt update && sudo apt full-upgrade`: the **&&** will run the first command and then the second command once it has finished 
 
 
-## Docker Containerization
+# Docker and Containerization
+
+_Howdy, welcome to the docker/containerization portion of this meeting._
+
+#### what exactly is *Containerization*?
+
+```
+Containerization involves bundling an application together with all of its related configuration files, libraries and dependencies required for it to run in an efficient and bug-free way across different computing environments.
+```
+
+#### Well, then what is *Docker*?
+
+```
+Docker is an open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automation of OS-level virtualization on Linux.
+```
+
+
+# GETTING STARTED
+
+### Installing docker: 
+https://docs.docker.com/get-docker/   
+
+### Debian based Linux (Kali):
+1. First, as always, update APT: 
+    *  `sudo apt update`
+2. Then we need to add the official Docker PGP key like so:
+    * `curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -`
+3. Next, we configure APT so we will be able to download, install and update Docker.
+    * `echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list`
+
+4. After adding Docker to APT, we need to update apt once more so we will be able to install Docker on Kali Linux:
+    * `sudo apt update`
+
+5. In case you have any old and/or outdated versions of Docker installed on your system, we make sure to get rid of them first:
+    * `sudo apt remove docker docker-engine docker.io`
+6. Once this is done, we are ready to install Docker on Kali Linux:
+    * `sudo apt install docker-ce -y`
+7. Finally, starting Docker:
+    * `sudo systemctl start docker` 
+8. *Optional* – Starting Docker automatically after a reboot. Do this at your own risk. I do not recommend doing this if you don’t know what you’re doing. I usually only start Docker when I actually need to use it.
+    * `sudo systemctl enable docker`
+
+### MacOS: 
+    sidebar: I am a mac person and when it comes to using docker in any form of professional setting I use docker desktop with the VScode docker plugin to manage all of my containers and images. 
+
+That being said, 
+* https://docs.docker.com/docker-for-mac/install/
+
+### Windows: 
+    sidebar: Almost the opposite of MacOS, I never use docker on a Windows machine (although you for sure can). Is it worse than a UNIX based machine? yeah, probably, but don't let that stop you, learn the way you can. 
+
+That being said, I assume people use Docker Desktop on Windows, but idk,
+* https://docs.docker.com/docker-for-windows/install/ 
+
+
+# Activity: 
+## 1. Run,
+* `docker run hello-world`
+
+The expected output is very insightful for how the docker work flow functions: 
+```
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+ ```
+
+
+## 2. Next, try running an Ubuntu container 
+* `docker run -it ubuntu bash` 
+
+breaking down that command:
+* docker --> the CLI command
+* run -it ubuntu ---> run container "ubuntu" with -it to use interactive mode 
+* bash ---> the program that gets run 
+
+
+## 3. Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+# Docker CLI 
+* `docker ps` --> The docker ps command shows you all containers that are currently running.
+* `docker images` -->
