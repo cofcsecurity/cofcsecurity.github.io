@@ -117,7 +117,7 @@ To change the permissions, we can do this two different ways:
 * `sudo apt update && sudo apt full-upgrade`: the **&&** will run the first command and then the second command once it has finished 
 
 
-# Docker and Containerization
+## Docker and Containerization
 
 _Howdy, welcome to the docker/containerization portion of this meeting._
 
@@ -134,7 +134,7 @@ Docker is an open-source project that automates the deployment of software appli
 ```
 
 
-# GETTING STARTED
+## GETTING STARTED
 
 ### Installing docker: 
 https://docs.docker.com/get-docker/   
@@ -159,21 +159,21 @@ https://docs.docker.com/get-docker/
 8. *Optional* – Starting Docker automatically after a reboot. Do this at your own risk. I do not recommend doing this if you don’t know what you’re doing. I usually only start Docker when I actually need to use it.
     * `sudo systemctl enable docker`
 
-### MacOS: 
+#### MacOS: 
     sidebar: I am a mac person and when it comes to using docker in any form of professional setting I use docker desktop with the VScode docker plugin to manage all of my containers and images. 
 
 That being said, 
 * https://docs.docker.com/docker-for-mac/install/
 
-### Windows: 
+#### Windows: 
     sidebar: Almost the opposite of MacOS, I never use docker on a Windows machine (although you for sure can). Is it worse than a UNIX based machine? yeah, probably, but don't let that stop you, learn the way you can. 
 
 That being said, I assume people use Docker Desktop on Windows, but idk,
 * https://docs.docker.com/docker-for-windows/install/ 
 
 
-# Activity: 
-## 1. Run,
+## Activity: 
+### 1. Run,
 * `docker run hello-world`
 
 The expected output is very insightful for how the docker work flow functions: 
@@ -201,7 +201,7 @@ For more examples and ideas, visit:
  ```
 
 
-## 2. Next, try running an Ubuntu container 
+### 2. Next, try running an Ubuntu container 
 * `docker run -it ubuntu bash` 
 
 breaking down that command:
@@ -210,9 +210,9 @@ breaking down that command:
 * bash ---> the program that gets run 
 
 
-## 3. Share images, automate workflows, and more with a free Docker ID:
+### 3. Share images, automate workflows, and more with a free Docker ID:
  https://hub.docker.com/
 
-# Docker CLI 
+### Docker CLI 
 * `docker ps` --> The docker ps command shows you all containers that are currently running.
 * `docker images` -->
