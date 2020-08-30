@@ -160,13 +160,17 @@ https://docs.docker.com/get-docker/
     * `sudo systemctl enable docker`
 
 ### MacOS: 
-    sidebar: I am a mac person and when it comes to using docker in any form of professional setting I use docker desktop with the VScode docker plugin to manage all of my containers and images. 
+```
+sidebar: I am a mac person and when it comes to using docker in any form of professional setting I use docker desktop with the VScode docker plugin to manage all of my containers and images. 
+```
 
 That being said, 
 * https://docs.docker.com/docker-for-mac/install/
 
 ### Windows: 
-    sidebar: Almost the opposite of MacOS, I never use docker on a Windows machine (although you for sure can). Is it worse than a UNIX based machine? yeah, probably, but don't let that stop you, learn the way you can. 
+```
+sidebar: Almost the opposite of MacOS, I never use docker on a Windows machine (although you for sure can). Is it worse than a UNIX based machine? yeah, probably, but don't let that stop you, learn the way you can. 
+```
 
 That being said, I assume people use Docker Desktop on Windows, but idk,
 * https://docs.docker.com/docker-for-windows/install/ 
@@ -210,9 +214,21 @@ breaking down that command:
 * bash ---> the program that gets run 
 
 
-## 3. Share images, automate workflows, and more with a free Docker ID:
- https://hub.docker.com/
+## 3. If you want more practice follow this guide. 
+ https://docker-curriculum.com/
 
 # Docker CLI 
 * `docker ps` --> The docker ps command shows you all containers that are currently running.
-* `docker images` -->
+* `docker images` --> To see the list of images that are available locally
+* `docker run` --> To run a Docker container based on this image.
+* `docker rm` + (container ID, found in docker ps) --> removes the container 
+
+Useful options: 
+* `docker ps -a` --> will list the status of recent containers
+* `docker run -it` --> runs the container in interactive mode, so you can input more than one command. 
+* etc... read the man pages 
+
+# Docker Terminology 
+* Image 
+* Container 
+* Dockerhub 
