@@ -117,7 +117,7 @@ To change the permissions, we can do this two different ways:
 * `sudo apt update && sudo apt full-upgrade`: the **&&** will run the first command and then the second command once it has finished 
 
 
-# Docker and Containerization
+## Docker and Containerization
 
 _Howdy, welcome to the docker/containerization portion of this meeting._
 
@@ -134,7 +134,7 @@ Docker is an open-source project that automates the deployment of software appli
 ```
 
 
-# GETTING STARTED
+## GETTING STARTED
 
 ### Installing docker: 
 https://docs.docker.com/get-docker/   
@@ -176,8 +176,8 @@ That being said, I assume people use Docker Desktop on Windows, but idk,
 * https://docs.docker.com/docker-for-windows/install/ 
 
 
-# Activity: 
-## 1. Run,
+## Activity: 
+### 1. Run,
 * `docker run hello-world`
 
 The expected output is very insightful for how the docker work flow functions: 
@@ -205,7 +205,7 @@ For more examples and ideas, visit:
  ```
 
 
-## 2. Next, try running an Ubuntu container 
+### 2. Next, try running an Ubuntu container 
 * `docker run -it ubuntu bash` 
 
 breaking down that command:
@@ -217,7 +217,7 @@ breaking down that command:
 ## 3. If you want more practice follow this guide. 
  https://docker-curriculum.com/
 
-# Docker CLI 
+### Docker CLI 
 * `docker ps` --> The docker ps command shows you all containers that are currently running.
 * `docker images` --> To see the list of images that are available locally
 * `docker run` --> To run a Docker container based on this image.
