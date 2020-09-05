@@ -1,5 +1,5 @@
 ---
-title: Discord
+title: Join Our Discord Server!
 date: 2020-09-04 17:00
 tags:
 - socials
