@@ -17,7 +17,7 @@ nav:
   home: /
   about: /about/
   Posts: /archives/
-  projects: /projects/
+#  projects: /projects/
   Resources: /resources/
 
 # !!! Moved to main config at /_config.yml under homemd tag. -lukem1
