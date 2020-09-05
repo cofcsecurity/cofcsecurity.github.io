@@ -3,9 +3,6 @@ title: Resources
 date: 2020-08-11 21:11:08
 ---
 
-
-**Club Notes / Presentations** [can be found here](/notes)
-
 Below are a collection of External Resources we found and wanted to share!
 ___
 
@@ -17,7 +14,7 @@ ___
 - [Edureka](https://www.youtube.com/playlist?list=PL9ooVrP1hQOGPQVeapGsJCktzIO4DtI4_)
 
 ## Linux Distros
-There are Linux distros specifically built with pentesting in mind. Here are some of our favorites. 
+There are Linux distros specifically built with pentesting in mind. Here are some of our favorites.
 If you are new to linux/cybersecurity we recommend you start with either Kali or Parrot.
 1. [Kali](https://www.kali.org/downloads/)
 - [Kali using Windows Subsystem for Linux](https://www.kali.org/news/wsl2-and-kali/)
