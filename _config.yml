@@ -10,6 +10,13 @@ author: CofC Cybersecurity Club
 language: en
 timezone: 'America/New_York'
 
+# Homepage markdown
+homemd: |
+  # Upcoming Events
+    1. Virtualization and Containarization Workshop on September 9th at 5:30
+    - New members will learn how to set up a Kali Linux virtual machine using VirtualBox
+    - We will also be having a presentation on Docker and containerization for those who are more experienced!
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://cofccybersecurityclub.github.io

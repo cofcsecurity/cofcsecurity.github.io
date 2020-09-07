@@ -1,13 +1,13 @@
 ---
-title: Discord
-date: 2020-08-18 17:00
-tags: 
+title: Join Our Discord Server!
+date: 2020-09-04 17:00
+tags:
 - socials
 - setup
 ---
-Hello, again. 
+Hello, again!
 
-**Discord Link**
-___
+We are currently transitioning away from slack to use discord as
+our primary means of communication.
 
-- https://discord.gg/yF8WCK
+# Join us here: https://discord.gg/uBCwjeG
