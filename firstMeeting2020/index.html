@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Meeting for 9&#x2F;9&#x2F;2020 Virtualization and Bash lead by Patrick McCabe Docker Containerization lead by Matt Walter  Introduction to VirtualizationWhat is required? A computer Internet connection Patience">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Write up for our Meeting on 9&#x2F;9">
+<meta property="og:url" content="http://cofccybersecurityclub.github.io/firstMeeting2020/">
+<meta property="og:site_name" content="CofC Cybersecurity Club">
+<meta property="og:description" content="Meeting for 9&#x2F;9&#x2F;2020 Virtualization and Bash lead by Patrick McCabe Docker Containerization lead by Matt Walter  Introduction to VirtualizationWhat is required? A computer Internet connection Patience">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-07T16:23:00.000Z">
+<meta property="article:modified_time" content="2020-09-07T16:25:19.328Z">
+<meta property="article:author" content="CofC Cybersecurity Club">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Write up for our Meeting on 9/9</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="CofC Cybersecurity Club" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Posts</a></li>
+         
+          <li><a href="/resources/">Resources</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/discord2020/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://cofccybersecurityclub.github.io/firstMeeting2020/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&text=Write up for our Meeting on 9/9"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&title=Write up for our Meeting on 9/9"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&is_video=false&description=Write up for our Meeting on 9/9"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Write up for our Meeting on 9/9&body=Check out this article: http://cofccybersecurityclub.github.io/firstMeeting2020/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&title=Write up for our Meeting on 9/9"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&title=Write up for our Meeting on 9/9"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&title=Write up for our Meeting on 9/9"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&title=Write up for our Meeting on 9/9"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&name=Write up for our Meeting on 9/9&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://cofccybersecurityclub.github.io/firstMeeting2020/&t=Write up for our Meeting on 9/9"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Meeting-for-9-9-2020"><span class="toc-number">1.</span> <span class="toc-text">Meeting for 9&#x2F;9&#x2F;2020</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction-to-Virtualization"><span class="toc-number">1.1.</span> <span class="toc-text">Introduction to Virtualization</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-required"><span class="toc-number">1.1.1.</span> <span class="toc-text">What is required?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-Virtualization"><span class="toc-number">1.1.2.</span> <span class="toc-text">What is Virtualization?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-do-we-set-up-the-Virtualization"><span class="toc-number">1.1.3.</span> <span class="toc-text">How do we set up the Virtualization?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-Bash"><span class="toc-number">1.1.4.</span> <span class="toc-text">What is Bash?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-do-we-use-Bash"><span class="toc-number">1.1.5.</span> <span class="toc-text">How do we use Bash?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-and-Containerization"><span class="toc-number">1.2.</span> <span class="toc-text">Docker and Containerization</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#what-exactly-is-Containerization"><span class="toc-number">1.2.0.1.</span> <span class="toc-text">what exactly is Containerization?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Well-then-what-is-Docker"><span class="toc-number">1.2.0.2.</span> <span class="toc-text">Well, then what is Docker?</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GETTING-STARTED"><span class="toc-number">1.3.</span> <span class="toc-text">GETTING STARTED</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Installing-docker"><span class="toc-number">1.3.1.</span> <span class="toc-text">Installing docker:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debian-based-Linux-Kali"><span class="toc-number">1.3.2.</span> <span class="toc-text">Debian based Linux (Kali):</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MacOS"><span class="toc-number">1.3.3.</span> <span class="toc-text">MacOS:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows"><span class="toc-number">1.3.4.</span> <span class="toc-text">Windows:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity"><span class="toc-number">1.4.</span> <span class="toc-text">Activity:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Run"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. Run,</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Next-try-running-an-Ubuntu-container"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. Next, try running an Ubuntu container</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-If-you-want-more-practice-follow-this-guide"><span class="toc-number">1.5.</span> <span class="toc-text">3. If you want more practice follow this guide.</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker-CLI"><span class="toc-number">1.5.1.</span> <span class="toc-text">Docker CLI</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker-Terminology"><span class="toc-number">2.</span> <span class="toc-text">Docker Terminology</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Write up for our Meeting on 9/9
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">CofC Cybersecurity Club</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-09-07T16:23:00.000Z" itemprop="datePublished">2020-09-07</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Meeting-for-9-9-2020"><a href="#Meeting-for-9-9-2020" class="headerlink" title="Meeting for 9/9/2020"></a>Meeting for 9/9/2020</h1><ul>
+<li>Virtualization and Bash lead by Patrick McCabe</li>
+<li>Docker Containerization lead by Matt Walter</li>
+</ul>
+<h2 id="Introduction-to-Virtualization"><a href="#Introduction-to-Virtualization" class="headerlink" title="Introduction to Virtualization"></a>Introduction to Virtualization</h2><h3 id="What-is-required"><a href="#What-is-required" class="headerlink" title="What is required?"></a>What is required?</h3><ol>
+<li>A computer</li>
+<li>Internet connection</li>
+<li>Patience (Depending on the OS, current packages will be downloaded during the install)</li>
+</ol>
+<h3 id="What-is-Virtualization"><a href="#What-is-Virtualization" class="headerlink" title="What is Virtualization?"></a>What is Virtualization?</h3><p>Virtualization is a way to run other <strong>Operating Systems</strong> (OS) on top of your host’s (computer’s) operating system. The way we virtualize an OS is through the use of a <strong>hypervisor</strong>. There are two types of hypervisors. They are the following:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">“Bare Metal” would be set up on a server (ex: home penetration testing lab)</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Requires an OS (Windows, MacOS, Linux, etc.), this is the type that we will be setting up in today’s meeting</td>
+</tr>
+</tbody></table>
+<h3 id="How-do-we-set-up-the-Virtualization"><a href="#How-do-we-set-up-the-Virtualization" class="headerlink" title="How do we set up the Virtualization?"></a>How do we set up the Virtualization?</h3><p>We will cover this in the meeting but the slide deck for today which can be located <a target="_blank" rel="noopener" href="https://github.com/cofccybersecurityclub/Presentations/blob/master/Workshop_01.pptx">here</a>. Please also take a look at the <a href="https://cofccybersecurityclub.github.io/resources/">Resources tab</a> under the Linux Distros for other OS’s that we recommend for Cyber Security! (There are also pre-built virtual machines for other purposes)</p>
+<h3 id="What-is-Bash"><a href="#What-is-Bash" class="headerlink" title="What is Bash?"></a>What is Bash?</h3><p>Bash is shorthand for <strong>Bourne Again Shell</strong> and is one of many <strong>command line interfaces</strong> (CLI) that exist in the Linux environment. Bash is one of the more common CLIs across Linux, so we will Some other common CLIs are:</p>
+<ul>
+<li>Friendly Interactive Shell (fish)</li>
+<li>Shell (sh)</li>
+<li>Z Shell (zsh) </li>
+<li>TMux (multi-shell interface)</li>
+<li>Screen (multi-shell interface)</li>
+<li>Powershell? (Yes! There is a Powershell interface on Linux)</li>
+</ul>
+<h3 id="How-do-we-use-Bash"><a href="#How-do-we-use-Bash" class="headerlink" title="How do we use Bash?"></a>How do we use Bash?</h3><p>We use Bash through a terminal emulator (For Parrot, it will be the Mate Terminal with a <strong>&gt;_</strong> as inside a circle for the icon and for Kali it will be Terminal Emulator with a <strong>$_</strong> in a rectangle for the icon). Once we have that opened, we can begin to learn Bash!</p>
+<p>Some common (and useful) commands are:</p>
+<ol>
+<li><code>pwd</code> which will print the current working directory (think of a directory as a folder) as the file path</li>
+<li><code>mkdir [directory]</code> creates a directory (folder) for the current directory </li>
+<li><code>ls</code> which lists the files and directories (All that are <strong>unhidden</strong>) Some common options (denoted by <strong>-</strong>) are</li>
+</ol>
+<ul>
+<li>-a: all files (including hidden)</li>
+<li>-l: long form with permissions, links, owner, group, size (in bytes), date modified, time modified, and name of the file or directory</li>
+<li>-t: sort by modification time</li>
+<li>-h: human readable format for the file size</li>
+</ul>
+<ol start="4">
+<li><code>touch [file.extension]</code> creates a file with the specified extension. Some extensions are:</li>
+</ol>
+<ul>
+<li>.txt: for a plaintext file</li>
+<li>.doc or .docx: document</li>
+<li>.log: for a log file</li>
+<li>.conf: for configuration files</li>
+</ul>
+<ol start="5">
+<li><code>nano [file name]</code> this will open the <strong>text editor</strong> nano <em>Side Note: you can create the file without using touch first</em></li>
+<li><code>echo &quot;some text&quot;</code> prints out some text to the terminal</li>
+</ol>
+<ul>
+<li><code>echo &quot;some text&quot; &gt; test.txt</code>: this will redirect some text into test.txt and <strong>overwrites</strong> it to test.txt</li>
+<li><code>echo &quot;some text&quot; &gt;&gt; test.txt</code>: this will redirect some text into test.txt and <strong>appends</strong> it to test.txt</li>
+</ul>
+<ol start="7">
+<li><code>cat test.txt</code> this will concatenate the file and print it to the terminal</li>
+<li><code>less test.txt</code> this is another way to view a file and will allow scrolling up and down with the arrow keys <em>Side note: the previous version of</em> <code>less</code> <em>was</em> <code>more</code> <em>and the Linux people decided to have fun with the name of the new version</em></li>
+<li><code>grep &quot;some text&quot; test.txt</code> grep will be used to pattern match (or search for the specified term) in test.txt <em>Side note: grep is a very powerful tool that will be useful for log analysis for computer forensics and data analytics with data sets</em> Some common options for grep are:</li>
+</ol>
+<ul>
+<li>-c: returns the count of “some text” in test.txt</li>
+<li>-E: for regular expressions (REGEX) (info on them can be found <a target="_blank" rel="noopener" href="https://www.regular-expressions.info/">here</a>)</li>
+<li>-h: for no file name</li>
+<li>-i: for ignore case</li>
+<li>-l: for files matching the pattern</li>
+<li>-n: for line number where the search matches</li>
+</ul>
+<ol start="10">
+<li>Piping: take the output of one command and sending it to another command (denoted by <strong>|</strong>)</li>
+</ol>
+<ul>
+<li>Why is this useful? We’ll use cat, sort, and uniq as examples: <code>cat test.txt | sort | uniq</code> this will concatenate test.txt, send the output to sort (which sorts alphabetically), and then pipes the output to uniq which returns the uniq strings in the file </li>
+</ul>
+<ol start="11">
+<li><code>wc test.txt</code> prints the word count of test.txt Some helpful options are:</li>
+</ol>
+<ul>
+<li>-c: prints the number of characters</li>
+<li>-l: prints the number of lines</li>
+<li>-w number of words</li>
+</ul>
+<ol start="12">
+<li><code>cp test.txt ~/Desktop/</code> copies test.txt to the Desktop directory and will leave a copy in the current directory. A helpful option for copying files with <code>cp</code> is the <strong>-r</strong> option for recursive copy, which is used for directories <em>Side note: <code>~</code> is short hand for /home/$USER, with $USER being the signed in user</em></li>
+<li><code>mv test.txt ~/Desktop/</code> this will move test.txt to ~/Desktop/ and will not leave a copy behind</li>
+<li><code>rm test.txt</code> this will delete test.txt. To delete directories, you may need to use the following <code>rm -r [directory]</code> (to recursively delete) or <code>rm -rf [directory]</code> to forcefully delete the directory</li>
+<li><code>sudo useradd [username]</code> this command will create a new user <em>Side note: sudo invokes <strong>root</strong> privileges to run a command that a normal user cannot run</em> Some common options are: </li>
+</ol>
+<ul>
+<li>-m: for a home directory</li>
+<li>-c “some text”: for comments</li>
+<li>-s [shell name]: determines what the login shell is for the new user</li>
+</ul>
+<ol start="16">
+<li><code>sudo passwd [user]</code> this will add a password for any user</li>
+<li><code>su [user]</code> this will switch the current user in the terminal (can be left by typing <code>exit</code> into the terminal)</li>
+<li><code>sudo usermod -aG [group] [user]</code> this will assign the user specified to the group that is specified</li>
+<li><code>chmod</code> is a crucial command that can be used to change file permissions</li>
+</ol>
+<p>Example: -rwxr–r– (the first - is whether or not the file is a directory or an individual file)</p>
+<table>
+<thead>
+<tr>
+<th align="center">Group</th>
+<th align="center">Abbreviation</th>
+<th align="center">Placement</th>
+<th align="center">Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">User</td>
+<td align="center">u</td>
+<td align="center">first three slots after the  first -</td>
+<td align="center">this is the group for the file’s owner and the permissions will be described below</td>
+</tr>
+<tr>
+<td align="center">Group</td>
+<td align="center">g</td>
+<td align="center">the next three slots after the user</td>
+<td align="center">this will set the permissions for the group that the user is a part of</td>
+</tr>
+<tr>
+<td align="center">Other</td>
+<td align="center">o</td>
+<td align="center">last three slots after the group</td>
+<td align="center">This will be the permissions for all the other users on the system</td>
+</tr>
+</tbody></table>
+<p><em>Side note: there is a special character for all and it is denoted by <strong>a</strong></em></p>
+<table>
+<thead>
+<tr>
+<th align="center">Option</th>
+<th align="center">Numerical Equivalent</th>
+<th align="center">Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+r</td>
+<td align="center">4</td>
+<td align="center">the file can be read through the specified group</td>
+</tr>
+<tr>
+<td align="center">+w</td>
+<td align="center">2</td>
+<td align="center">the file can be written to by the specified group</td>
+</tr>
+<tr>
+<td align="center">+x</td>
+<td align="center">1</td>
+<td align="center">the file can be executed (run) by the specified group</td>
+</tr>
+</tbody></table>
+<p><em>Side note: these permission numbers can be added up to add multiple permissions at once</em></p>
+<p>To change the permissions, we can do this two different ways:</p>
+<ul>
+<li>We can use <code>chmod [group]+[permission(s)]</code> or in other words, to add executable status to both the group and other by using <code>chmog go+x test.txt</code> </li>
+<li>The other way to accomplis this is <code>chmod [number][number][number] test.txt</code> and we will use the following: <code>chmod 755 test.txt</code>. The way that we determined the permission numbers is the following: 4 (read) + 2 (write) + 1 (execute) = 7 (for the user) and 4 (for read) + 1 (execute) = 5 for both the group and other user permissions</li>
+</ul>
+<ol start="20">
+<li><code>ip a</code> this will list out the current network interfaces and <strong>IP</strong> address for the machine (on Eth0 for Ethernet). Here is a little shortcut to get your IP and subnet (we will go over what a subnet is on Sept. 30)</li>
+</ol>
+<ul>
+<li><code>ip addr show | grep eth0 | grep inet | awk &#39;&#123;print $2&#125;&#39;</code></li>
+</ul>
+<ol start="21">
+<li><code>man [command]</code> man is short for manual and will be your best friend for learning the options for specific commands and unlocking their full potential</li>
+<li><code>apt</code> is the packacge (software) manager for Debian based systems (Ubuntu, Kali, Parrot, etc.) <em>Side note: most apt commands need root privilege to run so make sure to run the commands</em>. Some common commands are:</li>
+</ol>
+<ul>
+<li><code>sudo apt update</code>: update the packacge repositories for the system</li>
+<li><code>sudo apt full-upgrade</code>: upgrade all the packages on your system</li>
+<li><code>sudo apt autoremove</code>: cleans up unecessary packages</li>
+<li><code>sudo apt update &amp;&amp; sudo apt full-upgrade</code>: the <strong>&amp;&amp;</strong> will run the first command and then the second command once it has finished </li>
+</ul>
+<h2 id="Docker-and-Containerization"><a href="#Docker-and-Containerization" class="headerlink" title="Docker and Containerization"></a>Docker and Containerization</h2><p><em>Howdy, welcome to the docker/containerization portion of this meeting.</em></p>
+<h4 id="what-exactly-is-Containerization"><a href="#what-exactly-is-Containerization" class="headerlink" title="what exactly is Containerization?"></a>what exactly is <em>Containerization</em>?</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Containerization involves bundling an application together with all of its related configuration files, libraries and dependencies required for it to run in an efficient and bug-free way across different computing environments.</span><br></pre></td></tr></table></figure>
+
+<h4 id="Well-then-what-is-Docker"><a href="#Well-then-what-is-Docker" class="headerlink" title="Well, then what is Docker?"></a>Well, then what is <em>Docker</em>?</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Docker is an open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automation of OS-level virtualization on Linux.</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="GETTING-STARTED"><a href="#GETTING-STARTED" class="headerlink" title="GETTING STARTED"></a>GETTING STARTED</h2><h3 id="Installing-docker"><a href="#Installing-docker" class="headerlink" title="Installing docker:"></a>Installing docker:</h3><p><a target="_blank" rel="noopener" href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a>   </p>
+<h3 id="Debian-based-Linux-Kali"><a href="#Debian-based-Linux-Kali" class="headerlink" title="Debian based Linux (Kali):"></a>Debian based Linux (Kali):</h3><ol>
+<li><p>First, as always, update APT: </p>
+<ul>
+<li><code>sudo apt update</code></li>
+</ul>
+</li>
+<li><p>Then we need to add the official Docker PGP key like so:</p>
+<ul>
+<li><code>curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -</code></li>
+</ul>
+</li>
+<li><p>Next, we configure APT so we will be able to download, install and update Docker.</p>
+<ul>
+<li><code>echo &#39;deb [arch=amd64] https://download.docker.com/linux/debian buster stable&#39; | sudo tee /etc/apt/sources.list.d/docker.list</code></li>
+</ul>
+</li>
+<li><p>After adding Docker to APT, we need to update apt once more so we will be able to install Docker on Kali Linux:</p>
+<ul>
+<li><code>sudo apt update</code></li>
+</ul>
+</li>
+<li><p>In case you have any old and/or outdated versions of Docker installed on your system, we make sure to get rid of them first:</p>
+<ul>
+<li><code>sudo apt remove docker docker-engine docker.io</code></li>
+</ul>
+</li>
+<li><p>Once this is done, we are ready to install Docker on Kali Linux:</p>
+<ul>
+<li><code>sudo apt install docker-ce -y</code></li>
+</ul>
+</li>
+<li><p>Finally, starting Docker:</p>
+<ul>
+<li><code>sudo systemctl start docker</code> </li>
+</ul>
+</li>
+<li><p><em>Optional</em> – Starting Docker automatically after a reboot. Do this at your own risk. I do not recommend doing this if you don’t know what you’re doing. I usually only start Docker when I actually need to use it.</p>
+<ul>
+<li><code>sudo systemctl enable docker</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS:"></a>MacOS:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sidebar: I am a mac person and when it comes to using docker in any form of professional setting I use docker desktop with the VScode docker plugin to manage all of my containers and images. </span><br></pre></td></tr></table></figure>
+
+<p>That being said, </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.docker.com/docker-for-mac/install/">https://docs.docker.com/docker-for-mac/install/</a></li>
+</ul>
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows:"></a>Windows:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sidebar: Almost the opposite of MacOS, I never use docker on a Windows machine (although you for sure can). Is it worse than a UNIX based machine? yeah, probably, but don&#39;t let that stop you, learn the way you can. </span><br></pre></td></tr></table></figure>
+
+<p>That being said, I assume people use Docker Desktop on Windows, but idk,</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.docker.com/docker-for-windows/install/">https://docs.docker.com/docker-for-windows/install/</a> </li>
+</ul>
+<h2 id="Activity"><a href="#Activity" class="headerlink" title="Activity:"></a>Activity:</h2><h3 id="1-Run"><a href="#1-Run" class="headerlink" title="1. Run,"></a>1. Run,</h3><ul>
+<li><code>docker run hello-world</code></li>
+</ul>
+<p>The expected output is very insightful for how the docker work flow functions: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image which runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, which sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"> $ docker run -it ubuntu bash</span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https:&#x2F;&#x2F;hub.docker.com&#x2F;</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https:&#x2F;&#x2F;docs.docker.com&#x2F;get-started&#x2F;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="2-Next-try-running-an-Ubuntu-container"><a href="#2-Next-try-running-an-Ubuntu-container" class="headerlink" title="2. Next, try running an Ubuntu container"></a>2. Next, try running an Ubuntu container</h3><ul>
+<li><code>docker run -it ubuntu bash</code> </li>
+</ul>
+<p>breaking down that command:</p>
+<ul>
+<li>docker –&gt; the CLI command</li>
+<li>run -it ubuntu —&gt; run container “ubuntu” with -it to use interactive mode </li>
+<li>bash —&gt; the program that gets run </li>
+</ul>
+<h2 id="3-If-you-want-more-practice-follow-this-guide"><a href="#3-If-you-want-more-practice-follow-this-guide" class="headerlink" title="3. If you want more practice follow this guide."></a>3. If you want more practice follow this guide.</h2><p> <a target="_blank" rel="noopener" href="https://docker-curriculum.com/">https://docker-curriculum.com/</a></p>
+<h3 id="Docker-CLI"><a href="#Docker-CLI" class="headerlink" title="Docker CLI"></a>Docker CLI</h3><ul>
+<li><code>docker ps</code> –&gt; The docker ps command shows you all containers that are currently running.</li>
+<li><code>docker images</code> –&gt; To see the list of images that are available locally</li>
+<li><code>docker run</code> –&gt; To run a Docker container based on this image.</li>
+<li><code>docker rm</code> + (container ID, found in docker ps) –&gt; removes the container </li>
+</ul>
+<p>Useful options: </p>
+<ul>
+<li><code>docker ps -a</code> –&gt; will list the status of recent containers</li>
+<li><code>docker run -it</code> –&gt; runs the container in interactive mode, so you can input more than one command. </li>
+<li>etc… read the man pages </li>
+</ul>
+<h1 id="Docker-Terminology"><a href="#Docker-Terminology" class="headerlink" title="Docker Terminology"></a>Docker Terminology</h1><ul>
+<li>Image </li>
+<li>Container </li>
+<li>Dockerhub </li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Posts</a></li>
+         
+          <li><a href="/resources/">Resources</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Meeting-for-9-9-2020"><span class="toc-number">1.</span> <span class="toc-text">Meeting for 9&#x2F;9&#x2F;2020</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction-to-Virtualization"><span class="toc-number">1.1.</span> <span class="toc-text">Introduction to Virtualization</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-required"><span class="toc-number">1.1.1.</span> <span class="toc-text">What is required?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-Virtualization"><span class="toc-number">1.1.2.</span> <span class="toc-text">What is Virtualization?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-do-we-set-up-the-Virtualization"><span class="toc-number">1.1.3.</span> <span class="toc-text">How do we set up the Virtualization?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-Bash"><span class="toc-number">1.1.4.</span> <span class="toc-text">What is Bash?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-do-we-use-Bash"><span class="toc-number">1.1.5.</span> <span class="toc-text">How do we use Bash?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-and-Containerization"><span class="toc-number">1.2.</span> <span class="toc-text">Docker and Containerization</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#what-exactly-is-Containerization"><span class="toc-number">1.2.0.1.</span> <span class="toc-text">what exactly is Containerization?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Well-then-what-is-Docker"><span class="toc-number">1.2.0.2.</span> <span class="toc-text">Well, then what is Docker?</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GETTING-STARTED"><span class="toc-number">1.3.</span> <span class="toc-text">GETTING STARTED</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Installing-docker"><span class="toc-number">1.3.1.</span> <span class="toc-text">Installing docker:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debian-based-Linux-Kali"><span class="toc-number">1.3.2.</span> <span class="toc-text">Debian based Linux (Kali):</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MacOS"><span class="toc-number">1.3.3.</span> <span class="toc-text">MacOS:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows"><span class="toc-number">1.3.4.</span> <span class="toc-text">Windows:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity"><span class="toc-number">1.4.</span> <span class="toc-text">Activity:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Run"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. Run,</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Next-try-running-an-Ubuntu-container"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. Next, try running an Ubuntu container</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-If-you-want-more-practice-follow-this-guide"><span class="toc-number">1.5.</span> <span class="toc-text">3. If you want more practice follow this guide.</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker-CLI"><span class="toc-number">1.5.1.</span> <span class="toc-text">Docker CLI</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker-Terminology"><span class="toc-number">2.</span> <span class="toc-text">Docker Terminology</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://cofccybersecurityclub.github.io/firstMeeting2020/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&text=Write up for our Meeting on 9/9"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&title=Write up for our Meeting on 9/9"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&is_video=false&description=Write up for our Meeting on 9/9"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Write up for our Meeting on 9/9&body=Check out this article: http://cofccybersecurityclub.github.io/firstMeeting2020/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&title=Write up for our Meeting on 9/9"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&title=Write up for our Meeting on 9/9"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&title=Write up for our Meeting on 9/9"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&title=Write up for our Meeting on 9/9"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://cofccybersecurityclub.github.io/firstMeeting2020/&name=Write up for our Meeting on 9/9&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://cofccybersecurityclub.github.io/firstMeeting2020/&t=Write up for our Meeting on 9/9"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2020
+    CofC Cybersecurity Club
+  </div>
+  <div class="footer-center">
+    <a href=""><i class="fab fa-twitter"></i></a>
+    <a href=""><i class="fab fa-instagram"></i></a>
+    <a target="_blank" rel="noopener" href="https://github.com/cofccybersecurityclub/"><i class="fab fa-github"></i></a>
+    <a target="_blank" rel="noopener" href="http://cofcsecurity.slack.com"><i class="fab fa-slack"></i></a>
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Posts</a></li>
+         
+          <li><a href="/resources/">Resources</a></li>
+        
+      </ul>
+      <br>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
