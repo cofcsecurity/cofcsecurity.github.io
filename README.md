@@ -59,12 +59,12 @@ Youtube:
 * [LinkedIn](https://www.linkedin.com/in/patrick-mccabe-b4980314a/)
 * [Github](https://github.com/pmccabe5)
 2. **Vice President**: Seth Hinson
-* Year: 
-* Major: 
-* Minor(s): 
-* Email: 
-* [LinkedIn]
-* [Github]
+* Year: Senior
+* Major: Computer Science
+* Minor(s): Data Science, Russian Studies
+* Email: hinsonsc@g.cofc.edu
+* [LinkedIn](https://www.linkedin.com/in/seth-hinson-cofc/)
+* [Github](https://github.com/hinsonsc)
 3. **Secretary**: Matt Walter
 * Year: Junior
 * Major: Computer Science
