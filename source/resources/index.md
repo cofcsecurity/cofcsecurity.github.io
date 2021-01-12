@@ -6,6 +6,12 @@ date: 2020-08-11 21:11:08
 Below are a collection of External Resources we found and wanted to share!
 ___
 
+## Our GitHub Organization
+
+[CofC Cyber Security Club on GitHub](https://github.com/cofccybersecurityclub)
+
+We have a lot of resources and projects we are working on over on GitHub, check it out! If you are an active club member we will also add you to the organization upon request.
+
 ## Training Materials
 - [Under The Wire](https://www.underthewire.tech/):
   Powershell training from the security and administrative perspective.
