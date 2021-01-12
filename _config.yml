@@ -12,7 +12,7 @@ timezone: 'America/New_York'
 
 # Homepage markdown
 homemd: |
-  # Join us on Discord [here](https://discord.gg/uBCwjeG)!
+  ## [Join us on Discord here!](https://discord.gg/uBCwjeG)
   # Upcoming Events
     First Meeting of Spring 2021 - January 13 7:30 PM
     NCL Spring Registration - February 1 to March 5
