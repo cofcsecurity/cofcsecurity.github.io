@@ -9,9 +9,32 @@ College of Charleston’s Cybersecurity Club is a student-led, student-run group
 Our club meets each week in order to develop our skills, knowledge and understanding of the many different aspects of security, ranging from simpler topics such as network enumeration and command-line functions to more complex topics such as systems administration, hashing, steganography, and firewall policy. We hope by covering a wide range of topics within the overall cybersecurity umbrella we can cultivate new skilled professionals who are experts in these fields.
 
 ## Schedule
-Meetings are at 5:30 pm unless otherwise specified.
+Meetings are at 7:30 pm unless otherwise specified.
 
-Week | General Topic | Advanced Topic | Week | Special Notes
+### Spring 2021 Schedule
+
+Week | General Topic | Advanced Topic | Date | Special Notes
+:--:| :----------: | :-----------: | :-------------: | :--------:
+01 | Introduction and Planning | - | Jan. 13 | 7:30 pm
+02 | Virtualization | - | Jan. 20 | -
+03 | Scripting | - | Jan. 27 | -
+04 | Ansible | - | Feb. 03 | -
+05 | Docker/Kubernetes | - | Feb. 10 | -
+06 | Cyber Discussion | - | Feb. 17 | -
+08 | What is a Computer Network | - | Feb. 24 | -
+09 | Network Security | - | Mar. 03 | -
+10 | NCL Tune Up | - | Mar. 10 | -
+11 | Cyber Discussion | - | Mar. 17 | -
+12 | Web App Security | - | Mar. 24 | -
+13 | Splunk | - | Mar. 31 | -
+14 | Defense by Offense | - | Apr. 07 | -
+15 | End of Year Party | - | Apr. 14 | -
+
+![NCL Spring Season 2021](https://images.squarespace-cdn.com/content/v1/5e13a4b584a68c775e362068/1605640919725-LTV5NC25Y4WJC749WKGP/ke17ZwdGBToddI8pDm48kFN-DFK1eK1PdvHSeEQ1GP0UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcMjTBaMDyDtF-PZ6G0utiW5P6KPxcFyIcI8wqAQSp9vX3A5KcwvKKTYWvQrEWfIO1/NCL+Spring+Season+2021?format=2500w)
+
+### Fall 2020 Schedule
+
+Week | General Topic | Advanced Topic | Date | Special Notes
 :--:| :----------: | :-----------: | :-------------: | :--------:
 1 | Intro to club | none | Sept. 4 | 2:00 pm
 2 | Inroduction to Virtualization and Bash| Docker | Sept. 9 | None

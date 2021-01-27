@@ -12,8 +12,9 @@ timezone: 'America/New_York'
 
 # Homepage markdown
 homemd: |
+  ## [Join us on Discord here!](https://discord.gg/uBCwjeG)
   # Upcoming Events
-    Mini BSides - October 14
+    NCL Spring Registration - February 1 to March 5
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
