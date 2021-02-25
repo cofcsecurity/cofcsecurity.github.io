@@ -25,11 +25,13 @@ Resources:
 
 1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. [VMWare Workstation Player](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
+3. [Microsoft Azure Student Account](https://azure.microsoft.com/en-us/free/students/)
 
 ## Linux: Getting Started
 
 1. [Command Line Commands](https://www.youtube.com/playlist?list=PLBf0hzazHTGMh2fe2MFf3lCgk0rKmS2by)
 2. [Penetration Testing Tools](https://www.youtube.com/playlist?list=PLBf0hzazHTGOEuhPQSnq-Ej8jRyXxfYvl)
+3. [Computerfile](https://www.youtube.com/user/Computerphile/featured)
 
 ## Resources for Practice
 
@@ -47,7 +49,12 @@ Resources:
 
 Instagram:
 Twitter:
-Youtube:
+Youtube: 
+Slack: cofcsecurity.slack.com
+
+## Miscellaneous 
+
+1. [GitHub Student Developer Pack](https://education.github.com/pack)
 
 ## Officers
 
