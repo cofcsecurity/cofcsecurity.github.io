@@ -1,6 +1,6 @@
 ---
 title: Computer Networking Basics
-date: 2021-03-23 07:00
+date: 2021-03-03 07:00
 ---
 
 [Recording Link](https://cofc.zoom.us/recording/detail?meeting_id=tlaH2%2FuuQrWfPWHmruqZmw%3D%3D)
