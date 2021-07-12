@@ -7,7 +7,7 @@ date: 2020-08-11 21:11:08
 
 Getting into cybersecurity can be a bit daunting. It is a huge and rapidly evolving field that contains numerous specializations including penetration testing, incidence response, digital forensics, network engineering, malware analysis, and more.
 
-If you are just getting started, with little or no background knowledge, here is what we recommend:
+If you are just getting started here is what we recommend:
 
 1. Learn Linux and/or Windows Server as well as Bash or Powershell respectively.
 

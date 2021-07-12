@@ -13,11 +13,11 @@ During Fall/Spring semesters the club typically meets once per week with special
 
 #### Meetings
 
-Week | Date | Title | Notes
+Week | Date | Topic | Notes
 :-:| :-----: | :-------------: | :---:
  1 | Aug. 25 | Getting Started | Introduction and planning
  2 | Sep. 1  | The Basics | Virtualization and Kali
- 3 | Sep. 8  | Cryptography | Encryption, hashing, cracking
+ 3 | Sep. 8  | Cryptography | Encryption, hashing, and cracking
  4 | Sep. 15 | **Special Topic** | -
  5 | Sep. 22 | Network Traffic Analysis | Wireshark
  6 | Sep. 29 | Cyber Discussions | -
