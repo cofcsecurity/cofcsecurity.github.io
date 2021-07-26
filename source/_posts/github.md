@@ -13,4 +13,4 @@ If you are an active club member we will also add you to our GitHub organization
 **Github Link**
 ___
 
-- https://github.com/cofccybersecurityclub
+- https://github.com/cofcsecurity

@@ -18,7 +18,7 @@ If you are just getting started here is what we recommend:
 
 ## Our GitHub Organization
 
-[CofC Cyber Security Club on GitHub](https://github.com/cofccybersecurityclub)
+[CofC Cyber Security Club on GitHub](https://github.com/cofcsecurity)
 
 We have a lot of resources and projects we are working on over on GitHub, check it out! If you are an active club member we will also add you to the organization upon request so you can contribute as well.
 

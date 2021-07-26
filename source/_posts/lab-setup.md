@@ -5,7 +5,7 @@ date: 2021-01-20 17:00
 
 # COFC DevOPS: Setup
 
-[Github Repository](https://github.com/cofccybersecurityclub/DevOps)
+[Github Repository](https://github.com/cofcsecurity/DevOps)
 
 ## Recording
 
