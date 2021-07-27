@@ -1,9 +1,9 @@
 ---
 title: Write up for our Meeting on 9/9
-date: 2020-09-07 12:23
+date: 2020-09-09 12:23
 ---
 
-# Meeting for 9/9/2020
+# September 9 2020 Meeting
 
 * Virtualization and Bash lead by Patrick McCabe
 * Docker Containerization lead by Matt Walter
@@ -27,7 +27,7 @@ Virtualization is a way to run other **Operating Systems** (OS) on top of your h
 
 ### How do we set up the Virtualization?
 
-We will cover this in the meeting but the slide deck for today which can be located [here](https://github.com/cofccybersecurityclub/Presentations/blob/master/Workshop_01.pptx). Please also take a look at the [Resources tab](https://cofccybersecurityclub.github.io/resources/) under the Linux Distros for other OS's that we recommend for Cyber Security! (There are also pre-built virtual machines for other purposes)
+We will cover this in the meeting but the slide deck for today which can be located [here](https://github.com/cofcsecurity/Presentations/blob/master/Workshop_01.pptx). Please also take a look at the [Resources tab](https://cofcsecurity.github.io/resources/) under the Linux Distros for other OS's that we recommend for Cyber Security! (There are also pre-built virtual machines for other purposes)
 
 
 

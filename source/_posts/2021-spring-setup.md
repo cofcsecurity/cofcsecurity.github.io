@@ -7,11 +7,6 @@ date: 2021-01-20 17:00
 
 [Github Repository](https://github.com/cofcsecurity/DevOps)
 
-## Recording
-
-[Link](https://cofc.zoom.us/rec/share/d3kZDW1bzXeYes0SSBRzr_TXcHLv2QnBa4lET_XzZuR_MaFvI1hihlrW22u1ITXl.HgQ7SZ8cQQOzslGQ)
-
-Passcode: 8pCtm$$Q
 
 ## Goals:
 

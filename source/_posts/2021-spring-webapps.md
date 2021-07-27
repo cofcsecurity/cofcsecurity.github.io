@@ -5,8 +5,6 @@ date: 2021-03-23 00:00
 
 # March 24 2021 Meeting
 
-## Recording: TBD
-
 ## NCL Preseason Review
 
 ### Cryptography
