@@ -43,7 +43,7 @@ date: 2021-03-23 00:00
     - Dissassembly
     - Decompiling
     - Debugging/Emulation
-- (The GNU Project Debugger (GDB))[https://www.gnu.org/software/gdb/]
+- (The GNU Project Debugger - GDB)[https://www.gnu.org/software/gdb/]
   - See what's going on inside an executing program
 - ltrace Command
   - Intercepts a program's dynamic library calls, system calls, and received signals
