@@ -35,6 +35,7 @@ date: 2021-08-02
 - Chase Myer
 - Matt Walter
 - Luke McGuire
+- Neal Kakadia
 
 ### Shadow Team
 - Seth Hinson 
