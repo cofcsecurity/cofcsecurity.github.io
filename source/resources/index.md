@@ -100,7 +100,7 @@ Nowadays cloud knowledge is crucial to virtually anything computer science inclu
 3. [danscourses](https://www.youtube.com/user/danscourses): Lots of networking tutorials
 4. [TechWorld with Nana](https://www.youtube.com/channel/UCdngmbVKX1Tgre699-XLlUA): Tons of DevOps tutorials
 5. [Hackersploit](https://www.youtube.com/channel/UC0ZTPkdxlAKf-V33tqXwi3Q): HackerSploit is the leading provider of free Infosec and cybersecurity training. Our goal is to make cybersecurity training more effective and accessible to students and professionals.
-
+6. [NetworkChuck](https://www.youtube.com/channel/UC9x0AN7BWHpCDHSm9NiJFJQ): If your goals are to obtain your CCNA, CompTIA A+, CompTIA Network+...I'm here to help you with that goal in any way I can! 
 
 ## Practice
 
