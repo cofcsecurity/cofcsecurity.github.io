@@ -1,6 +1,6 @@
 ---
 title: History
-date: 2020-08-11 21:09:16
+date: 2021-08-02 
 ---
 # Club history
 
