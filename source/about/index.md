@@ -18,3 +18,5 @@ An important part of our club is the Cyber Defense Team. The CofC Cyber Defense 
 Competing in these competitions provides extremely valuable experience that is recognized in the industry. Many past defense team members attribute jobs offers, interviews, or raises they have received directly to their participation in these competitions.
 
 Anyone, regardless of experience, is encouraged to participate!
+
+Our Club's Defense Competition history can be found [here](https://cofcsecurity.github.io/history/)!
