@@ -49,8 +49,8 @@ date: 2021-08-02
 * Coach: Dr. Xenia Mountrouidou
 
 ### Main Team Members
-- Carson Smart (Captain)
-- Blaine Billings (Asst. Captain)
+- Carson Smart (**Captain**)
+- Blaine Billings (**Asst. Captain**)
 - Sarah Winegar
 - Luis Mejía-Ricart
 - Patrick McCabe
@@ -67,8 +67,8 @@ date: 2021-08-02
 * Coach: Dr. Xenia Mountrouidou
 
 ### Main Team Members
-- Zach Dayton (Captain)
-- John Anderson (Asst. Captain)
+- Zach Dayton (**Captain**)
+- John Anderson (**Asst. Captain**)
 - Nate Smith
 - Phillip Wilson
 - Hitarth Patel
