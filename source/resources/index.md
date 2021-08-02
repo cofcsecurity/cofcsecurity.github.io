@@ -99,6 +99,7 @@ Nowadays cloud knowledge is crucial to virtually anything computer science inclu
 2. [IppSec](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA): HackTheBox walkthroughs
 3. [danscourses](https://www.youtube.com/user/danscourses): Lots of networking tutorials
 4. [TechWorld with Nana](https://www.youtube.com/channel/UCdngmbVKX1Tgre699-XLlUA): Tons of DevOps tutorials
+5. [Hackersploit](https://www.youtube.com/channel/UC0ZTPkdxlAKf-V33tqXwi3Q): HackerSploit is the leading provider of free Infosec and cybersecurity training. Our goal is to make cybersecurity training more effective and accessible to students and professionals.
 
 
 ## Practice
