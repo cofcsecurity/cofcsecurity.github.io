@@ -31,8 +31,6 @@ date: 2021-08-03
 
 ## Hashing and Password Hashing:
 
-![meme](cofcsecurity/cofcsecurity.github.io/source/_posts/images/dictionary-attack.png)
-
 ### What is Hashing?
 
 - Short Answer: a more secure cipher that is irreversible
