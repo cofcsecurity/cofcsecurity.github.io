@@ -31,7 +31,7 @@ date: 2021-08-03
 
 ## Hashing and Password Hashing:
 
-![Meme](images/dictionary-attack.png)
+![Meme](./images/dictionary-attack.png)
 
 ### What is Hashing?
 
