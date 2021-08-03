@@ -27,11 +27,11 @@ date: 2021-08-03
         - [Rapidtables](https://bit.ly/2nqHKBM)
         - [Rumkin](https://bit.ly/1tgtYh0)
         - [CyberChef](https://gchq.github.io/CyberChef/)
-        - [Luke's Site]()
+        - [Boxentriq](https://www.boxentriq.com/code-breaking)
 
 ## Hashing and Password Hashing:
 
-![Meme](../../source/images/dictionary-attack.jpg)
+![Meme](./source/images/dictionary-attack.jpg)
 
 ### What is Hashing?
 - Short Answer: a more secure cipher that is irreversible
