@@ -31,9 +31,10 @@ date: 2021-08-03
 
 ## Hashing and Password Hashing:
 
-![Meme](images/dictionary-attack.jpg)
+![Meme](https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/dictionary-attack.jpg)
 
 ### What is Hashing?
+
 - Short Answer: a more secure cipher that is irreversible
 - Long Answer: It’s a way to remap the values of a string for secure transmission and file integrity (think of computer forensics)
 Example Hashes: see the crypto.zip file “hashSignatures.txt”
