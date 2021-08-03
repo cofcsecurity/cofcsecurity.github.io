@@ -191,8 +191,8 @@ done
 
 - If running via command line shabang: #!/bin/python
     * IDEs: 
-        - IDLE: https://www.python.org/downloads/
-        - Pycharm: https://www.jetbrains.com/pycharm/
+        - [IDLE](https://www.python.org/downloads/)
+        - [Pycharm](https://www.jetbrains.com/pycharm/)
 
 ### Variables:
 
