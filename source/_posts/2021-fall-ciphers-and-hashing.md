@@ -30,4 +30,4 @@ date: 2021-08-03
 
 ## Hashing and Password Hashing:
 
-! [Dictionary Attack Meme] (https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/images/dictionary-attack.jpg)
+![Dictionary Attack Meme] (https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/images/dictionary-attack.jpg)
