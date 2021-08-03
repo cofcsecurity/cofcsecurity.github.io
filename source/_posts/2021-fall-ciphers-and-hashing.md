@@ -30,4 +30,4 @@ date: 2021-08-03
 
 ## Hashing and Password Hashing:
 
-![Dictionary Attack Meme] (https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F220676450466316673%2F&psig=AOvVaw3-NqNojlJiXS-B2nn7l_Oa&ust=1628078857867000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJiT5MHolPICFQAAAAAdAAAAABAD)
+! [Dictionary Attack Meme] (https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/images/dictionary-attack.jpg)
