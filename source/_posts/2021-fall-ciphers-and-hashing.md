@@ -31,7 +31,7 @@ date: 2021-08-03
 
 ## Hashing and Password Hashing:
 
-![Meme](source/images/dictionary-attack.jpg)
+![Meme](../source/images/dictionary-attack.jpg)
 
 ### What is Hashing?
 - Short Answer: a more secure cipher that is irreversible
