@@ -1,5 +1,5 @@
 ---
-title: Ansible
+title: Bash and Python Scripting
 date: 2021-08-02
 ---
 
