@@ -31,7 +31,7 @@ date: 2021-08-03
 
 ## Hashing and Password Hashing:
 
-![Meme](cofccybersecurityclub/cofccybersecurityclub.github.io/source/_posts/images/dictionary-attack.png)
+![Meme](cofcsecurity/cofcsecurity.github.io/source/_posts/images/dictionary-attack.png)
 
 ### What is Hashing?
 
