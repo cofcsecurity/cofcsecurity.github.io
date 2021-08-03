@@ -8,16 +8,16 @@ date: 2021-08-03
 ## Ciphers
 
 ### What are ciphers?
-    - Cipher- a method to transform text to hide its meaning (Merriam-Webster def. 2)
-    - Types of ciphers (there are a lot but here are some common ones):
-        - Caesar
-        - Vigenere
-        - Decimal
-        - Base64
-        - Binary
-        - Hex
-        - Baconian
-        - And more!
+- Cipher- a method to transform text to hide its meaning (Merriam-Webster def. 2)
+- Types of ciphers (there are a lot but here are some common ones):
+    - Caesar
+    - Vigenere
+    - Decimal
+    - Base64
+    - Binary
+    - Hex
+    - Baconian
+    - And more!
 
 ### Decoding Ciphers:
 
