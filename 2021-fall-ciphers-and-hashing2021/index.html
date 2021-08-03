@@ -13,12 +13,12 @@
 <meta property="og:site_name" content="CofC Cybersecurity Club">
 <meta property="og:description" content="Ciphers and HashingCiphersWhat are ciphers?- Cipher- a method to transform text to hide its meaning (Merriam-Webster def. 2) - Types of ciphers (there are a lot but here are some common ones):     - C">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://cofcsecurity.github.io/2021-fall-ciphers-and-hashing2021/source/images/dictionary-attack.jpg">
+<meta property="og:image" content="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/images/dictionary-attack.jpg">
 <meta property="article:published_time" content="2021-08-03T04:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-03T12:13:09.504Z">
+<meta property="article:modified_time" content="2021-08-03T12:25:17.532Z">
 <meta property="article:author" content="CofC Cybersecurity Club">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://cofcsecurity.github.io/2021-fall-ciphers-and-hashing2021/source/images/dictionary-attack.jpg">
+<meta name="twitter:image" content="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/images/dictionary-attack.jpg">
     
     
         
@@ -111,7 +111,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ciphers-and-Hashing"><span class="toc-number">1.</span> <span class="toc-text">Ciphers and Hashing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ciphers"><span class="toc-number">1.1.</span> <span class="toc-text">Ciphers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-are-ciphers"><span class="toc-number">1.1.1.</span> <span class="toc-text">What are ciphers?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Decoding-Ciphers"><span class="toc-number">1.1.2.</span> <span class="toc-text">Decoding Ciphers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hashing-and-Password-Hashing"><span class="toc-number">1.2.</span> <span class="toc-text">Hashing and Password Hashing:</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ciphers-and-Hashing"><span class="toc-number">1.</span> <span class="toc-text">Ciphers and Hashing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ciphers"><span class="toc-number">1.1.</span> <span class="toc-text">Ciphers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-are-ciphers"><span class="toc-number">1.1.1.</span> <span class="toc-text">What are ciphers?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Decoding-Ciphers"><span class="toc-number">1.1.2.</span> <span class="toc-text">Decoding Ciphers:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hashing-and-Password-Hashing"><span class="toc-number">1.2.</span> <span class="toc-text">Hashing and Password Hashing:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-Hashing"><span class="toc-number">1.2.1.</span> <span class="toc-text">What is Hashing?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Identifying-Hashes"><span class="toc-number">1.2.2.</span> <span class="toc-text">Identifying Hashes:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cracking-Hashes"><span class="toc-number">1.2.3.</span> <span class="toc-text">Cracking Hashes:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Building-a-Dictionary"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">Building a Dictionary:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tools-of-the-Trade"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">Tools of the Trade:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#CLI"><span class="toc-number">1.2.3.2.1.</span> <span class="toc-text">CLI:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#GUI"><span class="toc-number">1.2.3.2.2.</span> <span class="toc-text">GUI:</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -160,20 +160,79 @@
     - Hex
     - Baconian
     - And more!</code></pre>
-<h3 id="Decoding-Ciphers"><a href="#Decoding-Ciphers" class="headerlink" title="Decoding Ciphers"></a>Decoding Ciphers</h3><ul>
+<h3 id="Decoding-Ciphers"><a href="#Decoding-Ciphers" class="headerlink" title="Decoding Ciphers:"></a>Decoding Ciphers:</h3><ul>
 <li>Methods:<ul>
 <li>Scripting (Python, BASH, etc.)</li>
 <li>Through the Web:<ul>
-<li>[Rapidtables] (<a target="_blank" rel="noopener" href="https://bit.ly/2nqHKBM">https://bit.ly/2nqHKBM</a>)</li>
-<li>[Rumkin] (<a target="_blank" rel="noopener" href="https://bit.ly/1tgtYh0">https://bit.ly/1tgtYh0</a>)</li>
-<li>[CyberChef] (<a target="_blank" rel="noopener" href="https://gchq.github.io/CyberChef/">https://gchq.github.io/CyberChef/</a>)</li>
+<li><a target="_blank" rel="noopener" href="https://bit.ly/2nqHKBM">Rapidtables</a></li>
+<li><a target="_blank" rel="noopener" href="https://bit.ly/1tgtYh0">Rumkin</a></li>
+<li><a target="_blank" rel="noopener" href="https://gchq.github.io/CyberChef/">CyberChef</a></li>
 <li><a href="">Luke’s Site</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="Hashing-and-Password-Hashing"><a href="#Hashing-and-Password-Hashing" class="headerlink" title="Hashing and Password Hashing:"></a>Hashing and Password Hashing:</h2><p><img src="source/images/dictionary-attack.jpg" alt="Dictionary Attack Meme"></p>
+<h2 id="Hashing-and-Password-Hashing"><a href="#Hashing-and-Password-Hashing" class="headerlink" title="Hashing and Password Hashing:"></a>Hashing and Password Hashing:</h2><p><img src="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/images/dictionary-attack.jpg" alt="Dictionary Attack Meme"></p>
+<h3 id="What-is-Hashing"><a href="#What-is-Hashing" class="headerlink" title="What is Hashing?"></a>What is Hashing?</h3><ul>
+<li>Short Answer: a more secure cipher that is irreversible</li>
+<li>Long Answer: It’s a way to remap the values of a string for secure transmission and file integrity (think of computer forensics)<br>Example Hashes: see the crypto.zip file “hashSignatures.txt”</li>
+<li>How to use file integrity: <code>md5sum &lt;file&gt;</code>,<br><code>sha[1, 256, 384, 512]sum &lt;file&gt;</code><ul>
+<li>Example - ParrotOS md5 checksum<ul>
+<li>Parrot Security 4.7 x64 (iso) - 97b80f3f05cb48aab61c59586e11a49a</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>How to Calculate Hashes: <a target="_blank" rel="noopener" href="https://bit.ly/2IwTZJ8">https://bit.ly/2IwTZJ8</a></li>
+</ul>
+<h3 id="Identifying-Hashes"><a href="#Identifying-Hashes" class="headerlink" title="Identifying Hashes:"></a>Identifying Hashes:</h3><ul>
+<li>via CLI: <code>hash-identifier &lt;single hash&gt;</code></li>
+<li>via <a target="_blank" rel="noopener" href="https://bit.ly/2p9t9zf">Web</a></li>
+<li>You can put hashes of the same type in a file and crack all at once</li>
+</ul>
+<h3 id="Cracking-Hashes"><a href="#Cracking-Hashes" class="headerlink" title="Cracking Hashes:"></a>Cracking Hashes:</h3><h4 id="Building-a-Dictionary"><a href="#Building-a-Dictionary" class="headerlink" title="Building a Dictionary:"></a>Building a Dictionary:</h4><ul>
+<li>Included dictionary with Kali and Parrot: RockYou.txt: /usr/share/wordlists<ul>
+<li>Note: you need to use gunzip rockyou.txt.gz and then cp rockyou.txt to a directory that is easy to access to you</li>
+</ul>
+</li>
+<li>Create your own:<ul>
+<li>Crunch (no mask): <code>crunch &lt;min&gt; &lt;max&gt; [charset] &gt;&gt; output.txt</code></li>
+</ul>
+</li>
+<li>Crunch (w/ mask): <code>crunch &lt;min&gt; &lt;max&gt; -t String-txt-@,%^ &gt;&gt; output.txt</code><ul>
+<li>@ = lowercase letters</li>
+<li>, (comma) = uppercase letters</li>
+<li>% = numbers</li>
+<li>^ = symbols</li>
+</ul>
+</li>
+<li>Cewl: <code>cewl -d 0 &lt;url&gt; &gt;&gt; output.txt</code></li>
+<li>SecLists: <code>git clone https://github.com/danielmiessler/SecLists.git</code></li>
+</ul>
+<h4 id="Tools-of-the-Trade"><a href="#Tools-of-the-Trade" class="headerlink" title="Tools of the Trade:"></a>Tools of the Trade:</h4><h5 id="CLI"><a href="#CLI" class="headerlink" title="CLI:"></a>CLI:</h5><ul>
+<li>Straight Attack: <code>sudo hashcat -a &lt;attack type&gt; -m &lt;hash num&gt; hashes.txt ~/path/to/dictionary (or dictionary file if working within the same directory) --show &gt;&gt; cracked.txt</code><ul>
+<li>Note from experience: run hashcat once before using the –show in order to crack hashes and outputting cracked hash </li>
+</ul>
+</li>
+<li>Combination: <code>sudo hashcat -a &lt;attack type&gt; -m &lt;hash num&gt; hashes.txt /path/to/dictionary1 /path/to/dictionary2 (or dictionary file if working within the same directory) --show &gt;&gt; cracked.txt</code></li>
+<li>John the Ripper (john –list=formats)<br>Password file: <code>sudo --format=&lt;hashtype&gt; john hashes.txt MD5 = raw-md5</code><ul>
+<li>Zip: <code>zip2john &lt;file&gt;.zip &gt;&gt; johnhash.txt</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="GUI"><a href="#GUI" class="headerlink" title="GUI:"></a>GUI:</h5><ul>
+<li>NTLM via GUI</li>
+<li>Applications → Pentesting → Password Attacks → Local attacks → Ophcrack</li>
+<li>Need to download <a target="_blank" rel="noopener" href="https://bit.ly/2mG7mhs">ophcrack tables</a><ul>
+<li>Just as an FYI, these tables can take up a lot of storage</li>
+</ul>
+</li>
+<li>To load in tables: Tables → Select Table → Find where its installed → Select &amp; hit Ok<ul>
+<li>Note: you will have to do this every time you use ophcrack</li>
+</ul>
+</li>
+</ul>
 
   </div>
 </article>
@@ -201,7 +260,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ciphers-and-Hashing"><span class="toc-number">1.</span> <span class="toc-text">Ciphers and Hashing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ciphers"><span class="toc-number">1.1.</span> <span class="toc-text">Ciphers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-are-ciphers"><span class="toc-number">1.1.1.</span> <span class="toc-text">What are ciphers?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Decoding-Ciphers"><span class="toc-number">1.1.2.</span> <span class="toc-text">Decoding Ciphers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hashing-and-Password-Hashing"><span class="toc-number">1.2.</span> <span class="toc-text">Hashing and Password Hashing:</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ciphers-and-Hashing"><span class="toc-number">1.</span> <span class="toc-text">Ciphers and Hashing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ciphers"><span class="toc-number">1.1.</span> <span class="toc-text">Ciphers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-are-ciphers"><span class="toc-number">1.1.1.</span> <span class="toc-text">What are ciphers?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Decoding-Ciphers"><span class="toc-number">1.1.2.</span> <span class="toc-text">Decoding Ciphers:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hashing-and-Password-Hashing"><span class="toc-number">1.2.</span> <span class="toc-text">Hashing and Password Hashing:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-Hashing"><span class="toc-number">1.2.1.</span> <span class="toc-text">What is Hashing?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Identifying-Hashes"><span class="toc-number">1.2.2.</span> <span class="toc-text">Identifying Hashes:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cracking-Hashes"><span class="toc-number">1.2.3.</span> <span class="toc-text">Cracking Hashes:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Building-a-Dictionary"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">Building a Dictionary:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tools-of-the-Trade"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">Tools of the Trade:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#CLI"><span class="toc-number">1.2.3.2.1.</span> <span class="toc-text">CLI:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#GUI"><span class="toc-number">1.2.3.2.2.</span> <span class="toc-text">GUI:</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
