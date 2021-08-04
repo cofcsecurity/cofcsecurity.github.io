@@ -50,6 +50,8 @@ Example Hashes: see the crypto.zip file “hashSignatures.txt”
 
 ### Cracking Hashes:
 
+![Dictionary Attack Meme](https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/dictionary-attack.png)
+
 #### Building a Dictionary:
 
 - Included dictionary with Kali and Parrot: RockYou.txt: /usr/share/wordlists
