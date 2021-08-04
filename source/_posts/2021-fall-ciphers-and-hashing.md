@@ -5,7 +5,11 @@ date: 2021-08-03
 
 # Ciphers and Hashing
 
+**[Matrials for the Meeting](https://github.com/cofcsecurity/Presentations/blob/master/Presentation-Materials/crypto.zip?raw=true)**
+
 ## Ciphers
+
+**Practice: cipherChallenge.txt**
 
 ### What are ciphers?
 - Cipher- a method to transform text to hide its meaning (Merriam-Webster def. 2)
@@ -30,6 +34,8 @@ date: 2021-08-03
         - [Boxentriq](https://www.boxentriq.com/code-breaking)
 
 ## Hashing and Password Hashing:
+
+**Practice: hashChallenge.txt**
 
 ### What is Hashing?
 
