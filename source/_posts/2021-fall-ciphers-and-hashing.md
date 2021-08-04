@@ -40,7 +40,7 @@ Example Hashes: see the crypto.zip file “hashSignatures.txt”
 `sha[1, 256, 384, 512]sum <file>`
     - Example - ParrotOS md5 checksum
         - Parrot Security 4.7 x64 (iso) - 97b80f3f05cb48aab61c59586e11a49a
-- How to Calculate Hashes: https://bit.ly/2IwTZJ8
+- [How to Calculate Hashes](https://bit.ly/2IwTZJ8)
 
 ### Identifying Hashes:
 
@@ -50,7 +50,7 @@ Example Hashes: see the crypto.zip file “hashSignatures.txt”
 
 ### Cracking Hashes:
 
-![Dictionary Attack Meme](images/dictionary-attack.png)
+![Dictionary Attack Meme](https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/dictionary-attack.png?raw=true)
 
 #### Building a Dictionary:
 
