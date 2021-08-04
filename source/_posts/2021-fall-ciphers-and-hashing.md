@@ -50,7 +50,7 @@ Example Hashes: see the crypto.zip file “hashSignatures.txt”
 
 ### Cracking Hashes:
 
-![Dictionary Attack Meme](https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/dictionary-attack.png)
+![Dictionary Attack Meme](images/dictionary-attack.png)
 
 #### Building a Dictionary:
 
