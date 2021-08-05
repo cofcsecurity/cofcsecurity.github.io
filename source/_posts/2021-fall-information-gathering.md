@@ -64,7 +64,7 @@ date: 2021-08-05
 
 #### `nslookup` and `host`
 
-- [Test Domain](zonetransfer.me)
+- [Test Domain](https://zonetransfer.me)
 - host <hostname> (or the ip)
 - host -t <record type> <hostname>
 - host -l <hostname> <DNS nameserver>
