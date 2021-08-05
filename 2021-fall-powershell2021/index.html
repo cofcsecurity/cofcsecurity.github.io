@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="PowershellAll files can be found here Get Powershell What is powershell?: Microsoft’s answer to the Linux terminal, but more Object-Oriented (OOP)  Method 1: Windows VM or Host OS Method 2:  Ubuntu VM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Powershell">
+<meta property="og:url" content="http://cofcsecurity.github.io/2021-fall-powershell2021/">
+<meta property="og:site_name" content="CofC Cybersecurity Club">
+<meta property="og:description" content="PowershellAll files can be found here Get Powershell What is powershell?: Microsoft’s answer to the Linux terminal, but more Object-Oriented (OOP)  Method 1: Windows VM or Host OS Method 2:  Ubuntu VM">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-08-05T04:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-05T18:20:36.134Z">
+<meta property="article:author" content="CofC Cybersecurity Club">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Powershell</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="CofC Cybersecurity Club" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/schedule/">Schedule</a></li>
+         
+          <li><a href="/archives/">Posts</a></li>
+         
+          <li><a href="/resources/">Resources</a></li>
+         
+          <li><a href="/history/">History</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2021-fall-information-gathering2021/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2021-fall-image-forensics2021/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://cofcsecurity.github.io/2021-fall-powershell2021/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&text=Powershell"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&title=Powershell"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&is_video=false&description=Powershell"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Powershell&body=Check out this article: http://cofcsecurity.github.io/2021-fall-powershell2021/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&title=Powershell"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&title=Powershell"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&title=Powershell"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&title=Powershell"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&name=Powershell&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://cofcsecurity.github.io/2021-fall-powershell2021/&t=Powershell"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Powershell"><span class="toc-number">1.</span> <span class="toc-text">Powershell</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Get-Powershell"><span class="toc-number">1.1.</span> <span class="toc-text">Get Powershell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Powershell-Basics"><span class="toc-number">1.2.</span> <span class="toc-text">Powershell Basics:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables"><span class="toc-number">1.2.1.</span> <span class="toc-text">Variables:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Operations"><span class="toc-number">1.2.2.</span> <span class="toc-text">Operations:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Addition"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">Addition:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Equality"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">Equality:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Booleans"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">Booleans:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditionals"><span class="toc-number">1.2.3.</span> <span class="toc-text">Conditionals:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loops"><span class="toc-number">1.2.4.</span> <span class="toc-text">Loops:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Functions"><span class="toc-number">1.2.5.</span> <span class="toc-text">Functions:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Cool-Stuff"><span class="toc-number">1.3.</span> <span class="toc-text">The Cool Stuff</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-Listener"><span class="toc-number">1.3.1.</span> <span class="toc-text">TCP Listener</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Port-Scanning"><span class="toc-number">1.3.2.</span> <span class="toc-text">Port Scanning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Downgrading-Powershell"><span class="toc-number">1.3.3.</span> <span class="toc-text">Downgrading Powershell:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Time-Stomping"><span class="toc-number">1.3.4.</span> <span class="toc-text">Time Stomping:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Duck%E2%80%A6"><span class="toc-number">1.4.</span> <span class="toc-text">The Duck…</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#General"><span class="toc-number">1.4.1.</span> <span class="toc-text">General:</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Powershell
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">CofC Cybersecurity Club</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-08-05T04:00:00.000Z" itemprop="datePublished">2021-08-05</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Powershell"><a href="#Powershell" class="headerlink" title="Powershell"></a>Powershell</h1><p><strong>All files can be found <a target="_blank" rel="noopener" href="https://github.com/cofcsecurity/Presentations/tree/master/psResources">here</a></strong></p>
+<h2 id="Get-Powershell"><a href="#Get-Powershell" class="headerlink" title="Get Powershell"></a>Get Powershell</h2><ul>
+<li>What is powershell?: Microsoft’s answer to the Linux terminal, but more Object-Oriented (OOP) </li>
+<li>Method 1:<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines">Windows VM</a> or Host OS</li>
+<li>Method 2: <ul>
+<li>Ubuntu VM or Mac with Powershell installed??? (aka PFM)</li>
+<li>Uses Powershell core (and doesn’t need docker, just homebrew)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Powershell-Basics"><a href="#Powershell-Basics" class="headerlink" title="Powershell Basics:"></a>Powershell Basics:</h2><h3 id="Variables"><a href="#Variables" class="headerlink" title="Variables:"></a>Variables:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$var1 &#x3D; 5</span><br><span class="line">$var2 &#x3D; “55”</span><br></pre></td></tr></table></figure>
+
+<h3 id="Operations"><a href="#Operations" class="headerlink" title="Operations:"></a>Operations:</h3><h4 id="Addition"><a href="#Addition" class="headerlink" title="Addition:"></a>Addition:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$var1 + $var2</span><br><span class="line">$var2 + $var1</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Why are they different?</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var ++</span><br><span class="line">var +&#x3D; 5 </span><br></pre></td></tr></table></figure>
+
+<h4 id="Equality"><a href="#Equality" class="headerlink" title="Equality:"></a>Equality:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-eq: equals</span><br><span class="line">-ne: not equal to</span><br><span class="line">-ceq: case sensitive comparison</span><br><span class="line">-gt: greater than</span><br><span class="line">-gte: greater than or equal to</span><br><span class="line">-lt: less than </span><br><span class="line">-lte: less than or equal to</span><br></pre></td></tr></table></figure>
+
+<h4 id="Booleans"><a href="#Booleans" class="headerlink" title="Booleans:"></a>Booleans:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-and </span><br><span class="line">-or</span><br></pre></td></tr></table></figure>
+
+<h3 id="Conditionals"><a href="#Conditionals" class="headerlink" title="Conditionals:"></a>Conditionals:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">If (&lt;condition&gt;)&#123;</span><br><span class="line">    &lt;code&#x2F;commands&gt;</span><br><span class="line">&#125;</span><br><span class="line">Else&#123;</span><br><span class="line">    &lt;code&#x2F;commands&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Loops"><a href="#Loops" class="headerlink" title="Loops:"></a>Loops:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$question &#x3D; &quot;Are we there yet?&quot;</span><br><span class="line">$answer &#x3D; &quot;Noooooo!&quot;</span><br><span class="line">for ($i &#x3D; 3; $i -gt 0; $i--)&#123;</span><br><span class="line">    $question</span><br><span class="line">    sleep 2</span><br><span class="line">&#125;</span><br><span class="line">Write-Output &quot;&#96;n$answer&quot;</span><br><span class="line">**(&#96;n) &#x3D; new line, not \n like python&#x2F;java&#x2F;c</span><br><span class="line"></span><br><span class="line">$services &#x3D; get-service</span><br><span class="line">ForEach ($thing in $services)&#123;</span><br><span class="line">    $thing.name + &quot; : &quot; + $thing.status</span><br><span class="line">&#125;</span><br><span class="line">Write-Output &quot;&#96;nThe last service is $($thing.name)&quot; </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$food &#x3D; &#39;Beans&#39;, &#39;Greens&#39;, &#39;Potatoes&#39;, &#39;Lamb&#39;, &#39;Rams&#39;, &#39;Hogs&#39;, &#39;Dogs&#39;</span><br><span class="line">for ($i &#x3D; 5; $i -gt 0; $i--)&#123;</span><br><span class="line">    foreach($item in $food)&#123;</span><br><span class="line">        Write-Output &quot;I got $item &quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Write-Output &quot;&#96;nYou name it!&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while ($true)&#123;</span><br><span class="line">    test-connection 127.0.0.1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$rabbits &#x3D; 2</span><br><span class="line">Do&#123;</span><br><span class="line">    Write-output &quot;We now have $rabbits rabbits!&quot;</span><br><span class="line">    $rabbits *&#x3D; 2</span><br><span class="line">&#125;</span><br><span class="line">While ($rabbits -lt 10000)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$i &#x3D; 0</span><br><span class="line">while($i -lt 999)&#123;</span><br><span class="line">    $i++</span><br><span class="line">    $i</span><br><span class="line">&#125;</span><br><span class="line">Write-Host &quot;&#96;nCount complete - We have counted up to $i&quot; -ForegroundColor Cyan</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>AKA the original for-loop or you can call the for-loop a wannabe while loop, either one works with me</strong></li>
+</ul>
+<h3 id="Functions"><a href="#Functions" class="headerlink" title="Functions:"></a>Functions:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Function &lt;name&gt;&#123;</span><br><span class="line">    Function ($parameter)&#123;</span><br><span class="line">    &lt;Insert code here&gt;</span><br><span class="line">    &#125;</span><br><span class="line">    &lt;Insert code here&gt;</span><br><span class="line">&#125;</span><br><span class="line">&lt;name&gt; -parameter 1</span><br></pre></td></tr></table></figure>
+
+<h2 id="The-Cool-Stuff"><a href="#The-Cool-Stuff" class="headerlink" title="The Cool Stuff"></a>The Cool Stuff</h2><h3 id="TCP-Listener"><a href="#TCP-Listener" class="headerlink" title="TCP Listener"></a>TCP Listener</h3><ul>
+<li>Idea: we monitor someone’s computer and we get a notification when they open an application</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">function WMI_Subscription&#123;</span><br><span class="line"></span><br><span class="line">function server($port)&#123;</span><br><span class="line">    $Tcplistener &#x3D; New-object System.Net.Sockets.TcpListener $port</span><br><span class="line">    $Tcplistener.Start()</span><br><span class="line">    Write-host &quot;[-] &quot; -ForegroundColor green -NoNewline; Write-Host &quot;Listening: 0.0.0.0:$port&quot; -ForegroundColor cyan</span><br><span class="line">    $TcpClient &#x3D; $Tcplistener.AcceptTcpClient()</span><br><span class="line">    $remoteclient &#x3D; $TcpClient.Client.RemoteEndPoint.Address.IPAddressToString</span><br><span class="line">    Write-Host &quot;[-] &quot; -ForegroundColor green -NoNewline; Write-Host &quot;New connection: $remoteclient&quot; -ForegroundColor Cyan</span><br><span class="line"></span><br><span class="line">    $TcpNetworkstream &#x3D; $TCPClient.GetStream()</span><br><span class="line">    $Receivebuffer &#x3D; New-Object Byte[] $TcpClient.ReceiveBufferSize</span><br><span class="line">    $encodingtype &#x3D; New-Object System.Text.ASCIIEncoding</span><br><span class="line">    while ($TCPClient.Connected)&#123;</span><br><span class="line">        $Read &#x3D; $TcpNetworkstream.Read($Receivebuffer, 0, $Receivebuffer.Length)          </span><br><span class="line">            [Array]$Bytesreceived +&#x3D; $Receivebuffer[0..($Read -1)]</span><br><span class="line">            [Array]::Clear($Receivebuffer, 0, $Read)</span><br><span class="line"></span><br><span class="line">            $ScriptBlock &#x3D; [ScriptBlock]::Create($EncodingType.GetString($Bytesreceived))</span><br><span class="line">            $ScriptBlock</span><br><span class="line">            $TcpNetworkstream.Dispose(); $Tcpclient.Dispose(), $Tcplistener.Stop()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">server -port 6602</span><br><span class="line"></span><br><span class="line"># Temp WMI... dies when the process terminates</span><br><span class="line"></span><br><span class="line">Get-Process -Name notepad  -ErrorAction SilentlyContinue | Stop-Process</span><br><span class="line"></span><br><span class="line">Register-CimIndicationEvent -Query &quot;Select * from __InstanceCreationEvent within 15 where targetInstance isa &#39;win32_process&#39; and (targetinstance.name &#x3D; &#39;notepad.exe&#39; OR targetinstance.name &#x3D; &#39;wordpad.exe&#39;)&quot; &#96;</span><br><span class="line">    -SourceIdentifier &quot;trigger&quot; -Action&#123;Write-Output &quot;$(get-date) - Temp WMI Register Executed Successfully&quot; | Out-File $env:USERPROFILE\Desktop\logger.txt -Append&#125;</span><br><span class="line"></span><br><span class="line">Start-Process notepad</span><br><span class="line">Get-Content &quot;$env:USERPROFILE\Desktop\logger.txt&quot;</span><br><span class="line">Get-EventSubscriber</span><br><span class="line">Unregister-Event -SourceIdentifier &quot;trigger&quot;</span><br><span class="line"></span><br><span class="line">Register-CimIndicationEvent -Query &quot;Select * from __instanceModificationEvent within 15 where targetInstance isa &#39;win32_Service&#39;&quot; &#96;</span><br><span class="line">    -SourceIdentifier &quot;trigger2&quot; -Action&#123;Write-Output &quot;$(get-date) - Temp WMI Register Executed Successfully&quot; | Out-File $env:USERPROFILE\Desktop\logger2.txt -Append&#125;</span><br><span class="line"></span><br><span class="line">Restart-Service -Name BITS</span><br><span class="line">Get-Content &quot;$env:USERPROFILE\Desktop\logger2.txt&quot;</span><br><span class="line">Unregister-Event -SourceIdentifier &quot;trigger2&quot;</span><br><span class="line"></span><br><span class="line">Register-WmiEvent -Query &quot;Select * from __InstanceoperationEvent within 20 where targetinstance ISA &#39;win32_process&#39; AND targetinstance.name&#x3D;&#39;lsass.exe&#39;&quot; -SourceIdentifier &quot;beacon&quot; &#96;</span><br><span class="line">    -Action&#123;</span><br><span class="line">        $socket &#x3D; new-object System.Net.Sockets.TcpClient(&quot;127.0.0.1&quot;, &quot;6602&quot;)</span><br><span class="line">        $data &#x3D; [System.Text.Encoding]::ASCII.GetBytes(&quot;This is a test&quot;)</span><br><span class="line">        $stream &#x3D; $socket.GetStream()</span><br><span class="line">        $stream.Write($data, 0, $data.Length)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">Unregister-Event -SourceIdentifier &quot;beacon&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Get-WmiObject -Namespace root&#x2F;cimv2 -Class win32_localtime</span><br><span class="line"></span><br><span class="line">Register-WmiEvent -Query &quot;Select * from __InstanceModificationEvent within 30 WHERE TargetInstance ISA &#39;Win32_LocalTime&#39; AND targetinstance.hour &#x3D; 20 AND targetinstance.minute &#x3D; 42 group within 30&quot; -SourceIdentifier &quot;beacon2&quot; &#96;</span><br><span class="line">    -Action&#123;</span><br><span class="line">        $socket &#x3D; new-object System.Net.Sockets.TcpClient(&quot;127.0.0.1&quot;, &quot;6602&quot;)</span><br><span class="line">        $data &#x3D; [System.Text.Encoding]::ASCII.GetBytes(&quot;This is a test&quot;)</span><br><span class="line">        $stream &#x3D; $socket.GetStream()</span><br><span class="line">        $stream.Write($data, 0, $data.Length)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">Unregister-Event -SourceIdentifier &quot;beacon2&quot;</span><br><span class="line"></span><br><span class="line">Get-Job</span><br></pre></td></tr></table></figure>
+<h3 id="Port-Scanning"><a href="#Port-Scanning" class="headerlink" title="Port Scanning"></a>Port Scanning</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">$ports &#x3D; 1..100</span><br><span class="line">$IP &#x3D; &quot;192.168.0.185&quot;</span><br><span class="line">$scan &#x3D; foreach($port in $ports)&#123;</span><br><span class="line">    try&#123;</span><br><span class="line">        $portStatus &#x3D; new-object Net.Sockets.TcpClient($IP, $port)</span><br><span class="line">        [pscustomobject]@&#123;</span><br><span class="line">            RemoteAddress &#x3D; $IP</span><br><span class="line">            RemotePort &#x3D; $port</span><br><span class="line">            TcpTestSucceeded &#x3D;  $portStatus.connected</span><br><span class="line">        &#125;</span><br><span class="line">       </span><br><span class="line">        $portStatus.Close()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    catch&#123;</span><br><span class="line">        [pscustomobject]@&#123;</span><br><span class="line">            RemoteAddress &#x3D; $IP</span><br><span class="line">            RemotePort &#x3D; $port</span><br><span class="line">            TcpTestSucceeded &#x3D; &#39;False&#39;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$scan</span><br></pre></td></tr></table></figure>
+
+<h3 id="Downgrading-Powershell"><a href="#Downgrading-Powershell" class="headerlink" title="Downgrading Powershell:"></a>Downgrading Powershell:</h3><ul>
+<li>Why would we do this??</li>
+<li>How to downgrade: <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if ($PSVersionTable.PSVersion -gt [Version]&quot;2.0&quot;) &#123; </span><br><span class="line">powershell -Version 2 -File $MyInvocation.MyCommand.Definition exit &#125; </span><br><span class="line">&#39;run some code&#39; Read-Host -Prompt &quot;Scripts Completed : Press any key to exit&quot;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="Time-Stomping"><a href="#Time-Stomping" class="headerlink" title="Time Stomping:"></a>Time Stomping:</h3><ul>
+<li>What is it?</li>
+<li>Why is it important?</li>
+<li>Why you shouldn’t do it to your professors :)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">file &#x3D; &quot;$env:USERPROFILE\desktop\myfile.txt&quot;</span><br><span class="line">Get-Item $file | format-list *time</span><br><span class="line">(Get-Item -path $file).LastWriteTimeutc &#x3D; Get-Date</span><br><span class="line">(Get-Item -path $file).LastWriteTime &#x3D; (Get-Date).AddDays(-270)</span><br><span class="line">(Get-Item -path $file).CreationTime &#x3D; &quot;8&#x2F;8&#x2F;2018 09:00:00 PM&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="The-Duck…"><a href="#The-Duck…" class="headerlink" title="The Duck…"></a>The Duck…</h2><figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/IdWhkGD-ojM" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
+
+<h3 id="General"><a href="#General" class="headerlink" title="General:"></a>General:</h3><ul>
+<li>What is it?</li>
+<li>Why should you know about it?</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/schedule/">Schedule</a></li>
+         
+          <li><a href="/archives/">Posts</a></li>
+         
+          <li><a href="/resources/">Resources</a></li>
+         
+          <li><a href="/history/">History</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Powershell"><span class="toc-number">1.</span> <span class="toc-text">Powershell</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Get-Powershell"><span class="toc-number">1.1.</span> <span class="toc-text">Get Powershell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Powershell-Basics"><span class="toc-number">1.2.</span> <span class="toc-text">Powershell Basics:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables"><span class="toc-number">1.2.1.</span> <span class="toc-text">Variables:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Operations"><span class="toc-number">1.2.2.</span> <span class="toc-text">Operations:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Addition"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">Addition:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Equality"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">Equality:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Booleans"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">Booleans:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditionals"><span class="toc-number">1.2.3.</span> <span class="toc-text">Conditionals:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loops"><span class="toc-number">1.2.4.</span> <span class="toc-text">Loops:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Functions"><span class="toc-number">1.2.5.</span> <span class="toc-text">Functions:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Cool-Stuff"><span class="toc-number">1.3.</span> <span class="toc-text">The Cool Stuff</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-Listener"><span class="toc-number">1.3.1.</span> <span class="toc-text">TCP Listener</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Port-Scanning"><span class="toc-number">1.3.2.</span> <span class="toc-text">Port Scanning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Downgrading-Powershell"><span class="toc-number">1.3.3.</span> <span class="toc-text">Downgrading Powershell:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Time-Stomping"><span class="toc-number">1.3.4.</span> <span class="toc-text">Time Stomping:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Duck%E2%80%A6"><span class="toc-number">1.4.</span> <span class="toc-text">The Duck…</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#General"><span class="toc-number">1.4.1.</span> <span class="toc-text">General:</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://cofcsecurity.github.io/2021-fall-powershell2021/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&text=Powershell"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&title=Powershell"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&is_video=false&description=Powershell"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Powershell&body=Check out this article: http://cofcsecurity.github.io/2021-fall-powershell2021/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&title=Powershell"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&title=Powershell"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&title=Powershell"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&title=Powershell"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://cofcsecurity.github.io/2021-fall-powershell2021/&name=Powershell&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://cofcsecurity.github.io/2021-fall-powershell2021/&t=Powershell"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2020
+    CofC Cybersecurity Club
+  </div>
+  <div class="footer-center">
+    <a target="_blank" rel="noopener" href="https://github.com/cofcsecurity/"><i class="fab fa-github"></i></a>
+    <a target="_blank" rel="noopener" href="https://discord.gg/uBCwjeG"><i class="fab fa-discord"></i></a>
+    <a target="_blank" rel="noopener" href="http://cofcsecurity.slack.com"><i class="fab fa-slack"></i></a>
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/schedule/">Schedule</a></li>
+        
+          <li><a href="/archives/">Posts</a></li>
+        
+          <li><a href="/resources/">Resources</a></li>
+        
+          <li><a href="/history/">History</a></li>
+        
+      </ul>
+      <br>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
