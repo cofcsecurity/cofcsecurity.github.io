@@ -278,3 +278,27 @@ Get-Item $file | format-list *time
 
 - What is it?
 - Why should you know about it?
+
+### Use Cases:
+
+- Script parameters:
+    1. Computer information
+    2. USB Information
+    3. Installed Updates
+    4. Network Information
+    5. Network Scan
+    6. Port Scan
+    8. Saved in C:\Users
+- **Can be used to get a reverse shell**
+
+### How to get your hands on one: 
+
+- [Official link](https://shop.hak5.org/collections/physical-access/products/usb-rubber-ducky-deluxe)
+- [Make your own](https://www.pentestingshop.com/pentesting/make-your-own-usb-rubber-ducky-using-a-normal-usb-stick/)
+
+## Practice
+
+- [Under the Wire (Sentry)](https://underthewire.tech/)
+- [PoSh Hunter](https://posh-hunter.com/)
+- [Fernando Tomlinson's Website](https://posh-hunter.com/)
+- [Fernando Tomlinson's Github](https://github.com/WiredPulse)
