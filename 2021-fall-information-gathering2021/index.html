@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Information GatheringGoogle Dorks  Answer: The best way to refine Google &amp; database searches for OSINT (&amp; schoolwork)! Cheatsheet Common Vulnerabilities and Exposures (CVEs) Practice: What is">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Information Gathering">
+<meta property="og:url" content="http://cofcsecurity.github.io/2021-fall-information-gathering2021/">
+<meta property="og:site_name" content="CofC Cybersecurity Club">
+<meta property="og:description" content="Information GatheringGoogle Dorks  Answer: The best way to refine Google &amp; database searches for OSINT (&amp; schoolwork)! Cheatsheet Common Vulnerabilities and Exposures (CVEs) Practice: What is">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/google.png?raw=true">
+<meta property="og:image" content="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/dns-query.png?raw=true">
+<meta property="article:published_time" content="2021-08-05T04:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-05T16:47:43.912Z">
+<meta property="article:author" content="CofC Cybersecurity Club">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/google.png?raw=true">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Information Gathering</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="CofC Cybersecurity Club" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/schedule/">Schedule</a></li>
+         
+          <li><a href="/archives/">Posts</a></li>
+         
+          <li><a href="/resources/">Resources</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2021-fall-image-forensics2021/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://cofcsecurity.github.io/2021-fall-information-gathering2021/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&text=Information Gathering"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&title=Information Gathering"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&is_video=false&description=Information Gathering"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Information Gathering&body=Check out this article: http://cofcsecurity.github.io/2021-fall-information-gathering2021/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&title=Information Gathering"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&title=Information Gathering"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&title=Information Gathering"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&title=Information Gathering"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&name=Information Gathering&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&t=Information Gathering"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Information-Gathering"><span class="toc-number">1.</span> <span class="toc-text">Information Gathering</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Google-Dorks"><span class="toc-number">1.1.</span> <span class="toc-text">Google Dorks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Network-Recon"><span class="toc-number">1.2.</span> <span class="toc-text">Network Recon</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap"><span class="toc-number">1.2.1.</span> <span class="toc-text">nmap:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-Useful-Tools"><span class="toc-number">1.2.2.</span> <span class="toc-text">Other Useful Tools:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS-Recon"><span class="toc-number">1.2.3.</span> <span class="toc-text">DNS Recon:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting-DNS-Info"><span class="toc-number">1.2.4.</span> <span class="toc-text">Getting DNS Info</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#nslookup-and-host"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">nslookup and host</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dig"><span class="toc-number">1.2.4.2.</span> <span class="toc-text">dig</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Automated-Information-Gathering-Maltego"><span class="toc-number">1.2.5.</span> <span class="toc-text">Automated Information Gathering: Maltego</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Information Gathering
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">CofC Cybersecurity Club</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-08-05T04:00:00.000Z" itemprop="datePublished">2021-08-05</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Information-Gathering"><a href="#Information-Gathering" class="headerlink" title="Information Gathering"></a>Information Gathering</h1><h2 id="Google-Dorks"><a href="#Google-Dorks" class="headerlink" title="Google Dorks"></a>Google Dorks</h2><p><img src="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/google.png?raw=true" alt="Google Dorks"></p>
+<ul>
+<li>Answer: The best way to refine Google &amp; database searches for OSINT (&amp; schoolwork)!</li>
+<li><a target="_blank" rel="noopener" href="https://www.sans.org/posters/google-hacking-and-defense-cheat-sheet/">Cheatsheet</a></li>
+<li>Common Vulnerabilities and Exposures (<a target="_blank" rel="noopener" href="https://cve.mitre.org/">CVEs</a>)</li>
+<li>Practice:<ol>
+<li>What is the CVE of the original POODLE attack?</li>
+<li>What version of VSFTPD contained the smiley face backdoor?</li>
+<li>What was the first 1.0.1 version of OpenSSL that was NOT vulnerable to heartbleed?</li>
+<li>What was the original RFC number that described Telnet?</li>
+<li>How large (in bytes) was the SQL Slammer worm?</li>
+<li>Samy is my…</li>
+</ol>
+</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/cofcsecurity/Presentations/blob/master/Answers/osint.md">Answers</a></li>
+</ul>
+<h2 id="Network-Recon"><a href="#Network-Recon" class="headerlink" title="Network Recon"></a>Network Recon</h2><ul>
+<li>Grab your current IP and Subnet: <code>ip addr show | grep &lt;network interface&gt; | grep inet | awk &#39;&#123;print $2&#125;&#39;</code> </li>
+</ul>
+<h3 id="nmap"><a href="#nmap" class="headerlink" title="nmap:"></a>nmap:</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://nmap.org/book/man.html">Documentation</a></li>
+<li>Usage: <code>nmap -&lt;options&gt; &lt;ip/subnet or address&gt;</code></li>
+<li>Common Options:<ul>
+<li><code>-sn</code> - ping scan (essentially is ping 8.8.8.8 via CLI)</li>
+<li><code>-sS</code> - SYN or Normal scan</li>
+<li><code>-sU</code> - UDP scan</li>
+<li><code>-p&lt;start num-end num&gt;</code><ul>
+<li>Default is 1-1024</li>
+<li>Max port = 65535</li>
+</ul>
+</li>
+<li><code>-sV</code> - list all the services (+ version) running on the target</li>
+<li><code>-O</code> - OS detection</li>
+<li><code>-Pn</code> - treat all hosts as up up</li>
+<li><code>-A</code> - runs nmap scripts, -O, -sV, &amp; traceroute</li>
+</ul>
+</li>
+</ul>
+<h3 id="Other-Useful-Tools"><a href="#Other-Useful-Tools" class="headerlink" title="Other Useful Tools:"></a>Other Useful Tools:</h3><ul>
+<li><code>ping &lt;options&gt; &lt;ip address or hostname&gt;</code></li>
+<li><code>traceroute &lt;ip or address&gt;</code> - shows all the hops from your machine to the ip/address</li>
+<li><code>netdiscover -i &lt;interface/subnet&gt;</code></li>
+</ul>
+<h3 id="DNS-Recon"><a href="#DNS-Recon" class="headerlink" title="DNS Recon:"></a>DNS Recon:</h3><p><img src="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/dns-query.png?raw=true" alt="DNS"></p>
+<ul>
+<li>DNS = Domain Name Servers </li>
+<li>Common DNS’s:<ul>
+<li>Google- 8.8.8.8 (8.8.4.4)</li>
+<li>Cloudflare- 1.1.1.1 (1.0.0.1)</li>
+</ul>
+</li>
+<li>Why are they important? - They hold the records for websites and they are the key player for navigating to websites</li>
+<li>Why they are good: they make navigating to websites way easier</li>
+<li>Cons: if you take out a DNS, you effectively cut off access to that part of the internet<ul>
+<li>ex: the Cloudflare DOS (July 2019)*</li>
+</ul>
+</li>
+</ul>
+<h3 id="Getting-DNS-Info"><a href="#Getting-DNS-Info" class="headerlink" title="Getting DNS Info"></a>Getting DNS Info</h3><h4 id="nslookup-and-host"><a href="#nslookup-and-host" class="headerlink" title="nslookup and host"></a><code>nslookup</code> and <code>host</code></h4><ul>
+<li><a href="zonetransfer.me">Test Domain</a></li>
+<li>host <hostname> (or the ip)</li>
+<li>host -t <record type> <hostname></li>
+<li>host -l <hostname> <DNS nameserver></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nslookup </span><br><span class="line">    set type&#x3D; &lt;record type&gt; </span><br><span class="line">    &lt;hostname&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Record types:<ul>
+<li>mx = email (mail exchange)</li>
+<li>a = address</li>
+<li>aaaa = IPV6 address</li>
+<li>ns = name server (aka who is their DNS)</li>
+</ul>
+</li>
+</ul>
+<h4 id="dig"><a href="#dig" class="headerlink" title="dig"></a><code>dig</code></h4><ul>
+<li><code>dig &lt;hostname&gt;</code></li>
+<li><code>dig &lt;hostname&gt; -t [record type]</code></li>
+<li><code>dig &lt;hostname&gt; [record name]</code></li>
+<li><code>dig &lt;hostname&gt; -t [record type] +short</code></li>
+<li><code>dig axfr &lt;hostname&gt; @[name server]</code></li>
+</ul>
+<h3 id="Automated-Information-Gathering-Maltego"><a href="#Automated-Information-Gathering-Maltego" class="headerlink" title="Automated Information Gathering: Maltego"></a>Automated Information Gathering: Maltego</h3><ul>
+<li>Short answer- Tool for automating information gather</li>
+<li>Long answer- this tool uses transforms, or modules, in order to search a specific target for reconnaissance within scope</li>
+<li>CE is free with a bunch of good transforms from Shodan, DNSDB, and others</li>
+<li>Test sites: <a target="_blank" rel="noopener" href="http://www.000webhostapp.com/">www.000webhostapp.com</a> or zonetransfer.me</li>
+</ul>
+<p><strong>I am not responsible for what you do with this tool after you gather the information</strong></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/schedule/">Schedule</a></li>
+         
+          <li><a href="/archives/">Posts</a></li>
+         
+          <li><a href="/resources/">Resources</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Information-Gathering"><span class="toc-number">1.</span> <span class="toc-text">Information Gathering</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Google-Dorks"><span class="toc-number">1.1.</span> <span class="toc-text">Google Dorks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Network-Recon"><span class="toc-number">1.2.</span> <span class="toc-text">Network Recon</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap"><span class="toc-number">1.2.1.</span> <span class="toc-text">nmap:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-Useful-Tools"><span class="toc-number">1.2.2.</span> <span class="toc-text">Other Useful Tools:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS-Recon"><span class="toc-number">1.2.3.</span> <span class="toc-text">DNS Recon:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting-DNS-Info"><span class="toc-number">1.2.4.</span> <span class="toc-text">Getting DNS Info</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#nslookup-and-host"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">nslookup and host</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dig"><span class="toc-number">1.2.4.2.</span> <span class="toc-text">dig</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Automated-Information-Gathering-Maltego"><span class="toc-number">1.2.5.</span> <span class="toc-text">Automated Information Gathering: Maltego</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://cofcsecurity.github.io/2021-fall-information-gathering2021/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&text=Information Gathering"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&title=Information Gathering"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&is_video=false&description=Information Gathering"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Information Gathering&body=Check out this article: http://cofcsecurity.github.io/2021-fall-information-gathering2021/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&title=Information Gathering"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&title=Information Gathering"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&title=Information Gathering"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&title=Information Gathering"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&name=Information Gathering&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://cofcsecurity.github.io/2021-fall-information-gathering2021/&t=Information Gathering"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2020
+    CofC Cybersecurity Club
+  </div>
+  <div class="footer-center">
+    <a target="_blank" rel="noopener" href="https://github.com/cofcsecurity/"><i class="fab fa-github"></i></a>
+    <a target="_blank" rel="noopener" href="https://discord.gg/uBCwjeG"><i class="fab fa-discord"></i></a>
+    <a target="_blank" rel="noopener" href="http://cofcsecurity.slack.com"><i class="fab fa-slack"></i></a>
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/schedule/">Schedule</a></li>
+        
+          <li><a href="/archives/">Posts</a></li>
+        
+          <li><a href="/resources/">Resources</a></li>
+        
+      </ul>
+      <br>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
