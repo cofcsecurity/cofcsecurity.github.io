@@ -7,8 +7,6 @@ date: 2021-08-05
 
 **All files can be found [here](https://github.com/cofcsecurity/Presentations/tree/master/psResources)**
 
-
-
 ## Get Powershell
 
 - What is powershell?: Microsoft’s answer to the Linux terminal, but more Object-Oriented (OOP) 
