@@ -7,7 +7,7 @@ This is a list of industry contacts that interact with out club!
 ___
 1. **SOC Analyst**: Patrick McCabe
 * Company: Cyber Guards USA (Memphis, TN)
-* Specialty: Business Injects
+* Specialty: Business Injects, Linux
 * [Email](mailto:mccabepj@g.cofc.edu)
 * [Github](https://github.com/pmccabe5)
 
@@ -16,3 +16,9 @@ ___
 * Specialty: Windows and Networking
 * [Email](mailto:hinsonsc@g.cofc.edu)
 * [Github](https://github.com/hinsonsc)
+
+3. **Software Engineeer**: Matt Walter
+* Company: greymatter.io (Washington, D.C.)
+* Specialty: Docker, DevOps, Linux
+* [Email](mailto:walterm@g.cofc.edu)
+* [Github](https://github.com/WookieMonkeys)
