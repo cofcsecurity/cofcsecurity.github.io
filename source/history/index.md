@@ -57,11 +57,11 @@ date: 2021-08-02
 - Patrick McCabe
 - Chase Myers
 - Nate Smith
-- Stephen Pappas
+- Casey Wilson
 
 ### Shadow Team
+- Dilyara Meeder
 - Seth Hinson
-- Casey Wilson
 
 ## 2017-2018
 
