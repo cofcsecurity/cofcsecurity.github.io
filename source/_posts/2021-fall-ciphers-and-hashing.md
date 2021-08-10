@@ -91,3 +91,5 @@ MD5 = raw-md5`
     - Just as an FYI, these tables can take up a lot of storage
 - To load in tables: Tables → Select Table → Find where its installed → Select & hit Ok
     - Note: you will have to do this every time you use ophcrack
+
+
