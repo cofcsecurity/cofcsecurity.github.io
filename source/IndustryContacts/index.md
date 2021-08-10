@@ -17,7 +17,7 @@ ___
 * [Email](mailto:hinsonsc@g.cofc.edu)
 * [Github](https://github.com/hinsonsc)
 
-3. **Software Engineeer**: Matt Walter
+3. **Software Engineer**: Matt Walter
 * Company: greymatter.io (Washington, D.C.)
 * Specialty: Docker, DevOps, Linux
 * [Email](mailto:walterm@g.cofc.edu)
