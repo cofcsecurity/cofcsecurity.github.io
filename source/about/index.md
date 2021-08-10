@@ -19,4 +19,3 @@ Competing in these competitions provides extremely valuable experience that is r
 
 Anyone, regardless of experience, is encouraged to participate!
 
-Our Club's Defense Competition history can be found [here](https://cofcsecurity.github.io/history/)!
