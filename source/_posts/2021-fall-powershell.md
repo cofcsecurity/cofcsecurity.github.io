@@ -296,10 +296,11 @@ Get-Item $file | format-list *time
 
 ## Practice
 
-[Under the Wire (Sentry)](https://underthewire.tech/)
+- [Under the Wire (Sentry)](https://underthewire.tech/)
 
-[PoSh Hunter](https://posh-hunter.com/)
+- [PoSh Hunter](https://posh-hunter.com/)
 
-[Fernando Tomlinson's Website](https://posh-hunter.com/)
+- [Fernando Tomlinson's Website](https://posh-hunter.com/)
 
-[Fernando Tomlinson's Github](https://github.com/WiredPulse)
+- [Fernando Tomlinson's Github](https://github.com/WiredPulse)
+
