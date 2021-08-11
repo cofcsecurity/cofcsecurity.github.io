@@ -99,4 +99,5 @@ nslookup
 - Test sites: www.000webhostapp.com or zonetransfer.me
 **I am not responsible for what you do with this tool after you gather the information**
 
-[@pmccabe5](https://github.com/pmccabe5)
+[@pmccabe5](https://github.com/pmccabe5)  
+

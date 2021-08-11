@@ -92,4 +92,5 @@ MD5 = raw-md5`
 - To load in tables: Tables → Select Table → Find where its installed → Select & hit Ok
     - Note: you will have to do this every time you use ophcrack
 
-[@pmccabe5](https://github.com/pmccabe5)
+[@pmccabe5](https://github.com/pmccabe5)  
+
