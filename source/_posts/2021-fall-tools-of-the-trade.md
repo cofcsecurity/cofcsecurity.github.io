@@ -58,7 +58,9 @@ date: 2021-08-11
 
 ## Fun Stuff 
 
-### The Duck
+### Hotplug Attacks
+
+#### The Duck
 
 <figure class="video_container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/IdWhkGD-ojM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -68,19 +70,13 @@ date: 2021-08-11
   <iframe width="560" height="315" src="https://www.youtube.com/embed/sbKN8FhGnqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-### Malduino
+#### Malduino
 
 <figure class="video_container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/nNDWdmJI6bw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-### Key Croc
-
-<figure class="video_container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/qU13LP5W348" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-
-### Bash Bunny
+#### Bash Bunny
 
 - Mk1
 
@@ -94,25 +90,49 @@ date: 2021-08-11
   <iframe width="560" height="315" src="https://www.youtube.com/embed/-UmvZdDxCiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-### Shark Jack
+### Keyloggers
+
+#### Key Croc
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/qU13LP5W348" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+
+#### O.MG Cable
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/-jL_Xz-BKBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+
+### Implants & Remote Access
+
+#### Shark Jack
 
 <figure class="video_container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/SOWi-S4UwkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-### LAN Turtle
+#### LAN Turtle
 
 <figure class="video_container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/l8YpTOv7Q2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-### Packet Squirrel
+#### Packet Squirrel
 
 <figure class="video_container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/R0xEnIXCl2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-### The Pineapple
+#### Screen Crab
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/XTU0W2Kt7lU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+
+### Wireless Testing
+
+#### The Pineapple
 
 - Mk6 (nano)
 
@@ -126,16 +146,10 @@ date: 2021-08-11
   <iframe width="560" height="315" src="https://www.youtube.com/embed/7v3JR4Wlw4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-### Signal Owl
+#### Signal Owl
 
 <figure class="video_container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/5wZhXQNpznA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-
-### Screen Crab
-
-<figure class="video_container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/XTU0W2Kt7lU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
 
