@@ -307,3 +307,5 @@ Network Sniffing: sniff(iface=“<interface>”, prn=lambda x:x.summary)
 BE CAREFUL WITH THIS NEXT ONE
 DOS Attack: send(IP(src=“attacker IP”, dst=“<target>”)/TCP(sport=444, dport=444), count=10000)
 ```
+
+[@pmccabe5](https://github.com/pmccabe5)
