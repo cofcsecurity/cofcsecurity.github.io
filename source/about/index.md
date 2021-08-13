@@ -15,7 +15,10 @@ Our club meets each week in order to develop our skills, knowledge and understan
 
 An important part of our club is the Cyber Defense Team. The CofC Cyber Defense Team competes in several competitions each year including the [Palmetto Cyber Defense Competition](http://pcdc-sc.com/) (PCDC) and the [Southeast Collegiate Cyber Defense Competition](https://cyberinstitute.kennesaw.edu/seccdc/index.php) (SECCDC). In 2021 our team placed 1st at SECCDC and became the first school from South Carolina to advance to the National CCDC where we placed 9th in the nation.  
 
-Competing in these competitions provides extremely valuable experience that is recognized in the industry. Many past defense team members attribute jobs offers, interviews, or raises they have received directly to their participation in these competitions.
+Competing in these competitions provides extremely valuable experience that is recognized in the industry. Many past defense team members attribute job offers, interviews, or raises they have received directly to their participation in these competitions.
 
 Anyone, regardless of experience, is encouraged to participate!
 
+## History
+
+For more details on our club's history check out [this page](/history/).
