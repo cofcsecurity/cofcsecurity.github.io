@@ -20,5 +20,6 @@ ___
 3. **Software Engineer**: Matt Walter
 * Company: greymatter.io (Washington, D.C.)
 * Specialty: Docker, DevOps, Linux
-* [Email](mailto:walterm@g.cofc.edu)
+* [Email](mailto:mattwalter99@gmail.com)
 * [Github](https://github.com/WookieMonkeys)
+* [Twitter](https://twitter.com/wookiemonkeys)
