@@ -15,19 +15,19 @@ During Fall/Spring semesters the club typically meets once per week with special
 
 Week | Date | Topic | Notes
 :-:| :-----: | :-------------: | :---:
- 1 | Aug. 25 | Getting Started | Introduction and planning
- 2 | Sep. 1  | The Basics | Virtualization and Kali
- 3 | Sep. 8  | Cryptography | Encryption, hashing, and cracking
- 4 | Sep. 15 | **Special Topic** | -
- 5 | Sep. 22 | Network Traffic Analysis | Wireshark
- 6 | Sep. 29 | Cyber Discussions | -
- 7 | Oct. 6  | NCL Tune Up | Preseason prep
- 8 | Oct. 13 | **Special Topic** | -
- 9 | Oct. 20 | NCL Practice | Preseason review and Individual Game prep
-10 | Oct. 27 | Individual Game Review | -
-11 | Nov. 3  | Cyber Discussions | -
-12 | Nov. 10 | Containers | Docker and Kubernetes
-13 | Nov. 17 | Final Meeting of Fall | -
+ 1 | - | - | -
+ 2 | Aug. 31 | Getting Started | Introduction and planning
+ 3 | Sep. 7  | The Basics | Virtualization and Kali
+ 4 | Sep. 14  | Cryptography | Encryption, hashing, and cracking
+ 5 | Sep. 21 | Network Traffic Analysis | Wireshark
+ 6 | Sep. 28 | Cyber Discussions | -
+ 7 | Oct. 5  | NCL Tune Up | Preseason prep
+ 8 | Oct. 12 | **Special Topic** | -
+ 9 | Oct. 19 | NCL Practice | Preseason review and Individual Game prep
+10 | Oct. 26 | Individual Game Review | -
+11 | Nov. 2  | Cyber Discussions | -
+12 | Nov. 9 | Containers | Docker and Kubernetes
+13 | Nov. 16 | Final Meeting of Fall | -
 
 #### Other Important Dates
 
