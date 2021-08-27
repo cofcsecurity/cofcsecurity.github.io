@@ -9,7 +9,7 @@ During Fall/Spring semesters the club typically meets once per week with special
 
 ### Fall 2021 Schedule
 
-Club meetings are at 7:50 PM on Tuesdays unless otherwise specified.
+Club meetings are at 7:30 PM on Tuesdays unless otherwise specified.
 
 Defense team meetings are at 7:30 PM on Thursdays.
 
