@@ -14,8 +14,9 @@ timezone: 'America/New_York'
 homemd: |
   ## [Click here to join us on Discord!](https://discord.gg/uBCwjeG)
   # Upcoming Events
-    First Meeting of Fall 2021 - TBD
-    NCL Fall Registration - Opens August 23
+    Club Meetings - Tuesdays at 7:30 PM at Harbor Walk room 105F
+    Defense Team Meetings - Thursdays at 7:30 PM on Discord
+    [National Cyber League Fall Registration](https://nationalcyberleague.org/) - August 23 through October 8
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
