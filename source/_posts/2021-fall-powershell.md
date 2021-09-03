@@ -20,7 +20,7 @@ date: 2021-08-05
 
 ### Variables:
 
-```
+```powershell
 $var1 = 5
 $var2 = “55”
 ```
@@ -29,21 +29,21 @@ $var2 = “55”
 
 #### Addition:
 
-```
+```powershell
 $var1 + $var2
 $var2 + $var1
 ```
 
 - Why are they different?
 
-```
+```powershell
 var ++
 var += 5 
 ```
 
 #### Equality:
 
-```
+```powershell
 -eq: equals
 -ne: not equal to
 -ceq: case sensitive comparison
@@ -55,14 +55,14 @@ var += 5
 
 #### Booleans:
 
-```
+```powershell
 -and 
 -or
 ```
 
 ### Conditionals:
 
-```
+```powershell
 If (<condition>){
 	<code/commands>
 }
@@ -73,7 +73,7 @@ Else{
 
 ### Loops:
 
-```
+```powershell
 $question = "Are we there yet?"
 $answer = "Noooooo!"
 for ($i = 3; $i -gt 0; $i--){
@@ -90,7 +90,7 @@ ForEach ($thing in $services){
 Write-Output "`nThe last service is $($thing.name)" 
 ```
 
-```
+```powershell
 $food = 'Beans', 'Greens', 'Potatoes', 'Lamb', 'Rams', 'Hogs', 'Dogs'
 for ($i = 5; $i -gt 0; $i--){
     foreach($item in $food){
@@ -100,7 +100,7 @@ for ($i = 5; $i -gt 0; $i--){
 Write-Output "`nYou name it!"
 ```
 
-```
+```powershell
 while ($true){
     test-connection 127.0.0.1
 }
@@ -115,7 +115,7 @@ Do{
 While ($rabbits -lt 10000)
 ```
 
-```
+```powershell
 $i = 0
 while($i -lt 999){
     $i++
@@ -127,7 +127,7 @@ Write-Host "`nCount complete - We have counted up to $i" -ForegroundColor Cyan
 
 ### Functions:
 
-```
+```powershell
 Function <name>{
 	Function ($parameter){
 	<Insert code here>
@@ -143,7 +143,7 @@ Function <name>{
 
 - Idea: we monitor someone’s computer and we get a notification when they open an application
 
-```
+```powershell
 function WMI_Subscription{
 
 function server($port){
@@ -215,7 +215,7 @@ Get-Job
 ```
 ### Port Scanning
 
-```
+```powershell
 $ports = 1..100
 $IP = "192.168.0.185"
 $scan = foreach($port in $ports){
@@ -246,7 +246,8 @@ $scan
 
 - Why would we do this??
 - How to downgrade: 
-```
+
+```powershell
 if ($PSVersionTable.PSVersion -gt [Version]"2.0") { 
 powershell -Version 2 -File $MyInvocation.MyCommand.Definition exit } 
 'run some code' Read-Host -Prompt "Scripts Completed : Press any key to exit"
@@ -258,7 +259,7 @@ powershell -Version 2 -File $MyInvocation.MyCommand.Definition exit }
 - Why is it important?
 - Why you shouldn’t do it to your professors :)
 
-```
+```powershell
 file = "$env:USERPROFILE\desktop\myfile.txt"
 Get-Item $file | format-list *time
 (Get-Item -path $file).LastWriteTimeutc = Get-Date

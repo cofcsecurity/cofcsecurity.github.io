@@ -25,15 +25,16 @@ date: 2021-08-02
 
 - UPPERCASE= value/string/output from a command
 - Example: `NAME=“Your Name”`
-- Variabe usage: 
-```
+- Variabe usage:
+
+```bash
 echo “My name is $NAME”
 echo “My name is ${NAME}, hello”
 ```
 
 #### Reading User Input:
 
-```
+```bash
 # !/bin/bash
 #Read user data
 echo "Please enter your full name: "
@@ -53,7 +54,7 @@ adduser --home /$1 $1
 
 ### Menus:
 
-```
+```bash
 #!/bin/bash
 #menus
 echo "Welcome to Bob's Burgers"
@@ -67,7 +68,7 @@ done
 
 ### Conditionals:
 
-```
+```bash
 #!/bin/bash
 #if/if-else
 NAME="Patrick"
@@ -87,7 +88,7 @@ fi
 
 ### Loops: 
 
-```
+```bash
 #!/bin/bash
 #for loops
 for NAMES in $(cat names.txt); do
@@ -97,7 +98,7 @@ done
 
 ### Functions:
 
-```
+```bash
 #!/bin/bash
 #functions
 function shadowtest(){
@@ -124,7 +125,7 @@ testpwd
 
 #### Manual `ping` Sweeper:
 
-```
+```bash
 #!/bin/bash
 #ping sweep script
 echo "Please enter your subnet: "
@@ -136,7 +137,7 @@ done
 
 #### Password Generator with the `SSL` Library
 
-```
+```bash
 #!/bin/bash
 #simple password generator
 echo "Enter the length of the password: "
@@ -149,7 +150,7 @@ done
 
 #### File Encryptor/Decryotor:
 
-```
+```bash
 #!/bin/bash
 #file encrypter/decrypter
 echo "This is a simple file encrypter/decrypter"
@@ -176,7 +177,7 @@ select option in $choice; do
 
 #### DNS Reverse Lookup:
 
-```
+```bash
 #!/bin/bash
 echo "Please enter your subnet: "
 read SUBNET
@@ -198,20 +199,21 @@ done
 
 #### Declaration:
 
-```
+```python
 Single value: test = 5
 Array: test = [1, dog, 2.5]
 ```
 
 #### Reading User Input:
 
-```
+```python3
 userInput = input(“Enter a number here: ”)
 print(“Your number is: ” + str(userInput))
 ```
 
 ### Conditionals:
-```
+
+```python
 if test == true:
    print("It's true!")
 elif test == false:
@@ -224,7 +226,7 @@ else:
 
 #### For loop:
 
-```
+```python
 for i in range(0, 5, 1):
  print(i) 
 for item in arr:
@@ -233,7 +235,7 @@ for item in arr:
 
 #### While loop:
 
-```
+```python
 i = 0
 while i < 5:
 	print(i)
@@ -242,7 +244,7 @@ while i < 5:
 
 ### Functions:
 
-```
+```python
 def firstFun(x, y):
 	return x + y
 
@@ -257,7 +259,7 @@ main()
 
 #### Manual Port Scanner
 
-```
+```python
 #!/usr/bin/python3
 import socket
 host = input("Enter the host: ")
@@ -275,7 +277,7 @@ portScanner()
 
 #### OS Library:
 
-```
+```python
 import os
 def main():
     print(os.getcwd())
@@ -301,7 +303,7 @@ main()
 
 #### Some [Scapy](https://scapy.readthedocs.io/en/latest/) Fun (Please, please be careful with this and only use it in an environment with permission):
 
-```
+```python
 IP Spoof: send(IP(src=“<attacker IP>”, dst=“<target IP>”)/ICMP()/“Hello world”)
 Network Sniffing: sniff(iface=“<interface>”, prn=lambda x:x.summary)
 BE CAREFUL WITH THIS NEXT ONE
