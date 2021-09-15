@@ -21,7 +21,7 @@ Week | Date | Topic | Notes
  2 | Aug. 31 | Getting Started | Introduction and planning
  3 | Sep. 7  | The Basics | Virtualization and Kali
  4 | Sep. 14  | Cryptography | Encryption, hashing, and cracking
- 5 | Sep. 21 | Network Traffic Analysis | Wireshark
+ 5 | Sep. 21 | Computer Networks | -
  6 | Sep. 28 | Cyber Discussions | -
  7 | Oct. 5  | NCL Tune Up | Preseason prep
  8 | Oct. 12 | **Special Topic** | -
@@ -36,6 +36,7 @@ Week | Date | Topic | Notes
 Date | Note
 :-----: | :-----:
 Aug. 23 | NCL Registration Opens
+Oct. 9 | Hivestorm Competition
 Oct. 11-18 | NCL Preseason
 Oct. 22-24 | NCL Individual Game
 Nov. 5-7 | NCL Team Game
