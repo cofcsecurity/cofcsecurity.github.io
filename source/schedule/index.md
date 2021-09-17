@@ -36,6 +36,7 @@ Week | Date | Topic | Notes
 Date | Note
 :-----: | :-----:
 Aug. 23 | NCL Registration Opens
+Oct. 2 | Raymond James CTF
 Oct. 9 | Hivestorm Competition
 Oct. 11-18 | NCL Preseason
 Oct. 22-24 | NCL Individual Game
