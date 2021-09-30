@@ -22,7 +22,7 @@ Week | Date | Topic | Notes
  3 | Sep. 7  | The Basics | Virtualization and Kali
  4 | Sep. 14  | Cryptography | Encryption, hashing, and cracking
  5 | Sep. 21 | Computer Networks | -
- 6 | Sep. 28 | Guest Speaker | Splunk
+ 6 | Sep. 28 | Guest Speaker | Personal and Application Security
  7 | Oct. 5  | NCL Tune Up | Preseason prep
  8 | Oct. 12 | **Special Topic** | -
  9 | Oct. 19 | NCL Practice | Preseason review and Individual Game prep
