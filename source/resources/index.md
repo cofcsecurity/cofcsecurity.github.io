@@ -109,7 +109,7 @@ Nowadays cloud knowledge is crucial to virtually anything computer science inclu
 3. [Hack The Box](https://www.hackthebox.eu/): Another collection of vulnerable VMs
 4. [Over The Wire: Bandit (Bash)](https://overthewire.org/): Learn security concepts in wargames challenges
 5. [Under the Wire (Powershell)](https://underthewire.tech/): Like Over The Wire, but with a focus on Powershell
-
+6. [Posh-Hunter](https://posh-hunter.com/): More advanced powershell for both blue and red team ops
 
 ## Competitions
 
