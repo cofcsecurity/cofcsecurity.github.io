@@ -26,7 +26,7 @@ Week | Date | Topic | Notes
  7 | Oct. 5  | NCL Tune Up | Preseason prep
  8 | Oct. 12 | Cyber Discussions | -
  9 | Oct. 19 | NCL Practice | Preseason review and Individual Game prep
-10 | Oct. 26 | Individual Game Review | -
+10 | Oct. 26 | Infrastructure as Code | -
 11 | Nov. 2  | **Guest Speaker** | DevOps
 12 | Nov. 9 | Containers | Docker and Kubernetes
 13 | Nov. 16 | Final Meeting of Fall | -
