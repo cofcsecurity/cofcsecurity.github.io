@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="OverviewThis post will provide a high level overview of important things to know about securing and adminstrating Linux systems. Command LineKnowing how to use the command line is essential, Linux ser">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux Knowledge">
+<meta property="og:url" content="http://cofcsecurity.github.io/2021-fall-linux-resources2021/">
+<meta property="og:site_name" content="CofC Cybersecurity Club">
+<meta property="og:description" content="OverviewThis post will provide a high level overview of important things to know about securing and adminstrating Linux systems. Command LineKnowing how to use the command line is essential, Linux ser">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-12-14T05:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-18T22:52:31.482Z">
+<meta property="article:author" content="CofC Cybersecurity Club">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Linux Knowledge</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="CofC Cybersecurity Club" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/schedule/">Schedule</a></li>
+         
+          <li><a href="/archives/">Posts</a></li>
+         
+          <li><a href="/resources/">Resources</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2021-fall-lockpicking2021/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://cofcsecurity.github.io/2021-fall-linux-resources2021/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&text=Linux Knowledge"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&title=Linux Knowledge"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&is_video=false&description=Linux Knowledge"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linux Knowledge&body=Check out this article: http://cofcsecurity.github.io/2021-fall-linux-resources2021/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&title=Linux Knowledge"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&title=Linux Knowledge"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&title=Linux Knowledge"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&title=Linux Knowledge"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&name=Linux Knowledge&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&t=Linux Knowledge"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Overview"><span class="toc-number">1.</span> <span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Command-Line"><span class="toc-number">2.</span> <span class="toc-text">Command Line</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bash"><span class="toc-number">2.1.</span> <span class="toc-text">Bash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Secure-Shell-SSH"><span class="toc-number">2.2.</span> <span class="toc-text">Secure Shell (SSH)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tmux"><span class="toc-number">2.3.</span> <span class="toc-text">tmux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Logging"><span class="toc-number">3.</span> <span class="toc-text">Logging</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Important-Logs"><span class="toc-number">3.1.</span> <span class="toc-text">Important Logs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Auditd"><span class="toc-number">3.2.</span> <span class="toc-text">Auditd</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Users-Groups-and-Permissions"><span class="toc-number">4.</span> <span class="toc-text">Users, Groups, and Permissions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Firewall"><span class="toc-number">5.</span> <span class="toc-text">Firewall</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#netstat"><span class="toc-number">5.1.</span> <span class="toc-text">netstat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Uncomplicated-Firewal-UFW"><span class="toc-number">5.2.</span> <span class="toc-text">Uncomplicated Firewal (UFW)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Service-Management"><span class="toc-number">6.</span> <span class="toc-text">Service Management</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Processes"><span class="toc-number">7.</span> <span class="toc-text">Processes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Package-Management"><span class="toc-number">8.</span> <span class="toc-text">Package Management</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Debian-Based-Distros"><span class="toc-number">8.1.</span> <span class="toc-text">Debian Based Distros</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RedHat-Based-Distros"><span class="toc-number">8.2.</span> <span class="toc-text">RedHat Based Distros</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scanning-and-Enumeration"><span class="toc-number">9.</span> <span class="toc-text">Scanning and Enumeration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap"><span class="toc-number">9.1.</span> <span class="toc-text">nmap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nikto"><span class="toc-number">9.2.</span> <span class="toc-text">nikto</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Linux Knowledge
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">CofC Cybersecurity Club</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-12-14T05:00:00.000Z" itemprop="datePublished">2021-12-14</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>This post will provide a high level overview of important things to know about securing and adminstrating Linux systems.</p>
+<h2 id="Command-Line"><a href="#Command-Line" class="headerlink" title="Command Line"></a>Command Line</h2><p>Knowing how to use the command line is essential, Linux servers usually do not have desktop environments - and even if they do many administrative tasks are not possible to do via GUI.</p>
+<h3 id="Bash"><a href="#Bash" class="headerlink" title="Bash"></a>Bash</h3><p>The default shell in many Linux systems. Check out this guide: <a target="_blank" rel="noopener" href="https://guide.bash.academy/commands/">https://guide.bash.academy/commands/</a></p>
+<h3 id="Secure-Shell-SSH"><a href="#Secure-Shell-SSH" class="headerlink" title="Secure Shell (SSH)"></a>Secure Shell (SSH)</h3><p>Know how to connect into other computers via the command line using SSH as well as how to create and use SSH keys.</p>
+<ul>
+<li><p>SSH Command: <a target="_blank" rel="noopener" href="https://www.ssh.com/academy/ssh/command">https://www.ssh.com/academy/ssh/command</a></p>
+</li>
+<li><p>SSH Keys: <a target="_blank" rel="noopener" href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-2">https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-2</a></p>
+</li>
+</ul>
+<h3 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h3><p>tmux is a terminal multiplexer that allows you to access multiple terminal sessions in a single window.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/">https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/</a></li>
+</ul>
+<h2 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h2><p>Know where important logs are and how to read them.</p>
+<h3 id="Important-Logs"><a href="#Important-Logs" class="headerlink" title="Important Logs"></a>Important Logs</h3><ul>
+<li>/var/log<ul>
+<li>/var/log/syslog</li>
+<li>/var/log/auth.log</li>
+</ul>
+</li>
+</ul>
+<p>Service logs (ie nginx, Apache, named, etc) are also very important. Usually these logs are also in /var/log, but not always.</p>
+<h3 id="Auditd"><a href="#Auditd" class="headerlink" title="Auditd"></a>Auditd</h3><p>A component of the Linux Auditing System. Allows the creation of rules to log certain events (ie program execution, file modifications, etc).</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.redhat.com/sysadmin/configure-linux-auditing-auditd">https://www.redhat.com/sysadmin/configure-linux-auditing-auditd</a></li>
+</ul>
+<h2 id="Users-Groups-and-Permissions"><a href="#Users-Groups-and-Permissions" class="headerlink" title="Users, Groups, and Permissions"></a>Users, Groups, and Permissions</h2><p>Users and Groups: <a target="_blank" rel="noopener" href="https://www.redhat.com/sysadmin/linux-user-group-management">https://www.redhat.com/sysadmin/linux-user-group-management</a></p>
+<p>Permissions: <a target="_blank" rel="noopener" href="https://www.redhat.com/sysadmin/manage-permissions">https://www.redhat.com/sysadmin/manage-permissions</a></p>
+<h2 id="Firewall"><a href="#Firewall" class="headerlink" title="Firewall"></a>Firewall</h2><p>Know how to enumerate your network services and reduce attack service.</p>
+<h3 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h3><p>A command to examine a Linux system’s network connections and sockets.</p>
+<p>Syntax:</p>
+<p><code>netstat [options]</code></p>
+<p>Examples:</p>
+<ul>
+<li><code>netstat -tulnp</code></li>
+</ul>
+<p>Show the <strong>l</strong>istening <strong>T</strong>CP and *<em>U**</em>DP sockets and which <strong>p</strong>rograms created them.</p>
+<ul>
+<li><code>netstat -pan</code></li>
+</ul>
+<p>Show <strong>a</strong>ll connections and sockets.</p>
+<p>Further reading:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://linux.die.net/man/8/netstat">https://linux.die.net/man/8/netstat</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/netstat-command-linux/">https://www.geeksforgeeks.org/netstat-command-linux/</a></li>
+</ul>
+<h3 id="Uncomplicated-Firewal-UFW"><a href="#Uncomplicated-Firewal-UFW" class="headerlink" title="Uncomplicated Firewal (UFW)"></a>Uncomplicated Firewal (UFW)</h3><p>Uncomplicates iptables (the most common low level Linux firewall tool) and allows for the easy creation of firewall rules.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://help.ubuntu.com/community/UFW">https://help.ubuntu.com/community/UFW</a></li>
+</ul>
+<h2 id="Service-Management"><a href="#Service-Management" class="headerlink" title="Service Management"></a>Service Management</h2><p>Know how to view and manage Systemd services using systemctl.</p>
+<p><a target="_blank" rel="noopener" href="https://www.howtogeek.com/216454/how-to-manage-systemd-services-on-a-linux-system/">https://www.howtogeek.com/216454/how-to-manage-systemd-services-on-a-linux-system/</a></p>
+<h2 id="Processes"><a href="#Processes" class="headerlink" title="Processes"></a>Processes</h2><h2 id="Package-Management"><a href="#Package-Management" class="headerlink" title="Package Management"></a>Package Management</h2><p>Know how to verify, install, and manage software via the command line.</p>
+<h3 id="Debian-Based-Distros"><a href="#Debian-Based-Distros" class="headerlink" title="Debian Based Distros"></a>Debian Based Distros</h3><p>apt is the default package manager for many Debian based Linux distros like Ubuntu. The following describes the basic features: </p>
+<ol>
+<li>apt update</li>
+</ol>
+<p>Updates package lists and determines what needs to be updated.</p>
+<ol start="2">
+<li>apt upgrade [-y]</li>
+</ol>
+<p>Download and apply upgrades to packages that have updates.</p>
+<p><code>-y</code> to automatically respond yes to most prompts.</p>
+<ol start="3">
+<li>apt install X</li>
+</ol>
+<p>Install the package named X.</p>
+<ol start="4">
+<li>apt remove X</li>
+</ol>
+<p>Remove the package named X.</p>
+<p>Example: <code>apt install tmux</code></p>
+<p>Installs the package tmux.</p>
+<p>dpkg is a another packaging tool for Debian based systems that works with apt. Most of the time you just need to interact with apt, but dpkg provides one key feature:</p>
+<ol>
+<li>dpkg –verify</li>
+</ol>
+<p>This verifies the integrity of all installed packages. This can alert you to programs that have been tampered with. </p>
+<p>See here on how to read the output: <a target="_blank" rel="noopener" href="https://askubuntu.com/questions/792553/dpkg-v-what-does-the-output-mean">https://askubuntu.com/questions/792553/dpkg-v-what-does-the-output-mean</a></p>
+<h3 id="RedHat-Based-Distros"><a href="#RedHat-Based-Distros" class="headerlink" title="RedHat Based Distros"></a>RedHat Based Distros</h3><p>Yum is the default package manager on many RedHat based distros including CentOS and Fedora. Like apt, yum has the update, upgrade, intall, and remove features.</p>
+<p>And simillarly to dpkg –verify we have the following on RedHat:</p>
+<ol>
+<li>rpm -Va</li>
+</ol>
+<p>See here for details: <a target="_blank" rel="noopener" href="https://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/ch04s04.html">https://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/ch04s04.html</a></p>
+<h2 id="Scanning-and-Enumeration"><a href="#Scanning-and-Enumeration" class="headerlink" title="Scanning and Enumeration"></a>Scanning and Enumeration</h2><p>In order to manage and defend a machine or network you must understand the environment and know the attack surface.</p>
+<h3 id="nmap"><a href="#nmap" class="headerlink" title="nmap"></a><a target="_blank" rel="noopener" href="https://nmap.org/">nmap</a></h3><p>Know how to scan network services on hosts with nmap and learn how to interpret the results.</p>
+<p><strong>Syntax:</strong></p>
+<p><code>nmap [options] [targets]</code></p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>nmap -p22 scanme.org</code></li>
+</ul>
+<p>Scan port 22 on host scanme.org </p>
+<ul>
+<li><code>nmap -A 192.168.1.0/24</code></li>
+</ul>
+<p>Scan the range 192.168.1.0/24 and enable service version detection, OS detection, script scanning, and traceroute.</p>
+<ul>
+<li><code>nmap -sU -p- 192.168.1.15 192.168.1.30</code></li>
+</ul>
+<p>Scan all UDP ports on hosts 192.168.1.15 and 192.168.1.30.</p>
+<p><strong>Options to know:</strong></p>
+<ul>
+<li><code>-A</code></li>
+</ul>
+<p>Enables service version detection, OS detection, script scanning, and traceroute.</p>
+<ul>
+<li>Port specification: <code>-p</code></li>
+</ul>
+<p><code>-p-</code> for all ports.</p>
+<p><code>-pX</code> to scan port X.</p>
+<p><code>-pX,Y,...</code> to scan a list of ports X, Y, …</p>
+<p><code>-pX-Y</code> scan ports X through Y. Valid ports are 1-65535.</p>
+<ul>
+<li>UDP Scan: <code>-sU</code></li>
+</ul>
+<p>Scan UDP ports. The default scan type is <code>-sS</code> which is a TCP SYN scan.</p>
+<h3 id="nikto"><a href="#nikto" class="headerlink" title="nikto"></a>nikto</h3><p>nikto is a website vulnerability scanner. Know how to use it to scan a webserver and learn how to interpret the results.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://securitytrails.com/blog/nikto-website-vulnerability-scanner">https://securitytrails.com/blog/nikto-website-vulnerability-scanner</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/schedule/">Schedule</a></li>
+         
+          <li><a href="/archives/">Posts</a></li>
+         
+          <li><a href="/resources/">Resources</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Overview"><span class="toc-number">1.</span> <span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Command-Line"><span class="toc-number">2.</span> <span class="toc-text">Command Line</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bash"><span class="toc-number">2.1.</span> <span class="toc-text">Bash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Secure-Shell-SSH"><span class="toc-number">2.2.</span> <span class="toc-text">Secure Shell (SSH)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tmux"><span class="toc-number">2.3.</span> <span class="toc-text">tmux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Logging"><span class="toc-number">3.</span> <span class="toc-text">Logging</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Important-Logs"><span class="toc-number">3.1.</span> <span class="toc-text">Important Logs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Auditd"><span class="toc-number">3.2.</span> <span class="toc-text">Auditd</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Users-Groups-and-Permissions"><span class="toc-number">4.</span> <span class="toc-text">Users, Groups, and Permissions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Firewall"><span class="toc-number">5.</span> <span class="toc-text">Firewall</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#netstat"><span class="toc-number">5.1.</span> <span class="toc-text">netstat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Uncomplicated-Firewal-UFW"><span class="toc-number">5.2.</span> <span class="toc-text">Uncomplicated Firewal (UFW)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Service-Management"><span class="toc-number">6.</span> <span class="toc-text">Service Management</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Processes"><span class="toc-number">7.</span> <span class="toc-text">Processes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Package-Management"><span class="toc-number">8.</span> <span class="toc-text">Package Management</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Debian-Based-Distros"><span class="toc-number">8.1.</span> <span class="toc-text">Debian Based Distros</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RedHat-Based-Distros"><span class="toc-number">8.2.</span> <span class="toc-text">RedHat Based Distros</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scanning-and-Enumeration"><span class="toc-number">9.</span> <span class="toc-text">Scanning and Enumeration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap"><span class="toc-number">9.1.</span> <span class="toc-text">nmap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nikto"><span class="toc-number">9.2.</span> <span class="toc-text">nikto</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://cofcsecurity.github.io/2021-fall-linux-resources2021/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&text=Linux Knowledge"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&title=Linux Knowledge"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&is_video=false&description=Linux Knowledge"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linux Knowledge&body=Check out this article: http://cofcsecurity.github.io/2021-fall-linux-resources2021/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&title=Linux Knowledge"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&title=Linux Knowledge"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&title=Linux Knowledge"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&title=Linux Knowledge"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&name=Linux Knowledge&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://cofcsecurity.github.io/2021-fall-linux-resources2021/&t=Linux Knowledge"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    CofC Cybersecurity Club
+  </div>
+  <div class="footer-center">
+    <a target="_blank" rel="noopener" href="https://github.com/cofcsecurity/"><i class="fab fa-github"></i></a>
+    <a target="_blank" rel="noopener" href="https://discord.gg/uBCwjeG"><i class="fab fa-discord"></i></a>
+    <a target="_blank" rel="noopener" href="http://cofcsecurity.slack.com"><i class="fab fa-slack"></i></a>
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/schedule/">Schedule</a></li>
+        
+          <li><a href="/archives/">Posts</a></li>
+        
+          <li><a href="/resources/">Resources</a></li>
+        
+      </ul>
+      <br>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
