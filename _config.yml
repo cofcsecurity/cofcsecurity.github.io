@@ -14,9 +14,11 @@ timezone: 'America/New_York'
 homemd: |
   ## [Click here to join us on Discord!](https://discord.gg/uBCwjeG)
   # Upcoming Events
-    First Meeting of Spring 2022 - TBD
-#    Club Meetings - Tuesdays at 7:30 PM at Harbor Walk room 105F
-#    Defense Team Meetings - Thursdays at 7:30 PM on Discord
+    First Meeting of Spring 2022 - Jan 18 at 7:30 PM
+    NCL Registration Opens - Jan 31
+    SECCDC Qualifier - Feb 12
+    Club Meetings - Tuesdays at 7:30 PM at Harbor Walk room 105F
+    Defense Team Meetings - Thursdays at 7:30 PM on Discord
     
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
