@@ -149,7 +149,7 @@ Installs the package tmux.
 
 dpkg is a another packaging tool for Debian based systems that works with apt. Most of the time you just need to interact with apt, but dpkg provides one key feature:
 
-1. dpkg --verify
+1. `dpkg --verify`
 
 This verifies the integrity of all installed packages. This can alert you to programs that have been tampered with. 
 
@@ -159,7 +159,7 @@ See here on how to read the output: https://askubuntu.com/questions/792553/dpkg-
 
 Yum is the default package manager on many RedHat based distros including CentOS and Fedora. Like apt, yum has the update, upgrade, intall, and remove features.
 
-And simillarly to dpkg --verify we have the following on RedHat:
+And simillarly to `dpkg --verify` we have the following on RedHat:
 
 1. rpm -Va
 
