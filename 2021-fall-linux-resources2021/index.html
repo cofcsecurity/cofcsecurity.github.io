@@ -14,7 +14,7 @@
 <meta property="og:description" content="OverviewThis post will provide a high level overview of important things to know about securing and adminstrating Linux systems. Command LineKnowing how to use the command line is essential, Linux ser">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-12-14T05:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-18T20:57:16.528Z">
+<meta property="article:modified_time" content="2022-01-26T01:36:20.717Z">
 <meta property="article:author" content="CofC Cybersecurity Club">
 <meta name="twitter:card" content="summary">
     
@@ -234,12 +234,12 @@
 <p>Installs the package tmux.</p>
 <p>dpkg is a another packaging tool for Debian based systems that works with apt. Most of the time you just need to interact with apt, but dpkg provides one key feature:</p>
 <ol>
-<li>dpkg –verify</li>
+<li><code>dpkg --verify</code></li>
 </ol>
 <p>This verifies the integrity of all installed packages. This can alert you to programs that have been tampered with. </p>
 <p>See here on how to read the output: <a target="_blank" rel="noopener" href="https://askubuntu.com/questions/792553/dpkg-v-what-does-the-output-mean">https://askubuntu.com/questions/792553/dpkg-v-what-does-the-output-mean</a></p>
 <h3 id="RedHat-Based-Distros"><a href="#RedHat-Based-Distros" class="headerlink" title="RedHat Based Distros"></a>RedHat Based Distros</h3><p>Yum is the default package manager on many RedHat based distros including CentOS and Fedora. Like apt, yum has the update, upgrade, intall, and remove features.</p>
-<p>And simillarly to dpkg –verify we have the following on RedHat:</p>
+<p>And simillarly to <code>dpkg --verify</code> we have the following on RedHat:</p>
 <ol>
 <li>rpm -Va</li>
 </ol>
