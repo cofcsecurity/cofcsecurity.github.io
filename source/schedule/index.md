@@ -19,11 +19,11 @@ Week | Date | Topic | Notes
 :-:| :-----: | :-------------: | :---:
  1 | - | Classes Begin | -
  2 | Jan. 18 | Getting Started | Plans for Spring
- 3 | Jan. 25 | - | -
- 4 | Feb. 1  | - | -
- 5 | Feb. 8  | - | -
- 6 | Feb. 15 | - | -
- 7 | Feb. 22 | - | -
+ 3 | Jan. 25 | SECCDC Prep | -
+ 4 | Feb. 1  | SECCDC Prep | -
+ 5 | Feb. 8  | Firewalls | -
+ 6 | Feb. 15 | EDR | Endpoint Detection and Response with Wazuh
+ 7 | Feb. 22 | Splunk | Guest Speaker
  8 | Mar. 1  | - | -
  9 | - | Spring Break | -
 10 | Mar. 15 | - | -
