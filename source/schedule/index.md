@@ -25,7 +25,7 @@ Week | Date | Topic | Notes
  6 | Feb. 15 | EDR | Endpoint Detection and Response with Wazuh
  7 | Feb. 22 | Splunk | Guest Speaker
  8 | Mar. 1  | - | -
- 9 | - | Spring Break | -
+ 9 | - | Spring Break | SECCDC
 10 | Mar. 15 | - | -
 11 | Mar. 22 | - | -
 12 | Mar. 29 | - | -
