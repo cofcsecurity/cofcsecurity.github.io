@@ -23,8 +23,8 @@ Week | Date | Topic | Notes
  4 | Feb. 1  | SECCDC Prep | -
  5 | Feb. 8  | Firewalls | -
  6 | Feb. 15 | EDR | Endpoint Detection and Response with Wazuh
- 7 | Feb. 22 | Splunk | Guest Speaker
- 8 | Mar. 1  | - | -
+ 7 | Feb. 22 | Cyber Discussions | -
+ 8 | Mar. 1  | SECCDC Practice | -
  9 | - | Spring Break | SECCDC
 10 | Mar. 15 | - | -
 11 | Mar. 22 | - | -
@@ -42,6 +42,7 @@ Feb. 12 | SECCDC Qualifier
 Mar. 9-10 | SECCDC Regional
 Mar. 28 - Apr. 4 | NCL Preseason
 Apr. 8-10 | NCL Individual Game
+Apr. 10 | PCDC
 Apr. 22-24 | NCL Team Game
 
 ### Past Schedules
