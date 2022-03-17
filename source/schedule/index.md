@@ -26,7 +26,7 @@ Week | Date | Topic | Notes
  7 | Feb. 22 | Cyber Discussions | -
  8 | Mar. 1  | SECCDC Practice | -
  9 | - | Spring Break | SECCDC
-10 | Mar. 15 | - | -
+10 | Mar. 15 | SECCDC Debrief | -
 11 | Mar. 22 | - | -
 12 | Mar. 29 | - | -
 13 | Apr. 5  | - | -
