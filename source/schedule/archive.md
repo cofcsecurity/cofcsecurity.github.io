@@ -1,5 +1,40 @@
 # Archived Schedules
 
+### Spring 2022 Schedule
+
+#### Meetings
+
+Week | Date | Topic | Notes
+:-:| :-----: | :-------------: | :---:
+ 1 | - | Classes Begin | -
+ 2 | Jan. 18 | Getting Started | Plans for Spring
+ 3 | Jan. 25 | SECCDC Prep | -
+ 4 | Feb. 1  | SECCDC Prep | -
+ 5 | Feb. 8  | Firewalls | -
+ 6 | Feb. 15 | EDR | Endpoint Detection and Response with Wazuh
+ 7 | Feb. 22 | Cyber Discussions | -
+ 8 | Mar. 1  | SECCDC Practice | -
+ 9 | - | Spring Break | SECCDC
+10 | Mar. 15 | SECCDC Debrief | -
+11 | Mar. 22 | - | -
+12 | Mar. 29 | NCL Practice | -
+13 | Apr. 5  | PCDC Practice | -
+14 | Apr. 12 | PCDC Debrief | -
+15 | Apr. 19 | Final Meeting of Spring | -
+
+#### Other Important Dates
+
+Date | Note
+:-----: | :-----:
+Jan. 15 | SECCDC Registration Deadline
+Jan. 31 | NCL Registration Opens
+Feb. 12 | SECCDC Qualifier
+Mar. 9-10 | SECCDC Regional
+Mar. 28 - Apr. 4 | NCL Preseason
+Apr. 8-10 | NCL Individual Game
+Apr. 10 | PCDC
+Apr. 22-24 | NCL Team Game
+
 ### Fall 2021 Schedule
 
 #### Meetings

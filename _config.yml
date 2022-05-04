@@ -4,9 +4,9 @@
 
 # Site
 title: CofC Cybersecurity Club
-subtitle: 'CofC Security'
+subtitle: cofcsecurity
 keywords:
-author: CofC Cybersecurity Club
+author: cofcsecurity
 language: en
 timezone: 'America/New_York'
 
@@ -14,13 +14,7 @@ timezone: 'America/New_York'
 homemd: |
   ## [Click here to join us on Discord!](https://discord.gg/uBCwjeG)
   # Upcoming Events
-    [PCDC](https://pcdc-sc.com/) - Apr 10
-    NCL Registration Closes - Mar 25
-    NCL Practice Game - Mar 28 to Apr 4
-    NCL Individual Game - Apr 8-10
-    NCL Team Game - Apr 22-24
-    Club Meetings - Tuesdays at 7:30 PM at Harbor Walk room 105F
-    Defense Team Meetings - Thursdays at 7:30 PM on Discord
+    First Meeting of Fall 2022 - TBD
     
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
