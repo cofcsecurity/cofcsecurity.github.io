@@ -13,8 +13,6 @@ timezone: 'America/New_York'
 # Homepage markdown
 homemd: |
   ## [Click here to join us on Discord!](https://discord.gg/uBCwjeG)
-  # Upcoming Events
-    First Meeting of Fall 2022 - TBD
     
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
