@@ -18,17 +18,17 @@ Sep. 12  | What is Cyber Security
 Sep. 14  | Using your Virtual Machines
 Sep. 19  | Introduction to Networking 
 Sep. 21  | SSH and RDP and The Range 
-Sep. 26  | VMware and an Intro to Linux 
+Sep. 26  | Intro to Linux 
 Sep. 28  | Linux Deep Dive and The Range 
 Oct. 3   | Intro to Windows 
 Oct. 5   | Windows and The Range 
-Oct. 10  | Linux and Offensive Security 
+Oct. 10  | Offensive Security 
 Oct. 12  | Introduction to NMAP
 Oct. 17  | Fall Break No Meeting
 Oct. 19  | The Range Practice
 Oct. 24  | Windows PowerShell
 Oct. 26  | Windows and Vulnerabilities
-Oct. 31  | Introduction to Firewalls
+Oct. 31  | Intro to Firewalls
 Nov. 2   | Firewalls on End Devices 
 Nov. 7   | Introduction to Offensive Security 
 Nov. 9   | The Range Practice
