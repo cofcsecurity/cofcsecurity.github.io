@@ -26,7 +26,7 @@ Oct. 10  | Offensive Security
 Oct. 12  | HiveStorm Practive
 Oct. 17  | Fall Break No Meeting
 Oct. 19  | The Range Practice
-Oct. 24  | Intro to Firewalls
+Oct. 24  | OSWAP Juice Shop
 Oct. 26  | Windows Powershell
 Oct. 31  | Happy Haloween No Meeting
 Nov. 2   | Firewalls on End Devices 
