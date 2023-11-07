@@ -30,7 +30,7 @@ Oct. 24  | Cryptology
 Oct. 26  | The Range
 Oct. 31  | Happy Haloween No Meeting
 Nov. 2   | Firewalls on End Devices 
-Nov. 7   | Offensive Security 
+Nov. 7   | Defensive Security Lab 
 Nov. 9   | The Range Practice
 Nov. 14  | The Dark Web
 Nov. 16  | Range Practice (Last Meeting Of Semester) 
