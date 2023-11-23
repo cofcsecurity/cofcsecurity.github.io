@@ -76,6 +76,11 @@ These are some of our favorite tools, check them out! The most important to know
 10. [Aircrack-ng](https://www.aircrack-ng.org/): Wireless cracker and analysis suite
 
 
+## Other tools
+1. [PEASS-ng](https://github.com/carlospolop/PEASS-ng): Privilege escalation toolkit for Windows, MacOS, Linux
+2. [Gobuster](https://github.com/OJ/gobuster): Web server directory enumeration tool
+
+
 ## Hardware Hacking
 
 Some cool hardware projects relevant to cybersecurity.
