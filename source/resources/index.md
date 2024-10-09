@@ -59,7 +59,8 @@ We recommend you set up Kali Linux in either VirtualBox or VMware using the guid
 1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. [VMware Workstation Player](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
 3. [Windows Virtual Machine Installation Guide](./windows_installation_guide.html)
-4. [Mac Virtual Machine Installation Guide](./mac_installation_guide.html)
+4. [VM using Virtual Box and Hyper-V Setup Guide](./VB_and_Hyper-V_setup.html)
+5. [Mac Virtual Machine Installation Guide](./mac_installation_guide.html)
 
 
 ## The Tools of The Trade
