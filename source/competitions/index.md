@@ -10,11 +10,13 @@ Hello! These are the common competitions that we participate in during the schoo
 * Difficulty: Easy - Hard
 * Gives access to the practice gym, practice game, individual game, and team games.
 * Access lasts a few months.
+
 ### [Dragos CTF](https://www.dragos.com/)
-* Free
-* CTF
-* Individual game
-* Difficulty: Medium - Hard
+- Free
+- CTF
+- Individual game
+- Difficulty: Medium - Hard
+
 ### [Hivestorm](https://www.hivestorm.org/)
 * Free
 * Vulnerability securing
@@ -25,24 +27,27 @@ Hello! These are the common competitions that we participate in during the schoo
 **Spring Semester**
 
 ### [Pico](https://picoctf.org/)
-* Free
-* CTF
-* Individual game
-* Difficulty: Easy - Hard
-* 24/7 free access to pico gym
+- Free
+- CTF
+- Individual game
+- Difficulty: Easy - Hard
+- 24/7 free access to pico gym
+
 ### [HTB Cyber Apocalypse](https://www.hackthebox.com/events/)
 * Free
 * CTF
 * Team game
 * Difficulty: Medium - Hard
+
 ### [SECCDC](https://event.fit.edu/seccdc/)
-* Free
-* Larger competition
-* Team based
-* Team size: 7
-* Shadow team size: 4
-* Qualifier for [CCDC](https://www.nationalccdc.org/)
-* Simulates a real network being attacked by a red team.
+- Free
+- Larger competition
+- Team based
+- Team size: 7
+- Shadow team size: 4
+- Qualifier for [CCDC](https://www.nationalccdc.org/)
+- Simulates a real network being attacked by a red team.
+
 ### [PCDC](https://pcdc-sc.com/)
 * Free
 * Larger competition
