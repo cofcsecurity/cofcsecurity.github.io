@@ -1,11 +1,11 @@
 ---
 title: Schedule
-date: 2021-07-11 4:00:00
+date: 2026-05-5 12:00:00
 ---
 
 ## Schedule
 
-During Fall/Spring semesters the club typically meets twice per week On Tuesday and Thursday at 7:30 PM at the Stern Center room 201. We will hold general discussion meetings on various cyber security topics every Tuesday. We will occasionally have guest speakers on these days as well. On Thursdays is when the defense team will meet, and this is usually a time to dig deeper into topics as well as prepare for our competitions. This schedule gives a broad overview of what we will be discussing and when but is subject to change and you will be notified either on our Discord of any changes. 
+During Fall/Spring semesters the club typically meets twice per week On Tuesday and Thursday at 5:30 PM at the Simons Center for the Arts room 281. We will hold general discussion meetings on various cyber security topics every Tuesday. We will occasionally have guest speakers on these days as well. On Thursdays is when the defense team will meet, and this is usually a time to dig deeper into topics as well as prepare for our competitions. This schedule gives a broad overview of what we will be discussing and when but is subject to change and you will be notified either on our Discord of any changes. 
 
 
 ## Fall 2026
