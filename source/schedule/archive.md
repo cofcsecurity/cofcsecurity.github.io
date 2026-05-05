@@ -1,5 +1,34 @@
 # Archived Schedules
 
+
+### Fall 2023 Schedule
+
+#### Meetings
+
+Week | Date | Topic | Notes
+:-:| :-----: | :-------------: | :---:
+ 1 | Sep. 7 | Getting Started with Virtual Machines | -
+ 2 | Sep. 12 | What is Cyber Security | -
+ 2 | Sep. 14 | Using your Virtual Machines | -
+ 3 | Sep. 19 | Introduction to Networking | -
+ 3 | Sep. 21 | SSH and RDP and The Range | -
+ 4 | Sep. 26 | Intro to Linux | -
+ 4 | Sep. 28 | Linux Deep Dive and The Range | -
+ 5 | Oct. 3 | Intro to Windows | -
+ 5 | Oct. 5 | Windows and The Range | -
+ 6 | Oct. 10 | Offensive Security | -
+ 6 | Oct. 12 | HiveStorm Practice | -
+ 7 | Oct. 17 | Fall Break No Meeting | -
+ 7 | Oct. 19 | The Range Practice | -
+ 8 | Oct. 24 | Cryptology | -
+ 8 | Oct. 26 | The Range | -
+ 9 | Oct. 31 | Happy Halloween No Meeting | -
+ 9 | Nov. 2 | Firewalls on End Devices | -
+10 | Nov. 7 | Defensive Security Lab | -
+10 | Nov. 9 | The Range Practice | -
+11 | Nov. 14 | The Dark Web | -
+11 | Nov. 16 | Range Practice (Last Meeting Of Semester) | - 
+
 ### Spring 2022 Schedule
 
 #### Meetings
