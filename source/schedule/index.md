@@ -26,6 +26,7 @@ During Fall/Spring semesters the club typically meets twice per week On Tuesday 
 | 12 | Thursday | 10/1/2026 | 17:30-19:30 | Stern Center room 201 | |
 | 13 | Tuesday | 10/6/2026 | 17:30-19:30 | Stern Center room 201 | |
 | 14 | Thursday | 10/8/2026 | 17:30-19:30 | Stern Center room 201 | |
+| — | Tuesday | 10/13/2026 | — | — | No meeting |
 | 15 | Thursday | 10/15/2026 | 17:30-19:30 | Stern Center room 201 | |
 | 16 | Tuesday | 10/20/2026 | 17:30-19:30 | Stern Center room 201 | |
 | 17 | Thursday | 10/22/2026 | 17:30-19:30 | Stern Center room 201 | |
@@ -38,6 +39,7 @@ During Fall/Spring semesters the club typically meets twice per week On Tuesday 
 | 24 | Tuesday | 11/17/2026 | 17:30-19:30 | Stern Center room 201 | |
 | 25 | Thursday | 11/19/2026 | 17:30-19:30 | Stern Center room 201 | |
 | 26 | Tuesday | 11/24/2026 | 17:30-19:30 | Stern Center room 201 | |
+| — | Thursday | 11/26/2026 | — | — | No meeting (Thanksgiving) |
 | 27 | Tuesday | 12/1/2026 | 17:30-19:30 | Stern Center room 201 | |
 | 28 | Thursday | 12/3/2026 | 17:30-19:30 | Stern Center room 201 | |
 
