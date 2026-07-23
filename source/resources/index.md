@@ -58,6 +58,9 @@ We recommend you set up Kali Linux in either VirtualBox or VMware using the guid
 
 1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. [VMware Workstation Player](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
+3. [Windows Virtual Machine Installation Guide](./windows_installation_guide.html)
+4. [VM using Virtual Box and Hyper-V Setup Guide](./VB_and_Hyper-V_setup.html)
+5. [Mac Virtual Machine Installation Guide](./mac_installation_guide.html)
 
 
 ## The Tools of The Trade
@@ -106,6 +109,7 @@ Nowadays cloud knowledge is crucial to virtually anything computer science inclu
 4. [TechWorld with Nana](https://www.youtube.com/channel/UCdngmbVKX1Tgre699-XLlUA): Tons of DevOps tutorials
 5. [Hackersploit](https://www.youtube.com/channel/UC0ZTPkdxlAKf-V33tqXwi3Q): HackerSploit is the leading provider of free Infosec and cybersecurity training. Our goal is to make cybersecurity training more effective and accessible to students and professionals.
 6. [NetworkChuck](https://www.youtube.com/channel/UC9x0AN7BWHpCDHSm9NiJFJQ): If your goals are to obtain your CCNA, CompTIA A+, CompTIA Network+...I'm here to help you with that goal in any way I can! 
+7. [Jack Rhysider](https://www.youtube.com/@JackRhysider) Cybersecurity stories podcast.
 
 ## Practice
 
