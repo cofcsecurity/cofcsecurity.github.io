@@ -1,6 +1,6 @@
 ---
 title: Schedule
-date: 2026-05-5 12:00:00
+date: 2026-07-23 12:00:00
 ---
 
 ## Schedule
@@ -12,38 +12,38 @@ During Fall/Spring semesters the club typically meets twice per week On Tuesday 
 
 | # | Day | Date | Time | Location | Topic | Notes |
 |---|-----|------|------|----------|-------|-------|
-| 1 | Tuesday | 8/25/2026 | 17:30-19:30 | Simons 281 | | Day after classes start |
-| 2 | Thursday | 8/27/2026 | 17:30-19:30 | Simons 281 | | |
-| 3 | Tuesday | 9/1/2026 | 17:30-19:30 | Simons 281 | | |
-| 4 | Thursday | 9/3/2026 | 17:30-19:30 | Simons 281 | | |
-| 5 | Tuesday | 9/8/2026 | 17:30-19:30 | Simons 281 | | |
-| 6 | Thursday | 9/10/2026 | 17:30-19:30 | Simons 281 | | |
-| 7 | Tuesday | 9/15/2026 | 17:30-19:30 | Simons 281 | | |
-| 8 | Thursday | 9/17/2026 | 17:30-19:30 | Simons 281 | | |
-| 9 | Tuesday | 9/22/2026 | 17:30-19:30 | Simons 281 | | |
-| 10 | Thursday | 9/24/2026 | 17:30-19:30 | Simons 281 | | |
-| 11 | Tuesday | 9/29/2026 | 17:30-19:30 | Simons 281 | | |
-| 12 | Thursday | 10/1/2026 | 17:30-19:30 | Simons 281 | | |
-| 13 | Tuesday | 10/6/2026 | 17:30-19:30 | Simons 281 | | |
-| 14 | Thursday | 10/8/2026 | 17:30-19:30 | Simons 281 | | |
-| — | Tuesday | 10/13/2026 | — | — | | No meeting |
-| 15 | Thursday | 10/15/2026 | 17:30-19:30 | Simons 281 | | |
-| 16 | Tuesday | 10/20/2026 | 17:30-19:30 | Simons 281 | | |
-| 17 | Thursday | 10/22/2026 | 17:30-19:30 | Simons 281 | | |
-| 18 | Tuesday | 10/27/2026 | 17:30-19:30 | Simons 281 | | |
-| 19 | Thursday | 10/29/2026 | 17:30-19:30 | Simons 281 | | |
-| 20 | Tuesday | 11/3/2026 | 17:30-19:30 | Simons 281 | | |
-| 21 | Thursday | 11/5/2026 | 17:30-19:30 | Simons 281 | | |
-| 22 | Tuesday | 11/10/2026 | 17:30-19:30 | Simons 281 | | |
-| 23 | Thursday | 11/12/2026 | 17:30-19:30 | Simons 281 | | |
-| 24 | Tuesday | 11/17/2026 | 17:30-19:30 | Simons 281 | | |
-| 25 | Thursday | 11/19/2026 | 17:30-19:30 | Simons 281 | | |
-| 26 | Tuesday | 11/24/2026 | 17:30-19:30 | Simons 281 | | |
+| 1 | Tuesday | 8/25/2026 | 17:30-19:30 | Simons 281 | Introduction to the Club & CTF Basics | Day after classes start |
+| 2 | Thursday | 8/27/2026 | 17:30-19:30 | Simons 281 | Introduction to Cyber Competitions | |
+| 3 | Tuesday | 9/1/2026 | 17:30-19:30 | Simons 281 | Virtualization & Introduction to the Command Line | |
+| 4 | Thursday | 9/3/2026 | 17:30-19:30 | Simons 281 | Understanding File Systems | |
+| 5 | Tuesday | 9/8/2026 | 17:30-19:30 | Simons 281 | Remote Access Basics: SSH & RDP | |
+| 6 | Thursday | 9/10/2026 | 17:30-19:30 | Simons 281 | Basic Networking & Communication | |
+| 7 | Tuesday | 9/15/2026 | 17:30-19:30 | Simons 281 | Operating System Permissions & Access Control | |
+| 8 | Thursday | 9/17/2026 | 17:30-19:30 | Simons 281 | Basic Host Hardening | |
+| 9 | Tuesday | 9/22/2026 | 17:30-19:30 | Simons 281 | System Services & Background Processes | |
+| 10 | Thursday | 9/24/2026 | 17:30-19:30 | Simons 281 | Finding Unwanted Processes | |
+| 11 | Tuesday | 9/29/2026 | 17:30-19:30 | Simons 281 | Network Monitoring & Traffic Basics | |
+| 12 | Thursday | 10/1/2026 | 17:30-19:30 | Simons 281 | Analyzing Traffic for Incidents | |
+| 13 | Tuesday | 10/6/2026 | 17:30-19:30 | Simons 281 | Web Infrastructure Basics: DNS | |
+| 14 | Thursday | 10/8/2026 | 17:30-19:30 | Simons 281 | DNS Auditing & Configuration Check | |
+| — | Tuesday | 10/13/2026 | — | — | | No meeting (Fall break) |
+| 15 | Thursday | 10/15/2026 | 17:30-19:30 | Simons 281 | Mid-Semester Practice Simulation | |
+| 16 | Tuesday | 10/20/2026 | 17:30-19:30 | Simons 281 | Introduction to Active Directory | |
+| 17 | Thursday | 10/22/2026 | 17:30-19:30 | Simons 281 | Active Directory Basics & Policy Controls | |
+| 18 | Tuesday | 10/27/2026 | 17:30-19:30 | Simons 281 | Web & Database Server Setup | |
+| 19 | Thursday | 10/29/2026 | 17:30-19:30 | Simons 281 | Application Security & Log Review | |
+| 20 | Tuesday | 11/3/2026 | 17:30-19:30 | Simons 281 | Introduction to Log Collection | |
+| 21 | Thursday | 11/5/2026 | 17:30-19:30 | Simons 281 | Basic Centralized Monitoring | |
+| 22 | Tuesday | 11/10/2026 | 17:30-19:30 | Simons 281 | Basic Automation: Scripting | |
+| 23 | Thursday | 11/12/2026 | 17:30-19:30 | Simons 281 | Using Scripts for Configuration Checks | |
+| 24 | Tuesday | 11/17/2026 | 17:30-19:30 | Simons 281 | System Backups & Recovery Planning | |
+| 25 | Thursday | 11/19/2026 | 17:30-19:30 | Simons 281 | System Recovery Practice | |
+| 26 | Tuesday | 11/24/2026 | 17:30-19:30 | Simons 281 | Competition Workflow & Communication | |
 | — | Thursday | 11/26/2026 | — | — | | No meeting (Thanksgiving) |
-| 27 | Tuesday | 12/1/2026 | 17:30-19:30 | Simons 281 | | |
-| 28 | Thursday | 12/3/2026 | 17:30-19:30 | Simons 281 | | |
+| 27 | Tuesday | 12/1/2026 | 17:30-19:30 | Simons 281 | Open Lab Project Day & Catch-up | |
+| 28 | Thursday | 12/3/2026 | 17:30-19:30 | Simons 281 | End-of-Term Practice Run | |
 
 
 ### Past Schedules
 
-Past schedules can be found [here](/schedule/archive.html). 
+Past schedules can be found [here](/schedule/archive.html).
