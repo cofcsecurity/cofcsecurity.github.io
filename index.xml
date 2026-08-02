@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CofC Cybersecurity Club</title><link>https://cofcsecurity.github.io/</link><description>Recent content on CofC Cybersecurity Club</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cofcsecurity.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Networks Introduction</title><link>https://cofcsecurity.github.io/posts/2022-spring-network_intro/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2022-spring-network_intro/</guid><description>&lt;p&gt;In order to properly learn network secuirty, an understanding of computer network design and protocols is necessay. This presentation was aimed at teaching simple networking basics to prepare club members to learn more on their own. For a complete introduction, please watch the meeting recording and download the slides to follow along.&lt;/p&gt;
+&lt;h3 id="dynamic-host-configuration-protocol-dhcp"&gt;Dynamic Host Configuration Protocol (DHCP)&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://datatracker.ietf.org/doc/html/rfc2131"&gt;RFC 2131&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;On new connection to network, DHCP server delivers 3 important pieces information&lt;/p&gt;</description></item><item><title>Linux Knowledge</title><link>https://cofcsecurity.github.io/posts/2021-fall-linux-resources/</link><pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-fall-linux-resources/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This post will provide a high level overview of important things to know about securing and adminstrating Linux systems.&lt;/p&gt;
+&lt;h2 id="command-line"&gt;Command Line&lt;/h2&gt;
+&lt;p&gt;Knowing how to use the command line is essential, Linux servers usually do not have desktop environments - and even if they do many administrative tasks are not possible to do via GUI.&lt;/p&gt;
+&lt;h3 id="bash"&gt;Bash&lt;/h3&gt;
+&lt;p&gt;The default shell in many Linux systems. Check out this guide: &lt;a href="https://guide.bash.academy/commands/"&gt;https://guide.bash.academy/commands/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="secure-shell-ssh"&gt;Secure Shell (SSH)&lt;/h3&gt;
+&lt;p&gt;Know how to connect into other computers via the command line using SSH as well as how to create and use SSH keys.&lt;/p&gt;</description></item><item><title>Lock Picking</title><link>https://cofcsecurity.github.io/posts/2021-fall-lockpicking/</link><pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-fall-lockpicking/</guid><description>&lt;h1 id="lock-picking"&gt;Lock Picking&lt;/h1&gt;
+&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lock:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/internal-of-lock.jpg?raw=true" alt="Lock Internal"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pins&lt;/li&gt;
+&lt;li&gt;Springs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pick:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/tuxedo-picks.jpg?raw=true" alt="Picks"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Individual Pin Pick&lt;/li&gt;
+&lt;li&gt;Rake&lt;/li&gt;
+&lt;li&gt;Comb&lt;/li&gt;
+&lt;li&gt;Wafer&lt;/li&gt;
+&lt;li&gt;Tension Wrench&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Other Picks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Shims&lt;/li&gt;
+&lt;li&gt;Jims (Door lock)&lt;/li&gt;
+&lt;li&gt;Zip Gun&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/zip-gun-lockpicking.jpg?raw=true" alt="Zip Gun"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="how-does-it-work"&gt;How does it Work?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Non-destructive way to open a lock&lt;/li&gt;
+&lt;li&gt;Takes advantage of exploiting imperfections (not every lock is 100% accurate and secure due to manufacturing imperfections)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="how-to-pick-locks"&gt;How to Pick Locks&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;General Formula: tension + pick with the right pin combination = picked lock&lt;/li&gt;
+&lt;li&gt;Pin by Pin:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/lock-picking-precision.gif?raw=true" alt="Pin by Pin"&gt;&lt;/p&gt;</description></item><item><title>Tools of the Trade</title><link>https://cofcsecurity.github.io/posts/2021-fall-tools-of-the-trade/</link><pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-fall-tools-of-the-trade/</guid><description>&lt;h1 id="tools-of-the-trade"&gt;Tools of the Trade&lt;/h1&gt;
+&lt;h2 id="setting-up-your-box"&gt;Setting up Your Box&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hardware:
+&lt;ul&gt;
+&lt;li&gt;The computer you already have&lt;/li&gt;
+&lt;li&gt;Raspberry Pi (2-4)&lt;/li&gt;
+&lt;li&gt;Older/Used laptops (Thinkpads are what I would recommend)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://cofcsecurity.github.io/2020-fall-virtualization2020/"&gt;The VM Route&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.kali.org/docs/"&gt;Kali Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.parrotlinux.org/"&gt;Parrot Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bit.ly/2M1tz35"&gt;Dual-Boot Route&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;I personally recommend dual booting if at all possible possible&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://bit.ly/36Kev1R"&gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bit.ly/2r1wwcI"&gt;AWS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Server
+&lt;ul&gt;
+&lt;li&gt;Used hardware on eBay&lt;/li&gt;
+&lt;li&gt;ESXI hypervisor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="personal-security"&gt;Personal Security&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Password Manager&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1Password&lt;/li&gt;
+&lt;li&gt;LastPass&lt;/li&gt;
+&lt;li&gt;Remembear&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2FA&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://amzn.to/36EPRzn"&gt;Yubikey&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ &lt;figure class="video_container"&gt;
+ &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/NEDeL3Q4WvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+ &lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://bit.ly/2YVmAOc"&gt;Google Titan&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ &lt;figure class="video_container"&gt;
+ &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/2d_pwtUcPIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+ &lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;Biometric (If available)&lt;/li&gt;
+&lt;li&gt;6-digit code generator&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Internet Traffic Security&lt;/p&gt;</description></item><item><title>Information Gathering</title><link>https://cofcsecurity.github.io/posts/2021-fall-information-gathering/</link><pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-fall-information-gathering/</guid><description>&lt;h1 id="information-gathering"&gt;Information Gathering&lt;/h1&gt;
+&lt;h2 id="google-dorks"&gt;Google Dorks&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/google.png?raw=true" alt="Google Dorks"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Answer: The best way to refine Google &amp;amp; database searches for OSINT (&amp;amp; schoolwork)!&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.sans.org/posters/google-hacking-and-defense-cheat-sheet/"&gt;Cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Common Vulnerabilities and Exposures (&lt;a href="https://cve.mitre.org"&gt;CVEs&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Practice:
+&lt;ol&gt;
+&lt;li&gt;What is the CVE of the original POODLE attack?&lt;/li&gt;
+&lt;li&gt;What version of VSFTPD contained the smiley face backdoor?&lt;/li&gt;
+&lt;li&gt;What was the first 1.0.1 version of OpenSSL that was NOT vulnerable to heartbleed?&lt;/li&gt;
+&lt;li&gt;What was the original RFC number that described Telnet?&lt;/li&gt;
+&lt;li&gt;How large (in bytes) was the SQL Slammer worm?&lt;/li&gt;
+&lt;li&gt;Samy is my…&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cofcsecurity/Presentations/blob/master/Answers/osint.md"&gt;Answers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="network-recon"&gt;Network Recon&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Grab your current IP and Subnet: &lt;code&gt;ip addr show | grep &amp;lt;network interface&amp;gt; | grep inet | awk '{print $2}'&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="nmap"&gt;nmap:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://nmap.org/book/man.html"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Usage: &lt;code&gt;nmap -&amp;lt;options&amp;gt; &amp;lt;ip/subnet or address&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Common Options:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-sn&lt;/code&gt; - ping scan (essentially is ping 8.8.8.8 via CLI)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-sS&lt;/code&gt; - SYN or Normal scan&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-sU&lt;/code&gt; - UDP scan&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&amp;lt;start num-end num&amp;gt;&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Default is 1-1024&lt;/li&gt;
+&lt;li&gt;Max port = 65535&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-sV&lt;/code&gt; - list all the services (+ version) running on the target&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-O&lt;/code&gt; - OS detection&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-Pn&lt;/code&gt; - treat all hosts as up up&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-A&lt;/code&gt; - runs nmap scripts, -O, -sV, &amp;amp; traceroute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="other-useful-tools"&gt;Other Useful Tools:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ping &amp;lt;options&amp;gt; &amp;lt;ip address or hostname&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;traceroute &amp;lt;ip or address&amp;gt;&lt;/code&gt; - shows all the hops from your machine to the ip/address&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;netdiscover -i &amp;lt;interface/subnet&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="dns-recon"&gt;DNS Recon:&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/dns-query.png?raw=true" alt="DNS"&gt;&lt;/p&gt;</description></item><item><title>Powershell</title><link>https://cofcsecurity.github.io/posts/2021-fall-powershell/</link><pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-fall-powershell/</guid><description>&lt;h1 id="powershell"&gt;Powershell&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;All files can be found &lt;a href="https://github.com/cofcsecurity/Presentations/tree/master/psResources"&gt;here&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="get-powershell"&gt;Get Powershell&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;What is powershell?: Microsoft’s answer to the Linux terminal, but more Object-Oriented (OOP)&lt;/li&gt;
+&lt;li&gt;Method 1:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines"&gt;Windows VM&lt;/a&gt; or Host OS&lt;/li&gt;
+&lt;li&gt;Method 2:
+&lt;ul&gt;
+&lt;li&gt;Ubuntu VM or Mac with Powershell installed??? (aka PFM)&lt;/li&gt;
+&lt;li&gt;Uses Powershell core (and doesn’t need docker, just homebrew)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="powershell-basics"&gt;Powershell Basics:&lt;/h2&gt;
+&lt;h3 id="variables"&gt;Variables:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$var1 = &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$var2 = &lt;span style="color:#960050;background-color:#1e0010"&gt;“&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;55&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;”&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="operations"&gt;Operations:&lt;/h3&gt;
+&lt;h4 id="addition"&gt;Addition:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$var1 + $var2
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$var2 + $var1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Why are they different?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;var ++
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;var += &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="equality"&gt;Equality:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-eq&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;:&lt;/span&gt; equals
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-ne&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;:&lt;/span&gt; not equal to
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-ceq&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;:&lt;/span&gt; case sensitive comparison
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-gt&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;:&lt;/span&gt; greater than
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;-gte: greater than or equal to
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-lt&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;:&lt;/span&gt; less than 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;-lte: less than or equal to
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="booleans"&gt;Booleans:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-and&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-or&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="conditionals"&gt;Conditionals:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;If&lt;/span&gt; (&amp;lt;condition&amp;gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&amp;lt;code/commands&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;Else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&amp;lt;code/commands&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="loops"&gt;Loops:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$question = &lt;span style="color:#e6db74"&gt;&amp;#34;Are we there yet?&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$answer = &lt;span style="color:#e6db74"&gt;&amp;#34;Noooooo!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; ($i = &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;; $i &lt;span style="color:#f92672"&gt;-gt&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; $i--){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $question
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; sleep &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Write-Output &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;`n&lt;/span&gt;$answer&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;**(`n) = new line, not \n like python/java/c
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$services = get-service
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;ForEach&lt;/span&gt; ($thing &lt;span style="color:#66d9ef"&gt;in&lt;/span&gt; $services){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	$thing.name + &lt;span style="color:#e6db74"&gt;&amp;#34; : &amp;#34;&lt;/span&gt; + $thing.status
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Write-Output &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;`n&lt;/span&gt;&lt;span style="color:#e6db74"&gt;The last service is &lt;/span&gt;$($thing.name)&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$food = &lt;span style="color:#e6db74"&gt;&amp;#39;Beans&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;Greens&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;Potatoes&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;Lamb&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;Rams&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;Hogs&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;Dogs&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; ($i = &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;; $i &lt;span style="color:#f92672"&gt;-gt&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; $i--){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;foreach&lt;/span&gt;($item &lt;span style="color:#66d9ef"&gt;in&lt;/span&gt; $food){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Output &lt;span style="color:#e6db74"&gt;&amp;#34;I got &lt;/span&gt;$item&lt;span style="color:#e6db74"&gt; &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Write-Output &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;`n&lt;/span&gt;&lt;span style="color:#e6db74"&gt;You name it!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;while&lt;/span&gt; ($true){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; test-connection &lt;span style="color:#ae81ff"&gt;127.0&lt;/span&gt;.0.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex="0"&gt;&lt;code&gt;$rabbits = 2
+Do{
+ Write-output &amp;#34;We now have $rabbits rabbits!&amp;#34;
+ $rabbits *= 2
+}
+While ($rabbits -lt 10000)
+&lt;/code&gt;&lt;/pre&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$i = &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;while&lt;/span&gt;($i &lt;span style="color:#f92672"&gt;-lt&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;999&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $i++
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $i
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;`n&lt;/span&gt;&lt;span style="color:#e6db74"&gt;Count complete - We have counted up to &lt;/span&gt;$i&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt; -ForegroundColor Cyan
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AKA the original for-loop or you can call the for-loop a wannabe while loop, either one works with me&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="functions"&gt;Functions:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Function &amp;lt;name&amp;gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	Function ($parameter){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&amp;lt;Insert code here&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&amp;lt;Insert code here&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;name&amp;gt; -parameter &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="the-cool-stuff"&gt;The Cool Stuff&lt;/h2&gt;
+&lt;h3 id="tcp-listener"&gt;TCP Listener&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Idea: we monitor someone’s computer and we get a notification when they open an application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; WMI_Subscription{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; server($port){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $Tcplistener = New-object System.Net.Sockets.TcpListener $port
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $Tcplistener.Start()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-host &lt;span style="color:#e6db74"&gt;&amp;#34;[-] &amp;#34;&lt;/span&gt; -ForegroundColor green -NoNewline; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;Listening: 0.0.0.0:&lt;/span&gt;$port&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt; -ForegroundColor cyan
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $TcpClient = $Tcplistener.AcceptTcpClient()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $remoteclient = $TcpClient.Client.RemoteEndPoint.Address.IPAddressToString
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;[-] &amp;#34;&lt;/span&gt; -ForegroundColor green -NoNewline; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;New connection: &lt;/span&gt;$remoteclient&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt; -ForegroundColor Cyan
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $TcpNetworkstream = $TCPClient.GetStream()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $Receivebuffer = New-Object Byte[] $TcpClient.ReceiveBufferSize
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $encodingtype = New-Object System.Text.ASCIIEncoding
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt; ($TCPClient.Connected){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $Read = $TcpNetworkstream.Read($Receivebuffer, &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, $Receivebuffer.Length) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; [&lt;span style="color:#66d9ef"&gt;Array&lt;/span&gt;]$Bytesreceived += $Receivebuffer[&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;..($Read &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; [&lt;span style="color:#66d9ef"&gt;Array&lt;/span&gt;]::Clear($Receivebuffer, &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, $Read)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $ScriptBlock = [&lt;span style="color:#66d9ef"&gt;ScriptBlock&lt;/span&gt;]::Create($EncodingType.GetString($Bytesreceived))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $ScriptBlock
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $TcpNetworkstream.Dispose(); $Tcpclient.Dispose(), $Tcplistener.Stop()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;server -port &lt;span style="color:#ae81ff"&gt;6602&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Temp WMI... dies when the process terminates&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-Process -Name notepad -ErrorAction SilentlyContinue | Stop-Process
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Register-CimIndicationEvent -Query &lt;span style="color:#e6db74"&gt;&amp;#34;Select * from __InstanceCreationEvent within 15 where targetInstance isa &amp;#39;win32_process&amp;#39; and (targetinstance.name = &amp;#39;notepad.exe&amp;#39; OR targetinstance.name = &amp;#39;wordpad.exe&amp;#39;)&amp;#34;&lt;/span&gt; `
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -SourceIdentifier &lt;span style="color:#e6db74"&gt;&amp;#34;trigger&amp;#34;&lt;/span&gt; -Action{Write-Output &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$(get-date)&lt;span style="color:#e6db74"&gt; - Temp WMI Register Executed Successfully&amp;#34;&lt;/span&gt; | Out-File $env:USERPROFILE\Desktop\logger.txt -Append}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Start-Process notepad
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-Content &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$env:USERPROFILE&lt;span style="color:#e6db74"&gt;\Desktop\logger.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-EventSubscriber
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Unregister-Event -SourceIdentifier &lt;span style="color:#e6db74"&gt;&amp;#34;trigger&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Register-CimIndicationEvent -Query &lt;span style="color:#e6db74"&gt;&amp;#34;Select * from __instanceModificationEvent within 15 where targetInstance isa &amp;#39;win32_Service&amp;#39;&amp;#34;&lt;/span&gt; `
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -SourceIdentifier &lt;span style="color:#e6db74"&gt;&amp;#34;trigger2&amp;#34;&lt;/span&gt; -Action{Write-Output &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$(get-date)&lt;span style="color:#e6db74"&gt; - Temp WMI Register Executed Successfully&amp;#34;&lt;/span&gt; | Out-File $env:USERPROFILE\Desktop\logger2.txt -Append}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Restart-Service -Name BITS
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-Content &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$env:USERPROFILE&lt;span style="color:#e6db74"&gt;\Desktop\logger2.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Unregister-Event -SourceIdentifier &lt;span style="color:#e6db74"&gt;&amp;#34;trigger2&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Register-WmiEvent -Query &lt;span style="color:#e6db74"&gt;&amp;#34;Select * from __InstanceoperationEvent within 20 where targetinstance ISA &amp;#39;win32_process&amp;#39; AND targetinstance.name=&amp;#39;lsass.exe&amp;#39;&amp;#34;&lt;/span&gt; -SourceIdentifier &lt;span style="color:#e6db74"&gt;&amp;#34;beacon&amp;#34;&lt;/span&gt; `
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -Action{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $socket = new-object System.Net.Sockets.TcpClient(&lt;span style="color:#e6db74"&gt;&amp;#34;127.0.0.1&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;6602&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $data = [&lt;span style="color:#66d9ef"&gt;System.Text.Encoding&lt;/span&gt;]::ASCII.GetBytes(&lt;span style="color:#e6db74"&gt;&amp;#34;This is a test&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $stream = $socket.GetStream()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $stream.Write($data, &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, $data.Length)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Unregister-Event -SourceIdentifier &lt;span style="color:#e6db74"&gt;&amp;#34;beacon&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-WmiObject -Namespace root/cimv2 -Class win32_localtime
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Register-WmiEvent -Query &lt;span style="color:#e6db74"&gt;&amp;#34;Select * from __InstanceModificationEvent within 30 WHERE TargetInstance ISA &amp;#39;Win32_LocalTime&amp;#39; AND targetinstance.hour = 20 AND targetinstance.minute = 42 group within 30&amp;#34;&lt;/span&gt; -SourceIdentifier &lt;span style="color:#e6db74"&gt;&amp;#34;beacon2&amp;#34;&lt;/span&gt; `
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -Action{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $socket = new-object System.Net.Sockets.TcpClient(&lt;span style="color:#e6db74"&gt;&amp;#34;127.0.0.1&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;6602&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $data = [&lt;span style="color:#66d9ef"&gt;System.Text.Encoding&lt;/span&gt;]::ASCII.GetBytes(&lt;span style="color:#e6db74"&gt;&amp;#34;This is a test&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $stream = $socket.GetStream()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $stream.Write($data, &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, $data.Length)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Unregister-Event -SourceIdentifier &lt;span style="color:#e6db74"&gt;&amp;#34;beacon2&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-Job
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="port-scanning"&gt;Port Scanning&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ports = &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;.&lt;span style="color:#ae81ff"&gt;.100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$IP = &lt;span style="color:#e6db74"&gt;&amp;#34;192.168.0.185&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$scan = &lt;span style="color:#66d9ef"&gt;foreach&lt;/span&gt;($port &lt;span style="color:#66d9ef"&gt;in&lt;/span&gt; $ports){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;try&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $portStatus = new-object Net.Sockets.TcpClient($IP, $port)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; [&lt;span style="color:#66d9ef"&gt;pscustomobject&lt;/span&gt;]@{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; RemoteAddress = $IP
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; RemotePort = $port
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; TcpTestSucceeded = $portStatus.connected
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $portStatus.Close()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;catch&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; [&lt;span style="color:#66d9ef"&gt;pscustomobject&lt;/span&gt;]@{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; RemoteAddress = $IP
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; RemotePort = $port
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; TcpTestSucceeded = &lt;span style="color:#e6db74"&gt;&amp;#39;False&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$scan
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="downgrading-powershell"&gt;Downgrading Powershell:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Why would we do this??&lt;/li&gt;
+&lt;li&gt;How to downgrade:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ($PSVersionTable.PSVersion &lt;span style="color:#f92672"&gt;-gt&lt;/span&gt; [&lt;span style="color:#66d9ef"&gt;Version&lt;/span&gt;]&lt;span style="color:#e6db74"&gt;&amp;#34;2.0&amp;#34;&lt;/span&gt;) { 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;powershell -Version &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; &lt;span style="color:#f92672"&gt;-File&lt;/span&gt; $MyInvocation.MyCommand.Definition exit } 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;run some code&amp;#39;&lt;/span&gt; Read-Host -Prompt &lt;span style="color:#e6db74"&gt;&amp;#34;Scripts Completed : Press any key to exit&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="time-stomping"&gt;Time Stomping:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;What is it?&lt;/li&gt;
+&lt;li&gt;Why is it important?&lt;/li&gt;
+&lt;li&gt;Why you shouldn’t do it to your professors :)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;file = &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$env:USERPROFILE&lt;span style="color:#e6db74"&gt;\desktop\myfile.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-Item $file | format-list *time
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(Get-Item -path $file).LastWriteTimeutc = Get-Date
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(Get-Item -path $file).LastWriteTime = (Get-Date).AddDays(&lt;span style="color:#ae81ff"&gt;-270&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(Get-Item -path $file).CreationTime = &lt;span style="color:#e6db74"&gt;&amp;#34;8/8/2018 09:00:00 PM&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="the-duck"&gt;The Duck&amp;hellip;&lt;/h2&gt;
+&lt;figure class="video_container"&gt;
+ &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/IdWhkGD-ojM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+&lt;h3 id="general"&gt;General:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;What is it?&lt;/li&gt;
+&lt;li&gt;Why should you know about it?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="use-cases"&gt;Use Cases:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Script parameters:
+&lt;ol&gt;
+&lt;li&gt;Computer information&lt;/li&gt;
+&lt;li&gt;USB Information&lt;/li&gt;
+&lt;li&gt;Installed Updates&lt;/li&gt;
+&lt;li&gt;Network Information&lt;/li&gt;
+&lt;li&gt;Network Scan&lt;/li&gt;
+&lt;li&gt;Port Scan&lt;/li&gt;
+&lt;li&gt;Saved in C:\Users&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Can be used to get a reverse shell&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="how-to-get-your-hands-on-one"&gt;How to get your hands on one:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://shop.hak5.org/collections/physical-access/products/usb-rubber-ducky-deluxe"&gt;Official link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.pentestingshop.com/pentesting/make-your-own-usb-rubber-ducky-using-a-normal-usb-stick/"&gt;Make your own&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="practice"&gt;Practice&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://underthewire.tech/"&gt;Under the Wire (Sentry)&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Image Forensics</title><link>https://cofcsecurity.github.io/posts/2021-fall-image-forensics/</link><pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-fall-image-forensics/</guid><description>&lt;h1 id="image-forensics"&gt;Image Forensics&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://github.com/cofcsecurity/Presentations/blob/master/Presentation-Materials/stego.zip?raw=true"&gt;Materials for the Meeting&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="how-to-extract-metadata-from-files"&gt;How to Extract Metadata from Files&lt;/h2&gt;
+&lt;h3 id="cli"&gt;CLI&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Imago:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Installing:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/redaelli/imago-forensics.git"&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pip install imago&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Running:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;imago -i [path to directory where the file is located] -o [where do you want the output file to go] -x -t -g&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;-x = for exif metadata&lt;/li&gt;
+&lt;li&gt;-t = for only .jpg images&lt;/li&gt;
+&lt;li&gt;-g = gps info, if available&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Exiftool:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Running: &lt;code&gt;exiftool &amp;lt;options&amp;gt; /path/to/file&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="web"&gt;Web&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://exif.regex.info/exif.cgi"&gt;Web&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="steganography"&gt;Steganography&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Download: &lt;a href="http://diit.sourceforge.net/download.php"&gt;DIIT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;How to run: &lt;code&gt;java -jar -Xmx512m diit-1.5.jar&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Practice:
+&lt;ol&gt;
+&lt;li&gt;Stego 1.bmp&lt;/li&gt;
+&lt;li&gt;Stego 2.bmp&lt;/li&gt;
+&lt;li&gt;STEG3.bmp&lt;/li&gt;
+&lt;li&gt;Stego 3.bmp&lt;/li&gt;
+&lt;li&gt;Steg4.bmp&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://github.com/pmccabe5"&gt;@pmccabe5&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Ciphers and Hashing</title><link>https://cofcsecurity.github.io/posts/2021-fall-ciphers-and-hashing/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-fall-ciphers-and-hashing/</guid><description>&lt;h1 id="ciphers-and-hashing"&gt;Ciphers and Hashing&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://github.com/cofcsecurity/Presentations/blob/master/Presentation-Materials/crypto.zip?raw=true"&gt;Matrials for the Meeting&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="ciphers"&gt;Ciphers&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Practice: cipherChallenge.txt&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="what-are-ciphers"&gt;What are ciphers?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cipher- a method to transform text to hide its meaning (Merriam-Webster def. 2)&lt;/li&gt;
+&lt;li&gt;Types of ciphers (there are a lot but here are some common ones):
+&lt;ul&gt;
+&lt;li&gt;Caesar&lt;/li&gt;
+&lt;li&gt;Vigenere&lt;/li&gt;
+&lt;li&gt;Decimal&lt;/li&gt;
+&lt;li&gt;Base64&lt;/li&gt;
+&lt;li&gt;Binary&lt;/li&gt;
+&lt;li&gt;Hex&lt;/li&gt;
+&lt;li&gt;Baconian&lt;/li&gt;
+&lt;li&gt;And more!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="decoding-ciphers"&gt;Decoding Ciphers:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Methods:
+&lt;ul&gt;
+&lt;li&gt;Scripting (Python, BASH, etc.)&lt;/li&gt;
+&lt;li&gt;Through the Web:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://bit.ly/2nqHKBM"&gt;Rapidtables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bit.ly/1tgtYh0"&gt;Rumkin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gchq.github.io/CyberChef/"&gt;CyberChef&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.boxentriq.com/code-breaking"&gt;Boxentriq&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="hashing-and-password-hashing"&gt;Hashing and Password Hashing:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Practice: hashChallenge.txt&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="what-is-hashing"&gt;What is Hashing?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Short Answer: a more secure cipher that is irreversible&lt;/li&gt;
+&lt;li&gt;Long Answer: It’s a way to remap the values of a string for secure transmission and file integrity (think of computer forensics)
+Example Hashes: see the crypto.zip file “hashSignatures.txt”&lt;/li&gt;
+&lt;li&gt;How to use file integrity: &lt;code&gt;md5sum &amp;lt;file&amp;gt;&lt;/code&gt;,
+&lt;code&gt;sha[1, 256, 384, 512]sum &amp;lt;file&amp;gt;&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Example - ParrotOS md5 checksum
+&lt;ul&gt;
+&lt;li&gt;Parrot Security 4.7 x64 (iso) - 97b80f3f05cb48aab61c59586e11a49a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bit.ly/2IwTZJ8"&gt;How to Calculate Hashes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="identifying-hashes"&gt;Identifying Hashes:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;via CLI: &lt;code&gt;hash-identifier &amp;lt;single hash&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;via &lt;a href="https://bit.ly/2p9t9zf"&gt;Web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;You can put hashes of the same type in a file and crack all at once&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="cracking-hashes"&gt;Cracking Hashes:&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://github.com/cofcsecurity/cofcsecurity.github.io/blob/master/source/_posts/images/dictionary-attack.png?raw=true" alt="Dictionary Attack Meme"&gt;&lt;/p&gt;</description></item><item><title>Bash and Python Scripting</title><link>https://cofcsecurity.github.io/posts/2021-fall-scripting/</link><pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-fall-scripting/</guid><description>&lt;h1 id="bash-and-python-scripting"&gt;Bash and Python Scripting&lt;/h1&gt;
+&lt;h2 id="bourne-again-shell-bash"&gt;Bourne Again Shell (Bash)&lt;/h2&gt;
+&lt;h3 id="the-basics"&gt;The Basics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Shabang: #!/bin/bash&lt;/li&gt;
+&lt;li&gt;How to run bash scripts:&lt;/li&gt;
+&lt;li&gt;Make sure the file is executable:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ls -alth&lt;/code&gt; and check for an x flag&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If it isn’t executable:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;chmod +x &amp;lt;filename.sh&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;chmod 777 &amp;lt;filename.sh&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bash &amp;lt;filename.sh&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;./&amp;lt;filename.sh&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="variables"&gt;Variables&lt;/h3&gt;
+&lt;h4 id="conventions"&gt;Conventions:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;UPPERCASE= value/string/output from a command&lt;/li&gt;
+&lt;li&gt;Example: &lt;code&gt;NAME=“Your Name”&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Variabe usage:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo “My name is $NAME”
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo “My name is &lt;span style="color:#e6db74"&gt;${&lt;/span&gt;NAME&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;, hello”
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="reading-user-input"&gt;Reading User Input:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# !/bin/bash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#Read user data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;Please enter your full name: &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;read FIRSTNAME LASTNAME	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;Your name is &lt;/span&gt;$FIRSTNAME&lt;span style="color:#e6db74"&gt; &lt;/span&gt;$LASTNAME&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="positional-parameters"&gt;Positional Parameters:&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;#!/bin/bash
+#positional parameters
+echo &amp;#34;Execution of script $0&amp;#34;
+echo &amp;#34;Enter the name of the user: $1&amp;#34;
+#add user
+adduser --home /$1 $1
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="menus"&gt;Menus:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#menus&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;Welcome to Bob&amp;#39;s Burgers&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;Please choose what you want to eat: &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;meals&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Burger Fries&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;select&lt;/span&gt; option in $meals; &lt;span style="color:#66d9ef"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	echo &lt;span style="color:#e6db74"&gt;&amp;#34;The selected option is &lt;/span&gt;$REPLY&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	echo &lt;span style="color:#e6db74"&gt;&amp;#34;The selected meal is &lt;/span&gt;$option&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="conditionals"&gt;Conditionals:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#if/if-else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;NAME&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Patrick&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; &lt;span style="color:#f92672"&gt;[&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$NAME&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Patrick&amp;#34;&lt;/span&gt; &lt;span style="color:#f92672"&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	echo &lt;span style="color:#e6db74"&gt;&amp;#34;Welcome &lt;/span&gt;$NAME&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;Enter username: &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;read USERNAME
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; &lt;span style="color:#f92672"&gt;[&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$USERNAME&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Patrick&amp;#34;&lt;/span&gt; &lt;span style="color:#f92672"&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	echo &lt;span style="color:#e6db74"&gt;&amp;#34;Welcome &lt;/span&gt;$USERNAME&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	echo &lt;span style="color:#e6db74"&gt;&amp;#34;Invalid username please register an account&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="loops"&gt;Loops:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#for loops&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; NAMES in &lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;cat names.txt&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;; &lt;span style="color:#66d9ef"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	echo &lt;span style="color:#e6db74"&gt;&amp;#34;The name is &lt;/span&gt;$NAMES&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="functions"&gt;Functions:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#functions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; shadowtest&lt;span style="color:#f92672"&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; &lt;span style="color:#f92672"&gt;[&lt;/span&gt; -e /etc/shadow &lt;span style="color:#f92672"&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		echo &lt;span style="color:#e6db74"&gt;&amp;#34;yes it exists&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		echo &lt;span style="color:#e6db74"&gt;&amp;#34;Nope&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; testpwd&lt;span style="color:#f92672"&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; &lt;span style="color:#f92672"&gt;[&lt;/span&gt; -e /etc/passwd &lt;span style="color:#f92672"&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		echo &lt;span style="color:#e6db74"&gt;&amp;#34;yes it exists&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		echo &lt;span style="color:#e6db74"&gt;&amp;#34;Nope&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;shadowtest
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;testpwd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="having-some-fun-with-bash"&gt;Having some fun with Bash:&lt;/h3&gt;
+&lt;h4 id="manual-ping-sweeper"&gt;Manual &lt;code&gt;ping&lt;/code&gt; Sweeper:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#ping sweep script&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;Please enter your subnet: &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;read SUBNET
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; IP in &lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;seq &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; 254&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;; &lt;span style="color:#66d9ef"&gt;do&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	ping -c &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; $SUBNET.$IP
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="password-generator-with-the-ssl-library"&gt;Password Generator with the &lt;code&gt;SSL&lt;/code&gt; Library&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#simple password generator&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;Enter the length of the password: &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;read LENGTH 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; P in &lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;seq 1&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	openssl rand -base64 &lt;span style="color:#ae81ff"&gt;48&lt;/span&gt; | cut -c1-$LENGTH
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="file-encryptordecryotor"&gt;File Encryptor/Decryotor:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#file encrypter/decrypter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;This is a simple file encrypter/decrypter&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;Please choose what you want to do&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;choice&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Encrypt Decrypt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;select&lt;/span&gt; option in $choice; &lt;span style="color:#66d9ef"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; &lt;span style="color:#f92672"&gt;[&lt;/span&gt; $REPLY &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; &lt;span style="color:#f92672"&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		echo &lt;span style="color:#e6db74"&gt;&amp;#34;You have selected encryption&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		echo &lt;span style="color:#e6db74"&gt;&amp;#34;Please enter the file name&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		read file;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		gpg -c $file
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		echo &lt;span style="color:#e6db74"&gt;&amp;#34;The file has been encrypted&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; echo &lt;span style="color:#e6db74"&gt;&amp;#34;You have selected decryption&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; echo &lt;span style="color:#e6db74"&gt;&amp;#34;Please enter the file name&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; read file2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; gpg -d $file2
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; echo &lt;span style="color:#e6db74"&gt;&amp;#34;The file has been decrypted&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="dns-reverse-lookup"&gt;DNS Reverse Lookup:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;Please enter your subnet: &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;read SUBNET
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; IP in &lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;seq &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; 254&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;; &lt;span style="color:#66d9ef"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	dig -x $SUBNET.$ip | grep $IP &amp;gt;&amp;gt; dns.txt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="python-scripting"&gt;Python Scripting&lt;/h2&gt;
+&lt;h3 id="basics"&gt;Basics:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;If running via command line shabang: #!/bin/python
+&lt;ul&gt;
+&lt;li&gt;IDEs:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.python.org/downloads/"&gt;IDLE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.jetbrains.com/pycharm/"&gt;Pycharm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="variables-1"&gt;Variables:&lt;/h3&gt;
+&lt;h4 id="declaration"&gt;Declaration:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Single value: test &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Array: test &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;, dog, &lt;span style="color:#ae81ff"&gt;2.5&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="reading-user-input-1"&gt;Reading User Input:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;userInput &lt;span style="color:#f92672"&gt;=&lt;/span&gt; input(&lt;span style="color:#960050;background-color:#1e0010"&gt;“&lt;/span&gt;Enter a number here: &lt;span style="color:#960050;background-color:#1e0010"&gt;”&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#960050;background-color:#1e0010"&gt;“&lt;/span&gt;Your number &lt;span style="color:#f92672"&gt;is&lt;/span&gt;: &lt;span style="color:#960050;background-color:#1e0010"&gt;”&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; str(userInput))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="conditionals-1"&gt;Conditionals:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; test &lt;span style="color:#f92672"&gt;==&lt;/span&gt; true:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;It&amp;#39;s true!&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elif&lt;/span&gt; test &lt;span style="color:#f92672"&gt;==&lt;/span&gt; false:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;Its false!&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;Something is wrong&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="loops-1"&gt;Loops:&lt;/h3&gt;
+&lt;h4 id="for-loop"&gt;For loop:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; i &lt;span style="color:#f92672"&gt;in&lt;/span&gt; range(&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(i) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; item &lt;span style="color:#f92672"&gt;in&lt;/span&gt; arr:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	print(item)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="while-loop"&gt;While loop:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;while&lt;/span&gt; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	print(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; i &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="functions-1"&gt;Functions:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;firstFun&lt;/span&gt;(x, y):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; x &lt;span style="color:#f92672"&gt;+&lt;/span&gt; y
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	variable &lt;span style="color:#f92672"&gt;=&lt;/span&gt; firstFun(&lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	print(&lt;span style="color:#960050;background-color:#1e0010"&gt;‘&lt;/span&gt;Variable &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#960050;background-color:#1e0010"&gt;’&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; str(variable))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;main()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="the-cool-stuff"&gt;The Cool Stuff:&lt;/h3&gt;
+&lt;h4 id="manual-port-scanner"&gt;Manual Port Scanner&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/usr/bin/python3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; socket
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;host &lt;span style="color:#f92672"&gt;=&lt;/span&gt; input(&lt;span style="color:#e6db74"&gt;&amp;#34;Enter the host: &amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;maxport &lt;span style="color:#f92672"&gt;=&lt;/span&gt; int(input(&lt;span style="color:#e6db74"&gt;&amp;#34;Enter the max port to scan: &amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;portScanner&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; port &lt;span style="color:#f92672"&gt;in&lt;/span&gt; range(&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;, maxport &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; s &lt;span style="color:#f92672"&gt;=&lt;/span&gt; socket&lt;span style="color:#f92672"&gt;.&lt;/span&gt;socket(socket&lt;span style="color:#f92672"&gt;.&lt;/span&gt;AF_INET, socket&lt;span style="color:#f92672"&gt;.&lt;/span&gt;SOCK_STREAM)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; s&lt;span style="color:#f92672"&gt;.&lt;/span&gt;settimeout(&lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; result &lt;span style="color:#f92672"&gt;=&lt;/span&gt; s&lt;span style="color:#f92672"&gt;.&lt;/span&gt;connect_ex((host, port))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; result &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;Port &amp;#34;&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; str(port) &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34; is open&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; s&lt;span style="color:#f92672"&gt;.&lt;/span&gt;close()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;portScanner()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="os-library"&gt;OS Library:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; os
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;getcwd())
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# os.chdir(&amp;#34;/Users/patrickmccabe/Desktop/&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# print(os.listdir())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# os.rmdir(&amp;#34;Test1&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&amp;#34;&amp;#34;for dirpath, dirnames, filenames in os.walk(&amp;#34;/Users/patrickmccabe/Desktop/&amp;#34;):
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; print(&amp;#34;Current path:&amp;#34;, dirpath)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; print(&amp;#34;Directories:&amp;#34;, dirnames)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; print(&amp;#34;Files:&amp;#34;, filenames)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; print()&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# print(&amp;#34;Home: &amp;#34;, os.environ.get(&amp;#39;HOME&amp;#39;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# os.path.join(os.environ.get(&amp;#39;HOME&amp;#39;), &amp;#34;test.txt&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;path&lt;span style="color:#f92672"&gt;.&lt;/span&gt;basename(&lt;span style="color:#e6db74"&gt;&amp;#39;/usr/share&amp;#39;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;path&lt;span style="color:#f92672"&gt;.&lt;/span&gt;dirname(&lt;span style="color:#e6db74"&gt;&amp;#39;/usr/share&amp;#39;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;path&lt;span style="color:#f92672"&gt;.&lt;/span&gt;split(&lt;span style="color:#e6db74"&gt;&amp;#39;/usr/share&amp;#39;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;path&lt;span style="color:#f92672"&gt;.&lt;/span&gt;exists(&lt;span style="color:#e6db74"&gt;&amp;#39;/usr/share&amp;#39;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;path&lt;span style="color:#f92672"&gt;.&lt;/span&gt;isdir(&lt;span style="color:#e6db74"&gt;&amp;#39;/usr/share&amp;#39;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;path&lt;span style="color:#f92672"&gt;.&lt;/span&gt;isfile(&lt;span style="color:#e6db74"&gt;&amp;#39;/usr/share&amp;#39;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;path&lt;span style="color:#f92672"&gt;.&lt;/span&gt;splitext(&lt;span style="color:#e6db74"&gt;&amp;#39;/usr/share&amp;#39;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;main()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="some-scapy-fun-please-please-be-careful-with-this-and-only-use-it-in-an-environment-with-permission"&gt;Some &lt;a href="https://scapy.readthedocs.io/en/latest/"&gt;Scapy&lt;/a&gt; Fun (Please, please be careful with this and only use it in an environment with permission):&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;IP Spoof: send(IP(src&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;“&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;attacker IP&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;”&lt;/span&gt;, dst&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;“&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;target IP&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;”&lt;/span&gt;)&lt;span style="color:#f92672"&gt;/&lt;/span&gt;ICMP()&lt;span style="color:#f92672"&gt;/&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;“&lt;/span&gt;Hello world&lt;span style="color:#960050;background-color:#1e0010"&gt;”&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Network Sniffing: sniff(iface&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;“&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;interface&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;”&lt;/span&gt;, prn&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;lambda&lt;/span&gt; x:x&lt;span style="color:#f92672"&gt;.&lt;/span&gt;summary)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;BE CAREFUL WITH THIS NEXT ONE
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;DOS Attack: send(IP(src&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;“&lt;/span&gt;attacker IP&lt;span style="color:#960050;background-color:#1e0010"&gt;”&lt;/span&gt;, dst&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;“&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;target&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;”&lt;/span&gt;)&lt;span style="color:#f92672"&gt;/&lt;/span&gt;TCP(sport&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;444&lt;/span&gt;, dport&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;444&lt;/span&gt;), count&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;10000&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://github.com/pmccabe5"&gt;@pmccabe5&lt;/a&gt;&lt;/p&gt;</description></item><item><title>NCL Preseason Tools</title><link>https://cofcsecurity.github.io/posts/2021-spring-ncl-tools/</link><pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-spring-ncl-tools/</guid><description>&lt;h2 id="ncl-preseason-tools"&gt;NCL Preseason Tools&lt;/h2&gt;
+&lt;h3 id="cryptography"&gt;Cryptography&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://rumkin.com/tools/cipher/"&gt;Rumkin Chipher Tools&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic chipers
+&lt;ul&gt;
+&lt;li&gt;Ceaser&lt;/li&gt;
+&lt;li&gt;Rot13&lt;/li&gt;
+&lt;li&gt;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.boxentriq.com/code-breaking"&gt;Boxentriq Code Breaking Tools&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;More polished chipher tools
+&lt;ul&gt;
+&lt;li&gt;Railfence&lt;/li&gt;
+&lt;li&gt;Chiper detection/bruteforce&lt;/li&gt;
+&lt;li&gt;Frequency analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://diit.sourceforge.net/"&gt;Digital Invisible Ink Toolkit&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Image stego toolkit&lt;/li&gt;
+&lt;li&gt;Handles most of NCL stego challenges&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/DominicBreuker/stego-toolkit"&gt;Steganography Toolkit Docker Image&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;A collection of stego tools that can be helpful for more difficult challenges&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="network-traffic-analysis"&gt;Network Traffic Analysis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.wireshark.org/"&gt;Wireshark&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Packet analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.wireshark.org/docs/man-pages/tshark.html"&gt;tshark&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Terminal based Wireshark
+&lt;ul&gt;
+&lt;li&gt;Filter out data and write to file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://scapy.net/"&gt;Scapy&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Python packet manipulation library
+&lt;ul&gt;
+&lt;li&gt;Packet crafting and dissection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="enumeration-and-exploitation"&gt;Enumeration and Exploitation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/rizinorg/cutter"&gt;Cutter&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Reverse engineering platform
+&lt;ul&gt;
+&lt;li&gt;Dissassembly&lt;/li&gt;
+&lt;li&gt;Decompiling&lt;/li&gt;
+&lt;li&gt;Debugging/Emulation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;(The GNU Project Debugger - GDB)[https://www.gnu.org/software/gdb/]
+&lt;ul&gt;
+&lt;li&gt;See what&amp;rsquo;s going on inside an executing program&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ltrace Command
+&lt;ul&gt;
+&lt;li&gt;Intercepts a program&amp;rsquo;s dynamic library calls, system calls, and received signals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;strace Command
+&lt;ul&gt;
+&lt;li&gt;Intercepts a program&amp;rsquo;s system calls and received signals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Web Application Security</title><link>https://cofcsecurity.github.io/posts/2021-spring-webapps/</link><pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-spring-webapps/</guid><description>&lt;p&gt;Web applicaions have become increasingly complex. And with complexity comes vulnerabilities. Web applicaions are a huge target at both the client and server side. Code injection can allow a threat actor to take over a web server and/or steal valuable information, and cross site scripting vulnerabilites can allow an attacker to execute code in client web brosers. Given all of this it has become vital for security professionals to have an understanding of web app security.&lt;/p&gt;</description></item><item><title>Computer Networking Basics</title><link>https://cofcsecurity.github.io/posts/2021-spring-networks/</link><pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-spring-networks/</guid><description>&lt;h1 id="march-3-2021-meeting"&gt;March 3 2021 Meeting&lt;/h1&gt;
+&lt;p&gt;In this meeting we discussed the basics of computer networking as well as some important software to know:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.splunk.com/Documentation/Splunk"&gt;Splunk Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/pmccabe5/cofc-security-club/tree/master/splunkData"&gt;Splunk Intro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.graylog.org/en/4.0/"&gt;Graylog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.securityonion.net/en/2.3/"&gt;Security Onion Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.greenbone.net/"&gt;Greenbone Vulnerability Scanner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.netgate.com/pfsense/en/latest/index.html"&gt;pfSense&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.linux.com/training-tutorials/introduction-uncomplicated-firewall-ufw/"&gt;Uncomplicated Firewall (UFW)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Docker &amp; Kubernetes</title><link>https://cofcsecurity.github.io/posts/2021-spring-docker/</link><pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-spring-docker/</guid><description>&lt;h1 id="february-10-2021-meeting"&gt;February 10 2021 Meeting&lt;/h1&gt;
+&lt;p&gt;In this meeting we discussed Docker and Kubernetes. For more information check out the links below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/"&gt;Docker Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/eGz9DS-aIeY"&gt;Docker Video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/docs/home/"&gt;Kubernetes Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/7bA0gTroJjw"&gt;Kubernetes Video&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Ansible</title><link>https://cofcsecurity.github.io/posts/2021-spring-ansible/</link><pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-spring-ansible/</guid><description>&lt;h1 id="february-3-2021-meeting"&gt;February 3 2021 Meeting&lt;/h1&gt;
+&lt;p&gt;In this meeting we discussed Ansible, and open source configuration management, provisioning, and deployment tool. Here&amp;rsquo;s some helpful resources for working with and learning Ansible:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="docs.ansible.com"&gt;Ansible Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/5hycyr-8EKs"&gt;Ansible Video&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Lab Setup</title><link>https://cofcsecurity.github.io/posts/2021-spring-setup/</link><pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2021-spring-setup/</guid><description>&lt;h1 id="cofc-devops-setup"&gt;COFC DevOPS: Setup&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/cofcsecurity/DevOps"&gt;Github Repository&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="goals"&gt;Goals:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Set up 3 virtual machines
+&lt;ul&gt;
+&lt;li&gt;1 Ubuntu (Command Machine)&lt;/li&gt;
+&lt;li&gt;2 CentOS &amp;ldquo;webservers&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Set up an non-root user that is a part of the &lt;code&gt;wheel&lt;/code&gt; group on our webservers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="prerequisites"&gt;Prerequisites:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://www.virtualbox.org/"&gt;VirtualBox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ISOs:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://releases.ubuntu.com/20.04.1/ubuntu-20.04.1-live-server-amd64.iso?_ga=2.154606776.143673684.1605395134-1815728291.1605395134"&gt;Ubuntu 20.04 Minimal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ubuntu.com/download/server"&gt;Alternate Download&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="configuration-steps"&gt;Configuration Steps:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Download Virtualbox&lt;/li&gt;
+&lt;li&gt;Download ISOs&lt;/li&gt;
+&lt;li&gt;We will want to have the following configurations for our three VMs:
+&lt;ul&gt;
+&lt;li&gt;16 GB of storage per VM&lt;/li&gt;
+&lt;li&gt;1024 MB of RAM per VM&lt;/li&gt;
+&lt;li&gt;Network will be set to Host Only Adapter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;We will set up the Ubuntu Server first and then the CentOS Servers
+&lt;ul&gt;
+&lt;li&gt;We will need to update our repositories and packages that are installed on the system with the following commands:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo apt update&lt;/code&gt;: update the software repositories&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo apt full-upgrade&lt;/code&gt;: download and upgrade the software packages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Some notes for the Ubuntu Server:
+&lt;ul&gt;
+&lt;li&gt;We will need to check to see if the following packages are installed:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ansible&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;net-tools&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python3&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;We will need to make sure we start the SSH service and enable it on startup: &lt;code&gt;sudo systemctl start ssh; sudo systemctl enable ssh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;We will need to create a non-root user for the VM:
+&lt;ul&gt;
+&lt;li&gt;Create user: &lt;code&gt;sudo useradd [username]&lt;/code&gt; [for this lab we will use &lt;code&gt;devops&lt;/code&gt; as the non-root user]&lt;/li&gt;
+&lt;li&gt;Set password for the user: &lt;code&gt;passwd devops&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add the user to the &lt;code&gt;sudo&lt;/code&gt; group: &lt;code&gt;sudo usermod -aG sudo devops&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="book"&gt;Book&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/pmccabe5/python-tools-sec-guides/raw/master/Books/linuxbasicsforhackers.pdf"&gt;Linux Basics for Hackers&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Zach Dayton's DFIR Presentation</title><link>https://cofcsecurity.github.io/posts/2020-fall-forensics/</link><pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2020-fall-forensics/</guid><description>&lt;p&gt;In this meeting Zach Dayton, one of our industry contacts, gave a presentation on Digital Forensics and Incidence Response (DFIR).&lt;/p&gt;
+&lt;p&gt;The slides can be found &lt;a href="https://github.com/cofcsecurity/Presentations/tree/master/zach-dayton"&gt;here&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Virtualization</title><link>https://cofcsecurity.github.io/posts/2020-fall-virtualization/</link><pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2020-fall-virtualization/</guid><description>&lt;h1 id="september-9-2020-meeting"&gt;September 9 2020 Meeting&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Virtualization and Bash lead by Patrick McCabe&lt;/li&gt;
+&lt;li&gt;Docker Containerization lead by Matt Walter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="introduction-to-virtualization"&gt;Introduction to Virtualization&lt;/h2&gt;
+&lt;h3 id="what-is-required"&gt;What is required?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;A computer&lt;/li&gt;
+&lt;li&gt;Internet connection&lt;/li&gt;
+&lt;li&gt;Patience (Depending on the OS, current packages will be downloaded during the install)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="what-is-virtualization"&gt;What is Virtualization?&lt;/h3&gt;
+&lt;p&gt;Virtualization is a way to run other &lt;strong&gt;Operating Systems&lt;/strong&gt; (OS) on top of your host&amp;rsquo;s (computer&amp;rsquo;s) operating system. The way we virtualize an OS is through the use of a &lt;strong&gt;hypervisor&lt;/strong&gt;. There are two types of hypervisors. They are the following:&lt;/p&gt;</description></item><item><title>Join Our Discord Server!</title><link>https://cofcsecurity.github.io/posts/2020-fall-discord/</link><pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2020-fall-discord/</guid><description>&lt;p&gt;Hello, again!&lt;/p&gt;
+&lt;p&gt;We are currently transitioning away from slack to use discord as
+our primary means of communication.&lt;/p&gt;
+&lt;h1 id="join-us-here"&gt;Join us here: &lt;a href="https://discord.gg/uBCwjeG"&gt;https://discord.gg/uBCwjeG&lt;/a&gt;&lt;/h1&gt;</description></item><item><title>Our Github Page</title><link>https://cofcsecurity.github.io/posts/2020-fall-github/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2020-fall-github/</guid><description>&lt;p&gt;For those looking for the link, here is the link to our club github page.
+Feel free to contribute make PR&amp;rsquo;s for anything you&amp;rsquo;d like to add. :)&lt;/p&gt;
+&lt;p&gt;If you are an active club member we will also add you to our GitHub organization upon request.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Github Link&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cofcsecurity"&gt;https://github.com/cofcsecurity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Welcome!</title><link>https://cofcsecurity.github.io/posts/2020-fall-welcome/</link><pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/posts/2020-fall-welcome/</guid><description>&lt;p&gt;Hello everyone, welcome to the new Cybersecurity Club Website.
+We hope you all find it useful, and enjoy its look!&lt;/p&gt;
+&lt;p&gt;Also, if you have any suggestions for what we should put here, let us know!&lt;/p&gt;
+&lt;p&gt;This site is a work in progress and we will constantly be looking to improve it!&lt;/p&gt;</description></item><item><title>Mac Virtual Machine Installation Guide</title><link>https://cofcsecurity.github.io/resources/mac-installation-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/resources/mac-installation-guide/</guid><description>&lt;p&gt;&lt;strong&gt;MacBook M1, M2, M3 instructions are below.&lt;/strong&gt; Not sure which chip you have? Ask in &lt;a href="https://discord.gg/uBCwjeG"&gt;Discord&lt;/a&gt; and we can help you check.&lt;/p&gt;
+&lt;p&gt;&lt;ins&gt;Step 1: Install software to run virtual machines&lt;/ins&gt;&lt;/p&gt;
+&lt;p&gt;Apple Silicon has a different CPU architecture, so it needs different virtualization software to actually use your Mac&amp;rsquo;s hardware. We use UTM (Universal Turing Machine). It&amp;rsquo;s on the App Store, but that copy costs money — the link below gets you the same app for free, unless you&amp;rsquo;d like to support the developers directly.&lt;/p&gt;</description></item><item><title>Past Schedules</title><link>https://cofcsecurity.github.io/schedule/archive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/schedule/archive/</guid><description>&lt;h3 id="fall-2023-schedule"&gt;Fall 2023 Schedule&lt;/h3&gt;
+&lt;h4 id="meetings"&gt;Meetings&lt;/h4&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style="text-align: center"&gt;Week&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Date&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Topic&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Notes&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sep. 7&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Getting Started with Virtual Machines&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;2&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sep. 12&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;What is Cyber Security&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;2&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sep. 14&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Using your Virtual Machines&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;3&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sep. 19&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Introduction to Networking&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;3&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sep. 21&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;SSH and RDP and The Range&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;4&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sep. 26&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Intro to Linux&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;4&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sep. 28&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Linux Deep Dive and The Range&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;5&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 3&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Intro to Windows&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;5&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 5&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Windows and The Range&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;6&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Offensive Security&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;6&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 12&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;HiveStorm Practice&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;7&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 17&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Fall Break No Meeting&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;7&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 19&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;The Range Practice&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;8&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 24&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Cryptology&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;8&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 26&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;The Range&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;9&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 31&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Happy Halloween No Meeting&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;9&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Nov. 2&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Firewalls on End Devices&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Nov. 7&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Defensive Security Lab&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Nov. 9&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;The Range Practice&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;11&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Nov. 14&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;The Dark Web&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;11&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Nov. 16&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Range Practice (Last Meeting Of Semester)&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="spring-2022-schedule"&gt;Spring 2022 Schedule&lt;/h3&gt;
+&lt;h4 id="meetings-1"&gt;Meetings&lt;/h4&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style="text-align: center"&gt;Week&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Date&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Topic&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Notes&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Classes Begin&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;2&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Jan. 18&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Getting Started&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Plans for Spring&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;3&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Jan. 25&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;SECCDC Prep&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;4&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Feb. 1&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;SECCDC Prep&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;5&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Feb. 8&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Firewalls&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;6&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Feb. 15&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;EDR&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Endpoint Detection and Response with Wazuh&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;7&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Feb. 22&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Cyber Discussions&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;8&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Mar. 1&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;SECCDC Practice&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;9&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Spring Break&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;SECCDC&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Mar. 15&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;SECCDC Debrief&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;11&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Mar. 22&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;12&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Mar. 29&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Practice&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;13&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Apr. 5&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;PCDC Practice&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;14&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Apr. 12&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;PCDC Debrief&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;15&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Apr. 19&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Final Meeting of Spring&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="other-important-dates"&gt;Other Important Dates&lt;/h4&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style="text-align: center"&gt;Date&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Note&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Jan. 15&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;SECCDC Registration Deadline&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Jan. 31&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Registration Opens&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Feb. 12&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;SECCDC Qualifier&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Mar. 9-10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;SECCDC Regional&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Mar. 28 - Apr. 4&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Preseason&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Apr. 8-10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Individual Game&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Apr. 10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;PCDC&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Apr. 22-24&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Team Game&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="fall-2021-schedule"&gt;Fall 2021 Schedule&lt;/h3&gt;
+&lt;h4 id="meetings-2"&gt;Meetings&lt;/h4&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style="text-align: center"&gt;Week&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Date&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Topic&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Notes&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;2&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Aug. 31&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Getting Started&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Introduction and planning&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;3&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sep. 7&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;The Basics&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Virtualization and Kali&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;4&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sep. 14&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Cryptography&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Encryption, hashing, and cracking&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;5&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sep. 21&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Computer Networks&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;6&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sep. 28&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;&lt;strong&gt;Guest Speaker&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Personal and Application Security&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;7&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 5&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Tune Up&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Preseason prep&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;8&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 12&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Cyber Discussions&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;9&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 19&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Practice&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Preseason review and individual game prep&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 26&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Infrastructure as Code&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;11&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Nov. 2&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;&lt;strong&gt;Guest Speaker&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;DevOps&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;12&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Nov. 9&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Review&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Individual game and team game review&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;13&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Nov. 16&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Final Meeting of Fall&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="other"&gt;Other&lt;/h4&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style="text-align: center"&gt;Date&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Note&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Aug. 23&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Registration Opens&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Oct. 2&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Raymond James CTF&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Oct. 9&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Hivestorm Competition&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Oct. 11-18&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Preseason&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Oct. 22-24&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Individual Game&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;Nov. 5-7&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Team Game&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="spring-2021-schedule"&gt;Spring 2021 Schedule&lt;/h3&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style="text-align: center"&gt;Week&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;General Topic&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Advanced Topic&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Date&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Special Notes&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;01&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Introduction and Planning&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Jan. 13&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;7:30 pm&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;02&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Virtualization&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Jan. 20&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;03&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Scripting&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Jan. 27&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;04&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Ansible&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Feb. 03&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;05&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Docker/Kubernetes&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Feb. 10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;06&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Cyber Discussion&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Feb. 17&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;08&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;What is a Computer Network&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Feb. 24&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;09&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Network Security&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Mar. 03&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Tune Up&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Mar. 10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;11&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Cyber Discussion&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Mar. 17&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;12&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Web App Security&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Mar. 24&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;13&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Splunk&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Mar. 31&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;14&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Defense by Offense&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Apr. 07&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;15&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;End of Year Party&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Apr. 14&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="fall-2020-schedule"&gt;Fall 2020 Schedule&lt;/h3&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style="text-align: center"&gt;Week&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;General Topic&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Advanced Topic&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Date&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Special Notes&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Intro to club&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;none&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sept. 4&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;2:00 pm&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;2&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Inroduction to Virtualization and Bash&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Docker&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sept. 9&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;None&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;3&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Recon&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Forensics (&lt;strong&gt;Zach Dayton&lt;/strong&gt;)&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sept. 16&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Gym Opens&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;4&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Ciphers &amp;amp; Hashing&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Multi-layer hashes/encrypted files/fingerprinting/hash collisions&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sept. 23&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;None&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;5&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Intro to Networking&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Advanced Networking&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Sept. 30&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;None&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;6&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Training&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Refresh&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 7&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;None&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;8&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Mini BSides&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;None&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 14&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Preseason October 12 - 19&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;9&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Scripting&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Scapy&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 21&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL October 23 - 25&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;10&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Exploitation&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;None&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Oct. 28&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;None&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;11&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Web Apps&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;None&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Nov. 4&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;NCL Postseason Nov. 6 - 8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;12&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Zoom Party CTF&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;None&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Nov. 11&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;None&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: center"&gt;13&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Planning&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;None&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;Nov. 18&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;&lt;strong&gt;Officers Only&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>VirtualBox and Hyper-V Virtual Machine Setup</title><link>https://cofcsecurity.github.io/resources/vb-and-hyper-v-setup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/resources/vb-and-hyper-v-setup/</guid><description>&lt;p&gt;&lt;strong&gt;VirtualBox VM setup on Windows&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Most Windows systems now have enough resources to run both a hypervisor and a VM. The main constraint is disk space — make sure you have room for the OS image plus extra storage. If you plan on running intensive services inside the VM, you&amp;rsquo;ll also want to bump up the RAM and CPU cores it&amp;rsquo;s allowed to use. Questions any time — ask in &lt;a href="https://discord.gg/uBCwjeG"&gt;Discord&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Windows Virtual Machine Installation Guide</title><link>https://cofcsecurity.github.io/resources/windows-installation-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/resources/windows-installation-guide/</guid><description>&lt;p&gt;&lt;strong&gt;For Windows&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ins&gt;Step 1:&lt;/ins&gt; First, install VirtualBox — this is the software that runs the virtual machine.&lt;/p&gt;
+&lt;p&gt;Link: &lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;virtualbox.org/wiki/Downloads&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cofcsecurity.github.io/img/guides/VirtualBox_Download.jpg" alt="VirtualBox download"&gt;&lt;/p&gt;
+&lt;p&gt;Click the download button circled above. Once installed, double-click the file shown below.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cofcsecurity.github.io/img/guides/VirtualBox_Downloads_Folder.jpg" alt="VirtualBox zip in downloads"&gt;&lt;/p&gt;
+&lt;p&gt;Then follow all the prompts VirtualBox gives you.&lt;/p&gt;
+&lt;p&gt;&lt;ins&gt;Step 2: Install 7-Zip&lt;/ins&gt;&lt;/p&gt;
+&lt;p&gt;We need 7-Zip to extract a download that was compressed using it — same idea as a regular zip folder, just a different tool.&lt;/p&gt;</description></item></channel></rss>

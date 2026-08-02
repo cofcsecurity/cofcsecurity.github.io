@@ -1,0 +1,181 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Bash and Python Scripting · CofC Cybersecurity Club</title><meta name=description content="Student-run cybersecurity club at the College of Charleston"><meta property="og:type" content="website"><meta property="og:site_name" content="CofC Cybersecurity Club"><meta property="og:title" content="Bash and Python Scripting"><meta property="og:description" content="Student-run cybersecurity club at the College of Charleston"><meta property="og:image" content="https://cofcsecurity.github.io/img/og-image.jpg"><meta property="og:url" content="https://cofcsecurity.github.io/posts/2021-fall-scripting/"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Bash and Python Scripting"><meta name=twitter:description content="Student-run cybersecurity club at the College of Charleston"><meta name=twitter:image content="https://cofcsecurity.github.io/img/og-image.jpg"><link rel=icon type=image/png href=/img/favicon.png><link rel=stylesheet href=/css/style.css><script>try{var t=localStorage.getItem("theme");t==="hacker"||t==="dark"||t==="light"?document.documentElement.setAttribute("data-theme",t):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.documentElement.setAttribute("data-theme","dark")}catch{}</script></head><body><header class=site-header><div class=container><a class=brand href=/><img src=/img/logo-hor-w.png alt="College of Charleston Cybersecurity Club" height=40></a><div class=header-controls><button class=theme-toggle id=theme-toggle type=button aria-label="Toggle dark mode">
+<span class=theme-toggle-sun><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+</span><span class=theme-toggle-moon><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+</span></button>
+<button class=nav-toggle id=nav-toggle aria-expanded=false aria-controls=main-nav>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+Menu</button></div><nav class=main-nav id=main-nav><ul><li><a href=/>Home</a></li><li><a href=/about/>About</a></li><li><a href=/competitions/>Competitions</a></li><li><a href=/schedule/>Schedule</a></li><li><a href=/posts/>Posts</a></li><li><a href=/resources/>Resources</a></li><li><a href=/history/>History</a></li><li><a href=/industry-contacts/>Industry Contacts</a></li></ul></nav></div></header><script>document.getElementById("nav-toggle").addEventListener("click",function(){var e=document.getElementById("main-nav"),t=e.classList.toggle("open");this.setAttribute("aria-expanded",t)}),document.getElementById("theme-toggle").addEventListener("click",function(){var e=document.documentElement,t=e.getAttribute("data-theme"),s=t?t==="light":!window.matchMedia("(prefers-color-scheme: dark)").matches,n=s?"dark":"light";e.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch{}})</script><main><div class="section section-dark" style=padding-bottom:2.5rem><div class=container><h1>Bash and Python Scripting</h1><p class=lede style=max-width:60ch>August 2, 2021</p></div></div><div class="section section-light"><div class=container><article class=prose><h1 id=bash-and-python-scripting>Bash and Python Scripting</h1><h2 id=bourne-again-shell-bash>Bourne Again Shell (Bash)</h2><h3 id=the-basics>The Basics</h3><ul><li>Shabang: #!/bin/bash</li><li>How to run bash scripts:</li><li>Make sure the file is executable:<ul><li><code>ls -alth</code> and check for an x flag</li></ul></li><li>If it isn’t executable:<ul><li><code>chmod +x &lt;filename.sh></code></li><li><code>chmod 777 &lt;filename.sh></code></li></ul></li><li><code>bash &lt;filename.sh></code></li><li><code>./&lt;filename.sh></code></li></ul><h3 id=variables>Variables</h3><h4 id=conventions>Conventions:</h4><ul><li>UPPERCASE= value/string/output from a command</li><li>Example: <code>NAME=“Your Name”</code></li><li>Variabe usage:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>echo “My name is $NAME”
+</span></span><span style=display:flex><span>echo “My name is <span style=color:#e6db74>${</span>NAME<span style=color:#e6db74>}</span>, hello”
+</span></span></code></pre></div><h4 id=reading-user-input>Reading User Input:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># !/bin/bash</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#Read user data</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Please enter your full name: &#34;</span>
+</span></span><span style=display:flex><span>read FIRSTNAME LASTNAME	
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Your name is </span>$FIRSTNAME<span style=color:#e6db74> </span>$LASTNAME<span style=color:#e6db74>&#34;</span>
+</span></span></code></pre></div><h4 id=positional-parameters>Positional Parameters:</h4><pre tabindex=0><code>#!/bin/bash
+#positional parameters
+echo &#34;Execution of script $0&#34;
+echo &#34;Enter the name of the user: $1&#34;
+#add user
+adduser --home /$1 $1
+</code></pre><h3 id=menus>Menus:</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#menus</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Welcome to Bob&#39;s Burgers&#34;</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Please choose what you want to eat: &#34;</span>
+</span></span><span style=display:flex><span>meals<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Burger Fries&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>select</span> option in $meals; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>	echo <span style=color:#e6db74>&#34;The selected option is </span>$REPLY<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>	echo <span style=color:#e6db74>&#34;The selected meal is </span>$option<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span></code></pre></div><h3 id=conditionals>Conditionals:</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#if/if-else</span>
+</span></span><span style=display:flex><span>NAME<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Patrick&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$NAME<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Patrick&#34;</span> <span style=color:#f92672>]</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>	echo <span style=color:#e6db74>&#34;Welcome </span>$NAME<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Enter username: &#34;</span>
+</span></span><span style=display:flex><span>read USERNAME
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$USERNAME<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Patrick&#34;</span> <span style=color:#f92672>]</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>	echo <span style=color:#e6db74>&#34;Welcome </span>$USERNAME<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>	echo <span style=color:#e6db74>&#34;Invalid username please register an account&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>fi</span>
+</span></span></code></pre></div><h3 id=loops>Loops:</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#for loops</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> NAMES in <span style=color:#66d9ef>$(</span>cat names.txt<span style=color:#66d9ef>)</span>; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>	echo <span style=color:#e6db74>&#34;The name is </span>$NAMES<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span></code></pre></div><h3 id=functions>Functions:</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#functions</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> shadowtest<span style=color:#f92672>(){</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> -e /etc/shadow <span style=color:#f92672>]</span>;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>		echo <span style=color:#e6db74>&#34;yes it exists&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>		echo <span style=color:#e6db74>&#34;Nope&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> testpwd<span style=color:#f92672>(){</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> -e /etc/passwd <span style=color:#f92672>]</span>;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>		echo <span style=color:#e6db74>&#34;yes it exists&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>		echo <span style=color:#e6db74>&#34;Nope&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>shadowtest
+</span></span><span style=display:flex><span>testpwd
+</span></span></code></pre></div><h3 id=having-some-fun-with-bash>Having some fun with Bash:</h3><h4 id=manual-ping-sweeper>Manual <code>ping</code> Sweeper:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#ping sweep script</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Please enter your subnet: &#34;</span>
+</span></span><span style=display:flex><span>read SUBNET
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> IP in <span style=color:#66d9ef>$(</span>seq <span style=color:#ae81ff>1</span> 254<span style=color:#66d9ef>)</span>; <span style=color:#66d9ef>do</span> 
+</span></span><span style=display:flex><span>	ping -c <span style=color:#ae81ff>1</span> $SUBNET.$IP
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span></code></pre></div><h4 id=password-generator-with-the-ssl-library>Password Generator with the <code>SSL</code> Library</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#simple password generator</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Enter the length of the password: &#34;</span>
+</span></span><span style=display:flex><span>read LENGTH 
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> P in <span style=color:#66d9ef>$(</span>seq 1<span style=color:#66d9ef>)</span>; 
+</span></span><span style=display:flex><span><span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>	openssl rand -base64 <span style=color:#ae81ff>48</span> | cut  -c1-$LENGTH
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span></code></pre></div><h4 id=file-encryptordecryotor>File Encryptor/Decryotor:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#file encrypter/decrypter</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;This is a simple file encrypter/decrypter&#34;</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Please choose what you want to do&#34;</span>
+</span></span><span style=display:flex><span>choice<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Encrypt Decrypt&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>select</span> option in $choice; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $REPLY <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>]</span>;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>		echo <span style=color:#e6db74>&#34;You have selected encryption&#34;</span>
+</span></span><span style=display:flex><span>		echo <span style=color:#e6db74>&#34;Please enter the file name&#34;</span>
+</span></span><span style=display:flex><span>		read file;
+</span></span><span style=display:flex><span>		gpg -c $file
+</span></span><span style=display:flex><span>		echo <span style=color:#e6db74>&#34;The file has been encrypted&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>            echo <span style=color:#e6db74>&#34;You have selected decryption&#34;</span>
+</span></span><span style=display:flex><span>            echo <span style=color:#e6db74>&#34;Please enter the file name&#34;</span>
+</span></span><span style=display:flex><span>            read file2;
+</span></span><span style=display:flex><span>            gpg -d $file2
+</span></span><span style=display:flex><span>            echo <span style=color:#e6db74>&#34;The file has been decrypted&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>done</span>
+</span></span></code></pre></div><h4 id=dns-reverse-lookup>DNS Reverse Lookup:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Please enter your subnet: &#34;</span>
+</span></span><span style=display:flex><span>read SUBNET
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> IP in <span style=color:#66d9ef>$(</span>seq <span style=color:#ae81ff>1</span> 254<span style=color:#66d9ef>)</span>; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>	dig -x $SUBNET.$ip | grep $IP &gt;&gt; dns.txt;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span></code></pre></div><h2 id=python-scripting>Python Scripting</h2><h3 id=basics>Basics:</h3><ul><li>If running via command line shabang: #!/bin/python<ul><li>IDEs:<ul><li><a href=https://www.python.org/downloads/>IDLE</a></li><li><a href=https://www.jetbrains.com/pycharm/>Pycharm</a></li></ul></li></ul></li></ul><h3 id=variables-1>Variables:</h3><h4 id=declaration>Declaration:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span>Single value: test <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>Array: test <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span>, dog, <span style=color:#ae81ff>2.5</span>]
+</span></span></code></pre></div><h4 id=reading-user-input-1>Reading User Input:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python3 data-lang=python3><span style=display:flex><span>userInput <span style=color:#f92672>=</span> input(<span style=color:#960050;background-color:#1e0010>“</span>Enter a number here: <span style=color:#960050;background-color:#1e0010>”</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#960050;background-color:#1e0010>“</span>Your number <span style=color:#f92672>is</span>: <span style=color:#960050;background-color:#1e0010>”</span> <span style=color:#f92672>+</span> str(userInput))
+</span></span></code></pre></div><h3 id=conditionals-1>Conditionals:</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>if</span> test <span style=color:#f92672>==</span> true:
+</span></span><span style=display:flex><span>   print(<span style=color:#e6db74>&#34;It&#39;s true!&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elif</span> test <span style=color:#f92672>==</span> false:
+</span></span><span style=display:flex><span>   print(<span style=color:#e6db74>&#34;Its false!&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>   print(<span style=color:#e6db74>&#34;Something is wrong&#34;</span>)
+</span></span></code></pre></div><h3 id=loops-1>Loops:</h3><h4 id=for-loop>For loop:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>1</span>):
+</span></span><span style=display:flex><span> print(i) 
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> item <span style=color:#f92672>in</span> arr:
+</span></span><span style=display:flex><span>	print(item)
+</span></span></code></pre></div><h4 id=while-loop>While loop:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span>i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>while</span> i <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>5</span>:
+</span></span><span style=display:flex><span>	print(i)
+</span></span><span style=display:flex><span>	i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+</span></span></code></pre></div><h3 id=functions-1>Functions:</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>firstFun</span>(x, y):
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> x <span style=color:#f92672>+</span> y
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>main</span>():
+</span></span><span style=display:flex><span>	variable <span style=color:#f92672>=</span> firstFun(<span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>10</span>)
+</span></span><span style=display:flex><span>	print(<span style=color:#960050;background-color:#1e0010>‘</span>Variable <span style=color:#f92672>=</span> <span style=color:#960050;background-color:#1e0010>’</span> <span style=color:#f92672>+</span> str(variable))
+</span></span><span style=display:flex><span>main()
+</span></span></code></pre></div><h3 id=the-cool-stuff>The Cool Stuff:</h3><h4 id=manual-port-scanner>Manual Port Scanner</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e>#!/usr/bin/python3</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> socket
+</span></span><span style=display:flex><span>host <span style=color:#f92672>=</span> input(<span style=color:#e6db74>&#34;Enter the host: &#34;</span>)
+</span></span><span style=display:flex><span>maxport <span style=color:#f92672>=</span> int(input(<span style=color:#e6db74>&#34;Enter the max port to scan: &#34;</span>))
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>portScanner</span>():
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>for</span> port <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>1</span>, maxport <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>):
+</span></span><span style=display:flex><span>       s <span style=color:#f92672>=</span> socket<span style=color:#f92672>.</span>socket(socket<span style=color:#f92672>.</span>AF_INET, socket<span style=color:#f92672>.</span>SOCK_STREAM)
+</span></span><span style=display:flex><span>       s<span style=color:#f92672>.</span>settimeout(<span style=color:#ae81ff>10</span>)
+</span></span><span style=display:flex><span>       result <span style=color:#f92672>=</span> s<span style=color:#f92672>.</span>connect_ex((host, port))
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>if</span> result <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>:
+</span></span><span style=display:flex><span>           print(<span style=color:#e6db74>&#34;Port &#34;</span> <span style=color:#f92672>+</span> str(port) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; is open&#34;</span>)
+</span></span><span style=display:flex><span>       s<span style=color:#f92672>.</span>close()
+</span></span><span style=display:flex><span>portScanner()
+</span></span></code></pre></div><h4 id=os-library>OS Library:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>main</span>():
+</span></span><span style=display:flex><span>    print(os<span style=color:#f92672>.</span>getcwd())
+</span></span><span style=display:flex><span>    <span style=color:#75715e># os.chdir(&#34;/Users/patrickmccabe/Desktop/&#34;)</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># print(os.listdir())</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># os.rmdir(&#34;Test1&#34;)</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;for dirpath, dirnames, filenames in os.walk(&#34;/Users/patrickmccabe/Desktop/&#34;):
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        print(&#34;Current path:&#34;, dirpath)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        print(&#34;Directories:&#34;, dirnames)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        print(&#34;Files:&#34;, filenames)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        print()&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># print(&#34;Home: &#34;, os.environ.get(&#39;HOME&#39;))</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># os.path.join(os.environ.get(&#39;HOME&#39;), &#34;test.txt&#34;)</span>
+</span></span><span style=display:flex><span>    print(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(<span style=color:#e6db74>&#39;/usr/share&#39;</span>))
+</span></span><span style=display:flex><span>    print(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>dirname(<span style=color:#e6db74>&#39;/usr/share&#39;</span>))
+</span></span><span style=display:flex><span>    print(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#39;/usr/share&#39;</span>))
+</span></span><span style=display:flex><span>    print(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>exists(<span style=color:#e6db74>&#39;/usr/share&#39;</span>))
+</span></span><span style=display:flex><span>    print(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>isdir(<span style=color:#e6db74>&#39;/usr/share&#39;</span>))
+</span></span><span style=display:flex><span>    print(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>isfile(<span style=color:#e6db74>&#39;/usr/share&#39;</span>))
+</span></span><span style=display:flex><span>    print(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>splitext(<span style=color:#e6db74>&#39;/usr/share&#39;</span>))
+</span></span><span style=display:flex><span>main()
+</span></span></code></pre></div><h4 id=some-scapy-fun-please-please-be-careful-with-this-and-only-use-it-in-an-environment-with-permission>Some <a href=https://scapy.readthedocs.io/en/latest/>Scapy</a> Fun (Please, please be careful with this and only use it in an environment with permission):</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span>IP Spoof: send(IP(src<span style=color:#f92672>=</span><span style=color:#960050;background-color:#1e0010>“</span><span style=color:#f92672>&lt;</span>attacker IP<span style=color:#f92672>&gt;</span><span style=color:#960050;background-color:#1e0010>”</span>, dst<span style=color:#f92672>=</span><span style=color:#960050;background-color:#1e0010>“</span><span style=color:#f92672>&lt;</span>target IP<span style=color:#f92672>&gt;</span><span style=color:#960050;background-color:#1e0010>”</span>)<span style=color:#f92672>/</span>ICMP()<span style=color:#f92672>/</span><span style=color:#960050;background-color:#1e0010>“</span>Hello world<span style=color:#960050;background-color:#1e0010>”</span>)
+</span></span><span style=display:flex><span>Network Sniffing: sniff(iface<span style=color:#f92672>=</span><span style=color:#960050;background-color:#1e0010>“</span><span style=color:#f92672>&lt;</span>interface<span style=color:#f92672>&gt;</span><span style=color:#960050;background-color:#1e0010>”</span>, prn<span style=color:#f92672>=</span><span style=color:#66d9ef>lambda</span> x:x<span style=color:#f92672>.</span>summary)
+</span></span><span style=display:flex><span>BE CAREFUL WITH THIS NEXT ONE
+</span></span><span style=display:flex><span>DOS Attack: send(IP(src<span style=color:#f92672>=</span><span style=color:#960050;background-color:#1e0010>“</span>attacker IP<span style=color:#960050;background-color:#1e0010>”</span>, dst<span style=color:#f92672>=</span><span style=color:#960050;background-color:#1e0010>“</span><span style=color:#f92672>&lt;</span>target<span style=color:#f92672>&gt;</span><span style=color:#960050;background-color:#1e0010>”</span>)<span style=color:#f92672>/</span>TCP(sport<span style=color:#f92672>=</span><span style=color:#ae81ff>444</span>, dport<span style=color:#f92672>=</span><span style=color:#ae81ff>444</span>), count<span style=color:#f92672>=</span><span style=color:#ae81ff>10000</span>)
+</span></span></code></pre></div><p><a href=https://github.com/pmccabe5>@pmccabe5</a></p></article><p style=margin-top:2rem><a href=/posts/>&larr; All posts</a></p></div></div></main><footer class=site-footer><div class=container><div><div class=brand-text>CofC Cybersecurity Club</div><div class=copyright>&copy; 2026 cofcsecurity &#183; built with Hugo</div></div><div class=footer-socials><a href=https://discord.gg/uBCwjeG target=_blank rel=noopener><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.7 19.7.0 0015.6 3c-.2.4-.5.9-.7 1.3a18 18 0 00-5.8.0c-.2-.4-.5-.9-.7-1.3-1.7.3-3.3.8-4.7 1.4C1 8.7.3 12.9.6 17c1.9 1.4 3.7 2.2 5.5 2.8.4-.6.8-1.3 1.1-2-.6-.2-1.2-.5-1.7-.9l.4-.3c3.4 1.6 7.1 1.6 10.5.0l.4.3c-.5.4-1.1.7-1.7.9.3.7.7 1.4 1.1 2 1.8-.6 3.6-1.4 5.5-2.8.4-4.9-.8-9-3.4-12.6zM8.8 14.6c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.9 2.1-1.9 2.1zm6.4.0c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.9 2.1-1.9 2.1z"/></svg>
+Discord</a>
+<a href=https://github.com/cofcsecurity/ target=_blank rel=noopener><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 008.8 21.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.7.0.0.9-.3 2.8 1a10 10 0 015.2.0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7.0 3.9-2.4 4.7-4.6 5 .3.3.6.9.6 1.9v2.8c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>
+GitHub</a>
+<a href=https://www.instagram.com/cofc_cyber_club/ target=_blank rel=noopener><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+Instagram</a></div></div><button type=button id=theme-easter-egg aria-hidden=true tabindex=-1>_</button></footer><script>document.getElementById("theme-easter-egg").addEventListener("click",function(){var e=document.documentElement,t=e.getAttribute("data-theme")==="hacker";if(t){e.removeAttribute("data-theme");try{localStorage.removeItem("theme")}catch{}}else{e.setAttribute("data-theme","hacker");try{localStorage.setItem("theme","hacker")}catch{}}})</script></body></html>
