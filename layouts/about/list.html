@@ -13,4 +13,26 @@
     </div>
   </div>
 </div>
+
+<div class="section section-dark">
+  <div class="container">
+    <span class="kicker">Tools &amp; tech</span>
+    <h2>What we practice with</h2>
+    <div class="tool-grid" style="margin-top:1.5rem;">
+      {{ range .Site.Data.tools }}
+      <div class="tool-logo">
+        {{ if .wordmark }}
+        <span class="tool-wordmark">{{ .name }}</span>
+        {{ else if .icon }}
+        {{ partial "icon.html" .icon }}
+        <span>{{ .name }}</span>
+        {{ else }}
+        <img src="{{ printf "img/tools/%s.png" .slug | relURL }}" alt="{{ .name }}" loading="lazy">
+        <span>{{ .name }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
 {{ end }}

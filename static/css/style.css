@@ -121,16 +121,16 @@ img { max-width: 100%; display: block; }
 .site-header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding-top: 0.85rem;
   padding-bottom: 0.85rem;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.75rem 1.5rem;
 }
 .brand {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  margin-right: auto;
 }
 .brand img {
   height: 40px;
@@ -151,6 +151,29 @@ img { max-width: 100%; display: block; }
   color: var(--gold);
   letter-spacing: 0.05em;
 }
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.06);
+  color: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.theme-toggle:hover { background: rgba(255,255,255,0.14); }
+.theme-toggle-sun { display: none; }
+[data-theme="dark"] .theme-toggle-sun { display: inline-flex; }
+[data-theme="dark"] .theme-toggle-moon { display: none; }
 
 .nav-toggle {
   display: none;
@@ -444,6 +467,39 @@ a.card:hover {
 .timeline li.is-skipped { opacity: 0.55; }
 .timeline li.is-skipped::before { background: var(--muted); box-shadow: 0 0 0 2px var(--card-bg); }
 
+/* Tool/tech logo strip — white-on-transparent marks, needs a dark section */
+.tool-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem 2rem;
+}
+.tool-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 84px;
+  min-height: 56px;
+  opacity: 0.85;
+}
+.tool-logo:hover { opacity: 1; }
+.tool-logo img { height: 34px; width: auto; max-width: 64px; }
+.tool-logo svg { height: 34px; width: 34px; color: var(--white); }
+.tool-wordmark {
+  font-family: var(--font-heading);
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: var(--white);
+  line-height: 34px;
+}
+.tool-logo span {
+  font-size: 0.72rem;
+  text-align: center;
+  color: #d8cfcf;
+  line-height: 1.2;
+}
+
 /* Schedule table */
 .table-wrap { overflow-x: auto; }
 table.schedule {
@@ -514,6 +570,18 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
   top: 0; left: 0; width: 100%; height: 100%;
   border: 0;
 }
+
+/* Pagefind search — themed via its own CSS custom properties, adapts with light/dark/hacker */
+:root {
+  --pagefind-ui-primary: var(--maroon-dark);
+  --pagefind-ui-text: var(--ink);
+  --pagefind-ui-background: var(--paper);
+  --pagefind-ui-border: var(--border);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 10px;
+  --pagefind-ui-font: var(--font-body);
+}
+.pagefind-search { margin-bottom: 2rem; }
 
 /* Post list */
 .post-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
@@ -606,6 +674,29 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
 .hero p.lede { animation-delay: 0.12s; }
 .hero .hero-actions { animation-delay: 0.18s; }
 .hero-media { animation-delay: 0.24s; }
+
+/* ==========================================================================
+   Dark mode — on-brand dark palette (distinct from the hacker easter egg).
+   The header/hero/footer/stat/page-head sections are already dark in every
+   mode, so this mainly flips the currently-light sections and cards.
+   ========================================================================== */
+:root[data-theme="dark"] {
+  --ink: #f1e9e5;
+  --muted: #b8a8a3;
+  --card-bg: #2e2222;
+  --paper: #241b1b;
+  --border: #4a3535;
+  --link-color: var(--mint);
+  --teal-light: #14211f;
+}
+[data-theme="dark"] .kicker { color: var(--mint); }
+[data-theme="dark"] .contact-card .label { color: var(--mint); }
+[data-theme="dark"] .badge { background: var(--card-bg); color: var(--mint); border: 1px solid var(--border); }
+[data-theme="dark"] .prose blockquote { color: var(--muted); }
+[data-theme="dark"] table.schedule tr:nth-child(even) { background: var(--card-bg); }
+[data-theme="dark"] table.schedule td { border-bottom-color: var(--border); }
+[data-theme="dark"] .prose table th,
+[data-theme="dark"] .prose table td { border-color: var(--border); }
 
 /* ==========================================================================
    Secret hacker theme — colors lifted from the old site's Cactus dark theme

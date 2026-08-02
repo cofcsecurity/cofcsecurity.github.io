@@ -28,4 +28,68 @@
     </div>
   </div>
 </div>
+
+<div class="section section-tint">
+  <div class="container">
+    <span class="kicker">Competition prep</span>
+    <h2>Guides &amp; reference sheets</h2>
+    <p style="max-width:60ch; margin-top:0.5rem;">Cheat sheets the Defense Team uses during practice and competitions. Print them, or keep them open on a second screen.</p>
+    {{ range .Site.Data.guides }}
+    <h3 style="margin-top:2.2rem;">{{ .group }}</h3>
+    <div class="card-grid" style="margin-top:1rem;">
+      {{ range .docs }}
+      <div class="card">
+        <span class="icon-circle on-teal" style="margin-bottom:0.7rem;">{{ partial "icon.html" "book" }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+        <a class="btn btn-teal" style="margin-top:0.8rem;" href="{{ printf "files/%s" .file | relURL }}" target="_blank" rel="noopener">{{ partial "icon.html" "download" }} Download PDF</a>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+    <p style="margin-top:2rem; color:var(--muted); font-size:0.85rem;">
+      Guides written and maintained by <a href="https://github.com/tlmcguire" target="_blank" rel="noopener">Tyler McGuire</a>.
+    </p>
+  </div>
+</div>
+
+<div class="section section-light">
+  <div class="container">
+    <span class="kicker">Keep learning</span>
+    <h2>Platforms &amp; communities</h2>
+    <p style="max-width:60ch; margin-top:0.5rem;">Beyond club meetings, these are where most of us actually put in the hours.</p>
+    <div class="card-grid" style="margin-top:1.5rem;">
+      <div class="card">
+        <h3>TryHackMe</h3>
+        <p>Guided, beginner-friendly rooms covering everything from Linux basics to full attack chains.</p>
+        <a href="https://tryhackme.com/" target="_blank" rel="noopener">tryhackme.com {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>Hack The Box</h3>
+        <p>Less hand-holding, more realistic boxes. A natural next step once TryHackMe starts feeling easy.</p>
+        <a href="https://www.hackthebox.com/" target="_blank" rel="noopener">hackthebox.com {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>OverTheWire</h3>
+        <p>Wargames like Bandit are the fastest way to actually get comfortable at a Linux command line.</p>
+        <a href="https://overthewire.org/wargames/" target="_blank" rel="noopener">overthewire.org {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>PortSwigger Web Security Academy</h3>
+        <p>Free, and the closest thing to an industry-standard curriculum for web application security.</p>
+        <a href="https://portswigger.net/web-security" target="_blank" rel="noopener">portswigger.net {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>NCL &amp; CTFtime</h3>
+        <p>The National Cyber League runs seasonal games open to students; CTFtime tracks nearly every other CTF happening.</p>
+        <a href="https://www.nationalcyberleague.org/" target="_blank" rel="noopener">nationalcyberleague.org {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>Explainshell &amp; the man pages</h3>
+        <p>Before asking the club, try <code>man</code> or paste the command into Explainshell. It's usually faster.</p>
+        <a href="https://explainshell.com/" target="_blank" rel="noopener">explainshell.com {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+    </div>
+  </div>
+</div>
 {{ end }}

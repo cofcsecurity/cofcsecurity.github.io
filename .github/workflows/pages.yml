@@ -20,6 +20,8 @@ jobs:
           extended: true
       - name: Build
         run: hugo --minify
+      - name: Index search (Pagefind)
+        run: npx --yes pagefind --site public
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:

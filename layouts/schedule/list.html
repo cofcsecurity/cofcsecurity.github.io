@@ -8,7 +8,7 @@
       {{ with .OutputFormats.Get "calendar" }}
       <a class="btn btn-teal" href="{{ .Permalink | safeURL }}">{{ partial "icon.html" "download" }} Subscribe (.ics)</a>
       {{ end }}
-      <a class="btn btn-outline" style="border-color:var(--maroon-dark); color:var(--maroon-dark);" href="{{ "/schedule/archive/" | relURL }}">Past schedules</a>
+      <a class="btn btn-outline" style="border-color:var(--ink); color:var(--ink);" href="{{ "/schedule/archive/" | relURL }}">Past schedules</a>
     </div>
     <p style="color:var(--muted); font-size:0.88rem; margin-top:-1rem;">
       To get every meeting on your calendar automatically, subscribe to the feed above (Google Calendar: Settings &rarr; Add calendar &rarr; From URL). To add a single meeting, use the button in its row below.
@@ -42,7 +42,11 @@
               {{ $mStart := replace .start ":" "" }}
               {{ $mEnd := replace .end ":" "" }}
               {{ $mQS := querify "action" "TEMPLATE" "text" (printf "CofC Cybersecurity Club: %s" .topic) "dates" (printf "%sT%s00/%sT%s00" ($mDate.Format "20060102") $mStart ($mDate.Format "20060102") $mEnd) "details" "Weekly meeting of the College of Charleston Cybersecurity Club." "location" $.Site.Data.schedule.location "ctz" "America/New_York" }}
-              <a href="https://calendar.google.com/calendar/render?{{ $mQS | safeURL }}" target="_blank" rel="noopener">+ Calendar</a>
+              {{ $mIcsLines := slice "BEGIN:VCALENDAR" "VERSION:2.0" "PRODID:-//CofC Cybersecurity Club//Schedule//EN" "BEGIN:VEVENT" (printf "UID:%s-%s@cofcsecurity.github.io" ($mDate.Format "20060102") $mStart) (printf "DTSTAMP:%s" (now.Format "20060102T150405Z")) (printf "DTSTART:%sT%s00" ($mDate.Format "20060102") $mStart) (printf "DTEND:%sT%s00" ($mDate.Format "20060102") $mEnd) (printf "SUMMARY:%s" .topic) (printf "LOCATION:%s" $.Site.Data.schedule.location) "DESCRIPTION:Weekly meeting of the College of Charleston Cybersecurity Club." "END:VEVENT" "END:VCALENDAR" }}
+              {{ $mIcsB64 := delimit $mIcsLines "\n" | base64Encode }}
+              <a href="https://calendar.google.com/calendar/render?{{ $mQS | safeURL }}" target="_blank" rel="noopener">+ Google</a>
+              &middot;
+              <a href="{{ printf "data:text/calendar;charset=utf-8;base64,%s" $mIcsB64 | safeURL }}" download="cofc-cyber-club-meeting.ics">+ .ics</a>
               {{ end }}
             </td>
           </tr>

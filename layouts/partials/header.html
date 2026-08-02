@@ -3,9 +3,15 @@
     <a class="brand" href="{{ "/" | relURL }}">
       <img src="{{ "img/logo-hor-w.png" | relURL }}" alt="College of Charleston Cybersecurity Club" height="40">
     </a>
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav">
-      {{ partial "icon.html" "menu" }} Menu
-    </button>
+    <div class="header-controls">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="theme-toggle-sun">{{ partial "icon.html" "sun" }}</span>
+        <span class="theme-toggle-moon">{{ partial "icon.html" "moon" }}</span>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav">
+        {{ partial "icon.html" "menu" }} Menu
+      </button>
+    </div>
     <nav class="main-nav" id="main-nav">
       <ul>
         {{ range .Site.Menus.main }}
@@ -20,5 +26,13 @@
     var nav = document.getElementById('main-nav');
     var open = nav.classList.toggle('open');
     this.setAttribute('aria-expanded', open);
+  });
+  document.getElementById('theme-toggle').addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.getAttribute('data-theme');
+    var isLight = current ? current === 'light' : !window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = isLight ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
   });
 </script>

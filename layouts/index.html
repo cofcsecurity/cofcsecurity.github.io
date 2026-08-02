@@ -98,6 +98,8 @@
       {{ $nStart := replace $next.start ":" "" }}
       {{ $nEnd := replace $next.end ":" "" }}
       {{ $nQS := querify "action" "TEMPLATE" "text" (printf "CofC Cybersecurity Club: %s" $next.topic) "dates" (printf "%sT%s00/%sT%s00" ($nDate.Format "20060102") $nStart ($nDate.Format "20060102") $nEnd) "details" "Weekly meeting of the College of Charleston Cybersecurity Club." "location" .Site.Data.schedule.location "ctz" "America/New_York" }}
+      {{ $nIcsLines := slice "BEGIN:VCALENDAR" "VERSION:2.0" "PRODID:-//CofC Cybersecurity Club//Schedule//EN" "BEGIN:VEVENT" (printf "UID:%s-%s@cofcsecurity.github.io" ($nDate.Format "20060102") $nStart) (printf "DTSTAMP:%s" (now.Format "20060102T150405Z")) (printf "DTSTART:%sT%s00" ($nDate.Format "20060102") $nStart) (printf "DTEND:%sT%s00" ($nDate.Format "20060102") $nEnd) (printf "SUMMARY:%s" $next.topic) (printf "LOCATION:%s" .Site.Data.schedule.location) "DESCRIPTION:Weekly meeting of the College of Charleston Cybersecurity Club." "END:VEVENT" "END:VCALENDAR" }}
+      {{ $nIcsB64 := delimit $nIcsLines "\n" | base64Encode }}
       <div class="card" style="max-width:560px;">
         <div class="icon-row">
           <span class="icon-circle on-maroon">{{ partial "icon.html" "calendar" }}</span>
@@ -106,8 +108,9 @@
             <p>{{ $next.day }}, {{ $nDate.Format "January 2, 2006" }} &middot; {{ $next.start }}–{{ $next.end }}<br>
             {{ .Site.Data.schedule.location }}</p>
             <div class="hero-actions" style="margin-top:1rem;">
-              <a class="btn btn-teal" href="https://calendar.google.com/calendar/render?{{ $nQS | safeURL }}" target="_blank" rel="noopener">{{ partial "icon.html" "calendar" }} Add to Google Calendar</a>
-              <a class="btn btn-outline" style="border-color:var(--maroon-dark); color:var(--maroon-dark);" href="{{ "/schedule/" | relURL }}">Full schedule</a>
+              <a class="btn btn-teal" href="https://calendar.google.com/calendar/render?{{ $nQS | safeURL }}" target="_blank" rel="noopener">{{ partial "icon.html" "calendar" }} Google Calendar</a>
+              <a class="btn btn-outline" style="border-color:var(--ink); color:var(--ink);" href="{{ printf "data:text/calendar;charset=utf-8;base64,%s" $nIcsB64 | safeURL }}" download="cofc-cyber-club-meeting.ics">{{ partial "icon.html" "download" }} Apple/Outlook (.ics)</a>
+              <a class="btn btn-outline" style="border-color:var(--ink); color:var(--ink);" href="{{ "/schedule/" | relURL }}">Full schedule</a>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@
 {{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
 <div class="section section-light">
   <div class="container">
+    <div id="search" class="pagefind-search"></div>
     <ul class="post-list">
       {{ range .Pages.ByDate.Reverse }}
       <li>
@@ -14,4 +15,12 @@
     </ul>
   </div>
 </div>
+<link href="{{ "pagefind/pagefind-ui.css" | relURL }}" rel="stylesheet">
+<script src="{{ "pagefind/pagefind-ui.js" | relURL }}" defer></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (typeof PagefindUI === 'undefined') return;
+    new PagefindUI({ element: '#search', showSubResults: true, showImages: false, resetStyles: false });
+  });
+</script>
 {{ end }}
