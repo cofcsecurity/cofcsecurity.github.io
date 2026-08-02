@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - master  # default branch
+  schedule:
+    # Rebuilds even with no commits, so "next meeting" and the ICS feed
+    # stay accurate day to day instead of only updating on the next push.
+    - cron: '0 9 * * *'  # 9:00 UTC = 5:00 AM Eastern (4:00 AM during EDT)
+  workflow_dispatch: # lets you trigger a rebuild manually from the Actions tab
 
 permissions:
   contents: write
@@ -13,15 +18,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 20.x
-        uses: actions/setup-node@v4
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          node-version: '20.x'
-          cache: npm
-      - name: Install Dependencies
-        run: npm ci
+          hugo-version: '0.163.3'
+          extended: true
       - name: Build
-        run: npm run build
+        run: hugo --minify
+      - name: Index search (Pagefind)
+        run: npx --yes pagefind --site public
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:

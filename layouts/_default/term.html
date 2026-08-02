@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "title" .Title) }}
+<div class="section section-light">
+  <div class="container">
+    <ul class="post-list">
+      {{ range .Paginator.Pages }}
+      <li><a class="card" href="{{ .RelPermalink }}"><span>{{ .Title }}</span></a></li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}

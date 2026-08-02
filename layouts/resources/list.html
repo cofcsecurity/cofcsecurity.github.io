@@ -1,0 +1,199 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
+<div class="section section-light">
+  <div class="container">
+    <article class="prose" style="margin-bottom:2rem;">{{ .Content }}</article>
+    <div class="icon-row-list">
+      <div class="icon-row">
+        <span class="icon-circle on-maroon">{{ partial "icon.html" "terminal" }}</span>
+        <div>
+          <h4>Learn Linux and/or Windows Server</h4>
+          <p>Along with Bash or PowerShell, respectively. You'll use these daily.</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <span class="icon-circle on-teal">{{ partial "icon.html" "network" }}</span>
+        <div>
+          <h4>Learn the basics of networking</h4>
+          <p>Start with the OSI model. It underpins almost everything else in security.</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <span class="icon-circle on-maroon">{{ partial "icon.html" "users" }}</span>
+        <div>
+          <h4>Interact with the club, ask questions</h4>
+          <p>We want to help. Come to a meeting, or ask on <a href="{{ .Site.Params.discord }}" target="_blank" rel="noopener">Discord</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <article class="prose" style="margin-top:2.5rem;">
+      <h2>Our GitHub organization</h2>
+      <p><a href="https://github.com/cofcsecurity" target="_blank" rel="noopener">CofC Cybersecurity Club on GitHub</a> — we keep a lot of resources and in-progress projects there. Active member? Ask and we'll add you to the org so you can contribute too.</p>
+
+      <h2>Linux</h2>
+      <p>Linux is a family of open-source operating systems. Prominent distributions (distros) exist for personal computers (Ubuntu, Fedora), mobile devices (Android), embedded devices (BusyBox), and servers (Red Hat, Ubuntu Server).</p>
+      <h3>Getting started</h3>
+      <ul>
+        <li><a href="https://ubuntu.com/tutorials/command-line-for-beginners" target="_blank" rel="noopener">Linux Command Line for Beginners</a> (Ubuntu)</li>
+        <li><a href="https://www.youtube.com/playlist?list=PLBf0hzazHTGMh2fe2MFf3lCgk0rKmS2by" target="_blank" rel="noopener">Linux Command Line YouTube playlist</a></li>
+      </ul>
+      <h3>Infosec-oriented distros</h3>
+      <p>New to Linux or security? Start with Kali.</p>
+      <ul>
+        <li><a href="https://www.kali.org/downloads/" target="_blank" rel="noopener">Kali</a> — also available via <a href="https://www.kali.org/news/wsl2-and-kali/" target="_blank" rel="noopener">WSL2</a></li>
+        <li><a href="https://parrotlinux.org/download/" target="_blank" rel="noopener">Parrot</a></li>
+        <li><a href="https://www.blackarch.org/downloads.html" target="_blank" rel="noopener">BlackArch</a></li>
+      </ul>
+      <h3>Other distros worth knowing</h3>
+      <ul>
+        <li><a href="https://www.debian.org/" target="_blank" rel="noopener">Debian</a></li>
+        <li><a href="https://ubuntu.com/" target="_blank" rel="noopener">Ubuntu / Ubuntu Server</a></li>
+        <li><a href="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux" target="_blank" rel="noopener">Red Hat Enterprise Linux</a></li>
+        <li><a href="https://www.centos.org/" target="_blank" rel="noopener">CentOS</a></li>
+        <li><a href="https://getfedora.org/" target="_blank" rel="noopener">Fedora</a></li>
+      </ul>
+
+      <h2>Virtualization</h2>
+      <p>Hypervisors like VirtualBox and VMware let you run virtual machines (VMs) on your computer — multiple operating systems, each in its own sandbox. We recommend setting up Kali using Kali's own <a href="https://www.kali.org/docs/virtualization/" target="_blank" rel="noopener">virtualization guides</a>, or one of ours below.</p>
+      <ul>
+        <li><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">VirtualBox</a></li>
+        <li><a href="https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html" target="_blank" rel="noopener">VMware Workstation Player</a></li>
+        <li><a href="/resources/windows-installation-guide/">Windows VM installation guide</a></li>
+        <li><a href="/resources/vb-and-hyper-v-setup/">VirtualBox + Hyper-V setup guide</a></li>
+        <li><a href="/resources/mac-installation-guide/">Mac VM installation guide</a></li>
+      </ul>
+
+      <h2>Tools of the trade</h2>
+      <p>Our favorites — most come prepackaged with Kali. The most important to know are nmap, netcat, and Wireshark.</p>
+      <ul>
+        <li><a href="https://nmap.org/" target="_blank" rel="noopener">nmap</a> — <strong>the</strong> network mapper</li>
+        <li><a href="http://netcat.sourceforge.net/" target="_blank" rel="noopener">netcat</a> — Swiss army knife network debugger</li>
+        <li><a href="https://www.wireshark.org/" target="_blank" rel="noopener">Wireshark</a> — packet analysis</li>
+        <li><a href="https://www.metasploit.com/" target="_blank" rel="noopener">Metasploit</a> — pentesting framework</li>
+        <li><a href="https://www.zaproxy.org/" target="_blank" rel="noopener">OWASP ZAP</a> — web app security scanner</li>
+        <li><a href="https://www.radare.org/cutter/" target="_blank" rel="noopener">Radare Cutter</a> — decompiler and disassembler</li>
+        <li><a href="https://tools.kali.org/information-gathering/nikto" target="_blank" rel="noopener">Nikto</a> — web server scanner</li>
+        <li><a href="https://hashcat.net/hashcat/" target="_blank" rel="noopener">hashcat</a> — password cracker (GPU)</li>
+        <li><a href="https://www.openwall.com/john/" target="_blank" rel="noopener">John the Ripper</a> — password cracker (CPU)</li>
+        <li><a href="https://www.aircrack-ng.org/" target="_blank" rel="noopener">Aircrack-ng</a> — wireless cracking and analysis</li>
+      </ul>
+      <h3>Other tools</h3>
+      <ul>
+        <li><a href="https://github.com/carlospolop/PEASS-ng" target="_blank" rel="noopener">PEASS-ng</a> — privilege escalation toolkit (Windows/macOS/Linux)</li>
+        <li><a href="https://github.com/OJ/gobuster" target="_blank" rel="noopener">Gobuster</a> — web server directory enumeration</li>
+      </ul>
+
+      <h2>Hardware hacking</h2>
+      <ul>
+        <li><a href="https://hak5.org/" target="_blank" rel="noopener">Hak5</a> — pentesting/infosec gear, including the WiFi Pineapple, network implants, and hardware keyloggers</li>
+        <li><a href="https://www.raspberrypi.org/" target="_blank" rel="noopener">Raspberry Pi</a> — cheap, versatile single-board computer</li>
+      </ul>
+
+      <h2>The cloud</h2>
+      <p>Cloud knowledge is crucial to almost everything in computer science now, security included. Pick a platform and learn the basics — most offer free credit to get started.</p>
+      <ul>
+        <li><a href="https://aws.amazon.com/" target="_blank" rel="noopener">Amazon Web Services</a></li>
+        <li><a href="https://console.cloud.google.com/" target="_blank" rel="noopener">Google Cloud Platform</a></li>
+        <li><a href="https://azure.microsoft.com/" target="_blank" rel="noopener">Microsoft Azure</a></li>
+      </ul>
+
+      <h2>YouTube channels &amp; podcasts</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/hak5" target="_blank" rel="noopener">Hak5</a> — updates, HackByte, ThreatWire</li>
+        <li><a href="https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA" target="_blank" rel="noopener">IppSec</a> — Hack The Box walkthroughs</li>
+        <li><a href="https://www.youtube.com/user/danscourses" target="_blank" rel="noopener">danscourses</a> — networking tutorials</li>
+        <li><a href="https://www.youtube.com/channel/UCdngmbVKX1Tgre699-XLlUA" target="_blank" rel="noopener">TechWorld with Nana</a> — DevOps</li>
+        <li><a href="https://www.youtube.com/channel/UC0ZTPkdxlAKf-V33tqXwi3Q" target="_blank" rel="noopener">Hackersploit</a> — infosec training</li>
+        <li><a href="https://www.youtube.com/channel/UC9x0AN7BWHpCDHSm9NiJFJQ" target="_blank" rel="noopener">NetworkChuck</a> — CCNA, CompTIA A+/Network+</li>
+        <li><a href="https://www.youtube.com/@JackRhysider" target="_blank" rel="noopener">Jack Rhysider (Darknet Diaries)</a> — cybersecurity stories podcast</li>
+      </ul>
+    </article>
+  </div>
+</div>
+
+<div class="section section-tint">
+  <div class="container">
+    <span class="kicker">Competition prep</span>
+    <h2>Guides &amp; reference sheets</h2>
+    <p style="max-width:60ch; margin-top:0.5rem;">Cheat sheets the Defense Team uses during practice and competitions. Print them, or keep them open on a second screen.</p>
+    {{ range .Site.Data.guides }}
+    <h3 style="margin-top:2.2rem;">{{ .group }}</h3>
+    <div class="card-grid" style="margin-top:1rem;">
+      {{ range .docs }}
+      <div class="card">
+        <span class="icon-circle on-teal" style="margin-bottom:0.7rem;">{{ partial "icon.html" "book" }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+        <a class="btn btn-teal" style="margin-top:auto; align-self:flex-start; padding-top:0.8rem;" href="{{ printf "files/%s" .file | relURL }}" target="_blank" rel="noopener">{{ partial "icon.html" "download" }} Download PDF</a>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+    <p style="margin-top:2rem; color:var(--muted); font-size:0.85rem;">
+      Guides written and maintained by <a href="https://github.com/tlmcguire" target="_blank" rel="noopener">Tyler McGuire</a>.
+    </p>
+  </div>
+</div>
+
+<div class="section section-light">
+  <div class="container">
+    <span class="kicker">Keep learning</span>
+    <h2>Platforms &amp; communities</h2>
+    <p style="max-width:60ch; margin-top:0.5rem;">Beyond club meetings, these are where most of us actually put in the hours.</p>
+    <div class="card-grid" style="margin-top:1.5rem;">
+      <div class="card">
+        <h3>TryHackMe</h3>
+        <p>Guided, beginner-friendly rooms covering everything from Linux basics to full attack chains.</p>
+        <a class="card-link" href="https://tryhackme.com/" target="_blank" rel="noopener">tryhackme.com {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>Hack The Box</h3>
+        <p>Less hand-holding, more realistic boxes. A natural next step once TryHackMe starts feeling easy.</p>
+        <a class="card-link" href="https://www.hackthebox.com/" target="_blank" rel="noopener">hackthebox.com {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>OverTheWire</h3>
+        <p>Wargames like Bandit are the fastest way to actually get comfortable at a Linux command line.</p>
+        <a class="card-link" href="https://overthewire.org/wargames/" target="_blank" rel="noopener">overthewire.org {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>PortSwigger Web Security Academy</h3>
+        <p>Free, and the closest thing to an industry-standard curriculum for web application security.</p>
+        <a class="card-link" href="https://portswigger.net/web-security" target="_blank" rel="noopener">portswigger.net {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>NCL &amp; CTFtime</h3>
+        <p>The National Cyber League runs seasonal games open to students; CTFtime tracks nearly every other CTF happening.</p>
+        <a class="card-link" href="https://www.nationalcyberleague.org/" target="_blank" rel="noopener">nationalcyberleague.org {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>Explainshell &amp; the man pages</h3>
+        <p>Before asking the club, try <code>man</code> or paste the command into Explainshell. It's usually faster.</p>
+        <a class="card-link" href="https://explainshell.com/" target="_blank" rel="noopener">explainshell.com {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>Metasploitable 2</h3>
+        <p>A deliberately vulnerable VM built to practice pentesting against, at your own pace and offline.</p>
+        <a class="card-link" href="https://sourceforge.net/projects/metasploitable/" target="_blank" rel="noopener">sourceforge.net {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>VulnHub</h3>
+        <p>A whole library of vulnerable VMs beyond Metasploitable, ranging from beginner to brutal.</p>
+        <a class="card-link" href="https://www.vulnhub.com/" target="_blank" rel="noopener">vulnhub.com {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>UnderTheWire</h3>
+        <p>Like OverTheWire's Bandit, but PowerShell-focused — good practice if Windows is your weak spot.</p>
+        <a class="card-link" href="https://underthewire.tech/" target="_blank" rel="noopener">underthewire.tech {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+      <div class="card">
+        <h3>Posh-Hunter</h3>
+        <p>More advanced PowerShell practice for both blue and red team work.</p>
+        <a class="card-link" href="https://posh-hunter.com/" target="_blank" rel="noopener">posh-hunter.com {{ partial "icon.html" "arrow-right" }}</a>
+      </div>
+    </div>
+    <p style="margin-top:2rem;">Our defense team competes in PCDC and SECCDC every year, and any member can join us for National Cyber League. See the full list on our <a href="{{ "/competitions/" | relURL }}">Competitions</a> page.</p>
+  </div>
+</div>
+{{ end }}

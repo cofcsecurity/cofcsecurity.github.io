@@ -1,0 +1,59 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
+<div class="section section-light">
+  <div class="container">
+    <article class="prose">{{ .Content }}</article>
+
+    <div class="hero-actions" style="margin: 1.5rem 0 2rem;">
+      {{ with .OutputFormats.Get "calendar" }}
+      <a class="btn btn-teal" href="{{ .Permalink | safeURL }}">{{ partial "icon.html" "download" }} Subscribe (.ics)</a>
+      {{ end }}
+      <a class="btn btn-outline" style="border-color:var(--ink); color:var(--ink);" href="{{ "/schedule/archive/" | relURL }}">Past schedules</a>
+    </div>
+    <p style="color:var(--muted); font-size:0.88rem; margin-top:-1rem;">
+      To get every meeting on your calendar automatically, subscribe to the feed above (Google Calendar: Settings &rarr; Add calendar &rarr; From URL). To add a single meeting, use the button in its row below.
+    </p>
+
+    <div class="table-wrap">
+      <table class="schedule">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Day</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Topic</th>
+            <th>Notes</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range .Site.Data.schedule.meetings }}
+          {{ $mDate := time.AsTime .date }}
+          <tr{{ if .skipped }} class="is-skipped"{{ end }}>
+            <td>{{ with .week }}{{ . }}{{ else }}&mdash;{{ end }}</td>
+            <td>{{ .day }}</td>
+            <td>{{ $mDate.Format "Jan 2, 2006" }}</td>
+            <td>{{ if .skipped }}&mdash;{{ else }}{{ .start }}&ndash;{{ .end }}{{ end }}</td>
+            <td>{{ if .skipped }}<span class="badge">No meeting</span>{{ else }}{{ .topic }}{{ end }}</td>
+            <td>{{ .notes }}</td>
+            <td class="cal-link">
+              {{ if not .skipped }}
+              {{ $mStart := replace .start ":" "" }}
+              {{ $mEnd := replace .end ":" "" }}
+              {{ $mQS := querify "action" "TEMPLATE" "text" (printf "CofC Cybersecurity Club: %s" .topic) "dates" (printf "%sT%s00/%sT%s00" ($mDate.Format "20060102") $mStart ($mDate.Format "20060102") $mEnd) "details" "Weekly meeting of the College of Charleston Cybersecurity Club." "location" $.Site.Data.schedule.location "ctz" "America/New_York" }}
+              {{ $mIcsLines := slice "BEGIN:VCALENDAR" "VERSION:2.0" "PRODID:-//CofC Cybersecurity Club//Schedule//EN" "BEGIN:VEVENT" (printf "UID:%s-%s@cofcsecurity.github.io" ($mDate.Format "20060102") $mStart) (printf "DTSTAMP:%s" (now.Format "20060102T150405Z")) (printf "DTSTART:%sT%s00" ($mDate.Format "20060102") $mStart) (printf "DTEND:%sT%s00" ($mDate.Format "20060102") $mEnd) (printf "SUMMARY:%s" .topic) (printf "LOCATION:%s" $.Site.Data.schedule.location) "DESCRIPTION:Weekly meeting of the College of Charleston Cybersecurity Club." "END:VEVENT" "END:VCALENDAR" }}
+              {{ $mIcsB64 := delimit $mIcsLines "\n" | base64Encode }}
+              <a href="https://calendar.google.com/calendar/render?{{ $mQS | safeURL }}" target="_blank" rel="noopener">+ Google</a>
+              &middot;
+              <a href="{{ printf "data:text/calendar;charset=utf-8;base64,%s" $mIcsB64 | safeURL }}" download="cofc-cyber-club-meeting.ics">+ .ics</a>
+              {{ end }}
+            </td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{{ end }}

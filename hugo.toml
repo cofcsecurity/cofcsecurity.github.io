@@ -1,0 +1,73 @@
+baseURL = "https://cofcsecurity.github.io/"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "CofC Cybersecurity Club"
+enableRobotsTXT = true
+paginate = 8
+
+[params]
+  tagline = "Student-run cybersecurity club at the College of Charleston"
+  discord = "https://discord.gg/uBCwjeG"
+  github = "https://github.com/cofcsecurity/"
+  instagram = "https://www.instagram.com/cofc_cyber_club/"
+  meetingLocation = "Simons Center for the Arts, Room 281"
+  meetingTime = "Tuesdays & Thursdays, 5:30–7:30 PM"
+
+  # Privacy-respecting analytics, off by default. Set one of these to enable
+  # it — see CONTRIBUTING.md for how to sign up. Leave both blank to stay off.
+  goatcounterSite = ""
+  plausibleDomain = ""
+
+[mediaTypes."text/calendar"]
+  suffixes = ["ics"]
+
+[outputFormats.CALENDAR]
+  mediaType = "text/calendar"
+  isPlainText = true
+  baseName = "schedule"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
+
+[[menu.main]]
+  name = "Competitions"
+  url = "/competitions/"
+  weight = 3
+
+[[menu.main]]
+  name = "Schedule"
+  url = "/schedule/"
+  weight = 4
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 5
+
+[[menu.main]]
+  name = "Resources"
+  url = "/resources/"
+  weight = 6
+
+[[menu.main]]
+  name = "History"
+  url = "/history/"
+  weight = 7
+
+[[menu.main]]
+  name = "Industry Contacts"
+  url = "/industry-contacts/"
+  weight = 8

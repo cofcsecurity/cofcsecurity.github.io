@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CofC Cybersecurity Club//Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:CofC Cybersecurity Club Meetings
+X-WR-TIMEZONE:America/New_York
+{{- range .Site.Data.schedule.meetings }}
+{{- if not .skipped }}
+BEGIN:VEVENT
+UID:{{ (time.AsTime .date).Format "20060102" }}-{{ replace .start ":" "" }}@cofcsecurity.github.io
+DTSTAMP:{{ now.Format "20060102T150405Z" }}
+DTSTART:{{ (time.AsTime .date).Format "20060102" }}T{{ replace .start ":" "" }}00
+DTEND:{{ (time.AsTime .date).Format "20060102" }}T{{ replace .end ":" "" }}00
+SUMMARY:{{ .topic }}
+LOCATION:{{ $.Site.Data.schedule.location }}
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+END:VEVENT
+{{- end }}
+{{- end }}
+END:VCALENDAR

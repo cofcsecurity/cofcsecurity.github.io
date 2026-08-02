@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
+<div class="section section-light">
+  <div class="container">
+    <ul class="timeline">
+      {{ range .Site.Data.history }}
+      <li>
+        <span class="tl-meta">{{ .years }}{{ with .coach }} &middot; Coach: {{ . }}{{ end }}</span>
+        <div class="card" style="margin-top:0.6rem;">
+          {{ with .accomplishments }}
+          <div style="margin-bottom:0.8rem;">
+            {{ range . }}<span class="badge" style="margin-right:0.4em; margin-bottom:0.4em; display:inline-block;">{{ partial "icon.html" "trophy" }} {{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+          <h4 style="font-family:var(--font-heading); margin-bottom:0.3em;">Main Team</h4>
+          <p style="margin-bottom: {{ if .shadow }}0.8rem{{ else }}0{{ end }};">{{ delimit .members ", " }}</p>
+          {{ with .shadow }}
+          <h4 style="font-family:var(--font-heading); margin-bottom:0.3em;">Shadow Team</h4>
+          <p style="margin-bottom:0;">{{ delimit . ", " }}</p>
+          {{ end }}
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}
