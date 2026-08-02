@@ -1,13 +1,22 @@
 - name: "Patrick McCabe"
+<<<<<<< HEAD
   role: "SOC Analyst"
   company: "Cyber Guards USA (Memphis, TN)"
+=======
+  role: "Network and Security Analyst"
+  company: "Sensilla ( Dover, NH)"
+>>>>>>> ac3eb06 (Update industry contacts)
   specialty: "Business Injects, Linux"
   email: "mccabepj@g.cofc.edu"
   github: "https://github.com/pmccabe5"
 
 - name: "Seth Hinson"
   role: "Cyber Consultant"
+<<<<<<< HEAD
   company: "Ernst & Young (Atlanta, GA)"
+=======
+  company: "Frazier & Deeter (Atlanta, GA)"
+>>>>>>> ac3eb06 (Update industry contacts)
   specialty: "Windows and Networking"
   email: "hinsonsc@g.cofc.edu"
   github: "https://github.com/hinsonsc"
@@ -17,5 +26,9 @@
   company: "greymatter.io (Washington, D.C.)"
   specialty: "Docker, DevOps, Linux"
   email: "mattwalter99@gmail.com"
+<<<<<<< HEAD
   github: "https://github.com/WookieMonkeys"
   twitter: "https://twitter.com/wookiemonkeys"
+=======
+  github: "https://github.com/WookieMonkeys"
+>>>>>>> ac3eb06 (Update industry contacts)
