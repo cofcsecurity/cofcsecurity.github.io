@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
+<div class="section section-light">
+  <div class="container">
+    <article class="prose" style="margin-bottom:2rem;">{{ .Content }}</article>
+    <div class="icon-row-list">
+      <div class="icon-row">
+        <span class="icon-circle on-maroon">{{ partial "icon.html" "terminal" }}</span>
+        <div>
+          <h4>Learn Linux and/or Windows Server</h4>
+          <p>Along with Bash or PowerShell, respectively. You'll use these daily.</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <span class="icon-circle on-teal">{{ partial "icon.html" "network" }}</span>
+        <div>
+          <h4>Learn the basics of networking</h4>
+          <p>Start with the OSI model. It underpins almost everything else in security.</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <span class="icon-circle on-maroon">{{ partial "icon.html" "users" }}</span>
+        <div>
+          <h4>Interact with the club, ask questions</h4>
+          <p>We want to help. Come to a meeting, or ask on <a href="{{ .Site.Params.discord }}" target="_blank" rel="noopener">Discord</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

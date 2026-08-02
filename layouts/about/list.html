@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
+<div class="section section-light">
+  <div class="container">
+    <article class="prose">{{ .Content }}</article>
+
+    <div class="card" style="margin-top:2rem; max-width:78ch;">
+      <span class="icon-circle on-maroon" style="margin-bottom:0.8rem;">{{ partial "icon.html" "trophy" }}</span>
+      <h3>The Cyber Defense Team</h3>
+      <p>An important part of our club is the Cyber Defense Team. The team competes in several competitions each year, including the <a href="http://pcdc-sc.com/" target="_blank" rel="noopener">Palmetto Cyber Defense Competition</a> (PCDC) and the <a href="https://cyberinstitute.kennesaw.edu/seccdc/index.php" target="_blank" rel="noopener">Southeast Collegiate Cyber Defense Competition</a> (SECCDC). In 2021 the team placed 1st at SECCDC, becoming the first team from South Carolina to advance to the National CCDC, where it placed 9th in the nation.</p>
+      <p>Competing provides valuable experience recognized across the industry; many past team members attribute job offers, interviews, or raises directly to their participation. <strong>Anyone, regardless of experience, is encouraged to participate.</strong></p>
+      <a class="btn btn-teal" href="{{ "/history/" | relURL }}">See team history {{ partial "icon.html" "arrow-right" }}</a>
+    </div>
+  </div>
+</div>
+{{ end }}

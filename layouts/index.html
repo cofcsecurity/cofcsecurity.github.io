@@ -1,0 +1,152 @@
+{{ define "main" }}
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="kicker">College of Charleston</span>
+      <h1>Cybersecurity Club</h1>
+      <p class="lede">A student-run club for anyone curious about information security. No experience required.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ .Site.Params.discord }}" target="_blank" rel="noopener">{{ partial "icon.html" "discord" }} Join us on Discord</a>
+        <a class="btn btn-outline" href="{{ "/schedule/" | relURL }}">View the schedule</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <video controls preload="none" poster="{{ "img/promo-poster.jpg" | relURL }}">
+        <source src="{{ "video/promo.mp4" | relURL }}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">What we do</span>
+      <h2>Weekly meetings and a competitive team</h2>
+    </div>
+    <div class="icon-row-list">
+      <div class="icon-row">
+        <span class="icon-circle on-maroon">{{ partial "icon.html" "terminal" }}</span>
+        <div>
+          <h4>Weekly technical meetings</h4>
+          <p>Networking, systems, scripting, and offense/defense fundamentals, taught by students for students.</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <span class="icon-circle on-teal">{{ partial "icon.html" "shield" }}</span>
+        <div>
+          <h4>Cyber Defense Team</h4>
+          <p>Compete at SECCDC, PCDC, and NCCDC against schools across the region and country.</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <span class="icon-circle on-maroon">{{ partial "icon.html" "network" }}</span>
+        <div>
+          <h4>Real infrastructure, real practice</h4>
+          <p>Build and break networks, servers, and services in a lab environment before it matters in the field.</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <span class="icon-circle on-teal">{{ partial "icon.html" "users" }}</span>
+        <div>
+          <h4>Open to everyone</h4>
+          <p>Any major, any year. You don't need a background in security to join.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="stat-grid">
+      <div class="stat-callout">
+        <div class="stat-number">9th</div>
+        <div class="stat-label">National CCDC finish, 2021</div>
+      </div>
+      <div class="stat-callout">
+        <div class="stat-number">1st</div>
+        <div class="stat-label">SECCDC Region Champions, 2021</div>
+      </div>
+      <div class="stat-callout">
+        <div class="stat-number">2&times;</div>
+        <div class="stat-label">Meetings every week, fall &amp; spring</div>
+      </div>
+      <div class="stat-callout">
+        <div class="stat-number">{{ .Site.Params.founded | default "2016" }}</div>
+        <div class="stat-label">Founded</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ $next := "" }}
+{{ range .Site.Data.schedule.meetings }}
+  {{ if and (not .skipped) (eq $next "") (ge (time.AsTime .date) now) }}
+    {{ $next = . }}
+  {{ end }}
+{{ end }}
+<section class="section section-tint">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Next meeting</span>
+      <h2>{{ .Site.Data.schedule.semester }}</h2>
+    </div>
+    {{ if ne $next "" }}
+      {{ $nDate := time.AsTime $next.date }}
+      {{ $nStart := replace $next.start ":" "" }}
+      {{ $nEnd := replace $next.end ":" "" }}
+      {{ $nQS := querify "action" "TEMPLATE" "text" (printf "CofC Cybersecurity Club: %s" $next.topic) "dates" (printf "%sT%s00/%sT%s00" ($nDate.Format "20060102") $nStart ($nDate.Format "20060102") $nEnd) "details" "Weekly meeting of the College of Charleston Cybersecurity Club." "location" .Site.Data.schedule.location "ctz" "America/New_York" }}
+      <div class="card" style="max-width:560px;">
+        <div class="icon-row">
+          <span class="icon-circle on-maroon">{{ partial "icon.html" "calendar" }}</span>
+          <div>
+            <h3>{{ $next.topic }}</h3>
+            <p>{{ $next.day }}, {{ $nDate.Format "January 2, 2006" }} &middot; {{ $next.start }}–{{ $next.end }}<br>
+            {{ .Site.Data.schedule.location }}</p>
+            <div class="hero-actions" style="margin-top:1rem;">
+              <a class="btn btn-teal" href="https://calendar.google.com/calendar/render?{{ $nQS | safeURL }}" target="_blank" rel="noopener">{{ partial "icon.html" "calendar" }} Add to Google Calendar</a>
+              <a class="btn btn-outline" style="border-color:var(--maroon-dark); color:var(--maroon-dark);" href="{{ "/schedule/" | relURL }}">Full schedule</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{ else }}
+      <p>No upcoming meetings are scheduled right now. Check back soon, or ask on <a href="{{ .Site.Params.discord }}" target="_blank" rel="noopener">Discord</a>.</p>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:1.2rem;">
+      <span class="kicker">Get in touch</span>
+      <h2>Come say hello</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="icon-circle on-maroon">{{ partial "icon.html" "discord" }}</span>
+        <div class="label">Discord</div>
+        <div class="value"><a href="{{ .Site.Params.discord }}" target="_blank" rel="noopener">Join the server</a></div>
+      </div>
+      <div class="contact-card">
+        <span class="icon-circle on-teal">{{ partial "icon.html" "github" }}</span>
+        <div class="label">GitHub</div>
+        <div class="value"><a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">cofcsecurity</a></div>
+      </div>
+      <div class="contact-card">
+        <span class="icon-circle on-maroon">{{ partial "icon.html" "location" }}</span>
+        <div class="label">Location</div>
+        <div class="value">{{ .Site.Data.schedule.location }}</div>
+      </div>
+      <div class="contact-card">
+        <span class="icon-circle on-teal">{{ partial "icon.html" "clock" }}</span>
+        <div class="label">Meets</div>
+        <div class="value">{{ .Site.Params.meetingTime }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

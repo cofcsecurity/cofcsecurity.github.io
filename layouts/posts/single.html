@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "title" .Title "subtitle" (.Date.Format "January 2, 2006")) }}
+<div class="section section-light">
+  <div class="container">
+    <article class="prose">
+      {{ .Content }}
+    </article>
+    <p style="margin-top:2rem;"><a href="{{ "/posts/" | relURL }}">&larr; All posts</a></p>
+  </div>
+</div>
+{{ end }}

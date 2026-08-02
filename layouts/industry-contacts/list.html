@@ -1,0 +1,21 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
+<div class="section section-light">
+  <div class="container">
+    <article class="prose" style="margin-bottom:2rem;">{{ .Content }}</article>
+    <div class="card-grid">
+      {{ range .Site.Data.industry_contacts }}
+      <div class="card">
+        <h3>{{ .name }}</h3>
+        <p style="color:var(--muted); margin-bottom:0.3em;">{{ .role }}{{ with .company }} &middot; {{ . }}{{ end }}</p>
+        {{ with .specialty }}<span class="badge">{{ . }}</span>{{ end }}
+        <div class="hero-actions" style="margin-top:1rem; gap:0.5rem;">
+          {{ with .email }}<a href="mailto:{{ . }}" aria-label="Email" style="color:var(--link-color);">{{ partial "icon.html" "mail" }}</a>{{ end }}
+          {{ with .github }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="GitHub" style="color:var(--link-color);">{{ partial "icon.html" "github" }}</a>{{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

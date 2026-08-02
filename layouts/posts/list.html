@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
+<div class="section section-light">
+  <div class="container">
+    <ul class="post-list">
+      {{ range .Pages.ByDate.Reverse }}
+      <li>
+        <a class="card" href="{{ .RelPermalink }}">
+          <span>{{ .Title }}</span>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}

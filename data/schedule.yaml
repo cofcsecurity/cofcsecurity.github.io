@@ -1,0 +1,180 @@
+semester: "Fall 2026"
+location: "Simons Center for the Arts, Room 281"
+meetings:
+  - week: 1
+    day: "Tuesday"
+    date: 2026-08-25
+    start: "17:30"
+    end: "19:30"
+    topic: "Introduction to the Club & CTF Basics"
+    notes: "Day after classes start"
+  - week: 2
+    day: "Thursday"
+    date: 2026-08-27
+    start: "17:30"
+    end: "19:30"
+    topic: "Introduction to Cyber Competitions"
+  - week: 3
+    day: "Tuesday"
+    date: 2026-09-01
+    start: "17:30"
+    end: "19:30"
+    topic: "Virtualization & Introduction to the Command Line"
+  - week: 4
+    day: "Thursday"
+    date: 2026-09-03
+    start: "17:30"
+    end: "19:30"
+    topic: "Understanding File Systems"
+  - week: 5
+    day: "Tuesday"
+    date: 2026-09-08
+    start: "17:30"
+    end: "19:30"
+    topic: "Remote Access Basics: SSH & RDP"
+  - week: 6
+    day: "Thursday"
+    date: 2026-09-10
+    start: "17:30"
+    end: "19:30"
+    topic: "Basic Networking & Communication"
+  - week: 7
+    day: "Tuesday"
+    date: 2026-09-15
+    start: "17:30"
+    end: "19:30"
+    topic: "Operating System Permissions & Access Control"
+  - week: 8
+    day: "Thursday"
+    date: 2026-09-17
+    start: "17:30"
+    end: "19:30"
+    topic: "Basic Host Hardening"
+  - week: 9
+    day: "Tuesday"
+    date: 2026-09-22
+    start: "17:30"
+    end: "19:30"
+    topic: "System Services & Background Processes"
+  - week: 10
+    day: "Thursday"
+    date: 2026-09-24
+    start: "17:30"
+    end: "19:30"
+    topic: "Finding Unwanted Processes"
+  - week: 11
+    day: "Tuesday"
+    date: 2026-09-29
+    start: "17:30"
+    end: "19:30"
+    topic: "Network Monitoring & Traffic Basics"
+  - week: 12
+    day: "Thursday"
+    date: 2026-10-01
+    start: "17:30"
+    end: "19:30"
+    topic: "Analyzing Traffic for Incidents"
+  - week: 13
+    day: "Tuesday"
+    date: 2026-10-06
+    start: "17:30"
+    end: "19:30"
+    topic: "Web Infrastructure Basics: DNS"
+  - week: 14
+    day: "Thursday"
+    date: 2026-10-08
+    start: "17:30"
+    end: "19:30"
+    topic: "DNS Auditing & Configuration Check"
+  - day: "Tuesday"
+    date: 2026-10-13
+    skipped: true
+    notes: "No meeting (Fall break)"
+  - week: 15
+    day: "Thursday"
+    date: 2026-10-15
+    start: "17:30"
+    end: "19:30"
+    topic: "Mid-Semester Practice Simulation"
+  - week: 16
+    day: "Tuesday"
+    date: 2026-10-20
+    start: "17:30"
+    end: "19:30"
+    topic: "Introduction to Active Directory"
+  - week: 17
+    day: "Thursday"
+    date: 2026-10-22
+    start: "17:30"
+    end: "19:30"
+    topic: "Active Directory Basics & Policy Controls"
+  - week: 18
+    day: "Tuesday"
+    date: 2026-10-27
+    start: "17:30"
+    end: "19:30"
+    topic: "Web & Database Server Setup"
+  - week: 19
+    day: "Thursday"
+    date: 2026-10-29
+    start: "17:30"
+    end: "19:30"
+    topic: "Application Security & Log Review"
+  - week: 20
+    day: "Tuesday"
+    date: 2026-11-03
+    start: "17:30"
+    end: "19:30"
+    topic: "Introduction to Log Collection"
+  - week: 21
+    day: "Thursday"
+    date: 2026-11-05
+    start: "17:30"
+    end: "19:30"
+    topic: "Basic Centralized Monitoring"
+  - week: 22
+    day: "Tuesday"
+    date: 2026-11-10
+    start: "17:30"
+    end: "19:30"
+    topic: "Basic Automation: Scripting"
+  - week: 23
+    day: "Thursday"
+    date: 2026-11-12
+    start: "17:30"
+    end: "19:30"
+    topic: "Using Scripts for Configuration Checks"
+  - week: 24
+    day: "Tuesday"
+    date: 2026-11-17
+    start: "17:30"
+    end: "19:30"
+    topic: "System Backups & Recovery Planning"
+  - week: 25
+    day: "Thursday"
+    date: 2026-11-19
+    start: "17:30"
+    end: "19:30"
+    topic: "System Recovery Practice"
+  - week: 26
+    day: "Tuesday"
+    date: 2026-11-24
+    start: "17:30"
+    end: "19:30"
+    topic: "Competition Workflow & Communication"
+  - day: "Thursday"
+    date: 2026-11-26
+    skipped: true
+    notes: "No meeting (Thanksgiving)"
+  - week: 27
+    day: "Tuesday"
+    date: 2026-12-01
+    start: "17:30"
+    end: "19:30"
+    topic: "Open Lab Project Day & Catch-up"
+  - week: 28
+    day: "Thursday"
+    date: 2026-12-03
+    start: "17:30"
+    end: "19:30"
+    topic: "End-of-Term Practice Run"

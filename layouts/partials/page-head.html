@@ -1,0 +1,7 @@
+{{- /* Simple page header band. Pass a dict with title and optional subtitle. */ -}}
+<div class="section section-dark" style="padding-bottom: 2.5rem;">
+  <div class="container">
+    <h1>{{ .title }}</h1>
+    {{ with .subtitle }}<p class="lede" style="max-width:60ch;">{{ . }}</p>{{ end }}
+  </div>
+</div>

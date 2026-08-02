@@ -13,15 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 20.x
-        uses: actions/setup-node@v4
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          node-version: '20.x'
-          cache: npm
-      - name: Install Dependencies
-        run: npm ci
+          hugo-version: '0.163.3'
+          extended: true
       - name: Build
-        run: npm run build
+        run: hugo --minify
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:

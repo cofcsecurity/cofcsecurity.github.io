@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="{{ "/" | relURL }}">
+      <img src="{{ "img/logo-hor-w.png" | relURL }}" alt="College of Charleston Cybersecurity Club" height="40">
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav">
+      {{ partial "icon.html" "menu" }} Menu
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function () {
+    var nav = document.getElementById('main-nav');
+    var open = nav.classList.toggle('open');
+    this.setAttribute('aria-expanded', open);
+  });
+</script>

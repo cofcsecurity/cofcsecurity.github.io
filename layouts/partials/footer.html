@@ -1,0 +1,28 @@
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="brand-text">CofC Cybersecurity Club</div>
+      <div class="copyright">&copy; {{ now.Format "2006" }} cofcsecurity &middot; built with Hugo</div>
+    </div>
+    <div class="footer-socials">
+      {{ with .Site.Params.discord }}<a href="{{ . }}" target="_blank" rel="noopener">{{ partial "icon.html" "discord" }} Discord</a>{{ end }}
+      {{ with .Site.Params.github }}<a href="{{ . }}" target="_blank" rel="noopener">{{ partial "icon.html" "github" }} GitHub</a>{{ end }}
+      {{ with .Site.Params.instagram }}<a href="{{ . }}" target="_blank" rel="noopener">{{ partial "icon.html" "instagram" }} Instagram</a>{{ end }}
+    </div>
+  </div>
+  <button type="button" id="theme-easter-egg" aria-hidden="true" tabindex="-1">_</button>
+</footer>
+<script>
+  document.getElementById('theme-easter-egg').addEventListener('click', function () {
+    var root = document.documentElement;
+    var on = root.getAttribute('data-theme') === 'hacker';
+    if (on) {
+      root.removeAttribute('data-theme');
+      try { localStorage.removeItem('theme'); } catch (e) {}
+    } else {
+      root.setAttribute('data-theme', 'hacker');
+      try { localStorage.setItem('theme', 'hacker'); } catch (e) {}
+    }
+  });
+</script>
+

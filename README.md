@@ -4,4 +4,21 @@ GitHub Pages site for the CofC Cybersecurity Club.
 
 This site contains information about the club including our history, schedule, meeting writeups, and more.
 
-This site was built with [hexo](https://hexo.io) using the [Cactus](https://github.com/probberechts/hexo-theme-cactus) theme.
+Built with [Hugo](https://gohugo.io). Brand colors, typography, and logo lockups come from the club's Design Components deck and are aligned with CofC's official brand guidelines.
+
+## Local development
+
+```
+brew install hugo
+hugo server
+```
+
+## Structure
+
+- `content/` — pages and posts (markdown)
+- `data/schedule.yaml` — the current semester's meeting schedule (renders the schedule page, the "Add to Google Calendar" links, and the `/schedule/schedule.ics` subscribe feed)
+- `data/history.yaml`, `data/industry_contacts.yaml` — structured data for those pages
+- `layouts/` — page templates, organized by section
+- `static/` — images, logos, CSS, and the homepage video
+
+Deploys automatically to `gh-pages` via GitHub Actions on push to `master`.
