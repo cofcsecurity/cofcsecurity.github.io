@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - master  # default branch
+  schedule:
+    # Rebuilds even with no commits, so "next meeting" and the ICS feed
+    # stay accurate day to day instead of only updating on the next push.
+    - cron: '0 9 * * *'  # 9:00 UTC = 5:00 AM Eastern (4:00 AM during EDT)
+  workflow_dispatch: # lets you trigger a rebuild manually from the Actions tab
 
 permissions:
   contents: write

@@ -98,3 +98,5 @@ npx serve public
 ## Deployment
 
 Push to `master` → GitHub Actions builds with Hugo, indexes search, and deploys to the `gh-pages` branch. Usually live within a minute or two. There's no staging environment — a PR's build check tells you whether it *builds*, not whether it *looks right*, so preview visually with `hugo server` before merging anything that touches layout or CSS.
+
+It also rebuilds automatically every morning (9:00 UTC) even with no new commits, so "next meeting" on the homepage and the `.ics` calendar feed stay accurate day to day instead of only updating on the next push. You can also trigger a rebuild manually any time from the Actions tab → Pages → Run workflow.

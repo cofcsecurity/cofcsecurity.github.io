@@ -329,6 +329,8 @@ img { max-width: 100%; display: block; }
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -336,6 +338,7 @@ img { max-width: 100%; display: block; }
 }
 .card h3 { margin-bottom: 0.4em; }
 .card p:last-child { margin-bottom: 0; }
+.card-link { margin-top: auto; padding-top: 0.8rem; align-self: flex-start; }
 a.card { display: block; color: inherit; }
 a.card:hover {
   border-color: var(--gold);
