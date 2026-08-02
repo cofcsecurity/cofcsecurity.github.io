@@ -43,26 +43,31 @@ paginate = 8
   weight = 2
 
 [[menu.main]]
+  name = "Competitions"
+  url = "/competitions/"
+  weight = 3
+
+[[menu.main]]
   name = "Schedule"
   url = "/schedule/"
-  weight = 3
+  weight = 4
 
 [[menu.main]]
   name = "Posts"
   url = "/posts/"
-  weight = 4
+  weight = 5
 
 [[menu.main]]
   name = "Resources"
   url = "/resources/"
-  weight = 5
+  weight = 6
 
 [[menu.main]]
   name = "History"
   url = "/history/"
-  weight = 6
+  weight = 7
 
 [[menu.main]]
   name = "Industry Contacts"
   url = "/industry-contacts/"
-  weight = 7
+  weight = 8

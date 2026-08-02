@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
+<div class="section section-light">
+  <div class="container">
+    <article class="prose" style="margin-bottom:2rem;">{{ .Content }}</article>
+    {{ range .Site.Data.competitions }}
+    <h2>{{ .semester }}</h2>
+    <div class="card-grid" style="margin-top:1rem; margin-bottom:2.5rem;">
+      {{ range .items }}
+      <div class="card">
+        <h3><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></h3>
+        <div style="margin: 0.5rem 0;">
+          <span class="badge">{{ .cost }}</span>
+          <span class="badge">{{ .difficulty }}</span>
+        </div>
+        <p style="color:var(--muted); margin-bottom:0.4em;">{{ .format }}</p>
+        <p>{{ .description | markdownify }}</p>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

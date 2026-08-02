@@ -532,6 +532,7 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
   border-radius: 999px;
   background: var(--teal-light);
   color: var(--teal-dark);
+  margin: 0 0.4em 0.4em 0;
 }
 .badge svg { width: 0.95em; height: 0.95em; }
 
