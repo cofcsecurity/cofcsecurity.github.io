@@ -2,6 +2,11 @@
 {{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
 <div class="section section-light">
   <div class="container">
+    {{ with .OutputFormats.Get "rss" }}
+    <div class="hero-actions" style="margin-bottom: 1.5rem;">
+      <a class="btn btn-teal" href="{{ .Permalink | safeURL }}">{{ partial "icon.html" "rss" }} Subscribe via RSS</a>
+    </div>
+    {{ end }}
     <div id="search" class="pagefind-search"></div>
     <ul class="post-list">
       {{ range .Pages.ByDate.Reverse }}
