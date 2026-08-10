@@ -36,6 +36,7 @@
             <th>Date</th>
             <th>Time</th>
             <th>Topic</th>
+            <th>Location</th>
             <th>Notes</th>
             <th></th>
           </tr>
@@ -43,19 +44,21 @@
         <tbody>
           {{ range .Site.Data.schedule.meetings }}
           {{ $mDate := time.AsTime .date }}
+          {{ $mLoc := default $.Site.Data.schedule.location .location }}
           <tr{{ if .skipped }} class="is-skipped"{{ end }}>
             <td>{{ with .week }}{{ . }}{{ else }}&mdash;{{ end }}</td>
             <td>{{ .day }}</td>
             <td>{{ $mDate.Format "Jan 2, 2006" }}</td>
             <td>{{ if .skipped }}&mdash;{{ else }}{{ .start }}&ndash;{{ .end }}{{ end }}</td>
             <td>{{ if .skipped }}<span class="badge">No meeting</span>{{ else }}{{ .topic }}{{ end }}</td>
+            <td>{{ $mLoc }}</td>
             <td>{{ .notes }}</td>
             <td class="cal-link">
               {{ if not .skipped }}
               {{ $mStart := replace .start ":" "" }}
               {{ $mEnd := replace .end ":" "" }}
-              {{ $mQS := querify "action" "TEMPLATE" "text" (printf "CofC Cybersecurity Club: %s" .topic) "dates" (printf "%sT%s00/%sT%s00" ($mDate.Format "20060102") $mStart ($mDate.Format "20060102") $mEnd) "details" "Weekly meeting of the College of Charleston Cybersecurity Club." "location" $.Site.Data.schedule.location "ctz" "America/New_York" }}
-              {{ $mIcsLines := slice "BEGIN:VCALENDAR" "VERSION:2.0" "PRODID:-//CofC Cybersecurity Club//Schedule//EN" "BEGIN:VEVENT" (printf "UID:%s-%s@cofcsecurity.github.io" ($mDate.Format "20060102") $mStart) (printf "DTSTAMP:%s" (now.Format "20060102T150405Z")) (printf "DTSTART:%sT%s00" ($mDate.Format "20060102") $mStart) (printf "DTEND:%sT%s00" ($mDate.Format "20060102") $mEnd) (printf "SUMMARY:%s" .topic) (printf "LOCATION:%s" $.Site.Data.schedule.location) "DESCRIPTION:Weekly meeting of the College of Charleston Cybersecurity Club." "END:VEVENT" "END:VCALENDAR" }}
+              {{ $mQS := querify "action" "TEMPLATE" "text" (printf "CofC Cybersecurity Club: %s" .topic) "dates" (printf "%sT%s00/%sT%s00" ($mDate.Format "20060102") $mStart ($mDate.Format "20060102") $mEnd) "details" "Weekly meeting of the College of Charleston Cybersecurity Club." "location" $mLoc "ctz" "America/New_York" }}
+              {{ $mIcsLines := slice "BEGIN:VCALENDAR" "VERSION:2.0" "PRODID:-//CofC Cybersecurity Club//Schedule//EN" "BEGIN:VEVENT" (printf "UID:%s-%s@cofcsecurity.github.io" ($mDate.Format "20060102") $mStart) (printf "DTSTAMP:%s" (now.Format "20060102T150405Z")) (printf "DTSTART:%sT%s00" ($mDate.Format "20060102") $mStart) (printf "DTEND:%sT%s00" ($mDate.Format "20060102") $mEnd) (printf "SUMMARY:%s" .topic) (printf "LOCATION:%s" $mLoc) "DESCRIPTION:Weekly meeting of the College of Charleston Cybersecurity Club." "END:VEVENT" "END:VCALENDAR" }}
               {{ $mIcsB64 := delimit $mIcsLines "\n" | base64Encode }}
               <a href="https://calendar.google.com/calendar/render?{{ $mQS | safeURL }}" target="_blank" rel="noopener">+ Google</a>
               &middot;
