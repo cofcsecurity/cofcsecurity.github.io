@@ -9,254 +9,254 @@ COLOR:#2F9E91
 X-APPLE-CALENDAR-COLOR:#2F9E91
 BEGIN:VEVENT
 UID:20260825-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20260825T173000
 DTEND:20260825T193000
 SUMMARY:Introduction to the Club & CTF Basics
 LOCATION:Harbor Walk East 105F
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Week after classes start
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Week after classes start. Club overview, team roles, and a beginner CTF covering CS/security basics.
 END:VEVENT
 BEGIN:VEVENT
 UID:20260827-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20260827T173000
 DTEND:20260827T193000
 SUMMARY:Introduction to Cyber Competitions
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: How team defense competitions work, with team structure and roles.
 END:VEVENT
 BEGIN:VEVENT
 UID:20260901-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20260901T173000
 DTEND:20260901T193000
 SUMMARY:Virtualization & Introduction to the Command Line
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Linux command line basics and setting up VMs; practice with OverTheWire.
 END:VEVENT
 BEGIN:VEVENT
 UID:20260903-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20260903T173000
 DTEND:20260903T193000
 SUMMARY:Understanding File Systems
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Command line practice on the club range; comparing Linux and Windows file systems.
 END:VEVENT
 BEGIN:VEVENT
 UID:20260908-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20260908T173000
 DTEND:20260908T193000
 SUMMARY:Remote Access Basics: SSH & RDP
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: SSH and RDP fundamentals, how remote access works, and its vulnerabilities.
 END:VEVENT
 BEGIN:VEVENT
 UID:20260910-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20260910T173000
 DTEND:20260910T193000
 SUMMARY:Basic Networking & Communication
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: IP addressing, subnets, and network mapping with nmap and Wireshark.
 END:VEVENT
 BEGIN:VEVENT
 UID:20260915-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20260915T173000
 DTEND:20260915T193000
 SUMMARY:Operating System Permissions & Access Control
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: User accounts, groups, sudo, and file permissions on Linux and Windows.
 END:VEVENT
 BEGIN:VEVENT
 UID:20260917-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20260917T173000
 DTEND:20260917T193000
 SUMMARY:Basic Host Hardening
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Reviewing accounts and locking down permissions on practice hosts.
 END:VEVENT
 BEGIN:VEVENT
 UID:20260922-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20260922T173000
 DTEND:20260922T193000
 SUMMARY:System Services, Background Processes, and Guest Speaker Ryan Hays
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Windows services, registry, and Linux processes, plus guest speaker Ryan Hays.
 END:VEVENT
 BEGIN:VEVENT
 UID:20260924-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20260924T173000
 DTEND:20260924T193000
 SUMMARY:Finding Unwanted Processes
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Hunting simple backdoors and unauthorized scheduled tasks on the range.
 END:VEVENT
 BEGIN:VEVENT
 UID:20260929-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20260929T173000
 DTEND:20260929T193000
 SUMMARY:Network Monitoring & Traffic Basics
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Packet structures and protocol headers using tcpdump.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261001-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261001T173000
 DTEND:20261001T193000
 SUMMARY:Analyzing Traffic for Incidents
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Using Wireshark to spot unencrypted credentials and scan signatures.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261006-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261006T173000
 DTEND:20261006T193000
 SUMMARY:Web Infrastructure Basics: DNS
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: How DNS resolution works; setting up a local DNS server.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261008-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261008T173000
 DTEND:20261008T193000
 SUMMARY:DNS Auditing & Configuration Check
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Reviewing domain controller configs and fixing common DNS misconfigurations.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261015-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261015T173000
 DTEND:20261015T193000
 SUMMARY:Mid-Semester Practice Simulation
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Short practice run: setup, defend, and review, with help from alumni.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261020-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261020T173000
 DTEND:20261020T193000
 SUMMARY:Introduction to Active Directory
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Why orgs centralize user management: Windows Server domains, OUs, and trusts.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261022-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261022T173000
 DTEND:20261022T193000
 SUMMARY:Active Directory Basics & Policy Controls
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Using Group Policy Objects to apply security settings across systems.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261027-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261027T173000
 DTEND:20261027T193000
 SUMMARY:Web & Database Server Setup
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Installing Apache/Nginx and connecting a SQL database backend.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261029-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261029T173000
 DTEND:20261029T193000
 SUMMARY:Application Security & Log Review
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Locking down the web/DB setup and checking logs for irregular entries.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261103-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261103T173000
 DTEND:20261103T193000
 SUMMARY:Introduction to Log Collection
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: System logs, Windows Event IDs, and centralized log shipping.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261105-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261105T173000
 DTEND:20261105T193000
 SUMMARY:Basic Centralized Monitoring
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Setting up monitoring agents (Security Onion/Wazuh) and dashboards.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261110-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261110T173000
 DTEND:20261110T193000
 SUMMARY:Basic Automation: Scripting
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Writing diagnostic scripts in Python, Bash, Go, and PowerShell.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261112-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261112T173000
 DTEND:20261112T193000
 SUMMARY:Using Scripts for Configuration Checks
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Running verification scripts across range hosts to catch unauthorized changes.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261117-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261117T173000
 DTEND:20261117T193000
 SUMMARY:System Backups & Recovery Planning
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Backup strategies, system snapshots, and recovery planning.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261119-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261119T173000
 DTEND:20261119T193000
 SUMMARY:System Recovery Practice
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Incident response exercise: restoring services from backups.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261124-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261124T173000
 DTEND:20261124T193000
 SUMMARY:Competition Workflow & Communication
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: How teams prioritize tasks and track changes under time pressure.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261201-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261201T173000
 DTEND:20261201T193000
 SUMMARY:Open Lab Project Day & Catch-up
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Open work session for hardware setups, scripts, range practice, and strategy review.
 END:VEVENT
 BEGIN:VEVENT
 UID:20261203-1730@cofcsecurity.github.io
-DTSTAMP:20260810T192851Z
+DTSTAMP:20260810T193146Z
 DTSTART:20261203T173000
 DTEND:20261203T193000
 SUMMARY:End-of-Term Practice Run
 LOCATION:Simons Center for the Arts, Room 281
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:CofC Cybersecurity Club weekly meeting.\nNotes: Final two-hour team defense exercise with alumni support.
 END:VEVENT
 END:VCALENDAR
