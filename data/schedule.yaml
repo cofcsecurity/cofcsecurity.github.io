@@ -8,85 +8,98 @@ meetings:
     start: "17:30"
     end: "19:30"
     topic: "Introduction to the Club & CTF Basics"
-    notes: "Week after classes start"
+    notes: "Week after classes start. Club overview, team roles, and a beginner CTF covering CS/security basics."
   - week: 2
     day: "Thursday"
     date: 2026-08-27
     start: "17:30"
     end: "19:30"
     topic: "Introduction to Cyber Competitions"
+    notes: "How team defense competitions work, with team structure and roles."
   - week: 3
     day: "Tuesday"
     date: 2026-09-01
     start: "17:30"
     end: "19:30"
     topic: "Virtualization & Introduction to the Command Line"
+    notes: "Linux command line basics and setting up VMs; practice with OverTheWire."
   - week: 4
     day: "Thursday"
     date: 2026-09-03
     start: "17:30"
     end: "19:30"
     topic: "Understanding File Systems"
+    notes: "Command line practice on the club range; comparing Linux and Windows file systems."
   - week: 5
     day: "Tuesday"
     date: 2026-09-08
     start: "17:30"
     end: "19:30"
     topic: "Remote Access Basics: SSH & RDP"
+    notes: "SSH and RDP fundamentals, how remote access works, and its vulnerabilities."
   - week: 6
     day: "Thursday"
     date: 2026-09-10
     start: "17:30"
     end: "19:30"
     topic: "Basic Networking & Communication"
+    notes: "IP addressing, subnets, and network mapping with nmap and Wireshark."
   - week: 7
     day: "Tuesday"
     date: 2026-09-15
     start: "17:30"
     end: "19:30"
     topic: "Operating System Permissions & Access Control"
+    notes: "User accounts, groups, sudo, and file permissions on Linux and Windows."
   - week: 8
     day: "Thursday"
     date: 2026-09-17
     start: "17:30"
     end: "19:30"
     topic: "Basic Host Hardening"
+    notes: "Reviewing accounts and locking down permissions on practice hosts."
   - week: 9
     day: "Tuesday"
     date: 2026-09-22
     start: "17:30"
     end: "19:30"
     topic: "System Services, Background Processes, and Guest Speaker Ryan Hays"
+    notes: "Windows services, registry, and Linux processes, plus guest speaker Ryan Hays."
   - week: 10
     day: "Thursday"
     date: 2026-09-24
     start: "17:30"
     end: "19:30"
     topic: "Finding Unwanted Processes"
+    notes: "Hunting simple backdoors and unauthorized scheduled tasks on the range."
   - week: 11
     day: "Tuesday"
     date: 2026-09-29
     start: "17:30"
     end: "19:30"
     topic: "Network Monitoring & Traffic Basics"
+    notes: "Packet structures and protocol headers using tcpdump."
   - week: 12
     day: "Thursday"
     date: 2026-10-01
     start: "17:30"
     end: "19:30"
     topic: "Analyzing Traffic for Incidents"
+    notes: "Using Wireshark to spot unencrypted credentials and scan signatures."
   - week: 13
     day: "Tuesday"
     date: 2026-10-06
     start: "17:30"
     end: "19:30"
     topic: "Web Infrastructure Basics: DNS"
+    notes: "How DNS resolution works; setting up a local DNS server."
   - week: 14
     day: "Thursday"
     date: 2026-10-08
     start: "17:30"
     end: "19:30"
     topic: "DNS Auditing & Configuration Check"
+    notes: "Reviewing domain controller configs and fixing common DNS misconfigurations."
   - day: "Tuesday"
     date: 2026-10-13
     skipped: true
@@ -97,72 +110,84 @@ meetings:
     start: "17:30"
     end: "19:30"
     topic: "Mid-Semester Practice Simulation"
+    notes: "Short practice run: setup, defend, and review, with help from alumni."
   - week: 16
     day: "Tuesday"
     date: 2026-10-20
     start: "17:30"
     end: "19:30"
     topic: "Introduction to Active Directory"
+    notes: "Why orgs centralize user management: Windows Server domains, OUs, and trusts."
   - week: 17
     day: "Thursday"
     date: 2026-10-22
     start: "17:30"
     end: "19:30"
     topic: "Active Directory Basics & Policy Controls"
+    notes: "Using Group Policy Objects to apply security settings across systems."
   - week: 18
     day: "Tuesday"
     date: 2026-10-27
     start: "17:30"
     end: "19:30"
     topic: "Web & Database Server Setup"
+    notes: "Installing Apache/Nginx and connecting a SQL database backend."
   - week: 19
     day: "Thursday"
     date: 2026-10-29
     start: "17:30"
     end: "19:30"
     topic: "Application Security & Log Review"
+    notes: "Locking down the web/DB setup and checking logs for irregular entries."
   - week: 20
     day: "Tuesday"
     date: 2026-11-03
     start: "17:30"
     end: "19:30"
     topic: "Introduction to Log Collection"
+    notes: "System logs, Windows Event IDs, and centralized log shipping."
   - week: 21
     day: "Thursday"
     date: 2026-11-05
     start: "17:30"
     end: "19:30"
     topic: "Basic Centralized Monitoring"
+    notes: "Setting up monitoring agents (Security Onion/Wazuh) and dashboards."
   - week: 22
     day: "Tuesday"
     date: 2026-11-10
     start: "17:30"
     end: "19:30"
     topic: "Basic Automation: Scripting"
+    notes: "Writing diagnostic scripts in Python, Bash, Go, and PowerShell."
   - week: 23
     day: "Thursday"
     date: 2026-11-12
     start: "17:30"
     end: "19:30"
     topic: "Using Scripts for Configuration Checks"
+    notes: "Running verification scripts across range hosts to catch unauthorized changes."
   - week: 24
     day: "Tuesday"
     date: 2026-11-17
     start: "17:30"
     end: "19:30"
     topic: "System Backups & Recovery Planning"
+    notes: "Backup strategies, system snapshots, and recovery planning."
   - week: 25
     day: "Thursday"
     date: 2026-11-19
     start: "17:30"
     end: "19:30"
     topic: "System Recovery Practice"
+    notes: "Incident response exercise: restoring services from backups."
   - week: 26
     day: "Tuesday"
     date: 2026-11-24
     start: "17:30"
     end: "19:30"
     topic: "Competition Workflow & Communication"
+    notes: "How teams prioritize tasks and track changes under time pressure."
   - day: "Thursday"
     date: 2026-11-26
     skipped: true
@@ -173,9 +198,11 @@ meetings:
     start: "17:30"
     end: "19:30"
     topic: "Open Lab Project Day & Catch-up"
+    notes: "Open work session for hardware setups, scripts, range practice, and strategy review."
   - week: 28
     day: "Thursday"
     date: 2026-12-03
     start: "17:30"
     end: "19:30"
     topic: "End-of-Term Practice Run"
+    notes: "Final two-hour team defense exercise with alumni support."
