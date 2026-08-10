@@ -5,9 +5,15 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:CofC Cybersecurity Club Meetings
 X-WR-TIMEZONE:America/New_York
+COLOR:#2F9E91
+X-APPLE-CALENDAR-COLOR:#2F9E91
 {{- range .Site.Data.schedule.meetings }}
 {{- if not .skipped }}
 {{- $mLoc := default $.Site.Data.schedule.location .location }}
+{{- $mDesc := "CofC Cybersecurity Club weekly meeting." }}
+{{- with .notes }}
+{{- $mDesc = printf "%s\\nNotes: %s" $mDesc . }}
+{{- end }}
 BEGIN:VEVENT
 UID:{{ (time.AsTime .date).Format "20060102" }}-{{ replace .start ":" "" }}@cofcsecurity.github.io
 DTSTAMP:{{ now.Format "20060102T150405Z" }}
@@ -15,7 +21,7 @@ DTSTART:{{ (time.AsTime .date).Format "20060102" }}T{{ replace .start ":" "" }}0
 DTEND:{{ (time.AsTime .date).Format "20060102" }}T{{ replace .end ":" "" }}00
 SUMMARY:{{ .topic }}
 LOCATION:{{ $mLoc }}
-DESCRIPTION:CofC Cybersecurity Club weekly meeting.
+DESCRIPTION:{{ $mDesc }}
 END:VEVENT
 {{- end }}
 {{- end }}
