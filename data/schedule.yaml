@@ -4,7 +4,7 @@ meetings:
   - week: 1
     day: "Tuesday"
     date: 2026-08-25
-    start: "17:30"
+    start: "18:30"
     end: "19:30"
     topic: "Introduction to the Club & CTF Basics"
     notes: "Week after classes start"
