@@ -9,11 +9,11 @@ description: "Setting up VirtualBox and Kali Linux on Windows."
 
 Link: [virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 
-![VirtualBox download](/img/guides/VirtualBox_Download.jpg)
+<img src="/img/guides/VirtualBox_Download.webp" alt="VirtualBox download" width="622" height="286" loading="lazy">
 
 Click the download button circled above. Once installed, double-click the file shown below.
 
-![VirtualBox zip in downloads](/img/guides/VirtualBox_Downloads_Folder.jpg)
+<img src="/img/guides/VirtualBox_Downloads_Folder.webp" alt="VirtualBox zip in downloads" width="622" height="287" loading="lazy">
 
 Then follow all the prompts VirtualBox gives you.
 
@@ -23,7 +23,7 @@ We need 7-Zip to extract a download that was compressed using it — same idea a
 
 Link: [7-zip.org](https://7-zip.org/)
 
-![7-Zip download](/img/guides/7-ZIP_Picture.png)
+<img src="/img/guides/7-ZIP_Picture.webp" alt="7-Zip download" width="1400" height="672" loading="lazy">
 
 Double-click the `7zr.exe` file and follow the prompts to install 7-Zip.
 
@@ -35,14 +35,14 @@ Link: [kali.org/get-kali/#kali-platforms](https://www.kali.org/get-kali/#kali-pl
 
 Go to the link and select "Virtual Machines," circled below:
 
-![Kali virtual machine download](/img/guides/Kali_VirtualMachine_Download_Image.png)
+<img src="/img/guides/Kali_VirtualMachine_Download_Image.webp" alt="Kali virtual machine download" width="1400" height="746" loading="lazy">
 
 From there, click the download corresponding to VirtualBox, circled below:
 
-![VirtualBox-specific Kali download](/img/guides/Kali_VirtualBox_Download_Image.jpg)
+<img src="/img/guides/Kali_VirtualBox_Download_Image.webp" alt="VirtualBox-specific Kali download" width="777" height="355" loading="lazy">
 
 This starts downloading Kali — around 3GB, so it'll take a while depending on your connection. Once it's done, double-check your download looks like the one below. If it doesn't match, you may have grabbed the wrong file.
 
-![Kali zip in downloads](/img/guides/Kali_ZIP_File_Image.jpg)
+<img src="/img/guides/Kali_ZIP_File_Image.webp" alt="Kali zip in downloads" width="624" height="490" loading="lazy">
 
 Once it matches, you're good to go — we'll finish the rest of the setup together at a meeting. Questions in the meantime? Ask in [Discord]({{< param "discord" >}}).

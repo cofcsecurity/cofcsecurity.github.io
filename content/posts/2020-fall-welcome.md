@@ -1,9 +1,6 @@
 ---
 title: Welcome!
 date: 2020-08-12
-tags:
-- new
-- test
 ---
 
 Hello everyone, welcome to the new Cybersecurity Club Website.

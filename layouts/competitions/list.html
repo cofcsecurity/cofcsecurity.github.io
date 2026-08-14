@@ -3,7 +3,7 @@
 <div class="section section-light">
   <div class="container">
     <article class="prose" style="margin-bottom:2rem;">{{ .Content }}</article>
-    {{ range .Site.Data.competitions }}
+    {{ range hugo.Data.competitions }}
     <h2>{{ .semester }}</h2>
     <div class="card-grid" style="margin-top:1rem; margin-bottom:2.5rem;">
       {{ range .items }}

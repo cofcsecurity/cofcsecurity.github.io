@@ -117,7 +117,7 @@
     <span class="kicker">Competition prep</span>
     <h2>Guides &amp; reference sheets</h2>
     <p style="max-width:60ch; margin-top:0.5rem;">Cheat sheets the Defense Team uses during practice and competitions. Print them, or keep them open on a second screen.</p>
-    {{ range .Site.Data.guides }}
+    {{ range hugo.Data.guides }}
     <h3 style="margin-top:2.2rem;">{{ .group }}</h3>
     <div class="card-grid" style="margin-top:1rem;">
       {{ range .docs }}

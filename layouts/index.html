@@ -82,7 +82,7 @@
 </section>
 
 {{ $next := "" }}
-{{ range .Site.Data.schedule.meetings }}
+{{ range hugo.Data.schedule.meetings }}
   {{ if and (not .skipped) (eq $next "") (ge (time.AsTime .date) now) }}
     {{ $next = . }}
   {{ end }}
@@ -91,13 +91,13 @@
   <div class="container">
     <div class="section-head">
       <span class="kicker">Next meeting</span>
-      <h2>{{ .Site.Data.schedule.semester }}</h2>
+      <h2>{{ hugo.Data.schedule.semester }}</h2>
     </div>
     {{ if ne $next "" }}
       {{ $nDate := time.AsTime $next.date }}
       {{ $nStart := replace $next.start ":" "" }}
       {{ $nEnd := replace $next.end ":" "" }}
-      {{ $nLoc := default .Site.Data.schedule.location $next.location }}
+      {{ $nLoc := default hugo.Data.schedule.location $next.location }}
       {{ $nQS := querify "action" "TEMPLATE" "text" (printf "CofC Cybersecurity Club: %s" $next.topic) "dates" (printf "%sT%s00/%sT%s00" ($nDate.Format "20060102") $nStart ($nDate.Format "20060102") $nEnd) "details" "Weekly meeting of the College of Charleston Cybersecurity Club." "location" $nLoc "ctz" "America/New_York" }}
       {{ $nIcsLines := slice "BEGIN:VCALENDAR" "VERSION:2.0" "PRODID:-//CofC Cybersecurity Club//Schedule//EN" "BEGIN:VEVENT" (printf "UID:%s-%s@cofcsecurity.github.io" ($nDate.Format "20060102") $nStart) (printf "DTSTAMP:%s" (now.Format "20060102T150405Z")) (printf "DTSTART:%sT%s00" ($nDate.Format "20060102") $nStart) (printf "DTEND:%sT%s00" ($nDate.Format "20060102") $nEnd) (printf "SUMMARY:%s" $next.topic) (printf "LOCATION:%s" $nLoc) "DESCRIPTION:Weekly meeting of the College of Charleston Cybersecurity Club." "END:VEVENT" "END:VCALENDAR" }}
       {{ $nIcsB64 := delimit $nIcsLines "\n" | base64Encode }}
@@ -142,7 +142,7 @@
       <div class="contact-card">
         <span class="icon-circle on-maroon">{{ partial "icon.html" "location" }}</span>
         <div class="label">Location</div>
-        <div class="value">{{ .Site.Data.schedule.location }}</div>
+        <div class="value">{{ hugo.Data.schedule.location }}</div>
       </div>
       <div class="contact-card">
         <span class="icon-circle on-teal">{{ partial "icon.html" "clock" }}</span>

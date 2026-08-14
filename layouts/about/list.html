@@ -19,7 +19,7 @@
     <span class="kicker">Tools &amp; tech</span>
     <h2>What we practice with</h2>
     <div class="tool-grid" style="margin-top:1.5rem;">
-      {{ range .Site.Data.tools }}
+      {{ range hugo.Data.tools }}
       <div class="tool-logo">
         {{ if .wordmark }}
         <span class="tool-wordmark">{{ .name }}</span>

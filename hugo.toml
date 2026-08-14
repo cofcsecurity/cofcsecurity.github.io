@@ -1,9 +1,12 @@
 baseURL = "https://cofcsecurity.github.io/"
-languageCode = "en-us"
+locale = "en-us"
 defaultContentLanguage = "en"
 title = "CofC Cybersecurity Club"
 enableRobotsTXT = true
 paginate = 8
+
+[taxonomies]
+  tag = "tags"
 
 [params]
   tagline = "Student-run cybersecurity club at the College of Charleston"

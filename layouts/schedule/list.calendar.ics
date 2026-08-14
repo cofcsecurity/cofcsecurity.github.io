@@ -7,9 +7,9 @@ X-WR-CALNAME:CofC Cybersecurity Club Meetings
 X-WR-TIMEZONE:America/New_York
 COLOR:#2F9E91
 X-APPLE-CALENDAR-COLOR:#2F9E91
-{{- range .Site.Data.schedule.meetings }}
+{{- range hugo.Data.schedule.meetings }}
 {{- if not .skipped }}
-{{- $mLoc := default $.Site.Data.schedule.location .location }}
+{{- $mLoc := default hugo.Data.schedule.location .location }}
 {{- $mDesc := "CofC Cybersecurity Club weekly meeting." }}
 {{- with .notes }}
 {{- $mDesc = printf "%s\\nNotes: %s" $mDesc . }}

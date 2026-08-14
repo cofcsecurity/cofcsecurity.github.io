@@ -3,7 +3,7 @@
 <div class="section section-light">
   <div class="container">
     <ul class="timeline">
-      {{ range .Site.Data.history }}
+      {{ range hugo.Data.history }}
       <li>
         <span class="tl-meta">{{ .years }}{{ with .coach }} &middot; Coach: {{ . }}{{ end }}</span>
         <div class="card" style="margin-top:0.6rem;">

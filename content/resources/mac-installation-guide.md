@@ -11,7 +11,7 @@ Apple Silicon has a different CPU architecture, so it needs different virtualiza
 
 Link: [mac.getutm.app](https://mac.getutm.app/)
 
-![UTM download](/img/guides/UTM_Download_Image.png)
+<img src="/img/guides/UTM_Download_Image.webp" alt="UTM download" width="1400" height="750" loading="lazy">
 
 Click the download link circled on their site, then install it like any other Mac app.
 
@@ -21,14 +21,14 @@ This is also a bit different from Windows, since you need the version of Kali bu
 
 Link: [kali.org/get-kali/#kali-platforms](https://www.kali.org/get-kali/#kali-platforms)
 
-![Kali installer images option](/img/guides/Kali_Mac_Installer_Images.jpg)
+<img src="/img/guides/Kali_Mac_Installer_Images.webp" alt="Kali installer images option" width="624" height="335" loading="lazy">
 
 From there, select "Apple Silicon (ARM64)" to get the Mac-compatible build:
 
-![Apple Silicon ARM64 option](/img/guides/MAC_Apple_Silicon_Download_Image.jpg)
+<img src="/img/guides/MAC_Apple_Silicon_Download_Image.webp" alt="Apple Silicon ARM64 option" width="624" height="259" loading="lazy">
 
 Then click "Installer" to download Kali — around 3GB, so it'll take a bit.
 
-![Kali Mac installer download](/img/guides/Kali_MAC_Installer.jpg)
+<img src="/img/guides/Kali_MAC_Installer.webp" alt="Kali Mac installer download" width="624" height="270" loading="lazy">
 
 Once it's installed, you're good to go! Questions any time — ask in [Discord]({{< param "discord" >}}).

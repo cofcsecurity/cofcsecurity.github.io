@@ -4,7 +4,7 @@
   <div class="container">
     <article class="prose" style="margin-bottom:2rem;">{{ .Content }}</article>
     <div class="card-grid">
-      {{ range .Site.Data.industry_contacts }}
+      {{ range hugo.Data.industry_contacts }}
       <div class="card">
         <h3>{{ .name }}</h3>
         <p style="color:var(--muted); margin-bottom:0.3em;">{{ .role }}{{ with .company }} &middot; {{ . }}{{ end }}</p>

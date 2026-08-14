@@ -20,19 +20,19 @@ Not sure what to do with these files? See the [Windows installation guide](/reso
 
 <ins>Step 1:</ins> Open VirtualBox and click "Add."
 
-![VirtualBox add button](/img/guides/vb-hyper-v/VB_Add_VM.png)
+<img src="/img/guides/vb-hyper-v/VB_Add_VM.webp" alt="VirtualBox add button" width="544" height="414" loading="lazy">
 
 <ins>Step 2:</ins> Navigate to the extracted Kali folder, select the `.vbox` file, and click "Open."
 
-![VirtualBox Kali file explorer](/img/guides/vb-hyper-v/VB_Kali_File_Explorer.png)
+<img src="/img/guides/vb-hyper-v/VB_Kali_File_Explorer.webp" alt="VirtualBox Kali file explorer" width="559" height="350" loading="lazy">
 
 <ins>Step 3:</ins> Double-click the new Kali machine.
 
-![Kali VM in VirtualBox](/img/guides/vb-hyper-v/VB_Kali.png)
+<img src="/img/guides/vb-hyper-v/VB_Kali.webp" alt="Kali VM in VirtualBox" width="562" height="400" loading="lazy">
 
 <ins>Step 4:</ins> Wait for Kali to boot. Username and password are both `kali`.
 
-![Kali sign-in screen](/img/guides/vb-hyper-v/VM_Kali_Signin.png)
+<img src="/img/guides/vb-hyper-v/VM_Kali_Signin.webp" alt="Kali sign-in screen" width="462" height="322" loading="lazy">
 
 Your Kali VM on VirtualBox is all set.
 
@@ -54,7 +54,7 @@ Reference links:
 2. In "System Summary," scroll down to "Hyper-V Requirements."
 3. If it says "Yes," or "A hypervisor has been detected. Features required for Hyper-V will not be displayed," you're set.
 
-![System info Hyper-V requirements](/img/guides/vb-hyper-v/Sys_Info.png)
+<img src="/img/guides/vb-hyper-v/Sys_Info.webp" alt="System info Hyper-V requirements" width="627" height="292" loading="lazy">
 
 <ins>Step 1.5: Windows 10/11 Pro or above — enabling Hyper-V</ins>
 
@@ -62,7 +62,7 @@ Reference links:
 2. Click "Turn Windows features on or off."
 3. Check "Hyper-V," click OK, let it install, then restart.
 
-![Windows features dialog](/img/guides/vb-hyper-v/Windows_Features.png)
+<img src="/img/guides/vb-hyper-v/Windows_Features.webp" alt="Windows features dialog" width="370" height="329" loading="lazy">
 
 <ins>Step 2: Enabling Hyper-V on Windows 10/11 Home</ins>
 
@@ -92,11 +92,11 @@ Pause
 
 1. Click "Quick Create."
 
-![Hyper-V quick create](/img/guides/vb-hyper-v/Hyper-V.png)
+<img src="/img/guides/vb-hyper-v/Hyper-V.webp" alt="Hyper-V quick create" width="407" height="309" loading="lazy">
 
 2. Click "Local Installation Source."
 
-![Hyper-V VM creation](/img/guides/vb-hyper-v/Hyper-V_Create_VM.png)
+<img src="/img/guides/vb-hyper-v/Hyper-V_Create_VM.webp" alt="Hyper-V VM creation" width="460" height="327" loading="lazy">
 
 3. Deselect "This virtual machine will run Windows."
 4. Click "Change installation source" and navigate to your extracted Kali `.vhdx` file.

@@ -29,9 +29,9 @@
           </tr>
         </thead>
         <tbody>
-          {{ range .Site.Data.schedule.meetings }}
+          {{ range hugo.Data.schedule.meetings }}
           {{ $mDate := time.AsTime .date }}
-          {{ $mLoc := default $.Site.Data.schedule.location .location }}
+          {{ $mLoc := default hugo.Data.schedule.location .location }}
           {{ $mDesc := "Weekly meeting of the College of Charleston Cybersecurity Club." }}
           {{ with .notes }}
           {{ $mDesc = printf "%s\nNotes: %s" $mDesc . }}
