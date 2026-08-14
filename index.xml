@@ -1588,9 +1588,9 @@ We hope you all find it useful, and enjoy its look!&lt;/p&gt;
 &lt;p&gt;Most Windows systems now have enough resources to run both a hypervisor and a VM. The main constraint is disk space — make sure you have room for the OS image plus extra storage. If you plan on running intensive services inside the VM, you&amp;rsquo;ll also want to bump up the RAM and CPU cores it&amp;rsquo;s allowed to use. Questions any time — ask in &lt;a href="https://discord.gg/uBCwjeG"&gt;Discord&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Windows Virtual Machine Installation Guide</title><link>https://cofcsecurity.github.io/resources/windows-installation-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cofcsecurity.github.io/resources/windows-installation-guide/</guid><description>&lt;p&gt;&lt;strong&gt;For Windows&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;ins&gt;Step 1:&lt;/ins&gt; First, install VirtualBox — this is the software that runs the virtual machine.&lt;/p&gt;
 &lt;p&gt;Link: &lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;virtualbox.org/wiki/Downloads&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://cofcsecurity.github.io/img/guides/VirtualBox_Download.jpg" alt="VirtualBox download"&gt;&lt;/p&gt;
+&lt;img src="https://cofcsecurity.github.io/img/guides/VirtualBox_Download.webp" alt="VirtualBox download" width="622" height="286" loading="lazy"&gt;
 &lt;p&gt;Click the download button circled above. Once installed, double-click the file shown below.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://cofcsecurity.github.io/img/guides/VirtualBox_Downloads_Folder.jpg" alt="VirtualBox zip in downloads"&gt;&lt;/p&gt;
+&lt;img src="https://cofcsecurity.github.io/img/guides/VirtualBox_Downloads_Folder.webp" alt="VirtualBox zip in downloads" width="622" height="287" loading="lazy"&gt;
 &lt;p&gt;Then follow all the prompts VirtualBox gives you.&lt;/p&gt;
 &lt;p&gt;&lt;ins&gt;Step 2: Install 7-Zip&lt;/ins&gt;&lt;/p&gt;
 &lt;p&gt;We need 7-Zip to extract a download that was compressed using it — same idea as a regular zip folder, just a different tool.&lt;/p&gt;</description></item></channel></rss>
