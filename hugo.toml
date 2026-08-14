@@ -10,7 +10,6 @@ paginate = 8
   discord = "https://discord.gg/uBCwjeG"
   github = "https://github.com/cofcsecurity/"
   instagram = "https://www.instagram.com/cofc_cyber_club/"
-  meetingLocation = "Simons Center for the Arts, Room 281"
   meetingTime = "Tuesdays & Thursdays, 5:30–7:30 PM"
 
   # Privacy-respecting analytics, off by default. Set one of these to enable

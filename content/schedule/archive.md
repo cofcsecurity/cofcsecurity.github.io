@@ -122,7 +122,7 @@ Week | General Topic | Advanced Topic | Date | Special Notes
 Week | General Topic | Advanced Topic | Date | Special Notes
 :--:| :----------: | :-----------: | :-------------: | :--------:
 1 | Intro to club | none | Sept. 4 | 2:00 pm
-2 | Inroduction to Virtualization and Bash| Docker | Sept. 9 | None
+2 | Introduction to Virtualization and Bash| Docker | Sept. 9 | None
 3 | Recon | Forensics (**Zach Dayton**) | Sept. 16 | NCL Gym Opens
 4 | Ciphers & Hashing  | Multi-layer hashes/encrypted files/fingerprinting/hash collisions | Sept. 23 | None
 5 | Intro to Networking | Advanced Networking  | Sept. 30 | None

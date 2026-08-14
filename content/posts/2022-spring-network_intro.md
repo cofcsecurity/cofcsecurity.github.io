@@ -3,7 +3,7 @@ title: Networks Introduction
 date: 2022-02-08
 ---
 
-In order to properly learn network secuirty, an understanding of computer network design and protocols is necessay. This presentation was aimed at teaching simple networking basics to prepare club members to learn more on their own. For a complete introduction, please watch the meeting recording and download the slides to follow along. 
+In order to properly learn network security, an understanding of computer network design and protocols is necessary. This presentation was aimed at teaching simple networking basics to prepare club members to learn more on their own. For a complete introduction, please watch the meeting recording and download the slides to follow along. 
 
 
 ### Dynamic Host Configuration Protocol (DHCP) 
@@ -40,10 +40,10 @@ What if ip address is not stored in the local DNS server?
 Protocol Addresses (e.g., IP addresses) to Local Network
 Addresses (e.g., Ethernet addresses)" - RFC 826 
 
-Essentially, ARP is used for devices to comunicate to other local devices. 
+Essentially, ARP is used for devices to communicate to other local devices. 
 
 Steps
 1. Device broadcasts "who is [ip address to communicate with]. This is [ip of this machine]" to every device on the local network. 
-2. The device with ip that was searched relpies "Hello [ip of original machine]. I'm [ip of requested machine]" 
+2. The device with ip that was searched replies "Hello [ip of original machine]. I'm [ip of requested machine]" 
 note: As seen in RFC 826, the packets used for ARP contain the ethernet address of the sending machine in the packet header. Because of this, no further communication is needed to convey ethernet addresses. 
 

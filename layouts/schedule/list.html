@@ -14,19 +14,6 @@
       To get every meeting on your calendar automatically, subscribe to the feed above (Google Calendar: Settings &rarr; Add calendar &rarr; From URL). To add a single meeting, use the button in its row below.
     </p>
 
-    {{ with .Site.Params.topicRequestFormURL }}
-    <div class="card" style="margin: 0 0 2rem; max-width:78ch;">
-      <div class="icon-row">
-        <span class="icon-circle on-teal">{{ partial "icon.html" "terminal" }}</span>
-        <div>
-          <h3>Want us to cover something?</h3>
-          <p>Suggest a topic for a future meeting — anything from a specific tool to a whole subject area.</p>
-          <a class="btn btn-teal" style="margin-top:0.5rem;" href="{{ . }}" target="_blank" rel="noopener">Request a topic {{ partial "icon.html" "arrow-right" }}</a>
-        </div>
-      </div>
-    </div>
-    {{ end }}
-
     <div class="table-wrap">
       <table class="schedule">
         <thead>
