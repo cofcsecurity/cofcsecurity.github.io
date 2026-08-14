@@ -10,7 +10,7 @@
       <div class="card">
         <h3><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></h3>
         <div style="margin: 0.5rem 0;">
-          <span class="badge">{{ .cost }}</span>
+          <span class="badge{{ if strings.HasPrefix .cost "Free" }} badge-gold{{ end }}">{{ .cost }}</span>
           <span class="badge">{{ .difficulty }}</span>
         </div>
         <p style="color:var(--muted); margin-bottom:0.4em;">{{ .format }}</p>

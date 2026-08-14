@@ -13,6 +13,7 @@
   </div>
   <button type="button" id="theme-easter-egg" aria-hidden="true" tabindex="-1">_</button>
 </footer>
+<button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">{{ partial "icon.html" "arrow-up" }}</button>
 <script>
   document.getElementById('theme-easter-egg').addEventListener('click', function () {
     var root = document.documentElement;
@@ -25,5 +26,16 @@
       try { localStorage.setItem('theme', 'hacker'); } catch (e) {}
     }
   });
+  (function () {
+    var btn = document.getElementById('back-to-top');
+    function update() {
+      btn.classList.toggle('visible', window.scrollY > 600);
+    }
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0 });
+    });
+  })();
 </script>
 

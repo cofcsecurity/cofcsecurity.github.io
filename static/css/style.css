@@ -37,6 +37,9 @@ html { scroll-behavior: smooth; }
 
 svg { width: 1.1em; height: 1.1em; vertical-align: -0.15em; flex-shrink: 0; }
 
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+::selection { background: var(--gold); color: var(--maroon-dark); }
+
 a, .btn, .card, .footer-socials a, .main-nav a {
   transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
@@ -343,6 +346,8 @@ a.card { display: block; color: inherit; }
 a.card:hover {
   border-color: var(--gold);
   text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
 }
 
 .card-grid {
@@ -365,6 +370,7 @@ a.card:hover {
 .icon-circle.on-maroon { background: var(--maroon); color: var(--white); }
 .icon-circle.on-teal { background: var(--teal); color: var(--white); }
 .icon-circle.on-dark { background: rgba(255,255,255,0.12); color: var(--mint); }
+.icon-circle .initials { font-family: var(--font-heading); font-weight: bold; font-size: 0.95rem; }
 
 /* Icon rows */
 .icon-row-list {
@@ -409,6 +415,12 @@ a.card:hover {
   font-size: 0.9rem;
   color: #e9dede;
 }
+.js .stat-callout {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.js .stat-callout.in-view { opacity: 1; transform: translateY(0); }
 
 /* Contact cards */
 .contact-grid {
@@ -504,7 +516,17 @@ a.card:hover {
 }
 
 /* Schedule table */
-.table-wrap { overflow-x: auto; }
+.table-wrap { overflow-x: auto; position: relative; }
+.table-wrap.is-scrollable::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2.5rem;
+  background: linear-gradient(to right, transparent, var(--paper));
+  pointer-events: none;
+}
 table.schedule {
   width: 100%;
   border-collapse: collapse;
@@ -538,6 +560,7 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
   margin: 0 0.4em 0.4em 0;
 }
 .badge svg { width: 0.95em; height: 0.95em; }
+.badge-gold { background: #f3ecd9; color: var(--maroon-dark); }
 
 /* Generic markdown content areas (about, resources, history, posts) */
 .prose { max-width: 78ch; }
@@ -573,6 +596,80 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   border: 0;
+}
+.prose img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.2em 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Table of contents */
+.toc {
+  max-width: 78ch;
+  margin: 0 0 2rem;
+}
+.toc-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin: 0 0 0.6em;
+}
+.toc nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.92rem;
+}
+.toc nav ul ul {
+  list-style: none;
+  margin: 0.3em 0 0;
+  padding-left: 1.1em;
+}
+.toc nav li { margin: 0.35em 0; }
+.toc nav a { color: var(--link-color); }
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--maroon);
+  color: var(--white);
+  border: none;
+  box-shadow: var(--shadow-lift);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.18s ease;
+  z-index: 40;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover { background: var(--maroon-dark); }
+.back-to-top svg { width: 20px; height: 20px; }
+
+/* Search loading skeleton, shown until Pagefind's UI takes over */
+.pagefind-skeleton { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; }
+.pf-skel-input, .pf-skel-row {
+  border-radius: var(--radius);
+  background: linear-gradient(90deg, var(--card-bg) 25%, var(--border) 37%, var(--card-bg) 63%);
+  background-size: 400% 100%;
+  animation: pf-shimmer 1.4s ease infinite;
+}
+.pf-skel-input { height: 44px; }
+.pf-skel-row { height: 20px; width: 70%; }
+@keyframes pf-shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
 }
 
 /* Pagefind search — themed via its own CSS custom properties, adapts with light/dark/hacker */
@@ -691,11 +788,12 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
   --paper: #241b1b;
   --border: #4a3535;
   --link-color: var(--mint);
-  --teal-light: #14211f;
+  --teal-light: #123330;
 }
 [data-theme="dark"] .kicker { color: var(--mint); }
 [data-theme="dark"] .contact-card .label { color: var(--mint); }
 [data-theme="dark"] .badge { background: var(--card-bg); color: var(--mint); border: 1px solid var(--border); }
+[data-theme="dark"] .badge-gold { color: var(--gold); }
 [data-theme="dark"] .prose blockquote { color: var(--muted); }
 [data-theme="dark"] table.schedule tr:nth-child(even) { background: var(--card-bg); }
 [data-theme="dark"] table.schedule td { border-bottom-color: var(--border); }

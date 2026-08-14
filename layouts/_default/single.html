@@ -1,9 +1,17 @@
 {{ define "main" }}
 {{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
+{{ $content := .Content }}
 <div class="section section-light">
   <div class="container">
+    {{ $toc := .TableOfContents }}
+    {{ if ge (strings.Count "<li>" (printf "%s" $toc)) 2 }}
+    <div class="toc card">
+      <p class="toc-title">On this page</p>
+      {{ $toc }}
+    </div>
+    {{ end }}
     <article class="prose">
-      {{ .Content }}
+      {{ $content }}
     </article>
   </div>
 </div>

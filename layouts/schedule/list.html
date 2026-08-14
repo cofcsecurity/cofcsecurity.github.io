@@ -63,4 +63,18 @@
     </div>
   </div>
 </div>
+<script>
+  (function () {
+    var wrap = document.querySelector('.table-wrap');
+    if (!wrap) return;
+    function update() {
+      var scrollable = wrap.scrollWidth > wrap.clientWidth + 1;
+      var atEnd = wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 1;
+      wrap.classList.toggle('is-scrollable', scrollable && !atEnd);
+    }
+    update();
+    wrap.addEventListener('scroll', update);
+    window.addEventListener('resize', update);
+  })();
+</script>
 {{ end }}

@@ -1,0 +1,11 @@
+{{- $name := replaceRE `\s*\([^)]*\)` "" . -}}
+{{- $name = strings.TrimSpace $name -}}
+{{- $parts := split $name " " -}}
+{{- $out := "" -}}
+{{- if gt (len $parts) 0 -}}
+  {{- $out = substr (index $parts 0) 0 1 -}}
+  {{- if gt (len $parts) 1 -}}
+    {{- $out = printf "%s%s" $out (substr (index $parts (sub (len $parts) 1)) 0 1) -}}
+  {{- end -}}
+{{- end -}}
+{{- upper $out -}}

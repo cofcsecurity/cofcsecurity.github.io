@@ -80,6 +80,28 @@
     </div>
   </div>
 </section>
+<script>
+  (function () {
+    var els = document.querySelectorAll('.stat-grid .stat-callout');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in-view'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    els.forEach(function (el, i) {
+      el.style.transitionDelay = (i * 0.08) + 's';
+      io.observe(el);
+    });
+  })();
+</script>
 
 {{ $next := "" }}
 {{ range hugo.Data.schedule.meetings }}

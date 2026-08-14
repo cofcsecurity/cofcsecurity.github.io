@@ -7,7 +7,12 @@
       <a class="btn btn-teal" href="{{ .Permalink | safeURL }}">{{ partial "icon.html" "rss" }} Subscribe via RSS</a>
     </div>
     {{ end }}
-    <div id="search" class="pagefind-search"></div>
+    <div id="search-skeleton" class="pagefind-skeleton" aria-hidden="true">
+      <div class="pf-skel-input"></div>
+      <div class="pf-skel-row"></div>
+      <div class="pf-skel-row"></div>
+    </div>
+    <div id="search" class="pagefind-search" hidden></div>
     <ul class="post-list">
       {{ range .Pages.ByDate.Reverse }}
       <li>
@@ -24,8 +29,12 @@
 <script src="{{ "pagefind/pagefind-ui.js" | relURL }}" defer></script>
 <script>
   window.addEventListener('DOMContentLoaded', function () {
-    if (typeof PagefindUI === 'undefined') return;
+    var skeleton = document.getElementById('search-skeleton');
+    var target = document.getElementById('search');
+    if (typeof PagefindUI === 'undefined') { if (skeleton) skeleton.remove(); return; }
+    target.hidden = false;
     new PagefindUI({ element: '#search', showSubResults: true, showImages: false, resetStyles: false });
+    if (skeleton) skeleton.remove();
   });
 </script>
 {{ end }}

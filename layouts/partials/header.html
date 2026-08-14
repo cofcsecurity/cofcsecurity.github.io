@@ -15,7 +15,9 @@
     <nav class="main-nav" id="main-nav">
       <ul>
         {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a></li>
+        {{ $url := .URL | relURL }}
+        {{ $active := or (eq $.RelPermalink $url) (and (ne $url "/") (strings.HasPrefix $.RelPermalink $url)) }}
+        <li><a href="{{ $url }}"{{ if $active }} class="active"{{ end }}>{{ .Name }}</a></li>
         {{ end }}
       </ul>
     </nav>

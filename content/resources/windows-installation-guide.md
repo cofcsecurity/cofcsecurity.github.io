@@ -5,7 +5,9 @@ description: "Setting up VirtualBox and Kali Linux on Windows."
 
 **For Windows**
 
-<ins>Step 1:</ins> First, install VirtualBox — this is the software that runs the virtual machine.
+## Step 1: Install VirtualBox
+
+First, install VirtualBox — this is the software that runs the virtual machine.
 
 Link: [virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 
@@ -17,7 +19,7 @@ Click the download button circled above. Once installed, double-click the file s
 
 Then follow all the prompts VirtualBox gives you.
 
-<ins>Step 2: Install 7-Zip</ins>
+## Step 2: Install 7-Zip
 
 We need 7-Zip to extract a download that was compressed using it — same idea as a regular zip folder, just a different tool.
 
@@ -27,7 +29,7 @@ Link: [7-zip.org](https://7-zip.org/)
 
 Double-click the `7zr.exe` file and follow the prompts to install 7-Zip.
 
-<ins>Step 3: Install the Kali Linux prebuilt virtual machine</ins>
+## Step 3: Install the Kali Linux prebuilt virtual machine
 
 Next we'll download the actual operating system: a version of Debian Linux built specifically for cybersecurity, preinstalled with many of the tools we use in the club and in competitions.
 

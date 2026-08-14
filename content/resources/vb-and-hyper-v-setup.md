@@ -3,11 +3,11 @@ title: "VirtualBox and Hyper-V Virtual Machine Setup"
 description: "Setting up Kali on VirtualBox, plus optional Hyper-V setup on Windows."
 ---
 
-**VirtualBox VM setup on Windows**
+## VirtualBox VM setup on Windows
 
 Most Windows systems now have enough resources to run both a hypervisor and a VM. The main constraint is disk space — make sure you have room for the OS image plus extra storage. If you plan on running intensive services inside the VM, you'll also want to bump up the RAM and CPU cores it's allowed to use. Questions any time — ask in [Discord]({{< param "discord" >}}).
 
-<ins>Download and extract the software</ins>
+### Download and extract the software
 
 - VirtualBox: [virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 - 7-Zip: [7-zip.org](https://7-zip.org/)
@@ -16,27 +16,35 @@ Most Windows systems now have enough resources to run both a hypervisor and a VM
 
 Not sure what to do with these files? See the [Windows installation guide](/resources/windows-installation-guide/) or ask in Discord.
 
-<ins>Kali setup on VirtualBox</ins>
+### Kali setup on VirtualBox
 
-<ins>Step 1:</ins> Open VirtualBox and click "Add."
+#### Step 1: Add the Kali VM
+
+Open VirtualBox and click "Add."
 
 <img src="/img/guides/vb-hyper-v/VB_Add_VM.webp" alt="VirtualBox add button" width="544" height="414" loading="lazy">
 
-<ins>Step 2:</ins> Navigate to the extracted Kali folder, select the `.vbox` file, and click "Open."
+#### Step 2: Select the Kali folder
+
+Navigate to the extracted Kali folder, select the `.vbox` file, and click "Open."
 
 <img src="/img/guides/vb-hyper-v/VB_Kali_File_Explorer.webp" alt="VirtualBox Kali file explorer" width="559" height="350" loading="lazy">
 
-<ins>Step 3:</ins> Double-click the new Kali machine.
+#### Step 3: Launch the machine
+
+Double-click the new Kali machine.
 
 <img src="/img/guides/vb-hyper-v/VB_Kali.webp" alt="Kali VM in VirtualBox" width="562" height="400" loading="lazy">
 
-<ins>Step 4:</ins> Wait for Kali to boot. Username and password are both `kali`.
+#### Step 4: Sign in
+
+Wait for Kali to boot. Username and password are both `kali`.
 
 <img src="/img/guides/vb-hyper-v/VM_Kali_Signin.webp" alt="Kali sign-in screen" width="462" height="322" loading="lazy">
 
 Your Kali VM on VirtualBox is all set.
 
-**Hyper-V VM setup on Windows**
+## Hyper-V VM setup on Windows
 
 This part is optional — VirtualBox or VMware both work fine on their own. Hyper-V isn't an officially supported feature on Windows 10/11 Home, though it can still be enabled. Setup here can get a little involved, so ask in Discord if you get stuck. Enabling Hyper-V on an edition that doesn't officially support it may also brush up against the EULA, worth knowing going in.
 
@@ -48,7 +56,7 @@ Reference links:
 - [Microsoft: Enabling Hyper-V on Windows 11](https://techcommunity.microsoft.com/t5/educator-developer-blog/step-by-step-enabling-hyper-v-for-use-on-windows-11/ba-p/3745905)
 - [Kali docs: Install Hyper-V guest VM](https://www.kali.org/docs/virtualization/install-hyper-v-guest-vm/)
 
-<ins>Step 1: Check compatibility</ins>
+### Step 1: Check compatibility
 
 1. Press Windows key + R, type `msinfo32`, press Enter.
 2. In "System Summary," scroll down to "Hyper-V Requirements."
@@ -56,7 +64,7 @@ Reference links:
 
 <img src="/img/guides/vb-hyper-v/Sys_Info.webp" alt="System info Hyper-V requirements" width="627" height="292" loading="lazy">
 
-<ins>Step 1.5: Windows 10/11 Pro or above — enabling Hyper-V</ins>
+### Step 1.5: Windows 10/11 Pro or above — enabling Hyper-V
 
 1. Press Windows key + R, enter `appwiz.cpl`.
 2. Click "Turn Windows features on or off."
@@ -64,7 +72,7 @@ Reference links:
 
 <img src="/img/guides/vb-hyper-v/Windows_Features.webp" alt="Windows features dialog" width="370" height="329" loading="lazy">
 
-<ins>Step 2: Enabling Hyper-V on Windows 10/11 Home</ins>
+### Step 2: Enabling Hyper-V on Windows 10/11 Home
 
 The slightly more involved path:
 
@@ -88,7 +96,7 @@ Pause
 8. Check Hyper-V, Virtual Machine Platform, and Windows Hypervisor Platform, then click OK.
 9. Restart.
 
-<ins>Step 3: Kali on Hyper-V</ins>
+### Step 3: Kali on Hyper-V
 
 1. Click "Quick Create."
 
