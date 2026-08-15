@@ -24,11 +24,29 @@
   </div>
 </header>
 <script>
-  document.getElementById('nav-toggle').addEventListener('click', function () {
+  (function () {
+    var toggle = document.getElementById('nav-toggle');
     var nav = document.getElementById('main-nav');
-    var open = nav.classList.toggle('open');
-    this.setAttribute('aria-expanded', open);
-  });
+    function setOpen(open) {
+      nav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    }
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setOpen(!nav.classList.contains('open'));
+    });
+    document.addEventListener('click', function (e) {
+      if (nav.classList.contains('open') && !nav.contains(e.target)) {
+        setOpen(false);
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+  })();
   document.getElementById('theme-toggle').addEventListener('click', function () {
     var root = document.documentElement;
     var current = root.getAttribute('data-theme');

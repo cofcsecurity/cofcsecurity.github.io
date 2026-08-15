@@ -1,5 +1,8 @@
 {{ define "main" }}
-{{ partial "page-head.html" (dict "title" .Title "subtitle" .Description) }}
+{{ $crumbs := slice (dict "name" "Home" "url" ("/" | relURL)) }}
+{{ with .Parent }}{{ if ne .RelPermalink "/" }}{{ $crumbs = $crumbs | append (dict "name" .Title "url" .RelPermalink) }}{{ end }}{{ end }}
+{{ $crumbs = $crumbs | append (dict "name" .Title "url" "") }}
+{{ partial "page-head.html" (dict "title" .Title "subtitle" .Description "breadcrumbs" $crumbs) }}
 {{ $content := .Content }}
 <div class="section section-light">
   <div class="container">

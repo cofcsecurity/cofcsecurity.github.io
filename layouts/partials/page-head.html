@@ -1,6 +1,16 @@
-{{- /* Simple page header band. Pass a dict with title and optional subtitle. */ -}}
+{{- /* Simple page header band. Pass a dict with title, optional subtitle, and
+  optional breadcrumbs — a slice of {name, url}; the last entry should omit
+  url to render as the current, unlinked page. */ -}}
 <div class="section section-dark" style="padding-bottom: 2.5rem;">
   <div class="container">
+    {{ with .breadcrumbs }}
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      {{ range $i, $b := . }}
+      {{ if $i }}<span class="crumb-sep" aria-hidden="true">/</span>{{ end }}
+      {{ if $b.url }}<a href="{{ $b.url }}">{{ $b.name }}</a>{{ else }}<span aria-current="page">{{ $b.name }}</span>{{ end }}
+      {{ end }}
+    </nav>
+    {{ end }}
     <h1>{{ .title }}</h1>
     {{ with .subtitle }}<p class="lede" style="max-width:60ch;">{{ . }}</p>{{ end }}
   </div>

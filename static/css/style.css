@@ -33,12 +33,17 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scrollbar-color: var(--border) transparent; scrollbar-width: thin; }
 
 svg { width: 1.1em; height: 1.1em; vertical-align: -0.15em; flex-shrink: 0; }
 
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 ::selection { background: var(--gold); color: var(--maroon-dark); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; border: 2px solid transparent; background-clip: padding-box; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 
 a, .btn, .card, .footer-socials a, .main-nav a {
   transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
@@ -326,6 +331,12 @@ img { max-width: 100%; display: block; }
 .section-dark h2, .section-dark h3 { color: var(--white); }
 .section-dark p { color: #e9dede; }
 
+.breadcrumbs { font-size: 0.82rem; margin-bottom: 0.9rem; color: #e9dede; }
+.breadcrumbs a { color: inherit; text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs .crumb-sep { margin: 0 0.5em; opacity: 0.6; }
+.breadcrumbs [aria-current="page"] { color: var(--white); font-weight: bold; }
+
 .section-head {
   max-width: 60ch;
   margin-bottom: 2rem;
@@ -607,6 +618,17 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
 /* Generic markdown content areas (about, resources, history, posts) */
 .prose { max-width: 78ch; }
 .prose h2 { margin-top: 1.6em; }
+main a[target="_blank"]:not(.btn, .card-link):not(:has(svg))::after {
+  content: "";
+  display: inline-block;
+  width: 0.72em;
+  height: 0.72em;
+  margin-left: 0.2em;
+  vertical-align: -0.05em;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E") no-repeat center / contain;
+}
 .prose ul, .prose ol { padding-left: 1.3em; }
 .prose table {
   width: 100%;
