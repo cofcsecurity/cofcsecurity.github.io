@@ -547,6 +547,48 @@ table.schedule tr:nth-child(even) { background: var(--card-bg); }
 table.schedule tr.is-skipped { opacity: 0.55; font-style: italic; }
 table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
 
+/* Below ~700px the table has no room to breathe (8 columns, long wrapping
+   text), so it becomes a stack of labeled cards instead of a scrolling
+   table — a horizontal-scroll table at this width reads as broken rather
+   than as "swipe for more." */
+@media (max-width: 700px) {
+  .table-wrap { overflow-x: visible; }
+  .table-wrap.is-scrollable::after { display: none; }
+  table.schedule thead { display: none; }
+  table.schedule, table.schedule tbody, table.schedule tr, table.schedule td {
+    display: block;
+    width: 100%;
+  }
+  table.schedule tr {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.1rem;
+    margin-bottom: 1rem;
+  }
+  table.schedule td {
+    padding: 0.3em 0;
+    border-bottom: none;
+  }
+  table.schedule td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.2em;
+  }
+  table.schedule td[data-label="#"] { display: none; }
+  table.schedule td.sched-topic { font-weight: bold; font-size: 1.05rem; }
+  table.schedule td.cal-link {
+    border-top: 1px solid var(--border);
+    margin-top: 0.4rem;
+    padding-top: 0.7rem;
+  }
+}
+
 .badge {
   display: inline-flex;
   align-items: center;

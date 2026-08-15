@@ -37,14 +37,14 @@
           {{ $mDesc = printf "%s\nNotes: %s" $mDesc . }}
           {{ end }}
           <tr{{ if .skipped }} class="is-skipped"{{ end }}>
-            <td>{{ with .week }}{{ . }}{{ else }}&mdash;{{ end }}</td>
-            <td>{{ .day }}</td>
-            <td>{{ $mDate.Format "Jan 2, 2006" }}</td>
-            <td>{{ if .skipped }}&mdash;{{ else }}{{ .start }}&ndash;{{ .end }}{{ end }}</td>
-            <td>{{ if .skipped }}<span class="badge">No meeting</span>{{ else }}{{ .topic }}{{ end }}</td>
-            <td>{{ $mLoc }}</td>
-            <td>{{ .notes }}</td>
-            <td class="cal-link">
+            <td data-label="#">{{ with .week }}{{ . }}{{ else }}&mdash;{{ end }}</td>
+            <td data-label="Day">{{ .day }}</td>
+            <td data-label="Date">{{ $mDate.Format "Jan 2, 2006" }}</td>
+            <td data-label="Time">{{ if .skipped }}&mdash;{{ else }}{{ .start }}&ndash;{{ .end }}{{ end }}</td>
+            <td data-label="Topic" class="sched-topic">{{ if .skipped }}<span class="badge">No meeting</span>{{ else }}{{ .topic }}{{ end }}</td>
+            <td data-label="Location">{{ $mLoc }}</td>
+            <td data-label="Notes">{{ .notes }}</td>
+            <td class="cal-link" data-label="Add to calendar">
               {{ if not .skipped }}
               {{ $mStart := replace .start ":" "" }}
               {{ $mEnd := replace .end ":" "" }}
