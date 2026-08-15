@@ -3,10 +3,10 @@
 <div class="section section-light">
   <div class="container">
     <ul class="timeline">
-      {{ range hugo.Data.history }}
+      {{ range $i, $season := hugo.Data.history }}
       <li>
-        <span class="tl-meta">{{ .years }}{{ with .coach }} &middot; Coach: {{ . }}{{ end }}</span>
-        <div class="card" style="margin-top:0.6rem;">
+        <span class="tl-meta">{{ .years }}{{ with .coach }} &middot; Coach: {{ . }}{{ end }}{{ if eq $i 0 }} <span class="badge badge-gold">Most recent</span>{{ end }}</span>
+        <div class="card{{ if eq $i 0 }} is-recent{{ end }}" style="margin-top:0.6rem;">
           {{ with .accomplishments }}
           <div style="margin-bottom:0.8rem;">
             {{ range . }}<span class="badge" style="margin-right:0.4em; margin-bottom:0.4em; display:inline-block;">{{ partial "icon.html" "trophy" }} {{ . }}</span>{{ end }}

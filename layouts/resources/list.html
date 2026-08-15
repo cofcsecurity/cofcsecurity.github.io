@@ -27,11 +27,28 @@
       </div>
     </div>
 
+    <div class="toc card" style="margin-top:2.5rem;">
+      <p class="toc-title">On this page</p>
+      <nav>
+        <ul>
+          <li><a href="#github">Our GitHub organization</a></li>
+          <li><a href="#linux">Linux</a></li>
+          <li><a href="#virtualization">Virtualization</a></li>
+          <li><a href="#tools">Tools of the trade</a></li>
+          <li><a href="#hardware">Hardware hacking</a></li>
+          <li><a href="#cloud">The cloud</a></li>
+          <li><a href="#youtube">YouTube channels &amp; podcasts</a></li>
+          <li><a href="#guides">Guides &amp; reference sheets</a></li>
+          <li><a href="#platforms">Platforms &amp; communities</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <article class="prose" style="margin-top:2.5rem;">
-      <h2>Our GitHub organization</h2>
+      <h2 id="github">Our GitHub organization</h2>
       <p><a href="https://github.com/cofcsecurity" target="_blank" rel="noopener">CofC Cybersecurity Club on GitHub</a> — we keep a lot of resources and in-progress projects there. Active member? Ask and we'll add you to the org so you can contribute too.</p>
 
-      <h2>Linux</h2>
+      <h2 id="linux">Linux</h2>
       <p>Linux is a family of open-source operating systems. Prominent distributions (distros) exist for personal computers (Ubuntu, Fedora), mobile devices (Android), embedded devices (BusyBox), and servers (Red Hat, Ubuntu Server).</p>
       <h3>Getting started</h3>
       <ul>
@@ -54,7 +71,7 @@
         <li><a href="https://getfedora.org/" target="_blank" rel="noopener">Fedora</a></li>
       </ul>
 
-      <h2>Virtualization</h2>
+      <h2 id="virtualization">Virtualization</h2>
       <p>Hypervisors like VirtualBox and VMware let you run virtual machines (VMs) on your computer — multiple operating systems, each in its own sandbox. We recommend setting up Kali using Kali's own <a href="https://www.kali.org/docs/virtualization/" target="_blank" rel="noopener">virtualization guides</a>, or one of ours below.</p>
       <ul>
         <li><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">VirtualBox</a></li>
@@ -64,7 +81,7 @@
         <li><a href="/resources/mac-installation-guide/">Mac VM installation guide</a></li>
       </ul>
 
-      <h2>Tools of the trade</h2>
+      <h2 id="tools">Tools of the trade</h2>
       <p>Our favorites — most come prepackaged with Kali. The most important to know are nmap, netcat, and Wireshark.</p>
       <ul>
         <li><a href="https://nmap.org/" target="_blank" rel="noopener">nmap</a> — <strong>the</strong> network mapper</li>
@@ -84,13 +101,13 @@
         <li><a href="https://github.com/OJ/gobuster" target="_blank" rel="noopener">Gobuster</a> — web server directory enumeration</li>
       </ul>
 
-      <h2>Hardware hacking</h2>
+      <h2 id="hardware">Hardware hacking</h2>
       <ul>
         <li><a href="https://hak5.org/" target="_blank" rel="noopener">Hak5</a> — pentesting/infosec gear, including the WiFi Pineapple, network implants, and hardware keyloggers</li>
         <li><a href="https://www.raspberrypi.org/" target="_blank" rel="noopener">Raspberry Pi</a> — cheap, versatile single-board computer</li>
       </ul>
 
-      <h2>The cloud</h2>
+      <h2 id="cloud">The cloud</h2>
       <p>Cloud knowledge is crucial to almost everything in computer science now, security included. Pick a platform and learn the basics — most offer free credit to get started.</p>
       <ul>
         <li><a href="https://aws.amazon.com/" target="_blank" rel="noopener">Amazon Web Services</a></li>
@@ -98,7 +115,7 @@
         <li><a href="https://azure.microsoft.com/" target="_blank" rel="noopener">Microsoft Azure</a></li>
       </ul>
 
-      <h2>YouTube channels &amp; podcasts</h2>
+      <h2 id="youtube">YouTube channels &amp; podcasts</h2>
       <ul>
         <li><a href="https://www.youtube.com/hak5" target="_blank" rel="noopener">Hak5</a> — updates, HackByte, ThreatWire</li>
         <li><a href="https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA" target="_blank" rel="noopener">IppSec</a> — Hack The Box walkthroughs</li>
@@ -115,7 +132,7 @@
 <div class="section section-tint">
   <div class="container">
     <span class="kicker">Competition prep</span>
-    <h2>Guides &amp; reference sheets</h2>
+    <h2 id="guides">Guides &amp; reference sheets</h2>
     <p style="max-width:60ch; margin-top:0.5rem;">Cheat sheets the Defense Team uses during practice and competitions. Print them, or keep them open on a second screen.</p>
     {{ range hugo.Data.guides }}
     <h3 style="margin-top:2.2rem;">{{ .group }}</h3>
@@ -139,7 +156,7 @@
 <div class="section section-light">
   <div class="container">
     <span class="kicker">Keep learning</span>
-    <h2>Platforms &amp; communities</h2>
+    <h2 id="platforms">Platforms &amp; communities</h2>
     <p style="max-width:60ch; margin-top:0.5rem;">Beyond club meetings, these are where most of us actually put in the hours.</p>
     <div class="card-grid" style="margin-top:1.5rem;">
       <div class="card">

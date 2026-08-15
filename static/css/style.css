@@ -492,6 +492,7 @@ a.card:hover {
 }
 .timeline li.is-skipped { opacity: 0.55; }
 .timeline li.is-skipped::before { background: var(--muted); box-shadow: 0 0 0 2px var(--card-bg); }
+.timeline .card.is-recent { box-shadow: inset 3px 0 0 var(--gold); }
 
 /* Tool/tech logo strip — white-on-transparent marks, needs a dark section */
 .tool-grid {
@@ -527,6 +528,20 @@ a.card:hover {
 }
 
 /* Schedule table */
+.sched-filter { margin: 0 0 1.5rem; }
+.sched-filter input {
+  width: 100%;
+  max-width: 360px;
+  padding: 0.6em 0.9em;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+.sched-filter-empty { margin-top: 0.8rem; color: var(--muted); }
+table.schedule tr.is-next { box-shadow: inset 3px 0 0 var(--gold); }
 .table-wrap { overflow-x: auto; position: relative; }
 .table-wrap.is-scrollable::after {
   content: "";
@@ -856,8 +871,9 @@ main a[target="_blank"]:not(.btn, .card-link):not(:has(svg))::after {
 }
 [data-theme="dark"] .kicker { color: var(--mint); }
 [data-theme="dark"] .contact-card .label { color: var(--mint); }
+[data-theme="dark"] .timeline .tl-meta { color: var(--mint); }
 [data-theme="dark"] .badge { background: var(--card-bg); color: var(--mint); border: 1px solid var(--border); }
-[data-theme="dark"] .badge-gold { color: var(--gold); }
+[data-theme="dark"] .badge-gold { background: rgba(191, 168, 124, 0.16); color: var(--gold); border-color: rgba(191, 168, 124, 0.4); }
 [data-theme="dark"] .prose blockquote { color: var(--muted); }
 [data-theme="dark"] table.schedule tr:nth-child(even) { background: var(--card-bg); }
 [data-theme="dark"] table.schedule td { border-bottom-color: var(--border); }

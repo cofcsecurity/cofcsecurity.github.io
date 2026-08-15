@@ -14,6 +14,20 @@
       To get every meeting on your calendar automatically, subscribe to the feed above (Google Calendar: Settings &rarr; Add calendar &rarr; From URL). To add a single meeting, use the button in its row below.
     </p>
 
+    {{ $next := "" }}
+    {{ range hugo.Data.schedule.meetings }}
+      {{ if and (not .skipped) (eq $next "") (ge (time.AsTime .date) now) }}
+        {{ $next = . }}
+      {{ end }}
+    {{ end }}
+    {{ $nextKey := "" }}
+    {{ if ne $next "" }}{{ $nextKey = printf "%v|%v" $next.date $next.start }}{{ end }}
+
+    <div class="sched-filter">
+      <input type="search" id="sched-filter-input" placeholder="Filter by topic, day, or keyword&hellip;" aria-label="Filter schedule">
+      <p id="sched-filter-empty" class="sched-filter-empty" hidden>No meetings match &ldquo;<span></span>&rdquo;.</p>
+    </div>
+
     <div class="table-wrap">
       <table class="schedule">
         <thead>
@@ -36,12 +50,17 @@
           {{ with .notes }}
           {{ $mDesc = printf "%s\nNotes: %s" $mDesc . }}
           {{ end }}
-          <tr{{ if .skipped }} class="is-skipped"{{ end }}>
+          {{ $mKey := printf "%v|%v" .date .start }}
+          {{ $isNext := and (ne $nextKey "") (eq $mKey $nextKey) }}
+          {{ $rowClasses := slice }}
+          {{ if .skipped }}{{ $rowClasses = $rowClasses | append "is-skipped" }}{{ end }}
+          {{ if $isNext }}{{ $rowClasses = $rowClasses | append "is-next" }}{{ end }}
+          <tr{{ if $rowClasses }} class="{{ delimit $rowClasses " " }}"{{ end }}>
             <td data-label="#">{{ with .week }}{{ . }}{{ else }}&mdash;{{ end }}</td>
             <td data-label="Day">{{ .day }}</td>
             <td data-label="Date">{{ $mDate.Format "Jan 2, 2006" }}</td>
             <td data-label="Time">{{ if .skipped }}&mdash;{{ else }}{{ .start }}&ndash;{{ .end }}{{ end }}</td>
-            <td data-label="Topic" class="sched-topic">{{ if .skipped }}<span class="badge">No meeting</span>{{ else }}{{ .topic }}{{ end }}</td>
+            <td data-label="Topic" class="sched-topic">{{ if .skipped }}<span class="badge">No meeting</span>{{ else }}{{ .topic }}{{ if $isNext }} <span class="badge badge-gold">This week</span>{{ end }}{{ end }}</td>
             <td data-label="Location">{{ $mLoc }}</td>
             <td data-label="Notes">{{ .notes }}</td>
             <td class="cal-link" data-label="Add to calendar">
@@ -75,6 +94,25 @@
     update();
     wrap.addEventListener('scroll', update);
     window.addEventListener('resize', update);
+  })();
+  (function () {
+    var input = document.getElementById('sched-filter-input');
+    var rows = document.querySelectorAll('table.schedule tbody tr');
+    var empty = document.getElementById('sched-filter-empty');
+    if (!input || !rows.length) return;
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var visible = 0;
+      rows.forEach(function (row) {
+        var match = !q || row.textContent.toLowerCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      if (empty) {
+        empty.hidden = !(q && visible === 0);
+        empty.querySelector('span').textContent = q;
+      }
+    });
   })();
 </script>
 {{ end }}
