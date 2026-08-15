@@ -33,7 +33,7 @@
       difficulty: "Medium–Hard"
       description: "Hack The Box's seasonal team CTF event."
     - name: "SECCDC"
-      url: "https://event.fit.edu/seccdc/"
+      url: "https://cyberflorida.org/seccdc/"
       cost: "Free — limited space"
       format: "Team based · team of 7, shadow team of 4"
       difficulty: "Large competition"

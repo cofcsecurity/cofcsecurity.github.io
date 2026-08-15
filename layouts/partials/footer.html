@@ -37,5 +37,23 @@
       window.scrollTo({ top: 0 });
     });
   })();
+  (function () {
+    var svgNS = 'http://www.w3.org/2000/svg';
+    document.querySelectorAll('main a[target="_blank"]:not(.btn):not(.card-link)').forEach(function (a) {
+      if (a.querySelector('svg')) return;
+      var svg = document.createElementNS(svgNS, 'svg');
+      svg.setAttribute('viewBox', '0 0 24 24');
+      svg.setAttribute('fill', 'none');
+      svg.setAttribute('stroke', 'currentColor');
+      svg.setAttribute('stroke-width', '2.5');
+      svg.setAttribute('stroke-linecap', 'round');
+      svg.setAttribute('stroke-linejoin', 'round');
+      svg.setAttribute('class', 'ext-link-icon');
+      var path = document.createElementNS(svgNS, 'path');
+      path.setAttribute('d', 'M7 17 17 7M8 7h9v9');
+      svg.appendChild(path);
+      a.appendChild(svg);
+    });
+  })();
 </script>
 
