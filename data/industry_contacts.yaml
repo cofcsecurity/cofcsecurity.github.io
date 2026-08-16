@@ -2,14 +2,12 @@
   role: "Network and Security Analyst"
   company: "Sensilla (Dover, NH)"
   specialty: "Business Injects, Linux"
-  email: "mccabepj@g.cofc.edu"
   github: "https://github.com/pmccabe5"
 
 - name: "Seth Hinson"
   role: "Cyber Advisory Manager"
   company: "Frazier & Deeter (Atlanta, GA)"
   specialty: "Windows and Networking"
-  email: "hinsonsc@g.cofc.edu"
   github: "https://github.com/hinsonsc"
 
 - name: "Matt Walter"

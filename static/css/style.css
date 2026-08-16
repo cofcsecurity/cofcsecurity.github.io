@@ -566,7 +566,7 @@ table.schedule th {
 }
 table.schedule td {
   padding: 0.65em 0.8em;
-  border-bottom: 1px solid #e7e0d3;
+  border-bottom: 1px solid var(--border);
 }
 table.schedule tr:nth-child(even) { background: var(--card-bg); }
 table.schedule tr.is-skipped { opacity: 0.55; font-style: italic; }
@@ -641,7 +641,7 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
   font-size: 0.92rem;
 }
 .prose table th, .prose table td {
-  border: 1px solid #e2dccd;
+  border: 1px solid var(--border);
   padding: 0.5em 0.7em;
   text-align: left;
 }
@@ -865,9 +865,6 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
 [data-theme="dark"] .badge-gold { background: rgba(191, 168, 124, 0.16); color: var(--gold); border-color: rgba(191, 168, 124, 0.4); }
 [data-theme="dark"] .prose blockquote { color: var(--muted); }
 [data-theme="dark"] table.schedule tr:nth-child(even) { background: var(--card-bg); }
-[data-theme="dark"] table.schedule td { border-bottom-color: var(--border); }
-[data-theme="dark"] .prose table th,
-[data-theme="dark"] .prose table td { border-color: var(--border); }
 
 /* ==========================================================================
    Secret hacker theme — colors lifted from the old site's Cactus dark theme

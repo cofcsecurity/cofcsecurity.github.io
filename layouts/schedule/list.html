@@ -16,7 +16,7 @@
 
     {{ $next := "" }}
     {{ range hugo.Data.schedule.meetings }}
-      {{ if and (not .skipped) (eq $next "") (ge (time.AsTime .date) now) }}
+      {{ if and (not .skipped) (eq $next "") (ge ((time.AsTime .date).Format "2006-01-02") (now.Format "2006-01-02")) }}
         {{ $next = . }}
       {{ end }}
     {{ end }}
