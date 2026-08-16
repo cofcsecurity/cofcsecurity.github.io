@@ -60,7 +60,7 @@
             <td data-label="Day">{{ .day }}</td>
             <td data-label="Date">{{ $mDate.Format "Jan 2, 2006" }}</td>
             <td data-label="Time">{{ if .skipped }}&mdash;{{ else }}{{ .start }}&ndash;{{ .end }}{{ end }}</td>
-            <td data-label="Topic" class="sched-topic">{{ if .skipped }}<span class="badge">No meeting</span>{{ else }}{{ .topic }}{{ if $isNext }} <span class="badge badge-gold">This week</span>{{ end }}{{ end }}</td>
+            <td data-label="Topic" class="sched-topic">{{ if .skipped }}<span class="badge">No meeting</span>{{ else }}{{ .topic }}{{ if $isNext }} <span class="badge badge-gold">Up next</span>{{ end }}{{ end }}</td>
             <td data-label="Location">{{ $mLoc }}</td>
             <td data-label="Notes">{{ .notes }}</td>
             <td class="cal-link" data-label="Add to calendar">
