@@ -526,6 +526,26 @@ a.card:hover {
   line-height: 1.2;
 }
 
+/* Filter chips (Competitions) */
+.filter-chips { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 0 0 1.5rem; }
+.chip {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 0.82rem;
+  padding: 0.45em 1em;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--ink);
+  cursor: pointer;
+}
+.chip:hover { border-color: var(--gold); }
+.chip[aria-pressed="true"] {
+  background: var(--maroon);
+  border-color: var(--maroon);
+  color: var(--white);
+}
+
 /* Schedule table */
 .sched-filter { margin: 0 0 1.5rem; }
 .sched-filter input {
@@ -629,6 +649,35 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
 .badge svg { width: 0.95em; height: 0.95em; }
 .badge-gold { background: #f3ecd9; color: var(--maroon-dark); }
 
+/* FAQ accordion (native <details>/<summary>, no JS needed) */
+.faq { max-width: 78ch; }
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+}
+.faq-item summary {
+  font-family: var(--font-heading);
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-family: var(--font-body);
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after { content: "\2212"; }
+.faq-item p { margin: 0.8rem 0 0; color: var(--muted); }
+
 /* Generic markdown content areas (about, resources, history, posts) */
 .prose { max-width: 78ch; }
 .prose h2 { margin-top: 1.6em; }
@@ -698,6 +747,20 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
 }
 .toc nav li { margin: 0.35em 0; }
 .toc nav a { color: var(--link-color); }
+
+/* Guide prev/next pager */
+.guide-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  max-width: 78ch;
+  flex-wrap: wrap;
+}
+.guide-pager-link { font-weight: bold; }
+.guide-pager-link.next { margin-left: auto; text-align: right; }
 
 /* Back to top */
 .back-to-top {
@@ -908,3 +971,28 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
 [data-theme="hacker"] .stat-callout .stat-label,
 [data-theme="hacker"] .site-footer,
 [data-theme="hacker"] .site-footer .copyright { color: var(--muted); }
+
+/* ==========================================================================
+   Print — strip chrome, force light/legible colors regardless of theme.
+   ========================================================================== */
+@media print {
+  .site-header, .site-footer, .back-to-top, #theme-easter-egg,
+  .nav-toggle, .theme-toggle, .sched-filter, .filter-chips,
+  .toc, .pagefind-search, .pagefind-skeleton, .hero-media,
+  .table-wrap.is-scrollable::after, .ext-link-icon, .guide-pager {
+    display: none !important;
+  }
+  * { box-shadow: none !important; text-shadow: none !important; animation: none !important; }
+  body { background: #fff; color: #000; }
+  .hero, .section-light, .section-tint, .section-dark {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .hero h1, .hero p.lede, .section-dark h2, .section-dark h3, .section-dark p,
+  .breadcrumbs, .breadcrumbs [aria-current="page"] { color: #000 !important; }
+  a { color: #000; text-decoration: underline; }
+  .card, .contact-card { border: 1px solid #999; background: #fff; }
+  table.schedule th { background: #eee !important; color: #000 !important; }
+  .badge, .badge-gold { background: #eee !important; color: #000 !important; border: 1px solid #999; }
+  @page { margin: 1.5cm; }
+}
