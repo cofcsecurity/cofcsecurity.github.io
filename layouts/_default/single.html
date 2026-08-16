@@ -7,15 +7,35 @@
 <div class="section section-light">
   <div class="container">
     {{ $toc := .TableOfContents }}
-    {{ if ge (strings.Count "<li>" (printf "%s" $toc)) 2 }}
+    {{ $tocStr := printf "%s" $toc }}
+    {{ $stepCount := strings.Count ">Step " (printf "%s" $content) }}
+    {{ if ge (strings.Count "<li>" $tocStr) 2 }}
     <div class="toc card">
-      <p class="toc-title">On this page</p>
+      <p class="toc-title">On this page{{ if gt $stepCount 0 }} &middot; {{ $stepCount }} steps{{ end }}</p>
       {{ $toc }}
     </div>
     {{ end }}
     <article class="prose">
       {{ $content }}
     </article>
+    {{ $guideOrder := slice "windows-installation-guide" "vb-and-hyper-v-setup" "mac-installation-guide" }}
+    {{ $curSlug := .File.ContentBaseName }}
+    {{ $idx := -1 }}
+    {{ range $i, $slug := $guideOrder }}{{ if eq $slug $curSlug }}{{ $idx = $i }}{{ end }}{{ end }}
+    {{ if ge $idx 0 }}
+    <nav class="guide-pager" aria-label="Guide navigation">
+      {{ if gt $idx 0 }}
+        {{ with $.Site.GetPage (printf "/resources/%s" (index $guideOrder (sub $idx 1))) }}
+        <a href="{{ .RelPermalink }}" class="guide-pager-link prev">&larr; {{ .Title }}</a>
+        {{ end }}
+      {{ end }}
+      {{ if lt $idx (sub (len $guideOrder) 1) }}
+        {{ with $.Site.GetPage (printf "/resources/%s" (index $guideOrder (add $idx 1))) }}
+        <a href="{{ .RelPermalink }}" class="guide-pager-link next">{{ .Title }} &rarr;</a>
+        {{ end }}
+      {{ end }}
+    </nav>
+    {{ end }}
   </div>
 </div>
 {{ end }}

@@ -55,5 +55,15 @@
       a.appendChild(svg);
     });
   })();
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey) return;
+    var active = document.activeElement;
+    if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || active.isContentEditable)) return;
+    var target = document.querySelector('.sched-filter input, #search input');
+    if (target) {
+      e.preventDefault();
+      target.focus();
+    }
+  });
 </script>
 

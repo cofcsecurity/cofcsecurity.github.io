@@ -3,22 +3,61 @@
 <div class="section section-light">
   <div class="container">
     <article class="prose" style="margin-bottom:2rem;">{{ .Content }}</article>
+    <div class="filter-chips">
+      <button type="button" class="chip" id="comp-filter-free" data-filter="free" aria-pressed="false">Free only</button>
+      <button type="button" class="chip" id="comp-filter-beginner" data-filter="beginner" aria-pressed="false">Beginner-friendly</button>
+    </div>
+    <p id="comp-filter-empty" class="sched-filter-empty" hidden>No competitions match these filters.</p>
     {{ range hugo.Data.competitions }}
-    <h2>{{ .semester }}</h2>
-    <div class="card-grid" style="margin-top:1rem; margin-bottom:2.5rem;">
-      {{ range .items }}
-      <div class="card">
-        <h3><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></h3>
-        <div style="margin: 0.5rem 0;">
-          <span class="badge{{ if strings.HasPrefix .cost "Free" }} badge-gold{{ end }}">{{ .cost }}</span>
-          <span class="badge">{{ .difficulty }}</span>
+    <div class="comp-group">
+      <h2>{{ .semester }}</h2>
+      <div class="card-grid" style="margin-top:1rem; margin-bottom:2.5rem;">
+        {{ range .items }}
+        <div class="card" data-cost="{{ .cost }}" data-difficulty="{{ .difficulty }}">
+          <h3><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></h3>
+          <div style="margin: 0.5rem 0;">
+            <span class="badge{{ if strings.HasPrefix .cost "Free" }} badge-gold{{ end }}">{{ .cost }}</span>
+            <span class="badge">{{ .difficulty }}</span>
+          </div>
+          <p style="color:var(--muted); margin-bottom:0.4em;">{{ .format }}</p>
+          <p>{{ .description | markdownify }}</p>
         </div>
-        <p style="color:var(--muted); margin-bottom:0.4em;">{{ .format }}</p>
-        <p>{{ .description | markdownify }}</p>
+        {{ end }}
       </div>
-      {{ end }}
     </div>
     {{ end }}
   </div>
 </div>
+<script>
+  (function () {
+    var chips = document.querySelectorAll('.filter-chips .chip');
+    var groups = document.querySelectorAll('.comp-group');
+    var empty = document.getElementById('comp-filter-empty');
+    if (!chips.length || !groups.length) return;
+    function update() {
+      var wantFree = document.getElementById('comp-filter-free').getAttribute('aria-pressed') === 'true';
+      var wantBeginner = document.getElementById('comp-filter-beginner').getAttribute('aria-pressed') === 'true';
+      var anyVisible = false;
+      groups.forEach(function (group) {
+        var groupHasMatch = false;
+        group.querySelectorAll('[data-cost]').forEach(function (card) {
+          var isFree = card.getAttribute('data-cost').indexOf('Free') === 0;
+          var isBeginner = card.getAttribute('data-difficulty').indexOf('Easy') !== -1;
+          var match = (!wantFree || isFree) && (!wantBeginner || isBeginner);
+          card.style.display = match ? '' : 'none';
+          if (match) groupHasMatch = true;
+        });
+        group.style.display = groupHasMatch ? '' : 'none';
+        if (groupHasMatch) anyVisible = true;
+      });
+      if (empty) empty.hidden = anyVisible;
+    }
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chip.setAttribute('aria-pressed', String(chip.getAttribute('aria-pressed') !== 'true'));
+        update();
+      });
+    });
+  })();
+</script>
 {{ end }}

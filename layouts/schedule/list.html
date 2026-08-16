@@ -13,6 +13,9 @@
     <p style="color:var(--muted); font-size:0.88rem; margin-top:-1rem;">
       To get every meeting on your calendar automatically, subscribe to the feed above (Google Calendar: Settings &rarr; Add calendar &rarr; From URL). To add a single meeting, use the button in its row below.
     </p>
+    <p style="color:var(--muted); font-size:0.82rem;">
+      Page last rebuilt {{ now.Format "January 2, 2006" }}.
+    </p>
 
     {{ $next := "" }}
     {{ range hugo.Data.schedule.meetings }}
@@ -25,6 +28,10 @@
 
     <div class="sched-filter">
       <input type="search" id="sched-filter-input" placeholder="Filter by topic, day, or keyword&hellip;" aria-label="Filter schedule">
+      <div class="filter-chips" style="margin-top:0.8rem;">
+        <button type="button" class="chip" id="sched-filter-tue" data-day="Tuesday" aria-pressed="false">Tuesdays</button>
+        <button type="button" class="chip" id="sched-filter-thu" data-day="Thursday" aria-pressed="false">Thursdays</button>
+      </div>
       <p id="sched-filter-empty" class="sched-filter-empty" hidden>No meetings match &ldquo;<span></span>&rdquo;.</p>
     </div>
 
@@ -97,21 +104,36 @@
   })();
   (function () {
     var input = document.getElementById('sched-filter-input');
+    var dayChips = document.querySelectorAll('#sched-filter-tue, #sched-filter-thu');
     var rows = document.querySelectorAll('table.schedule tbody tr');
     var empty = document.getElementById('sched-filter-empty');
     if (!input || !rows.length) return;
-    input.addEventListener('input', function () {
+    function update() {
       var q = input.value.trim().toLowerCase();
+      var activeDays = Array.prototype.filter.call(dayChips, function (c) {
+        return c.getAttribute('aria-pressed') === 'true';
+      }).map(function (c) { return c.getAttribute('data-day'); });
       var visible = 0;
       rows.forEach(function (row) {
-        var match = !q || row.textContent.toLowerCase().indexOf(q) !== -1;
+        var textMatch = !q || row.textContent.toLowerCase().indexOf(q) !== -1;
+        var dayCell = row.querySelector('[data-label="Day"]');
+        var dayMatch = !activeDays.length || (dayCell && activeDays.indexOf(dayCell.textContent.trim()) !== -1);
+        var match = textMatch && dayMatch;
         row.style.display = match ? '' : 'none';
         if (match) visible++;
       });
       if (empty) {
-        empty.hidden = !(q && visible === 0);
-        empty.querySelector('span').textContent = q;
+        var filtering = q || activeDays.length;
+        empty.hidden = !(filtering && visible === 0);
+        empty.querySelector('span').textContent = q || activeDays.join(' / ');
       }
+    }
+    input.addEventListener('input', update);
+    dayChips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chip.setAttribute('aria-pressed', String(chip.getAttribute('aria-pressed') !== 'true'));
+        update();
+      });
     });
   })();
 </script>
