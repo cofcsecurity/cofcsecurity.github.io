@@ -492,7 +492,6 @@ a.card:hover {
 }
 .timeline li.is-skipped { opacity: 0.55; }
 .timeline li.is-skipped::before { background: var(--muted); box-shadow: 0 0 0 2px var(--card-bg); }
-.timeline .card.is-recent { box-shadow: inset 3px 0 0 var(--gold); }
 
 /* Tool/tech logo strip — white-on-transparent marks, needs a dark section */
 .tool-grid {
