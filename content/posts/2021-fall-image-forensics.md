@@ -18,7 +18,7 @@ date: 2021-08-04
         - `pip install imago`
     - Running:
         - `imago -i [path to directory where the file is located] -o [where do you want the output file to go] -x -t -g`
-            - -x = for exif metadata 
+            - -x = for exif metadata
             - -t = for only .jpg images
             - -g = gps info, if available
 
@@ -28,7 +28,8 @@ date: 2021-08-04
 
 ### Web
 
-- [Web](http://exif.regex.info/exif.cgi)
+- [MetadataRemover.ai Metadata Viewer](https://metadataremover.ai/metadata-viewer) — inspect EXIF, GPS, IPTC, and XMP in the browser without uploading the file.
+- Preserve the original file and confirm important values with ExifTool before using metadata as evidence.
 
 ## Steganography
 
@@ -42,5 +43,4 @@ date: 2021-08-04
     5. Steg4.bmp
 
 
-[@pmccabe5](https://github.com/pmccabe5)  
-
+[@pmccabe5](https://github.com/pmccabe5)
