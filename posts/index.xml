@@ -440,10 +440,6 @@ While ($rabbits -lt 10000)
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="web"&gt;Web&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://exif.regex.info/exif.cgi"&gt;Web&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id="steganography"&gt;Steganography&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Download: &lt;a href="http://diit.sourceforge.net/download.php"&gt;DIIT&lt;/a&gt;&lt;/li&gt;
