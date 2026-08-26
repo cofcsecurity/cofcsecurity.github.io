@@ -133,6 +133,9 @@
             <div class="hero-actions" style="margin-top:1rem;">
               <a class="btn btn-teal" href="https://calendar.google.com/calendar/render?{{ $nQS | safeURL }}" target="_blank" rel="noopener">{{ partial "icon.html" "calendar" }} Google Calendar</a>
               <a class="btn btn-outline" style="border-color:var(--ink); color:var(--ink);" href="{{ printf "data:text/calendar;charset=utf-8;base64,%s" $nIcsB64 | safeURL }}" download="cofc-cyber-club-meeting.ics">{{ partial "icon.html" "download" }} Apple/Outlook (.ics)</a>
+              {{ with $next.slides }}
+              <a class="btn btn-outline" style="border-color:var(--ink); color:var(--ink);" href="{{ . | relURL }}">Slides</a>
+              {{ end }}
               <a class="btn btn-outline" style="border-color:var(--ink); color:var(--ink);" href="{{ "/schedule/" | relURL }}">Full schedule</a>
             </div>
           </div>
