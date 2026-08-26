@@ -47,6 +47,7 @@
             <th>Location</th>
             <th>Notes</th>
             <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -80,6 +81,11 @@
               <a href="https://calendar.google.com/calendar/render?{{ $mQS | safeURL }}" target="_blank" rel="noopener">+ Google</a>
               &middot;
               <a href="{{ printf "data:text/calendar;charset=utf-8;base64,%s" $mIcsB64 | safeURL }}" download="cofc-cyber-club-meeting.ics">+ .ics</a>
+              {{ end }}
+            </td>
+            <td data-label="Slides">
+              {{ with .slides }}
+              <a href="{{ . | relURL }}">Slides</a>
               {{ end }}
             </td>
           </tr>
