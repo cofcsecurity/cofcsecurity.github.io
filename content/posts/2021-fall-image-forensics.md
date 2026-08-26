@@ -26,10 +26,6 @@ date: 2021-08-04
 
     - Running: `exiftool <options> /path/to/file`
 
-### Web
-
-- [Web](http://exif.regex.info/exif.cgi)
-
 ## Steganography
 
 - Download: [DIIT](http://diit.sourceforge.net/download.php)
