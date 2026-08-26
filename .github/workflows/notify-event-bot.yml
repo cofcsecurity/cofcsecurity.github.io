@@ -10,10 +10,10 @@ on:
 jobs:
   dispatch:
     runs-on: ubuntu-latest
-    # Skips quietly (instead of failing) until DISCORD_BOT_DISPATCH_TOKEN is added as a repo secret.
-    if: ${{ secrets.DISCORD_BOT_DISPATCH_TOKEN != '' }}
     steps:
       - name: Trigger discord-event-bot sync
+        # Skips quietly (instead of failing) until DISCORD_BOT_DISPATCH_TOKEN is added as a repo secret.
+        if: ${{ secrets.DISCORD_BOT_DISPATCH_TOKEN != '' }}
         run: |
           curl -sf -X POST \
             -H "Authorization: token ${{ secrets.DISCORD_BOT_DISPATCH_TOKEN }}" \
