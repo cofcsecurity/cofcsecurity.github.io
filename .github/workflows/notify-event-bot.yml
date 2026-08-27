@@ -6,17 +6,22 @@ on:
       - master
     paths:
       - data/schedule.yaml
+  workflow_dispatch: {}
 
 jobs:
   dispatch:
     runs-on: ubuntu-latest
+    env:
+      DISCORD_BOT_DISPATCH_TOKEN: ${{ secrets.DISCORD_BOT_DISPATCH_TOKEN }}
     steps:
       - name: Trigger discord-event-bot sync
         # Skips quietly (instead of failing) until DISCORD_BOT_DISPATCH_TOKEN is added as a repo secret.
-        if: ${{ secrets.DISCORD_BOT_DISPATCH_TOKEN != '' }}
+        # Note: the `secrets` context isn't allowed inside `if:` at all (job or step level),
+        # only `env`/`vars`/`with` are - hence routing it through env first.
+        if: ${{ env.DISCORD_BOT_DISPATCH_TOKEN != '' }}
         run: |
           curl -sf -X POST \
-            -H "Authorization: token ${{ secrets.DISCORD_BOT_DISPATCH_TOKEN }}" \
+            -H "Authorization: token ${{ env.DISCORD_BOT_DISPATCH_TOKEN }}" \
             -H "Accept: application/vnd.github+json" \
             https://api.github.com/repos/cofcsecurity/discord-event-bot/dispatches \
             -d '{"event_type":"schedule-updated"}'
