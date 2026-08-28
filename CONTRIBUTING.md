@@ -33,6 +33,56 @@ Also update `semester` and `location` at the top of the file if either changes.
 
 **At the end of a semester**, move the finished semester's table into [`content/schedule/archive.md`](content/schedule/archive.md) (plain markdown, just paste it in) before starting the new `schedule.yaml`.
 
+## Keeping Discord in sync
+
+Editing `data/schedule.yaml` also keeps Discord up to date, via a companion repo: [cofcsecurity/discord-event-bot](https://github.com/cofcsecurity/discord-event-bot). It creates/updates native Discord Scheduled Events from this file and posts a same-day `@everyone` announcement before each meeting. You don't do anything extra here — this section explains how the two repos connect, so you know where to look if Discord ever falls out of sync.
+
+### How it's wired together
+
+1. Someone edits `data/schedule.yaml` in this repo and pushes to `master`.
+2. This repo's [`notify-event-bot.yml`](.github/workflows/notify-event-bot.yml) workflow fires a `repository_dispatch` to `discord-event-bot`.
+3. That repo's `sync.yml` workflow picks it up and creates/updates Discord events to match, usually within a minute or two.
+4. Separately, that repo's `announce.yml` workflow runs every Tuesday/Thursday morning and posts that day's meeting to Discord, if there is one.
+5. As a safety net, `discord-event-bot` also re-syncs once a day on its own schedule, so a missed dispatch is never more than a day stale.
+
+If a schedule change doesn't show up in Discord within a day, check the Actions tab in both repos for failed runs — a missing or expired secret (below) is the usual cause.
+
+### Secrets
+
+**In this repo** (Settings → Secrets and variables → Actions):
+
+| Secret | Used by | Purpose |
+|---|---|---|
+| `DISCORD_BOT_DISPATCH_TOKEN` | `notify-event-bot.yml` | Lets this repo trigger a workflow in `discord-event-bot`. |
+
+To create it:
+1. As someone with admin on `cofcsecurity/discord-event-bot`, go to GitHub → **Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token**.
+2. Set **Resource owner** to `cofcsecurity`, and restrict **Repository access** to just `discord-event-bot`.
+3. Under **Permissions → Repository permissions**, set **Actions** to **Read and write** (nothing else is needed).
+4. Generate it and copy the token (shown once).
+5. In this repo, go to **Settings → Secrets and variables → Actions → New repository secret**, name it `DISCORD_BOT_DISPATCH_TOKEN`, and paste the token in.
+
+Until this secret exists, `notify-event-bot.yml` just skips quietly instead of failing — `discord-event-bot`'s daily safety-net sync still catches every change, just up to a day later. Fine-grained tokens expire (you set the expiration when creating one, up to a year out); when it does, dispatches will silently stop firing until someone regenerates the token and updates this secret.
+
+**In the `discord-event-bot` repo** (same Settings path, over there):
+
+| Secret | Used by | Purpose |
+|---|---|---|
+| `DISCORD_BOT_TOKEN` | `sync.yml`, `announce.yml` | The Discord bot's own token, from the Discord Developer Portal. |
+| `ANNOUNCE_CHANNEL_ID` | `announce.yml` | The Discord channel ID that meeting-day announcements post to. |
+
+Getting these two values (creating the Discord bot application, granting it permissions, adding it to the server, and finding the channel ID) is covered step by step in that repo's [README, under "One-time setup"](https://github.com/cofcsecurity/discord-event-bot#one-time-setup). Once you have them, add them as repo secrets there the same way as above, rather than the local environment variables the README shows for testing on your own machine.
+
+### Maintaining discord-event-bot day to day
+
+Full detail lives in that repo's own README, but the short version:
+
+- **Changing a meeting's time/topic/location**: just edit it here in `data/schedule.yaml` as usual — nothing to do in the bot repo.
+- **Cover photos**: are Discord-only, so they're mapped in the bot repo's own `images.yaml` (by meeting date), not here.
+- **Removing a meeting from Discord**: deleting it from `schedule.yaml` does *not* delete the Discord event — run `delete "Exact Title"` (or `wipe`) directly in the bot repo.
+- **Protecting an event from being auto-edited or deleted** (e.g. one people already RSVP'd to): use that repo's `lock` command.
+- **Testing a schedule change before it's pushed**: run the bot script locally against your uncommitted `schedule.yaml` (see `SCHEDULE_PATH` in that repo's README).
+
 ## Add a meeting write-up
 
 Add a new markdown file to `content/posts/`, e.g. `content/posts/2026-fall-intro.md`:
