@@ -15,7 +15,7 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 ## Meeting 3 — Tue, Sep 1 — Virtualization & Intro to the Command Line
 
 ![Meeting 3 square graphic](post-03-virtualization-square.png)
-*Vertical graphic pending re-export — the exported file was blank.*
+![Meeting 3 vertical graphic](post-03-virtualization-vertical.png)
 
 **Caption:**
 
