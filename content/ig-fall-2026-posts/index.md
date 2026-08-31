@@ -15,7 +15,7 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 ## Meeting 3 — Tue, Sep 1 — Virtualization & Intro to the Command Line
 
 ![Meeting 3 square graphic](post-03-virtualization-square.png)
-![Meeting 3 vertical graphic](post-03-virtualization-vertical.png)
+*Vertical graphic pending re-export — the exported file was blank.*
 
 **Caption:**
 
@@ -28,8 +28,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ## Meeting 4 — Thu, Sep 3 — Understanding File Systems
 
-![Meeting 4 square graphic](post-04-file-systems-square.png)
-![Meeting 4 vertical graphic](post-04-file-systems-vertical.png)
+*Square graphic pending re-export — the exported file was blank.*
+*Vertical graphic pending re-export — the exported file was blank.*
 
 **Caption:**
 
@@ -43,7 +43,7 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 ## Meeting 5 — Tue, Sep 8 — Remote Access Basics: SSH & RDP
 
 ![Meeting 5 square graphic](post-05-remote-access-square.png)
-![Meeting 5 vertical graphic](post-05-remote-access-vertical.png)
+*Vertical graphic pending re-export — the exported file was blank.*
 
 **Caption:**
 
@@ -56,8 +56,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ## Meeting 6 — Thu, Sep 10 — Basic Networking & Communication
 
-![Meeting 6 square graphic](post-06-computer-networks-square.png)
-![Meeting 6 vertical graphic](post-06-computer-networks-vertical.png)
+*Square graphic pending re-export — the exported file was blank.*
+*Vertical graphic pending re-export — the exported file was blank.*
 
 **Caption:**
 
@@ -70,7 +70,7 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ## Meeting 7 — Tue, Sep 15 — OS Permissions & Access Control
 
-![Meeting 7 square graphic](post-07-access-control-square.png)
+*Square graphic pending re-export — the exported file was blank.*
 ![Meeting 7 vertical graphic](post-07-access-control-vertical.png)
 
 **Caption:**
@@ -85,7 +85,7 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 ## Meeting 8 — Thu, Sep 17 — Basic Host Hardening
 
 ![Meeting 8 square graphic](post-08-basic-hardening-square.png)
-![Meeting 8 vertical graphic](post-08-basic-hardening-vertical.png)
+*Vertical graphic pending re-export — the exported file was blank.*
 
 **Caption:**
 
@@ -184,7 +184,7 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 ## Meeting 15 — Thu, Oct 15 — Mid-Semester Practice Simulation
 
 ![Meeting 15 square graphic](post-15-mid-semester-sim-square.png)
-![Meeting 15 vertical graphic](post-15-mid-semester-sim-vertical.png)
+*Vertical graphic pending re-export — the exported file was blank.*
 
 **Caption:**
 
@@ -212,7 +212,7 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 ## Meeting 17 — Thu, Oct 22 — Active Directory Basics & Policy Controls
 
 ![Meeting 17 square graphic](post-17-ad-policy-square.png)
-![Meeting 17 vertical graphic](post-17-ad-policy-vertical.png)
+*Vertical graphic pending re-export — the exported file was blank.*
 
 **Caption:**
 
@@ -226,7 +226,7 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 ## Meeting 18 — Tue, Oct 27 — Web & Database Server Setup
 
 ![Meeting 18 square graphic](post-18-web-db-setup-square.png)
-![Meeting 18 vertical graphic](post-18-web-db-setup-vertical.png)
+*Vertical graphic pending re-export — the exported file was blank.*
 
 **Caption:**
 
@@ -239,8 +239,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ## Meeting 19 — Thu, Oct 29 — Application Security & Log Review
 
-![Meeting 19 square graphic](post-19-appsec-logs-square.png)
-![Meeting 19 vertical graphic](post-19-appsec-logs-vertical.png)
+*Square graphic pending re-export — the exported file was blank.*
+*Vertical graphic pending re-export — the exported file was blank.*
 
 **Caption:**
 
@@ -253,7 +253,7 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ## Meeting 20 — Tue, Nov 3 — Introduction to Log Collection
 
-![Meeting 20 square graphic](post-20-log-collection-square.png)
+*Square graphic pending re-export — the exported file was blank.*
 ![Meeting 20 vertical graphic](post-20-log-collection-vertical.png)
 
 **Caption:**
@@ -267,7 +267,7 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ## Meeting 21 — Thu, Nov 5 — Basic Centralized Monitoring
 
-![Meeting 21 square graphic](post-21-centralized-monitoring-square.png)
+*Square graphic pending re-export — the exported file was blank.*
 ![Meeting 21 vertical graphic](post-21-centralized-monitoring-vertical.png)
 
 **Caption:**
@@ -281,8 +281,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ## Meeting 22 — Tue, Nov 10 — Basic Automation: Scripting
 
-![Meeting 22 square graphic](post-22-scripting-square.png)
-![Meeting 22 vertical graphic](post-22-scripting-vertical.png)
+*Square graphic pending re-export — the exported file was blank.*
+*Vertical graphic pending re-export — the exported file was blank.*
 
 **Caption:**
 
@@ -309,7 +309,7 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ## Meeting 24 — Tue, Nov 17 — System Backups & Recovery Planning
 
-![Meeting 24 square graphic](post-24-backups-recovery-square.png)
+*Square graphic pending re-export — the exported file was blank.*
 ![Meeting 24 vertical graphic](post-24-backups-recovery-vertical.png)
 
 **Caption:**
