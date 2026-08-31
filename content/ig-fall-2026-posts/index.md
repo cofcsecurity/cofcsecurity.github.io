@@ -19,7 +19,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> First real meeting of the year! We're setting up VMs and getting comfortable in the Linux command line, plus some OverTheWire practice to get your hands dirty. New members welcome, no experience needed. See you tonight at 5:30 in Simons 281.
+> First real meeting of the year! We're setting up VMs and getting comfortable in the Linux command line, with some OverTheWire practice to get your hands dirty. Did you know the first hypervisor, IBM's CP-40, dates back to 1967? New members welcome, no experience needed.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #LinuxCommandLine #OverTheWire #CofCCougars #TerminalBasics #CharlestonSC
 
@@ -32,7 +33,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Linux and Windows don't organize a hard drive the same way — inodes versus NTFS records, permissions handled completely differently. We're breaking down both and getting more command line reps in. 5:30 PM, Simons 281.
+> Linux and Windows don't organize a hard drive the same way. Inodes versus NTFS records, permissions handled completely differently. Ever wondered why deleting a file doesn't actually erase the data right away? We're breaking down both and getting more command line reps in.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #FileSystems #LinuxVsWindows #SysAdmin #CofCClubs #CougarNation
 
@@ -45,7 +47,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> How do you get into a machine that isn't sitting in front of you? This week covers SSH and RDP, how remote access works, and where it tends to go wrong. 5:30 PM, Simons 281.
+> How do you get into a machine that isn't sitting in front of you? This week covers SSH and RDP, how remote access works, and where it tends to go wrong. Did you know SSH largely replaced Telnet because Telnet sends everything, including passwords, in plain text?
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #SSH #RDP #RemoteAccess #NetworkSecurity #CofCLife
 
@@ -58,7 +61,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> IP addressing, subnetting, and mapping a network with nmap and Wireshark. If networking has ever felt like a black box, this is the meeting to show up for. 5:30 PM, Simons 281.
+> IP addressing, subnetting, and mapping a network with nmap and Wireshark. If networking has ever felt like a black box, this is the meeting to show up for.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #Networking #Nmap #Wireshark #Subnetting #CofCCougars
 
@@ -71,7 +75,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Every account on a system carries its own set of permissions deciding what it can and can't touch. Get that wrong and you've got a security problem. We're covering users, groups, sudo, and file permissions across Linux and Windows. 5:30 PM, Simons 281.
+> Every account on a system carries its own set of permissions deciding what it can and can't touch. Get that wrong and you've got a security problem. We're covering users, groups, sudo, and file permissions across Linux and Windows.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #AccessControl #Permissions #Sudo #BlueTeam #CharlestonSC
 
@@ -84,7 +89,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Time to put last week's permissions knowledge to work. We'll review accounts and lock down permissions on practice hosts. 5:30 PM, Simons 281.
+> Time to put last week's permissions knowledge to work. We'll review accounts and lock down permissions on practice hosts.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #HostHardening #BlueTeam #HandsOnLearning #CofCClubs
 
@@ -97,7 +103,9 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> We're covering Windows services, the registry, and Linux background processes — and welcoming guest speaker Ryan Hays. Don't miss this one. 5:30 PM, Simons 281.
+> We're covering Windows services, the registry, and Linux background processes this week. Don't miss it.
+> 🎤 Guest speaker: Ryan Hays
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #GuestSpeaker #SystemServices #WindowsRegistry #CofCCougars #CyberCareers
 
@@ -110,7 +118,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Ever wonder what's quietly running in the background of a machine right now? Backdoors and rogue scheduled tasks don't announce themselves — we're hunting for unauthorized processes on the range. 5:30 PM, Simons 281.
+> Ever wonder what's quietly running in the background of a machine right now? Backdoors and rogue scheduled tasks don't announce themselves. We're hunting for unauthorized processes on the range. Did you know the average breach goes undetected for months before anyone notices?
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #ThreatHunting #Backdoors #IncidentResponse #CougarNation
 
@@ -123,7 +132,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Packet structures and protocol headers, straight from tcpdump. This is the foundation for everything traffic analysis going forward. 5:30 PM, Simons 281.
+> Packet structures and protocol headers, straight from tcpdump. This is the foundation for everything traffic analysis going forward.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #Tcpdump #PacketAnalysis #NetworkMonitoring #CofCLife
 
@@ -136,7 +146,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Wireshark time. We're hunting for unencrypted credentials and scan signatures hiding in network traffic. 5:30 PM, Simons 281.
+> Wireshark time. We're hunting for unencrypted credentials and scan signatures hiding in network traffic. Would you spot a port scan in your own traffic?
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #Wireshark #TrafficAnalysis #NetworkForensics #CofCCougars
 
@@ -149,7 +160,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> How does typing a web address turn into a live connection halfway across the world? We're breaking down DNS resolution and standing up a local DNS server to see it happen. 5:30 PM, Simons 281.
+> How does typing a web address turn into a live connection halfway across the world? We're breaking down DNS resolution and standing up a local DNS server to see it happen. Did you know DNS was designed back in 1983 and still runs the entire internet's address book today?
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #DNS #WebInfrastructure #NetworkFundamentals #CharlestonSC
 
@@ -162,7 +174,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Domain controller configs and DNS misconfigurations — finding them and fixing them. 5:30 PM, Simons 281.
+> Domain controller configs and DNS misconfigurations. Finding them and fixing them.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #DNS #DomainController #ConfigAudit #CofCClubs
 
@@ -175,7 +188,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> No meeting Oct 13 for fall break, but we're back with our mid-semester practice run: setup, defense, and a review session with alumni. 5:30 PM, Simons 281.
+> No meeting Oct 13 for fall break, but we're back with our mid-semester practice run: setup, defense, and a review session with alumni.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #CCDC #PracticeRound #AlumniSupport #CofCCougars #TeamPractice
 
@@ -188,7 +202,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Active Directory manages user accounts and permissions across a huge share of the business world — most IT and security careers touch it eventually. We're covering domains, OUs, and trusts in Windows Server. 5:30 PM, Simons 281.
+> Active Directory manages user accounts and permissions across a huge share of the business world. Most IT and security careers touch it eventually. Did you know AD has run enterprise networks since Windows 2000 — and most Fortune 500 companies still depend on it today? We're covering domains, OUs, and trusts in Windows Server.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #ActiveDirectory #WindowsServer #EnterpriseIT #CougarNation
 
@@ -201,7 +216,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Group Policy Objects and how security settings get pushed out across an entire domain at once. 5:30 PM, Simons 281.
+> Group Policy Objects, and how security settings get pushed out across an entire domain at once.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #GroupPolicy #ActiveDirectory #WindowsSecurity #CofCLife
 
@@ -214,7 +230,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> We're standing up Apache/Nginx and connecting SQL databases behind them, with a security lens on every step. 5:30 PM, Simons 281.
+> We're standing up Apache/Nginx and connecting SQL databases behind them, with a security lens on every step. Ever wonder what actually happens between hitting enter on a login form and your credentials getting checked?
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #WebServers #Nginx #SQL #InfraSecurity #CofCClubs
 
@@ -227,7 +244,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Securing last meeting's web and database setup, then digging through logs for anything that looks off. 5:30 PM, Simons 281.
+> Securing last meeting's web and database setup, then digging through logs for anything that looks off.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #AppSec #LogReview #WebSecurity #CofCCougars
 
@@ -240,7 +258,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> If someone got into your system tonight, would the logs even show it? We're covering system logs, Windows Event IDs, and shipping logs to a central location. 5:30 PM, Simons 281.
+> If someone got into your system tonight, would the logs even show it? We're covering system logs, Windows Event IDs, and shipping logs to a central location. Did you know a handful of Windows Event IDs can tell you almost the whole story of what happened on a machine?
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #LogManagement #WindowsEventIDs #SIEM #CharlestonSC
 
@@ -253,7 +272,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Setting up monitoring agents and dashboards with Security Onion and Wazuh. 5:30 PM, Simons 281.
+> Setting up monitoring agents and dashboards with Security Onion and Wazuh.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #SecurityOnion #Wazuh #ThreatMonitoring #CofCClubs
 
@@ -266,7 +286,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Writing diagnostic scripts in Python, Bash, Go, and PowerShell. Automation is what separates a good defender from a great one. 5:30 PM, Simons 281.
+> Writing diagnostic scripts in Python, Bash, Go, and PowerShell. Automation is what separates a good defender from a great one. What's the one repetitive task you wish you could automate?
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #Python #Bash #PowerShell #Automation #CofCCougars
 
@@ -279,7 +300,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Running our scripts across hosts to catch unauthorized changes before they turn into a bigger problem. 5:30 PM, Simons 281.
+> Running our scripts across hosts to catch unauthorized changes before they turn into a bigger problem.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #ScriptingForSecurity #ConfigManagement #BlueTeam #CougarNation
 
@@ -292,7 +314,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> A backup only counts if it's been tested before you need it. We're covering backup strategies, snapshots, and recovery planning — the unglamorous work that saves you when everything else fails. 5:30 PM, Simons 281.
+> A backup only counts if it's been tested before you need it. We're covering backup strategies, snapshots, and recovery planning — the unglamorous work that saves you when everything else fails. Did you know the "3-2-1" backup rule, three copies, two different media, one offsite, is still considered the gold standard?
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #BackupAndRecovery #DisasterRecovery #ITResilience #CofCLife
 
@@ -305,7 +328,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Full incident response exercise focused on restoring services from backup. This is where the semester's skills come together. 5:30 PM, Simons 281.
+> Full incident response exercise focused on restoring services from backup. This is where the semester's skills come together.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #IncidentResponse #DisasterRecovery #HandsOnPractice #CofCClubs
 
@@ -318,7 +342,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Task prioritization and change tracking under time pressure, right ahead of competition season. 5:30 PM, Simons 281.
+> Task prioritization and change tracking under time pressure, right ahead of competition season.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #CCDC #CompetitionPrep #TeamWorkflow #CofCCougars
 
@@ -331,7 +356,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> No meeting Nov 26 for Thanksgiving, but we're back with an open work session — hardware, scripts, range practice, strategy, whatever you need to catch up on. 5:30 PM, Simons 281.
+> No meeting Nov 26 for Thanksgiving, but we're back with an open work session. Hardware, scripts, range practice, strategy, whatever you need to catch up on.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #OpenLab #StudyGroup #CCDCPrep #CougarNation
 
@@ -344,7 +370,8 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Last meeting of the semester. Final team defense exercise with alumni support before finals. Come put everything you've learned this fall to the test. 5:30 PM, Simons 281.
+> Last meeting of the semester. Final team defense exercise with alumni support before finals. What's the one thing you learned this semester that surprised you most? Come put it all to the test.
+> ⏰ 5:30 PM 📍 Simons 281
 >
 > #EndOfSemester #CCDC #TeamPractice #AlumniSupport #CofCCougars
 
