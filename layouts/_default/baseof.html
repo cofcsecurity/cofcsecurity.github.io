@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if .IsHome }}{{ .Site.Title }} · {{ .Site.Params.tagline }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.tagline }}{{ end }}">
+  {{ if .Params.noindex }}<meta name="robots" content="noindex,nofollow">{{ end }}
   {{ $ogTitle := cond .IsHome (printf "%s · %s" .Site.Title .Site.Params.tagline) .Title }}
   {{ $ogDesc := .Description | default .Site.Params.tagline }}
   {{ $ogImage := "img/og-image.jpg" | absURL }}

@@ -15,7 +15,7 @@
       {{ $toc }}
     </div>
     {{ end }}
-    <article class="prose">
+    <article class="prose"{{ if .Params.noindex }} data-pagefind-ignore="all"{{ end }}>
       {{ $content }}
     </article>
     {{ $guideOrder := slice "windows-installation-guide" "vb-and-hyper-v-setup" "mac-installation-guide" }}
