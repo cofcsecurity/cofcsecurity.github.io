@@ -18,6 +18,12 @@
       format: "Vulnerability securing · team of 4"
       difficulty: "Medium"
       description: "Teams of 4 secure 4 VM instances — 2 Windows, 2 Linux."
+    - name: IRSeC
+      url: "https://irsec.club/"
+      cost: "Free"
+      format: "Red vs Blue Incident Response"
+      difficulty: "Medium"
+      description: "RITSEC's beginner Red vs. Blue Incident Response competition"
 - semester: "Spring semester"
   items:
     - name: "PicoCTF"
