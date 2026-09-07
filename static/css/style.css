@@ -315,21 +315,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* ==========================================================================
-   Texture — a faint dot grid on the large maroon surfaces (header, hero,
-   footer, stat/tool/page-head bands). Those are the biggest flat areas of
-   solid color on the page relative to how little sits on them; the texture
-   gives them some depth without adding any new content or chrome.
-   ========================================================================== */
-.site-header,
-.site-footer,
-.hero .container,
-.section-dark .container,
-table.schedule th {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1.5px);
-  background-size: 18px 18px;
-}
-
-/* ==========================================================================
    Buttons
    ========================================================================== */
 .btn {
