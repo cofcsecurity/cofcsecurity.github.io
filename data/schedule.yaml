@@ -55,7 +55,7 @@ meetings:
     date: 2026-09-15
     start: "17:30"
     end: "19:30"
-    topic: "Operating System Permissions & Access Control"
+    topic: "Operating System Permissions & Access Control, and Guest Speaker Isaiah Stapleton"
     notes: "User accounts, groups, sudo, and file permissions on Linux and Windows."
     slides: "slides/07-access-control.pptx"
   - week: 8
