@@ -8,10 +8,14 @@
   --maroon-dark: #3d0000;
   --gold: #bfa87c;
 
-  --teal: #2f9e91;
-  --teal-dark: #014c44;
-  --mint: #4ad4c4;
-  --teal-light: #e5f4f2;
+  /* Muted a shade from the deck's raw teal — the fully-saturated originals
+     (especially teal-dark at ~99% saturation) read as a bright, modern
+     tech accent that fought the muted, warm maroon/gold instead of sitting
+     alongside it. Same hues, toned down so they read as one family. */
+  --teal: #448a82;
+  --teal-dark: #12423d;
+  --mint: #7fc9bc;
+  --teal-light: #e6f2ef;
 
   --white: #ffffff;
   --ink: #1b1e1d;
@@ -111,6 +115,16 @@ img { max-width: 100%; display: block; }
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+/* For a boxed section whose content is inherently narrow (a single card, a
+   short FAQ) — shrinks the colored box to hug that content instead of
+   stretching the full container width and leaving one side empty. Sections
+   built from a grid that actually benefits from the extra width (stats,
+   contact cards, tool logos) skip this and keep the full container. */
+.container-fit {
+  width: fit-content;
+  max-width: 100%;
 }
 
 .kicker {
@@ -525,6 +539,9 @@ a.card:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1.6rem 2rem;
+  /* A dozen fixed-width logos never fill a wide container; centering keeps
+     the leftover space symmetric instead of a lopsided gap on the right. */
+  justify-content: center;
 }
 .tool-logo {
   display: flex;
