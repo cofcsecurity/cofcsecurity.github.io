@@ -315,6 +315,21 @@ img { max-width: 100%; display: block; }
 }
 
 /* ==========================================================================
+   Texture — a faint dot grid on the large maroon surfaces (header, hero,
+   footer, stat/tool/page-head bands). Those are the biggest flat areas of
+   solid color on the page relative to how little sits on them; the texture
+   gives them some depth without adding any new content or chrome.
+   ========================================================================== */
+.site-header,
+.site-footer,
+.hero .container,
+.section-dark .container,
+table.schedule th {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+/* ==========================================================================
    Buttons
    ========================================================================== */
 .btn {
@@ -966,12 +981,19 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
    ========================================================================== */
 :root[data-theme="dark"] {
   --ink: #f1e9e5;
-  --muted: #b8a8a3;
-  --card-bg: #2e2222;
-  --paper: #241b1b;
-  --border: #4a3535;
+  --muted: #bfb0ab;
+  --card-bg: #372a2a;
+  --paper: #2a2020;
+  --border: #5c4646;
   --link-color: var(--mint);
-  --teal-light: #123330;
+  --teal-light: #1b4a44;
+  /* The header/hero/footer/stat/page-head boxes stay maroon in every mode,
+     but light mode's maroon-dark (#3d0000) is nearly as dark as this
+     theme's own page background — they'd blend together. Lift it so those
+     boxes still read as a distinct, richer surface against the page. */
+  --maroon-dark: #761a1a;
+  --shadow-lift: 0 10px 26px rgba(0, 0, 0, 0.45);
+  --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 [data-theme="dark"] .kicker { color: var(--mint); }
 [data-theme="dark"] .contact-card .label { color: var(--mint); }
