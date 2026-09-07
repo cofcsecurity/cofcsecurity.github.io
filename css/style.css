@@ -981,17 +981,21 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
    ========================================================================== */
 :root[data-theme="dark"] {
   --ink: #f1e9e5;
-  --muted: #bfb0ab;
-  --card-bg: #372a2a;
-  --paper: #2a2020;
-  --border: #5c4646;
+  --muted: #c2b3ae;
+  /* The header/hero/footer/stat/page-head boxes keep the brand's own
+     maroon-dark (#3d0000, unchanged) in every mode. Light mode gets away
+     with that because the page around it is pale — but the previous dark
+     page (#241b1b) sat at nearly the same lightness as those boxes and
+     blended right into them. Lighten the same warm brown-gray already used
+     for --ink/--muted/--card-bg a couple steps further, rather than
+     reaching for an unrelated hue (teal, neutral gray) — still clearly the
+     same family, just enough lighter that the maroon boxes read as a
+     distinct surface again. */
+  --card-bg: #4a3737;
+  --paper: #3c2c2c;
+  --border: #6b5252;
   --link-color: var(--mint);
-  --teal-light: #1b4a44;
-  /* The header/hero/footer/stat/page-head boxes stay maroon in every mode,
-     but light mode's maroon-dark (#3d0000) is nearly as dark as this
-     theme's own page background — they'd blend together. Lift it so those
-     boxes still read as a distinct, richer surface against the page. */
-  --maroon-dark: #761a1a;
+  --teal-light: #16332f;
   --shadow-lift: 0 10px 26px rgba(0, 0, 0, 0.45);
   --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
