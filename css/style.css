@@ -28,7 +28,10 @@
   --radius: 10px;
   --shadow-soft: 0 4px 16px rgba(61, 0, 0, 0.06);
   --shadow-lift: 0 10px 24px rgba(61, 0, 0, 0.12);
-  --max-width: 1120px;
+  /* Grows past the old fixed 1120px on wide screens so boxed sections use
+     the extra space instead of floating in a sea of margin, but plateaus
+     at 1600px so text columns and card grids don't get unreadably wide. */
+  --max-width: clamp(1120px, 78vw, 1600px);
 }
 
 * { box-sizing: border-box; }
@@ -104,17 +107,6 @@ pre code { background: none; padding: 0; }
 
 img { max-width: 100%; display: block; }
 
-/* Bounds the whole page (header/main/footer) so the alternating full-bleed
-   section backgrounds don't stretch into bare color bars on very wide
-   screens — beyond this width the plain body background shows instead. */
-.site-shell {
-  max-width: 1800px;
-  margin: 0 auto;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-lift);
-}
-
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -139,6 +131,9 @@ img { max-width: 100%; display: block; }
 .site-header {
   background: var(--maroon-dark);
   color: var(--white);
+  /* Flush with the top of the viewport, so only the trailing edge curves —
+     a square top would look odd floating away from the browser edge. */
+  border-radius: 0 0 var(--radius) var(--radius);
 }
 .site-header .container {
   display: flex;
@@ -871,6 +866,9 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
   color: #e9dede;
   padding: 2.5rem 0 2rem;
   margin-top: 2rem;
+  /* Mirrors the header: flush with the bottom of the viewport, so only the
+     leading edge curves. */
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 .site-footer .container {
   display: flex;
