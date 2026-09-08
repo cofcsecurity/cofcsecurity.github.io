@@ -13,7 +13,9 @@ paginate = 8
   discord = "https://discord.gg/uBCwjeG"
   github = "https://github.com/cofcsecurity/"
   instagram = "https://www.instagram.com/cofc_cyber_club/"
-  meetingTime = "Tuesdays & Thursdays, 5:30–7:30 PM"
+  meetingDays = "Tuesdays & Thursdays"
+  meetingStart = "17:30"
+  meetingEnd = "19:30"
 
   # Privacy-respecting analytics, off by default. Set one of these to enable
   # it — see CONTRIBUTING.md for how to sign up. Leave both blank to stay off.

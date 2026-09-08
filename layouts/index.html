@@ -128,7 +128,7 @@
           <span class="icon-circle on-maroon">{{ partial "icon.html" "calendar" }}</span>
           <div>
             <h3>{{ $next.topic }}</h3>
-            <p>{{ $next.day }}, {{ $nDate.Format "January 2, 2006" }} &middot; {{ $next.start }}–{{ $next.end }}<br>
+            <p>{{ $next.day }}, {{ $nDate.Format "January 2, 2006" }} &middot; {{ partial "time-range.html" (dict "start" $next.start "end" $next.end) }}<br>
             {{ $nLoc }}</p>
             <div class="hero-actions" style="margin-top:1rem;">
               <a class="btn btn-teal" href="https://calendar.google.com/calendar/render?{{ $nQS | safeURL }}" target="_blank" rel="noopener">{{ partial "icon.html" "calendar" }} Google Calendar</a>
@@ -172,7 +172,7 @@
       <div class="contact-card">
         <span class="icon-circle on-teal">{{ partial "icon.html" "clock" }}</span>
         <div class="label">Meets</div>
-        <div class="value">{{ .Site.Params.meetingTime }}</div>
+        <div class="value">{{ .Site.Params.meetingDays }}, {{ partial "time-range.html" (dict "start" .Site.Params.meetingStart "end" .Site.Params.meetingEnd) }}</div>
       </div>
     </div>
   </div>
