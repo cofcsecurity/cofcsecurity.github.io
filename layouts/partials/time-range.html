@@ -1,0 +1,5 @@
+{{- $start := .start -}}
+{{- $end := .end -}}
+{{- $start12 := (time.AsTime (printf "2000-01-01T%s:00" $start)).Format "3:04 PM" -}}
+{{- $end12 := (time.AsTime (printf "2000-01-01T%s:00" $end)).Format "3:04 PM" -}}
+<span class="time-toggle" data-start="{{ $start }}" data-end="{{ $end }}" role="button" tabindex="0" title="Click to toggle 12/24-hour time">{{ $start12 }}&ndash;{{ $end12 }}</span>

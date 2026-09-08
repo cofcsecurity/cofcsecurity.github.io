@@ -264,20 +264,20 @@ img { max-width: 100%; display: block; }
    Hero
    ========================================================================== */
 .hero {
-  padding: 2.5rem 0 3rem;
+  padding: 2rem 0 2.25rem;
 }
 /* Color lives on the boxed container, not the full-bleed section, so it can
    never stretch into an edge-to-edge band on a wide viewport. */
 .hero .container {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: center;
   background: var(--maroon-dark);
   color: var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow-lift);
-  padding: 3rem 2.5rem;
+  padding: 2.25rem 2rem;
 }
 .hero h1 { font-size: clamp(2.1rem, 1.7rem + 1.7vw, 2.7rem); color: var(--white); }
 .hero p.lede {
@@ -289,7 +289,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   gap: 0.9rem;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 1.1rem;
 }
 .hero-media {
   border-radius: var(--radius);
@@ -311,7 +311,7 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 600px) {
-  .hero .container { padding: 2rem 1.25rem; }
+  .hero .container { padding: 1.5rem 1.1rem; }
 }
 
 /* ==========================================================================
@@ -351,7 +351,7 @@ img { max-width: 100%; display: block; }
    Sections & cards
    ========================================================================== */
 .section {
-  padding: 3.5rem 0;
+  padding: 2.5rem 0;
 }
 .section-light { background: var(--paper); }
 /* Tint/dark sections carry their color on the boxed .container, never on the
@@ -360,14 +360,14 @@ img { max-width: 100%; display: block; }
 .section-tint .container {
   background: var(--teal-light);
   border-radius: var(--radius);
-  padding: 2.5rem 2rem;
+  padding: 2rem 1.75rem;
 }
 .section-dark .container {
   background: var(--maroon-dark);
   color: var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow-lift);
-  padding: 2.5rem 2rem;
+  padding: 2rem 1.75rem;
 }
 .section-dark h2, .section-dark h3 { color: var(--white); }
 .section-dark p { color: #e9dede; }
@@ -380,7 +380,7 @@ img { max-width: 100%; display: block; }
 
 .section-head {
   max-width: 60ch;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .card {
@@ -389,7 +389,7 @@ img { max-width: 100%; display: block; }
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.6rem;
+  padding: 1.35rem;
 }
 .card h3 { margin-bottom: 0.4em; }
 .card p:last-child { margin-bottom: 0; }
@@ -405,7 +405,7 @@ a.card:hover {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.4rem;
+  gap: 1.1rem;
 }
 
 /* Icon-circle, three tones — matches the deck's core component slide */
@@ -427,12 +427,12 @@ a.card:hover {
 /* Icon rows */
 .icon-row-list {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.2rem;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 .icon-row {
   display: flex;
-  gap: 1rem;
+  gap: 0.85rem;
   align-items: flex-start;
 }
 .icon-row h4 {
@@ -452,7 +452,7 @@ a.card:hover {
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.5rem;
+  gap: 1.2rem;
   text-align: center;
 }
 .stat-callout .stat-number {
@@ -478,16 +478,16 @@ a.card:hover {
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.2rem;
+  gap: 1rem;
 }
 .contact-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.4rem;
+  padding: 1.15rem;
   text-align: center;
 }
-.contact-card .icon-circle { margin: 0 auto 0.7rem; }
+.contact-card .icon-circle { margin: 0 auto 0.6rem; }
 .contact-card .label {
   font-family: var(--font-heading);
   font-weight: bold;
@@ -698,6 +698,17 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
 .badge svg { width: 0.95em; height: 0.95em; }
 .badge-gold { background: #f3ecd9; color: var(--maroon-dark); }
 
+/* Click-to-toggle 12/24-hour time, used anywhere a meeting time appears */
+.time-toggle {
+  cursor: pointer;
+  border-bottom: 1px dotted currentColor;
+  white-space: nowrap;
+}
+.time-toggle:hover { color: var(--teal-dark); }
+[data-theme="dark"] .time-toggle:hover,
+[data-theme="hacker"] .time-toggle:hover { color: var(--mint); }
+.section-dark .time-toggle:hover { color: var(--gold); }
+
 /* FAQ accordion (native <details>/<summary>, no JS needed) */
 .faq { max-width: 78ch; }
 .faq-item {
@@ -881,8 +892,8 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
 .site-footer {
   background: var(--maroon-dark);
   color: #e9dede;
-  padding: 2.5rem 0 2rem;
-  margin-top: 2rem;
+  padding: 2rem 0 1.5rem;
+  margin-top: 1.5rem;
   /* Mirrors the header: flush with the bottom of the viewport, so only the
      leading edge curves. */
   border-radius: var(--radius) var(--radius) 0 0;
@@ -940,8 +951,8 @@ table.schedule .cal-link { font-size: 0.85rem; white-space: nowrap; }
 #theme-easter-egg:hover { color: var(--mint); }
 
 @media (max-width: 600px) {
-  .section { padding: 2.5rem 0; }
-  .section-tint .container, .section-dark .container { padding: 1.75rem 1.25rem; }
+  .section { padding: 1.75rem 0; }
+  .section-tint .container, .section-dark .container { padding: 1.4rem 1.1rem; }
 }
 
 /* ==========================================================================

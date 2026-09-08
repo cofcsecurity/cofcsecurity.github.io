@@ -65,5 +65,52 @@
       target.focus();
     }
   });
+  (function () {
+    var KEY = 'cofc-time-format';
+    function getMode() {
+      try { return localStorage.getItem(KEY) === '24' ? '24' : '12'; } catch (e) { return '12'; }
+    }
+    function setMode(mode) {
+      try { localStorage.setItem(KEY, mode); } catch (e) {}
+    }
+    function formatOne(hhmm, mode) {
+      var parts = hhmm.split(':');
+      var h = parseInt(parts[0], 10);
+      var m = parts[1];
+      if (mode === '24') return (h < 10 ? '0' + h : String(h)) + ':' + m;
+      var suffix = h >= 12 ? 'PM' : 'AM';
+      var h12 = h % 12;
+      if (h12 === 0) h12 = 12;
+      return h12 + ':' + m + ' ' + suffix;
+    }
+    function renderAll() {
+      var mode = getMode();
+      document.querySelectorAll('.time-toggle').forEach(function (el) {
+        var start = el.getAttribute('data-start');
+        var end = el.getAttribute('data-end');
+        if (!start) return;
+        var text = formatOne(start, mode);
+        if (end) text += '–' + formatOne(end, mode);
+        el.textContent = text;
+        el.setAttribute('aria-label', text + ' — click to switch to ' + (mode === '24' ? '12' : '24') + '-hour time');
+      });
+    }
+    function toggle() {
+      setMode(getMode() === '24' ? '12' : '24');
+      renderAll();
+    }
+    document.addEventListener('click', function (e) {
+      var el = e.target.closest && e.target.closest('.time-toggle');
+      if (el) toggle();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var el = e.target.closest && e.target.closest('.time-toggle');
+      if (!el) return;
+      e.preventDefault();
+      toggle();
+    });
+    renderAll();
+  })();
 </script>
 
