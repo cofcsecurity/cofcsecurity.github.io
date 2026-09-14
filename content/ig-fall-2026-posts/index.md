@@ -75,10 +75,16 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 **Caption:**
 
-> Every account on a system carries its own set of permissions deciding what it can and can't touch. Get that wrong and you've got a security problem. We're covering users, groups, sudo, and file permissions across Linux and Windows.
-> ⏰ 5:30 PM 📍 Simons 281
+> This Tuesday: OS Permissions & Access Control
 >
-> #AccessControl #Permissions #Sudo #BlueTeam #CharlestonSC
+> We're covering permission models and access control fundamentals: the rules that decide who can read, write, and execute what on a system.
+>
+> Stick around after for a talk and Q&A with Isaiah Stapleton, a former club member. Isaiah was part of our 2021 defense team, the first college in South Carolina to win SECCDC and advance to nationals. He's now a Software Engineer at RedHat, pursuing a PhD fully funded by RedHat.
+>
+> Tuesday, Sept 15 · 5:30 PM · Simons 281
+> All majors welcome. No experience required.
+>
+> #CofCCyberClub #CyberSecurity #InfoSec #AccessControl #SECCDC #CTF #CyberDefense #CollegeOfCharleston #COFC #RedHat
 
 ---
 
