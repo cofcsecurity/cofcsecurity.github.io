@@ -33,3 +33,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages  # deploying branch
+          # Without these, the action defaults to github.actor for the commit
+          # author, which on scheduled runs is the repo owner - polluting their
+          # personal contribution graph with one commit per day.
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
