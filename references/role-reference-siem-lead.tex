@@ -1,0 +1,161 @@
+\documentclass[7pt,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.18in]{geometry}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\definecolor{navy}{RGB}{0, 51, 102}
+\definecolor{linuxc}{RGB}{160, 88, 24}
+\definecolor{winc}{RGB}{45, 95, 140}
+\setlength{\columnsep}{0.25in}
+\setlist{nosep, leftmargin=10pt}
+\titlespacing*{\section}{0pt}{1pt}{0.5pt}
+\setlength{\parindent}{0pt}
+\linespread{0.90}
+
+\titleformat{\section}{\small\bfseries\color{navy}}{\thesection}{0.5em}{}[\titlerule]
+\pagestyle{empty}
+
+\begin{document}
+\textbf{Role Reference: SIEM / Enumeration Lead} \hfill \textit{Last Updated: Aug 2026}
+\raggedcolumns
+\begin{multicols*}{3}
+
+\section{ROLE RESPONSIBILITIES}
+Standing up and tuning the SIEM. Calling out alerts. Confirming scope across every host, not just the one under attack.
+
+\section{ORDER OF OPERATIONS}
+\textbf{Round start:} Confirm Security Onion (and Wazuh, if deployed) is up, sensors capturing, agents reporting. \\
+\textbf{Tuning pass:} Reduce known-noisy alerts before the round gets busy. \\
+\textbf{Ongoing:} Work the alert queue continuously. \\
+\textbf{On a reported foothold:} Search every host for the same account, IOC, or timestamp. Report scope to the Captain. \\
+\textbf{After eviction:} Keep watching for it to return.
+
+\section{SECURITY ONION: SETUP CHECKS}
+\begin{itemize}
+    \item \texttt{so-status}: every component running.
+    \item \texttt{so-allow}: whitelist your IP if the web UI refuses connection.
+    \item Monitor interface (not management) is the one seeing traffic; packet counts climbing.
+    \item \texttt{so-user}: manage additional analyst accounts on the box itself.
+\end{itemize}
+
+\section{HUNT: KEY QUERIES}
+\begin{itemize}
+    \item \textit{Lateral movement:} \texttt{event.dataset:conn AND source.ip:"[host]"} \newline \texttt{AND destination.ip:10.0.0.0/8}
+    \item \textit{Exfiltration:} \texttt{event.dataset:conn AND source.ip:"[host]"}, sorted by \texttt{network.bytes} descending.
+    \item \textit{Other hosts:} \texttt{event.module:suricata AND rule.name:"[signature]"}, all sensors.
+    \item \textit{DNS tunneling suspicion:} \texttt{event.dataset:dns} sorted by query length or entropy, looking for unusually long subdomains.
+    \item \textit{Cleartext creds:} \texttt{event.dataset:http AND http.request.method:POST}, review bodies for login forms over plain HTTP.
+    \item Save a confirmed query as a saved search.
+\end{itemize}
+
+\section{HUNT: RED TEAM TRADECRAFT}
+\begin{itemize}
+    \item \textit{Automated push (Ansible or similar):} a burst of SSH (22/tcp) or WinRM (5985/5986/tcp) from one source to many hosts within seconds is a playbook run. \texttt{event.dataset:conn AND} \newline \texttt{destination.port:(22 OR 5985 OR 5986)}, grouped by source, sorted by distinct destination count.
+    \item \textit{Impacket-style tooling:} short SMB sessions opening the \texttt{svcctl} or \texttt{winreg} named pipe then closing within seconds, across multiple hosts, one source. Needs Zeek's DCE-RPC analyzer: \texttt{event.dataset:dce\_rpc AND} \newline \texttt{rpc.endpoint:(svcctl OR winreg)}.
+    \item \textit{Fan-out to admin shares:} SMB connections to \texttt{C\$}/\texttt{ADMIN\$} from a source that is not a known management host.
+    \item A source hitting both the fan-out query and the admin-share query narrows red team's launch point fast.
+\end{itemize}
+
+\section{DATA SOURCES}
+\begin{itemize}
+    \item \textit{Suricata:} signature-based alerts.
+    \item \textit{Zeek conn.log:} every connection seen, matched or not. Where movement/exfil show up first.
+    \item \textit{Zeek dns.log:} every DNS query and response; good for tunneling and beaconing.
+    \item \textit{Zeek http.log / ssl.log:} request/response metadata and certificate details, even without full payload capture.
+    \item \textit{Zeek files.log:} files extracted from traffic, useful for catching a dropped payload in transit.
+    \item \textit{Forwarded host logs:} account/process detail the network alone cannot see.
+\end{itemize}
+
+\section{WAZUH, IF DEPLOYED}
+\begin{itemize}
+    \item File Integrity Monitoring: fastest confirmation a specific file changed.
+    \item Vulnerability detection: known-CVE software already installed.
+    \item Scope query: \texttt{rule.groups:"syscheck" AND agent.name:"[host]"}.
+    \item Custom rule example, extending a built-in FIM rule:
+\end{itemize}
+\begin{quote}
+\footnotesize
+\texttt{<rule id="100010" level="7">} \newline
+\texttt{~~<if\_sid>550</if\_sid>} \newline
+\texttt{~~<field name="file">nginx.conf</field>} \newline
+\texttt{~~<description>config} \newline
+\texttt{~~modified</description>} \newline
+\texttt{</rule>}
+\normalsize
+\end{quote}
+
+\section{WRITING A SURICATA RULE}
+\begin{quote}
+\texttt{alert tcp any any -> \$HOME\_NET 4444 (msg:"Possible} \newline \texttt{reverse shell"; sid:1000001; rev:1;)}
+\end{quote}
+Test against known-good and known-bad traffic before enabling live. A rule too broad fires constantly; too narrow misses variants.
+
+\section{CLI HELPERS}
+\begin{itemize}
+    \item \texttt{zeek-cut}: pull specific fields out of raw Zeek TSV logs on the command line.
+    \item \texttt{jq}: parse and filter JSON-formatted logs quickly if exporting from the SIEM.
+    \item \texttt{tcpdump -nr [pcap] 'host [ip]'}: spot-check a specific host's traffic straight from a capture, no SIEM needed.
+\end{itemize}
+
+\section{ALERT TUNING}
+\begin{itemize}
+    \item Suppress or threshold a rule that fires on expected, benign traffic rather than disabling it outright.
+    \item Keep a short list of intentionally suppressed rules, with the reason, so nobody re-enables noise blind.
+    \item Alert fatigue: tune, do not just silence. A dropped real alert costs more than a noisy one.
+\end{itemize}
+
+\section{WAZUH ACTIVE RESPONSE}
+\begin{itemize}
+    \item Active response scripts can auto-react to a rule firing (e.g., blocking an IP), configured in \texttt{ossec.conf} on the manager.
+    \item Start with logging-only responses during a competition; an automated action that misfires can do more damage than the thing it was meant to stop.
+    \item \texttt{/var/ossec/logs/active-responses.log}: audit what active response has actually done.
+\end{itemize}
+
+\section{WRITING A WAZUH DECODER}
+\begin{itemize}
+    \item A decoder tells Wazuh how to parse a log line into fields a rule can then match against.
+    \item Needed when a custom or unusual log format is not recognized out of the box.
+    \item Test with \texttt{/var/ossec/bin/wazuh-logtest}, feeding it a sample line before trusting the decoder live.
+\end{itemize}
+
+\section{BUILDING A DASHBOARD PANEL}
+\begin{itemize}
+    \item Run and save the search first, then build a visualization from it (bar chart of matches over time is usually the most useful default).
+    \item Add the visualization to a dashboard, and set a sensible default time range: last 24 hours for a daily check, last hour during an active incident.
+    \item Name panels descriptively; "Panel 3" is useless to a teammate six hours into a round.
+\end{itemize}
+
+\section{LOG RETENTION}
+\begin{itemize}
+    \item Full packet capture fills disk fastest; decide the retention window before the round, not when the disk is already full.
+    \item Elasticsearch index lifecycle settings (or manual index deletion) control how long searchable data sticks around.
+    \item If disk fills mid-round, older indices are usually safer to drop than losing new ingestion; confirm this policy with the team ahead of time.
+\end{itemize}
+
+\section{CROSS-SOURCE CORRELATION}
+\begin{itemize}
+    \item A single alert is a clue. The same timestamp appearing in Suricata, Zeek, and a host log together is a much stronger case.
+    \item When reporting scope to the Captain, cite which sources agree, not just the first alert that fired.
+    \item Keep a short list of IOCs (IPs, hashes, filenames) confirmed bad this round; check new alerts against it fast.
+\end{itemize}
+
+\section{COMMON PITFALLS}
+\begin{itemize}
+    \item Storage vs. retention: decide what to keep before the disk fills.
+    \item Agent drift: a disconnected Wazuh agent stops reporting silently; check the Agents page, not just alert volume.
+    \item Treating "no alerts" as "nothing happening." Confirm sensors are actually capturing, not just quiet.
+\end{itemize}
+
+\section{PATTERN LIBRARY}
+\begin{itemize}
+    \item A sudden spike in DNS queries to one domain, especially with long or random-looking subdomains.
+    \item Beaconing: a connection recurring at a suspiciously regular interval, to the same destination.
+    \item A host generating alerts it has never generated before, even low-severity ones.
+    \item An agent that stops checking in right around the same time a host starts behaving oddly elsewhere.
+\end{itemize}
+
+\end{multicols*}
+\end{document}

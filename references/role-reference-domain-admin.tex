@@ -1,0 +1,153 @@
+\documentclass[7pt,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.18in]{geometry}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\definecolor{navy}{RGB}{0, 51, 102}
+\definecolor{linuxc}{RGB}{160, 88, 24}
+\definecolor{winc}{RGB}{45, 95, 140}
+\setlength{\columnsep}{0.25in}
+\setlist{nosep, leftmargin=10pt}
+\titlespacing*{\section}{0pt}{1pt}{0.5pt}
+\setlength{\parindent}{0pt}
+\linespread{0.90}
+
+\titleformat{\section}{\small\bfseries\color{navy}}{\thesection}{0.5em}{}[\titlerule]
+\pagestyle{empty}
+
+\begin{document}
+\textbf{Role Reference: Domain Admin} \hfill \textit{Last Updated: Aug 2026}
+\raggedcolumns
+\begin{multicols*}{3}
+
+\section{ROLE RESPONSIBILITIES}
+Accounts, groups, GPOs, DNS on the domain controller. Any hole or foothold touching AD.
+
+\section{ORDER OF OPERATIONS}
+\textbf{Baseline, day one:} \texttt{Get-ADUser -Filter * -Properties *}, \texttt{Get-ADGroupMember "Domain Admins"}. Save the list. \\
+\textbf{Ongoing:} Re-check privileged groups regularly. Watch for off-onboarding account creation. \\
+\textbf{On report:} Confirm if AD is involved. If yes, run it, coordinating with the engineer. \\
+\textbf{Eviction:} Disable/reset the account. Remove from any group it should not be in. Check for an unauthorized trust or delegation change. \\
+\textbf{Patch:} Re-harden the account/group baseline. Confirm password/lockout GPOs still linked and applying.
+
+\section{ROUND-START CHECKS}
+\begin{itemize}
+    \item \texttt{dcdiag}: domain controller health.
+    \item \texttt{repadmin /replsummary}: replication status.
+    \item \texttt{repadmin /showrepl}: per-partner replication detail if summary looks off.
+    \item \texttt{Get-GPO -All}: confirm expected GPOs linked.
+    \item \texttt{gpresult /r} on a client: confirm policy applies.
+    \item \texttt{Get-ADDomainController -Filter *}: confirm every expected DC is actually there.
+\end{itemize}
+
+\section{ACCOUNTS \& GROUPS}
+\begin{itemize}
+    \item \texttt{Get-ADUser -Filter \{Enabled -eq \$true\}}: active accounts vs. baseline.
+    \item \texttt{Get-ADGroupMember "Domain Admins"}: should be short, known.
+    \item \texttt{Get-ADGroupMember "Enterprise Admins"}: check this too; often forgotten.
+    \item \texttt{New-ADUser} / \texttt{Remove-ADUser}: create or remove.
+    \item \texttt{Set-ADAccountPassword}: reset a compromised account.
+    \item \texttt{Disable-ADAccount}: faster than deleting when unsure.
+    \item \texttt{Get-ADUser -Filter * -Properties} \newline \texttt{LastLogonDate | sort LastLogonDate}: find stale accounts.
+    \item \texttt{Get-ADObject -Filter \{isDeleted -eq \$true\}} \newline \texttt{-IncludeDeletedObjects}: check the recycle bin.
+\end{itemize}
+
+\section{COMMON ATTACK PATTERNS}
+\begin{itemize}
+    \item Kerberoasting: unusual TGS requests for service accounts. Event ID 4769. Check with \texttt{klist} on a suspect host for oddly-requested tickets.
+    \item DCSync-style replication requests from a non-DC account: Event ID 4662 with replication GUIDs.
+    \item Direct additions to Domain Admins or similar, outside a normal change. Event ID 4728/4732.
+    \item Unconstrained delegation enabled with no real need: \texttt{Get-ADComputer -Filter} \newline \texttt{\{TrustedForDelegation -eq \$true\}}.
+    \item A new account plus a privilege change together: one incident, not two.
+    \item Golden/silver ticket suspicion: unusually long-lived Kerberos tickets, or tickets for accounts that no longer exist.
+\end{itemize}
+
+\section{DNS ON THE DC}
+\begin{itemize}
+    \item \texttt{Get-DnsServerZone}: list zones.
+    \item \texttt{Get-DnsServerResourceRecord -ZoneName [zone]}: list records, scan for anything unrecognized.
+    \item SOA serial recent and increasing.
+    \item Unexpected records, especially wildcards or off-subnet.
+    \item Zone transfers restricted to actual secondaries: check \texttt{Get-DnsServerZoneTransferPolicy} or the zone's transfer tab.
+\end{itemize}
+
+\section{GROUP POLICY}
+\begin{itemize}
+    \item \texttt{New-GPO -Name "X"} then \texttt{New-GPLink}: create and link.
+    \item Highest value: password policy, lockout, software restriction, audit policy.
+    \item \texttt{Get-GPOReport -All -ReportType HTML -Path report.html}: dump every GPO's settings for review.
+    \item Check \texttt{gpresult /r} periodically. A GPO that stops applying looks identical to one never created.
+    \item AppLocker or Software Restriction Policy can be pushed via GPO to block execution from Temp/Downloads domain-wide.
+\end{itemize}
+
+\section{TRUSTS \& REPLICATION}
+\begin{itemize}
+    \item \texttt{nltest /domain\_trusts}: list trusts.
+    \item \texttt{Test-ComputerSecureChannel}: confirm a machine's trust relationship with the domain is intact.
+    \item \texttt{repadmin /replsummary}: look for consistently failing partners, not just one bad sync.
+\end{itemize}
+
+\section{DENY RED TEAM: AD-SPECIFIC}
+\begin{itemize}
+    \item Restrict WinRM to a jump-host allowlist via GPO: the transport for Ansible's \texttt{winrm} connection and most PowerShell-based lateral movement.
+    \item \textbf{Protected Users} group for privileged accounts: blocks NTLM auth and long-lived Kerberos ticket caching, blunting Mimikatz-style credential theft.
+    \item Enforce SMB signing domain-wide: breaks NTLM-relay tooling (Responder, Impacket's \texttt{ntlmrelayx}).
+    \item AppLocker via GPO, block execution from Temp/Downloads: removes the landing zone for a dropped implant.
+    \item Rename or disable the built-in Administrator account domain-wide once a real admin path is confirmed working.
+\end{itemize}
+
+\section{TOOLS}
+\begin{itemize}
+    \item \textit{ADSI Edit}: raw view of AD objects and attributes, for when the normal consoles do not show enough.
+    \item \textit{BloodHound}: maps attack paths through group memberships and permissions; useful defensively to find your own risky paths before red team does.
+    \item \textit{dsquery / dsget}: quick command-line AD lookups without loading the full RSAT GUI.
+\end{itemize}
+
+\section{ENUMERATION ONE-LINERS}
+\begin{itemize}
+    \item \texttt{Get-ADComputer -Filter * -Properties} \newline \texttt{OperatingSystem}: inventory every domain-joined machine and its OS.
+    \item \texttt{Get-ADOrganizationalUnit -Filter *}: confirm the OU structure matches what you expect.
+    \item \texttt{Search-ADAccount -LockedOut}: accounts currently locked, worth knowing before assuming an account is simply gone.
+    \item \texttt{Search-ADAccount -AccountDisabled}: cross-check against who should actually be disabled.
+    \item \texttt{Get-ADFineGrainedPasswordPolicy -Filter *}: check for password policies that override the domain default for specific groups.
+    \item \texttt{Get-ADUser -Filter \{AdminCount -eq 1\}}: users ever granted privileged group membership, even if since removed. A good source of forgotten accounts.
+\end{itemize}
+
+\section{SYSVOL \& NETLOGON}
+\begin{itemize}
+    \item \texttt{\textbackslash\textbackslash [domain]\textbackslash SYSVOL}: replicated share holding GPO templates and logon scripts.
+    \item Logon scripts here run on every login; a modified one is a very effective, very quiet backdoor.
+    \item Compare script hashes against a known-good baseline if one exists.
+    \item Confirm SYSVOL replication itself is healthy: \texttt{dfsrmig /getglobalstate} on newer domains, or check the File Replication Service event log on older ones.
+\end{itemize}
+
+\section{CERTIFICATE SERVICES, IF PRESENT}
+\begin{itemize}
+    \item If AD CS is deployed, check for certificate templates that allow low-privileged users to enroll for templates granting elevated rights.
+    \item \texttt{certutil -TCAInfo}: quick sanity check on the CA's own configuration.
+    \item A rogue or unexpectedly issued certificate is a persistence mechanism that outlives a password reset.
+\end{itemize}
+
+\section{LAPS (LOCAL ADMIN PASSWORD SOLUTION)}
+\begin{itemize}
+    \item If deployed, local administrator passwords rotate automatically and are stored in AD, readable only by authorized accounts.
+    \item \texttt{Get-ADComputer -Filter * -Properties ms-Mcs-AdmPwd}: check whether LAPS is actually populating passwords, not just installed.
+    \item Removes the single-shared-local-admin-password problem, a common and serious finding on its own.
+\end{itemize}
+
+\section{HANDOFF TO ENGINEER}
+When AD is not the whole story, hand off clearly: account, group, GPO, what you already changed. Log it before moving on.
+
+\section{PATTERN LIBRARY}
+\begin{itemize}
+    \item An account created and added to a privileged group within the same short window: rarely legitimate.
+    \item A computer object with unconstrained delegation that has no clear operational reason to need it.
+    \item A GPO that exists but is not linked anywhere, or is linked somewhere unexpected.
+    \item Replication errors that appear suddenly on a domain controller that was healthy an hour earlier.
+\end{itemize}
+
+\end{multicols*}
+\end{document}

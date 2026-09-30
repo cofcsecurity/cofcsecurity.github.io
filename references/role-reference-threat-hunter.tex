@@ -1,0 +1,147 @@
+\documentclass[7pt,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.18in]{geometry}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\definecolor{navy}{RGB}{0, 51, 102}
+\definecolor{linuxc}{RGB}{160, 88, 24}
+\definecolor{winc}{RGB}{45, 95, 140}
+\setlength{\columnsep}{0.25in}
+\setlist{nosep, leftmargin=10pt}
+\titlespacing*{\section}{0pt}{1pt}{0.5pt}
+\setlength{\parindent}{0pt}
+\linespread{0.90}
+
+\titleformat{\section}{\small\bfseries\color{navy}}{\thesection}{0.5em}{}[\titlerule]
+\pagestyle{empty}
+
+\begin{document}
+\textbf{Role Reference: Threat Hunter (\textcolor{linuxc}{Linux} \& \textcolor{winc}{Windows})} \hfill \textit{Last Updated: Aug 2026}
+\raggedcolumns
+\begin{multicols*}{3}
+
+\section{ROLE RESPONSIBILITIES}
+Detect, find the user, find the hole, assess scope, on your assigned OS. Command detail lives in the Linux/Windows Hardening References; this is the hunting workflow.
+
+\section{ORDER OF OPERATIONS}
+\textbf{Baseline, day one:} User list, process list, listening ports, cron/scheduled tasks for your host. \\
+\textbf{Ongoing:} Watch the SIEM. Manual spot-check pass on your host periodically. \\
+\textbf{On detection:} Rule out a teammate's untracked change. Report host, time, symptom to Captain. \\
+\textbf{Find user, then hole, then scope:} In that order. Hand off to the engineer once confirmed. \\
+\textbf{After eviction:} Re-check your host for the same pattern before calling it closed.
+
+\section{FIND THE USER}
+\begin{itemize}
+    \item \textit{\textcolor{linuxc}{Linux:}} \texttt{w}, \texttt{who}, \texttt{last}. Compare vs. \texttt{/etc/passwd} baseline.
+    \item \textit{\textcolor{winc}{Windows:}} \texttt{query user}, Event ID 4624/4625. Compare vs. \texttt{Get-LocalUser} baseline.
+    \item Either OS: a low-privilege account suddenly in an admin/sudo group is a signal on its own.
+    \item \texttt{lastlog} \textcolor{linuxc}{(Linux)}: last login time per account, even ones never logged into.
+\end{itemize}
+
+\section{TRACE A PROCESS TO ITS OWNER}
+\begin{itemize}
+    \item \textit{\textcolor{linuxc}{Linux:}} \texttt{ps -o user,pid,ppid,cmd -p [PID]}. \texttt{lsof -p [PID]} for open files/sockets.
+    \item \textit{\textcolor{winc}{Windows:}} \texttt{Get-CimInstance Win32\_Process -Filter} \newline \texttt{"ProcessId=[PID]"} for \texttt{ParentProcessId}. Sysmon Event ID 1 if installed, includes hash and full command line.
+    \item A shell spawned from a web server or service process is not normal, either OS.
+\end{itemize}
+
+\section{FIND THE HOLE}
+\begin{itemize}
+    \item Weak/reused password: auth logs, repeated failures then a success, or an unfamiliar source address.
+    \item Exposed/unpatched service: an unexpected listening port, or a known vulnerable version.
+    \item Leftover backdoor: cron job, scheduled task, a modified startup file (\texttt{.bashrc} is a known trick), or a WMI event subscription.
+    \item Forgotten trust path: an unrecognized \texttt{authorized\_keys} entry, or an over-privileged service account.
+    \item \texttt{find / -newer /etc/passwd -type f} \newline \texttt{2>/dev/null}: files modified since a known-stable point.
+    \item \texttt{find / -perm -4000 -type f 2>/dev/null}: SUID binaries; compare against a known-good list.
+\end{itemize}
+
+\section{CROSS-REFERENCE THE TIMESTAMP}
+\begin{itemize}
+    \item \textit{\textcolor{linuxc}{Linux:}} \texttt{grep "Accepted" /var/log/auth.log}, filtered to the window from Find the User.
+    \item \textit{\textcolor{winc}{Windows:}} \texttt{Get-WinEvent -LogName Security}, Event ID 4624/4625, same window.
+    \item The login that started the session is in that window.
+    \item \texttt{ausearch -ts recent}: pull recent audit events on \textcolor{linuxc}{Linux} by time window directly.
+\end{itemize}
+
+\section{ASSESS THE SCOPE}
+\begin{itemize}
+    \item Lateral movement: connections to hosts it does not normally talk to. \texttt{ss -tunp} \textcolor{linuxc}{(Linux)} or \texttt{Get-NetTCPConnection} \textcolor{winc}{(Windows)}.
+    \item Exfiltration: unusual volume, or an unfamiliar destination.
+    \item Affected resources: which services, databases, or files it touches.
+    \item Other hosts: hand this to the SIEM lead. They can check every host at once.
+\end{itemize}
+
+\section{RED TEAM TOOLING SIGNATURES}
+\begin{itemize}
+    \item \textit{Ansible artifacts, \textcolor{linuxc}{Linux:}} a \texttt{.ansible/tmp} directory under a user's home or \texttt{/root}, holding short-lived Python scripts. Confirm with the team before treating it as hostile; it means automated push tooling, red or blue.
+    \item \textit{Impacket psexec/smbexec, \textcolor{winc}{Windows:}} Event ID 7045, a newly installed service with a short random name, \texttt{cmd.exe} spawned from \texttt{services.exe}.
+    \item \textit{Impacket wmiexec, \textcolor{winc}{Windows:}} \texttt{cmd.exe} spawned from \texttt{WmiPrvSE.exe}, an abnormal parent for an interactive shell.
+    \item \textit{Pass-the-hash (CrackMapExec, Impacket):} Event ID 4624 logon type 3 immediately followed by 4648, same source, same second.
+    \item \textit{LOLBins worth flagging:} \texttt{certutil.exe -urlcache} (download disguised as a cert op), \texttt{regsvr32.exe /i:http...} (Squiblydoo), \texttt{mshta.exe}, \texttt{bitsadmin.exe /transfer}. None normally reach the internet.
+    \item A short-lived, random-named file in \texttt{C:\textbackslash Windows\textbackslash Temp} or \texttt{ADMIN\$}: an automated exploitation framework, not a human operator.
+\end{itemize}
+
+\section{\textcolor{linuxc}{LINUX EXTRAS}}
+\begin{itemize}
+    \item \texttt{history} / \texttt{~/.bash\_history}: check for commands an attacker ran, but treat as untrusted if they had access to edit it.
+    \item \texttt{rkhunter --check} or \texttt{chkrootkit}: quick rootkit sanity check.
+    \item \texttt{systemctl list-timers}: systemd timers are a cron alternative attackers also use for persistence.
+    \item \texttt{diff} a fresh \texttt{ps -ef} / \texttt{ls} against a saved baseline for a fast anomaly spot.
+\end{itemize}
+
+\section{\textcolor{winc}{WINDOWS EXTRAS}}
+\begin{itemize}
+    \item PowerShell script block logging (Event ID 4104): catches obfuscated PowerShell commands in full.
+    \item \texttt{Get-WmiObject -Namespace root\textbackslash subscription} \newline \texttt{-Class \_\_EventFilter}: check for WMI-based persistence.
+    \item Amcache/Shimcache: evidence a binary executed even if since deleted; worth knowing exist, dig deeper with Sysinternals if needed.
+    \item \texttt{Get-Process | Select ProcessName,Path}: flag anything running from Temp or a user profile path.
+\end{itemize}
+
+\section{\textcolor{linuxc}{LINUX FORENSICS}}
+\begin{itemize}
+    \item \texttt{file [path]}: confirm a binary actually is what its name claims.
+    \item \texttt{strings [binary] | less}: quick look for suspicious hardcoded strings (IPs, URLs, credentials).
+    \item Check \texttt{/tmp}, \texttt{/dev/shm}, and \texttt{/var/tmp} for dropped binaries; world-writable and often ignored.
+    \item \texttt{ldd [binary]}: confirm linked libraries look normal; a hijacked shared library is a quiet persistence method.
+    \item \texttt{lsattr [file]}: check for a suspicious immutable flag an attacker set to protect their own foothold.
+\end{itemize}
+
+\section{\textcolor{winc}{WINDOWS FORENSICS}}
+\begin{itemize}
+    \item PowerShell history file, under \texttt{\%APPDATA\%} \newline (\texttt{...\textbackslash PSReadline\textbackslash}): command history per user, even outside a logged session.
+    \item Prefetch folder (\texttt{C:\textbackslash Windows\textbackslash Prefetch}): evidence a program ran, with a timestamp, even after deletion.
+    \item Browser download history: a fast way to spot a tool an attacker pulled down through a GUI session.
+    \item \texttt{Get-Item [file] | Select LastWriteTime,} \newline \texttt{CreationTime}: timestamp comparison can reveal timestomping if creation postdates last-write oddly.
+\end{itemize}
+
+\section{BUILDING YOUR OWN BASELINE}
+\begin{itemize}
+    \item Save output of \texttt{ps -ef}, \texttt{ss -tunp}, and the account list to a text file on day one.
+    \item \texttt{diff} a fresh capture against that baseline any time something feels off; do not rely on memory of "what normal looks like."
+    \item Re-save the baseline after any authorized change, or it will start reporting false positives on your own team's work.
+\end{itemize}
+
+\section{TIMELINE RECONSTRUCTION}
+\begin{itemize}
+    \item Anchor on the one confirmed timestamp first (a login, a file write), then work outward from it in both directions.
+    \item Cross-reference host-local logs against SIEM data for the same window; a gap between the two is itself informative.
+    \item Write the timeline down as you build it. It is the artifact the engineer and Captain both need, not just your own mental model.
+\end{itemize}
+
+\section{HANDOFF CHECKLIST}
+Before handing to the engineer: account name, process and parent process, entry timestamp, the specific hole, first-pass scope. Log all of it before eviction starts.
+
+\section{PATTERN LIBRARY}
+\begin{itemize}
+    \item A process with no parent, or a parent that already exited, is worth a second look on either OS.
+    \item A user account logged in from two very different source addresses within minutes of each other.
+    \item A service account with an interactive logon type; service accounts rarely need one.
+    \item A scheduled task or cron entry with an oddly encoded or obfuscated command line.
+    \item Traffic to an IP with no matching DNS lookup beforehand; real users resolve a name first.
+\end{itemize}
+
+\end{multicols*}
+\end{document}

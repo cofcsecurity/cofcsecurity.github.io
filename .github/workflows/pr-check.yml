@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Build reference PDFs
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+          ./scripts/build-references.sh
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:

@@ -1,0 +1,193 @@
+\documentclass[7pt,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.18in]{geometry}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\definecolor{navy}{RGB}{0, 51, 102}
+\definecolor{linuxc}{RGB}{160, 88, 24}
+\definecolor{winc}{RGB}{45, 95, 140}
+\setlength{\columnsep}{0.25in}
+\setlist{nosep, leftmargin=10pt}
+\titlespacing*{\section}{0pt}{1pt}{0.5pt}
+\setlength{\parindent}{0pt}
+\linespread{0.90}
+
+\titleformat{\section}{\small\bfseries\color{navy}}{\thesection}{0.5em}{}[\titlerule]
+\pagestyle{empty}
+
+\begin{document}
+\textbf{\textcolor{winc}{Windows} Hardening Reference 2026} \hfill \textit{Last Updated: Aug 2026}
+\raggedcolumns
+\begin{multicols*}{3}
+
+\section{ORDER OF OPERATIONS}
+\textbf{Enumerate:} \texttt{systeminfo}, \texttt{Get-ComputerInfo}. Users: \texttt{Get-LocalUser}. Running: \texttt{Get-Process}, \texttt{Get-Service}. Ports: \texttt{netstat -ano}. Domain-joined? \texttt{Get-ComputerInfo | select CsPartOfDomain}. \\
+\textbf{Firewall:} \texttt{Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True}. Allow only what is required, block the rest. \\
+\textbf{User Management:} \texttt{Get-LocalUser}, \texttt{Get-LocalGroupMember Administrators}. Disable unneeded accounts. Reset passwords on anything real. \\
+\textbf{Verify \& Update:} \texttt{sfc /scannow}. Windows Update GUI or \texttt{Get-WindowsUpdate}. \texttt{DISM /Online /Cleanup-Image /RestoreHealth} if sfc reports damage. \\
+\textbf{Secure Services:} \texttt{Get-Service | Where Status -eq Running}. Disable unnecessary: \texttt{Set-Service [name] -StartupType Disabled}. \\
+\textbf{Enable Auditing:} Advanced Audit Policy Configuration, or \texttt{auditpol /set}. Install Sysmon if allowed. Watch Event Viewer. \\
+\textbf{Deny red team tooling:} Disable unused WinRM/PSRemoting, restrict admin shares, kill PowerShell v2 (see below).
+
+\section{USERS \& GROUPS}
+\textbf{net user [name] /add}: create account.
+\begin{itemize}
+    \item \texttt{net user [name] [pass] /add}: with password set.
+\end{itemize}
+\textbf{net user [user] [newpass]}: change password. \\
+\textbf{Get-LocalUser | Set-LocalUser}: PowerShell equivalent, scriptable.
+\begin{itemize}
+    \item \textit{Batch reset:} \texttt{Get-LocalUser | Set-LocalUser -Password} \newline \texttt{(Read-Host -AsSecureString)} in a loop.
+\end{itemize}
+\textbf{net localgroup [group] [user] /add}: add to group.
+\begin{itemize}
+    \item \texttt{net user [user] /active:no}: disable.
+    \item \texttt{net user [user] /active:yes}: reactivate.
+\end{itemize}
+\textbf{whoami /priv}: current user's privileges. \\
+\textbf{whoami /groups}: group memberships, including hidden ones. \\
+\textbf{net accounts}: view/set password and lockout policy locally. \\
+\textbf{runas /user:[user] cmd}: run as another user. \\
+\textbf{Get-ChildItem -Path C:\textbackslash Users -Recurse} \newline \texttt{-Filter authorized\_keys}: find SSH keys if OpenSSH is installed. \\
+\textbf{query user} / \textbf{quser}: logged in users and session IDs. \\
+\textbf{logoff [session ID]}: force a session closed.
+
+\section{NETWORKING}
+\textbf{ipconfig /all}: interfaces and addresses. \\
+\textbf{netstat -ano}: connections/routing, with owning PID.
+\begin{itemize}
+    \item \texttt{Get-NetTCPConnection}: filterable, scriptable equivalent.
+\end{itemize}
+\textbf{Windows Defender Firewall}:
+\begin{itemize}
+    \item \textit{Status:} \texttt{Get-NetFirewallProfile}
+    \item \textit{Allow port:} \texttt{New-NetFirewallRule -DisplayName X} \newline \texttt{-Direction Inbound -LocalPort 443} \newline \texttt{-Protocol TCP -Action Allow}
+    \item \textit{Block outbound by default:} \newline \texttt{Set-NetFirewallProfile} \newline \texttt{-DefaultOutboundAction Block}
+    \item \textit{List rules:} \texttt{Get-NetFirewallRule | Where Enabled -eq True}
+    \item \textit{Legacy CLI:} \texttt{netsh advfirewall firewall add rule} \newline \texttt{name="X" dir=in action=allow protocol=TCP} \newline \texttt{localport=443}
+\end{itemize}
+\textbf{nmap [host(s)]}: same external tool as \textcolor{linuxc}{Linux}.
+\begin{itemize}
+    \item \texttt{nmap -A [host]}: OS, service version, script scan.
+    \item \texttt{Test-NetConnection [host] -Port [n]}: native port check, no nmap needed.
+\end{itemize}
+\textbf{arp -a}: local ARP cache, spot unexpected hosts. \\
+\textbf{Get-DnsClientCache}: local DNS resolver cache.
+
+\section{FILE PERMISSIONS}
+\textbf{icacls [file]}: view or change permissions. \\
+\textbf{icacls [file] /grant [user]:(R,W)}: grant read/write. \\
+\textbf{icacls [file] /remove [user]}: remove explicit permissions. \\
+\textbf{icacls [file] /inheritance:r}: strip inherited permissions. \\
+\textbf{Get-Acl} / \textbf{Set-Acl}: PowerShell equivalent, scriptable. \\
+\textbf{takeown /f [file]}: take ownership. \\
+\textbf{attrib +h +s [file]}: hidden/system flags; attackers hide with these too, worth checking for.
+
+\section{IMPORTANT FILES \& LOCATIONS}
+\textbf{...\textbackslash config\textbackslash SAM}: local account database. \\
+\textbf{HKLM/HKCU ...\textbackslash Run \& RunOnce}: common persistence. \\
+\textbf{...\textbackslash winevt\textbackslash Logs}: Event Viewer logs on disk. \\
+\textbf{...\textbackslash drivers\textbackslash etc\textbackslash hosts}: local DNS overrides, check for tampering. \\
+\textbf{Startup folder}: \texttt{shell:startup}, per-user and all-users. \\
+\textbf{HKLM\textbackslash ...\textbackslash Winlogon\textbackslash Shell}: another classic persistence key. \\
+\textbf{Scheduled task XML}: \texttt{C:\textbackslash Windows\textbackslash System32\textbackslash Tasks}. \\
+\textbf{WMI event subscriptions}: fileless persistence, check with \texttt{Get-WmiObject -Namespace root\textbackslash subscription} \newline \texttt{-Class \_\_EventFilter}. \\
+\textbf{Get-WinEvent -LogName [log] -MaxEvents [n]}: tail-like read of a log.
+
+\section{EVENT VIEWER \& AUDITING}
+\textit{Setup:} Local Security Policy $\rightarrow$ Advanced Audit Policy Configuration; enable logon, account management, process creation. Install Sysmon if allowed. \\
+\textbf{Key Event IDs}:
+\begin{itemize}
+    \item \texttt{4624 / 4625}: successful / failed logon.
+    \item \texttt{4634}: logoff.
+    \item \texttt{4720}: user account created.
+    \item \texttt{4732}: member added to a local group.
+    \item \texttt{4728}: member added to a global group.
+    \item \texttt{4688}: new process (needs Audit Process Creation on).
+    \item \texttt{5140}: network share accessed.
+    \item \texttt{1102}: audit log cleared. Rare, always investigate.
+\end{itemize}
+\textbf{Get-WinEvent -FilterHashtable} \newline \texttt{@\{LogName='Security';Id=4625\}}: query by ID directly. \\
+\textbf{PowerShell script block logging}: enables full command capture, huge for catching obfuscated PowerShell. Turn on via Group Policy $\rightarrow$ Windows Components $\rightarrow$ PowerShell.
+
+\section{SERVICES \& SCHEDULED TASKS}
+\textbf{Get-Service}: list services and status.
+\begin{itemize}
+    \item \texttt{Set-Service [name] -StartupType Disabled}: persistence/state.
+    \item \texttt{Restart-Service [name]}: after a config change.
+\end{itemize}
+\textbf{schtasks /query /fo LIST /v}: all scheduled tasks, verbose. \\
+\textbf{Task Scheduler (taskschd.msc)}: check root and Microsoft $\rightarrow$ Windows folders; attackers often hide here. \\
+\textbf{Get-ScheduledTask | Where Author -notlike} \newline \texttt{"Microsoft*"}: filter to non-default tasks. \\
+\textbf{Get-CimInstance Win32\_StartupCommand}: another view of startup persistence.
+
+\section{MALWARE: DEFENDER \& SYSINTERNALS}
+\textbf{Windows Defender}:
+\begin{itemize}
+    \item \texttt{Get-MpComputerStatus}: confirm real-time protection on.
+    \item \texttt{Update-MpSignature}: update signatures.
+    \item \texttt{Start-MpScan -ScanType FullScan}: run a full scan.
+    \item \texttt{Get-MpThreatDetection}: recent detections.
+\end{itemize}
+\textbf{Sysinternals Suite} (download ahead of time):
+\begin{itemize}
+    \item \textit{Autoruns / autorunsc.exe}: everything set to run at startup, CLI-friendly for scripting.
+    \item \textit{Process Explorer}: deeper than \texttt{tasklist}; parent/child, loaded DLLs.
+    \item \textit{TCPView}: GUI version of \texttt{netstat}.
+    \item \textit{Sigcheck}: verify a binary's digital signature before trusting it.
+\end{itemize}
+\textbf{Yara on \textcolor{winc}{Windows}}: same rule syntax as \textcolor{linuxc}{Linux}, works cross-platform.
+
+\section{PROCESSES \& THREAT HUNTING}
+\textbf{Get-Process}: all running processes. \\
+\textbf{tasklist /svc}: processes with hosted services. \\
+\textbf{taskkill /PID [pid] /F}: kill a process. \\
+\textbf{taskkill /IM [name.exe] /F}: kill all by image name. \\
+\textbf{Get-CimInstance Win32\_Process -Filter} \newline \texttt{"ProcessId=[pid]"}: includes \texttt{ParentProcessId}, the Windows equivalent of tracing \texttt{/proc/[pid]}.
+\begin{itemize}
+    \item A shell (\texttt{cmd.exe}, \texttt{powershell.exe}) spawned from a service or web server process is not normal.
+\end{itemize}
+\textbf{Sysmon Event ID 1}: process creation with full command line and hash, if installed. \\
+\textbf{Get-Process | Select ProcessName,Path}: flag processes running from unusual paths (Temp, user profile).
+
+\section{DENY RED TEAM: WINRM \& LOLBINS}
+Confirm nothing legitimate depends on an item, then disable it and log the change.
+\begin{itemize}
+    \item \textbf{WinRM/PSRemoting:} transport for Ansible's \texttt{winrm} connection and most PowerShell/Empire-style lateral movement. Disable if unused: \texttt{Disable-PSRemoting -Force}, block 5985/5986 at the host firewall.
+    \item \textbf{Admin shares (\texttt{C\$}, \texttt{ADMIN\$}):} what psexec/wmiexec ride in on. Scope to your management host with a firewall rule instead of a blanket disable if your team relies on them.
+    \item \textbf{PowerShell v2:} installable alongside v5+, lacks v5's logging; attackers downgrade to it on purpose. \texttt{Disable-WindowsOptionalFeature -Online} \newline \texttt{-FeatureName MicrosoftWindowsPowerShellV2}.
+    \item \textbf{LOLBins to watch/restrict via AppLocker:} \texttt{certutil.exe -urlcache} (download disguised as a cert op), \texttt{regsvr32.exe /i:http...} (Squiblydoo), \texttt{mshta.exe}, \texttt{bitsadmin.exe /transfer}. None normally reach the internet.
+    \item \textbf{Compilers/scripting runtimes added for dev convenience (Python, Perl via Chocolatey):} remove if no scored service needs them; same Ansible/scripted-payload exposure as Linux.
+\end{itemize}
+
+\section{ACTIVE DIRECTORY BASICS}
+\textbf{Get-ADUser -Filter * -Properties *}: every domain account. \\
+\textbf{Get-ADGroupMember "Domain Admins"}: who has full control. \\
+\textbf{dcdiag}: domain controller health check. \\
+\textbf{repadmin /replsummary}: replication status. \\
+\textbf{Get-GPO -All} / \textbf{gpresult /r}: list GPOs, or confirm what applied. \\
+\textbf{nltest /domain\_trusts}: list domain trusts. \\
+\textbf{Common attack patterns}:
+\begin{itemize}
+    \item Kerberoasting: unusual TGS requests for service accounts (Event ID 4769).
+    \item New accounts added directly to privileged groups.
+    \item Unconstrained delegation with no real need.
+\end{itemize}
+
+\section{RDP \& REMOTE ACCESS}
+\textbf{Enable/Disable RDP}:
+\begin{itemize}
+    \item \texttt{Set-ItemProperty -Name fDenyTSConnections} \newline \texttt{-Value 0} on the Terminal Server key: enable.
+    \item Value \texttt{1} disables it.
+\end{itemize}
+\textbf{Require Network Level Authentication}: via Group Policy, or \texttt{Set-ItemProperty} on \texttt{UserAuthentication}. \\
+\textbf{Restrict who can connect}: add only required users to Remote Desktop Users, not Administrators broadly. \\
+\textbf{Local Security Policy (secpol.msc)}: password policy, lockout policy, user rights assignment. \\
+\textbf{AppLocker / Software Restriction Policies}: block execution from Temp or Downloads. \\
+\textbf{PSRemoting security}: prefer HTTPS listener over the HTTP default; use constrained endpoints where possible.
+
+\end{multicols*}
+\end{document}

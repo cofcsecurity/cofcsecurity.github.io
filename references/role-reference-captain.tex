@@ -1,0 +1,165 @@
+\documentclass[7pt,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.18in]{geometry}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\definecolor{navy}{RGB}{0, 51, 102}
+\definecolor{linuxc}{RGB}{160, 88, 24}
+\definecolor{winc}{RGB}{45, 95, 140}
+\setlength{\columnsep}{0.25in}
+\setlist{nosep, leftmargin=10pt}
+\titlespacing*{\section}{0pt}{1pt}{0.5pt}
+\setlength{\parindent}{0pt}
+\linespread{0.90}
+
+\titleformat{\section}{\small\bfseries\color{navy}}{\thesection}{0.5em}{}[\titlerule]
+\pagestyle{empty}
+
+\begin{document}
+\textbf{Role Reference: Captain} \hfill \textit{Last Updated: Aug 2026}
+\raggedcolumns
+\begin{multicols*}{3}
+
+\section{ROLE RESPONSIBILITIES}
+Injects, phone, flex support, coordinating the team. Rarely fixes anything directly. Makes sure every fix has an owner and nothing falls through.
+
+\section{ORDER OF OPERATIONS}
+\textbf{Round start:} Confirm every role staffed. Confirm shared log/template open. \\
+\textbf{Inject arrives:} Read fully. Note deadline. Assign owner immediately. \\
+\textbf{Foothold reported:} Get host, time, symptom. Assign loop: threat hunter continues user/hole, SIEM lead checks other hosts, engineer stages fix. \\
+\textbf{Findings converge:} Confirm engineer has what they need. Confirm scope logged before eviction. \\
+\textbf{Verified fixed:} Log closed, timestamped, with confirmer. Move to next item.
+
+\section{THINK LIKE RED TEAM}
+\begin{itemize}
+    \item Weigh a fix by how much of red team's playbook it disables, not just whether it closes today's hole.
+    \item Push the engineer toward removals that cost red team more than blue team or the scored service: unused interpreters, unused remote-management protocols, reused local admin passwords.
+    \item A quiet stretch can mean red team is regrouping around tooling you removed, not that they've given up.
+\end{itemize}
+
+\section{TRIAGE PRIORITY}
+\begin{itemize}
+    \item Severity first: scoring/safety impact now, or can it wait.
+    \item Effort second: 5-minute fix ahead of a 30-minute one, all else equal.
+    \item An owner, always. Untracked work does not happen.
+    \item A visible queue. Everyone sees what is pending, not just you.
+\end{itemize}
+
+\section{THE TRACKING TEMPLATE}
+Keep running the entire round, not reconstructed after.
+\begin{itemize}
+    \item Time detected, reported by, host(s) affected
+    \item User/account involved, entry vector (the hole)
+    \item Lateral movement: yes/no, where
+    \item Exfiltration: yes/no, what
+    \item Owner assigned, actions taken (timestamped)
+    \item Verified closed: time, by whom
+\end{itemize}
+
+\section{HANDLING INJECTS}
+\begin{itemize}
+    \item Read the whole queue before assigning from it.
+    \item Schedule injects alongside technical work, not after it.
+    \item Do not pull a threat hunter or engineer off active eviction for a routine inject. Use flex, or handle it yourself.
+    \item Keep a standard inject response template ready: restate the ask, list what was done, note timestamps. Saves time under a deadline.
+\end{itemize}
+
+\section{RUNNING THE COMMS CHANNEL}
+\begin{itemize}
+    \item One channel for status updates, separate from casual chat, if your tool allows it.
+    \item Pin the tracking template link and the current priority list.
+    \item Use short, structured updates: role, host, status, next step. Not paragraphs.
+    \item A 60-second radio check every 15-20 minutes catches silent blockers early.
+\end{itemize}
+
+\section{YOUR OWN CHECKS}
+Things you can verify yourself without pulling a specialist off task.
+\begin{itemize}
+    \item \texttt{ping [host]} / \texttt{Test-Connection}: is it even up.
+    \item \texttt{curl -I [url]} or a browser: is the scored service responding.
+    \item \texttt{ssh [host]} or RDP: can you still get in at all.
+    \item \texttt{whoami}: confirm you did not just get logged in as someone unexpected.
+\end{itemize}
+
+\section{DELEGATION MAP}
+\begin{itemize}
+    \item \textit{Domain Admin:} Anything AD-specific.
+    \item \textit{Threat hunters:} Detect, find user, find hole, assess scope, per OS.
+    \item \textit{Engineer(s):} Evict and patch, after handoff.
+    \item \textit{SIEM lead:} Scope across every host. Watches for return.
+\end{itemize}
+
+\section{FLEX BRIEFING: DOMAIN ADMIN}
+Enough to cover if nobody else can.
+\begin{itemize}
+    \item Baseline: \texttt{Get-ADUser -Filter *}, \newline \texttt{Get-ADGroupMember "Domain Admins"}.
+    \item Health: \texttt{dcdiag}, \texttt{repadmin /replsummary}.
+    \item Policy: \texttt{Get-GPO -All}, \texttt{gpresult /r} to confirm it applied.
+    \item Red flag: a new Domain Admin, or unusual Kerberos ticket activity.
+    \item Reset: \texttt{Set-ADAccountPassword}, \newline or \texttt{Disable-ADAccount} if unsure.
+\end{itemize}
+
+\section{FLEX BRIEFING: THREAT HUNTER}
+\begin{itemize}
+    \item Who's logged in: \texttt{w}/\texttt{who} \textcolor{linuxc}{(Linux)}, \texttt{query user} \textcolor{winc}{(Windows)}.
+    \item Who logged in recently: \texttt{last} \textcolor{linuxc}{(Linux)}, Event ID 4624/4625 \textcolor{winc}{(Windows)}.
+    \item Trace a process: \texttt{ps -o user,pid,ppid,cmd -p [PID]} \textcolor{linuxc}{(Linux)}, \texttt{Get-CimInstance Win32\_Process} for parent PID \textcolor{winc}{(Windows)}.
+    \item Find the hole: check auth logs for the login window around the suspicious timestamp.
+    \item Scope: \texttt{ss -tunp} / \texttt{Get-NetTCPConnection} for unfamiliar connections.
+\end{itemize}
+
+\section{FLEX BRIEFING: ENGINEER}
+\begin{itemize}
+    \item Kill it: \texttt{kill -9 [PID]} \textcolor{linuxc}{(Linux)}, \texttt{Stop-Process -Id [PID] -Force} \textcolor{winc}{(Windows)}.
+    \item Remove persistence: cron/\texttt{/etc/cron.d} \textcolor{linuxc}{(Linux)}, Task Scheduler/Run keys \textcolor{winc}{(Windows)}.
+    \item Patch the actual vulnerability, not just the symptom. Rotate anything possibly exposed.
+    \item Protect a fix: \texttt{chattr +i} on \textcolor{linuxc}{Linux}, tighter \texttt{icacls} on \textcolor{winc}{Windows}.
+    \item Confirm the scored service is still up after any change.
+    \item If time allows: strip unused interpreters (Python, Perl), disable unused WinRM/PSRemoting.
+\end{itemize}
+
+\section{FLEX BRIEFING: SIEM LEAD}
+\begin{itemize}
+    \item Health: \texttt{so-status}. Access: \texttt{so-allow} if the web UI refuses you.
+    \item Use Hunt for ad-hoc queries, not just the prebuilt Alerts view.
+    \item Lateral movement: \texttt{event.dataset:conn} filtered to the host in question.
+    \item Other hosts: search Suricata alerts by the same signature across every sensor.
+    \item If Wazuh is deployed, File Integrity Monitoring alerts confirm a specific file changed fast.
+\end{itemize}
+
+\section{SCOREBOARD}
+\begin{itemize}
+    \item Points typically split between service uptime (checked on an interval) and injects (graded on submission quality and timeliness).
+    \item Uptime is scored automatically and continuously; a service down for ten minutes costs more than one incident report submitted five minutes late.
+    \item Know which services are actually scored vs. which are just present. Do not spend a scarce engineer on a box that earns nothing.
+    \item Ask White Team early if scoring criteria for an inject are ambiguous. A clarifying question costs less than a wrong guess.
+\end{itemize}
+
+\section{SIMULTANEOUS INCIDENTS}
+\begin{itemize}
+    \item Rank by scored-service impact first, safety second, everything else after.
+    \item Do not let a loud, obvious problem eclipse a quiet one on a more valuable host. Check the full host list, not just what people are shouting about.
+    \item Assign a distinct owner per incident even if hands are shared across them; the tracking template still needs one line per incident, not one merged mess.
+    \item If truly overloaded, tell the team explicitly what is being deprioritized and why, out loud, not silently.
+\end{itemize}
+
+\section{WORKING WITH WHITE TEAM / JUDGES}
+\begin{itemize}
+    \item Report an outage or scoring dispute the moment it is noticed, not after trying to fix it quietly first.
+    \item Keep language factual: what you observed, when, what you believe caused it. Save the argument for after the round.
+    \item A formal timeout or scoring pause exists for a reason. Use it for a genuine platform issue, not as a stalling tactic.
+    \item Written communication (chat, ticket) beats verbal when a dispute might need to be revisited later.
+\end{itemize}
+
+\section{DEBRIEF}
+\begin{itemize}
+    \item Walk the timeline from the template, not memory.
+    \item Find what slowed the loop, not who to blame.
+    \item Ask where a handoff was slow or unclear. That is usually the real fix.
+\end{itemize}
+
+\end{multicols*}
+\end{document}

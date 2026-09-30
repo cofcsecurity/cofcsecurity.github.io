@@ -1,0 +1,200 @@
+\documentclass[7pt,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.18in]{geometry}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\definecolor{navy}{RGB}{0, 51, 102}
+\definecolor{linuxc}{RGB}{160, 88, 24}
+\definecolor{winc}{RGB}{45, 95, 140}
+\setlength{\columnsep}{0.25in}
+\setlist{nosep, leftmargin=10pt}
+\titlespacing*{\section}{0pt}{1pt}{0.5pt}
+\setlength{\parindent}{0pt}
+\linespread{0.90}
+
+\titleformat{\section}{\small\bfseries\color{navy}}{\thesection}{0.5em}{}[\titlerule]
+\pagestyle{empty}
+
+\begin{document}
+\textbf{\textcolor{linuxc}{Linux} Hardening Reference 2026} \hfill \textit{Last Updated: Aug 2026}
+\raggedcolumns
+\begin{multicols*}{3}
+
+\section{ORDER OF OPERATIONS}
+\textbf{Enumerate:}
+What type of system is this? (\texttt{cat /etc/os-release} to see distribution/version).
+What users are on the system? What services are running? What ports are open? \texttt{ss -tulnp} lists listening tcp/udp ports with owning process. Run \texttt{linpeas.sh} early to see what a red teamer would find first (SUID/SGID binaries, weak perms, writable cron jobs, creds in files/history) and fix what it flags. \\
+\textbf{Firewall:}
+Install UFW. \texttt{sudo ufw allow ssh}. Allow other required services: For Jenkins: allow 8080/tcp; For OpenVPN: allow 1194/udp; For web servers: allow 443/tcp. \\
+\textbf{User Management:}
+List users: (look for users with shells/hashes). \texttt{sudo cat /etc/passwd} and \texttt{sudo cat /etc/shadow}. Expire unneeded. Change passwords. \\
+\textbf{Verify Packages:}
+Debian: \texttt{sudo dpkg --verify}. REHL: \texttt{sudo rpm -Va}. \\
+\textbf{Update Packages:}
+Debian: \texttt{apt update \&\& apt upgrade -y}. RHEL: apt = yum (dnf on Fedora). \\
+\textbf{Secure service:}
+Check configuration. Manage users (if applicable). \\
+\textbf{Install and Configure Auditd:}
+Monitor and defend. Watch logs. Keep looking for badness. \\
+\textbf{Deny red team tooling:}
+Strip interpreters/compilers/relay tools a scored service does not use (see below).
+
+\section{USERS}
+\textbf{useradd [name]}: Creates a user account.
+\begin{itemize}
+    \item \texttt{-m}: Creates a home folder for the user.
+\end{itemize}
+\textbf{passwd [user]}: Change a user’s password. \\
+\textbf{chpasswd}: Batch update passwords (format: \texttt{user:pass}).
+\begin{itemize}
+    \item \textit{Direct usage:} Run \texttt{sudo chpasswd}, type list, press \texttt{Ctrl+D} to save changes.
+    \item \textit{File usage:} \texttt{sudo chpasswd < list.txt}
+\end{itemize}
+\textbf{usermod [user]}: Modify a user account.
+\begin{itemize}
+    \item \texttt{-aG [group]}: Add user to a group (e.g., sudo/wheel).
+    \item \texttt{--expiredate 1}: Completely disable the account.
+    \item \texttt{--expiredate 2030-01-01}: Reactivate expired account.
+\end{itemize}
+\textbf{su [user]}: Switch user. \texttt{sudo su} = become root. \\
+\textbf{find / -name authorized\_keys}: Find allowed SSH keys. \\
+\textbf{who -a}: Show logged in users, session PIDs, and remote IPs.
+
+\section{NETWORKING}
+\textbf{ip a}: List all network interfaces and their addresses. \\
+\textbf{netstat}: Print network connections and routing tables.
+\begin{itemize}
+    \item \texttt{-tulnp}: Show listening tcp/udp ports and processes.
+    \item \texttt{-tupan}: Show listening and outbound connections.
+\end{itemize}
+\textbf{ufw}: Uncomplicated firewall.
+\begin{itemize}
+    \item \textit{Setup:} \texttt{sudo apt install ufw -y}, \texttt{sudo ufw allow ssh}, \texttt{sudo ufw enable}.
+    \item \textit{Allow port:} \texttt{sudo ufw allow port/protocol}.
+    \item \textit{Examples:} \texttt{sudo ufw allow 443/tcp}, \texttt{sudo ufw allow 53/udp}.
+\end{itemize}
+\textbf{firewalld (RHEL/CentOS/Fedora)}:
+\begin{itemize}
+    \item \textit{Status:} \texttt{firewall-cmd --state}
+    \item \textit{Allow Service:} \texttt{firewall-cmd --permanent --add-service=http}
+    \item \textit{Allow Port:} \texttt{firewall-cmd --permanent --add-port=8080/tcp}
+    \item \textit{Apply:} \texttt{firewall-cmd --reload}
+    \item \textit{List Rules:} \texttt{firewall-cmd --list-all}
+\end{itemize}
+\textbf{nmap [host(s)]}: Network scanner. \\
+\textit{Example:} \texttt{nmap -A 10.0.10.0-255} (OS, Service, Scan).
+\textbf{nmap (Local Scan):}
+\begin{itemize}
+    \item \texttt{nmap -sV 10.0.10.0/24}: Scan local subnet for service versions.
+    \item \texttt{nmap -A [host]}: OS detection, service version, script scanning.
+    \item \texttt{nmap -p- [host]}: Scan all 65535 ports.
+\end{itemize}
+
+\section{FILE PERMISSIONS}
+\textbf{chown [user] [file]}: Change the owner of a file. \\
+\textbf{chmod}: Change file permissions.
+\begin{itemize}
+    \item \textit{Symbolic:} \texttt{u}=User/Owner, \texttt{g}=Group, \texttt{o}=Other, \texttt{a}=All, \texttt{r}=read, \texttt{w}=write, \texttt{x}=execute
+    \item \textit{Numeric:} 1=execute, 2=write, 4=read.
+    \item \textit{Example:} \texttt{chmod 740 file} (Owner=7=rwx, Group=4=r, Other=0=---).
+    \item \textit{Example:} \texttt{chmod a+x file} (Give everyone execute).
+\end{itemize}
+
+\section{IMPORTANT FILES}
+\textbf{/etc/passwd}: List of all users. \\
+\textbf{/etc/shadow}: List of user password hashes. \\
+\textbf{/etc/sudoers \& /etc/sudoers.d}: Defines sudo permissions. \texttt{ALL ALL=(ALL) ALL} means all users can use sudo. Use \texttt{visudo} to edit. \\
+\textbf{/etc/group}: Lists all groups and their members. \\
+\textbf{/var/log/auth.log} \& \textbf{/var/log/syslog}: Auth and system logs. \\
+\textbf{tail -f [file]}: Watch log for new events in real-time.
+
+\section{AUDITD, AUREPORT, AUSEARCH}
+\textit{Setup:} \texttt{sudo apt install auditd}, \texttt{curl -O [rules]}, \texttt{mv} to \texttt{/etc/audit/rules.d/}, \texttt{sudo service auditd restart}. \\
+\textbf{aureport -i}: Reports info on audit logs.
+\begin{itemize}
+    \item \texttt{-x --summary}: Show run counts for executables (Check for malware).
+    \item \texttt{-au}: Authentication attempts. \texttt{-u}: User commands.
+    \item \texttt{-h}: Connected hosts. \texttt{-f --summary}: Files opened.
+    \item \texttt{-tm}: Terminals used. \texttt{-m}: User modifications.
+\end{itemize}
+\textbf{ausearch -i}: Search the audit logs.
+\begin{itemize}
+    \item \texttt{-k [key]}: Search by event key (rootcmd, susp\_activity).
+    \item \texttt{-p [pid]}: Events related to a specific process ID.
+    \item \texttt{-m [type]}: Message type (LOGIN, EXECVE, ADD\_USER).
+\end{itemize}
+
+\section{SYSTEMD \& CRON}
+\textbf{systemctl}: Manage system services.
+\begin{itemize}
+    \item \texttt{list-units --type=service}: List all services.
+    \item \texttt{enable/disable/restart [srv]}: Persistence/state.
+    \item \texttt{status [srv]}: Show if service is active or failed.
+\end{itemize}
+\textbf{/etc/systemd/}: Look for weird unit files in system/user dirs; disable if bad. \\
+\textbf{Cron}: Command scheduler. Remove unauthorized entries.
+\begin{itemize}
+    \item \textit{Root crontabs:} \texttt{/etc/crontab}, \texttt{/etc/cron.d/}.
+    \item \textit{User crontabs:} \texttt{/var/spool/cron/}.
+\end{itemize}
+
+\section{DENY RED TEAM TOOLING}
+Most of red team's toolkit depends on what's already sitting on the box. Confirm nothing scored needs an item, then remove it and log the change.
+\begin{itemize}
+    \item \textbf{Python:} Ansible's default connection plugin needs a Python interpreter on the managed node; most red team post-ex/staging scripts assume one too. \texttt{apt remove --purge python3} (or \texttt{chmod 000} the binary + \texttt{apt-mark hold} python3) breaks both.
+    \item \textbf{Perl, Ruby, other unused interpreters:} same idea, lower prevalence.
+    \item \textbf{Compilers (gcc, cc, make, build-essential):} rarely needed at runtime. Blocks on-box compilation of an exploit or implant.
+    \item \textbf{netcat/ncat/socat, if unused:} the default pivot/reverse-shell relay. Check startup scripts and cron first.
+    \item \textbf{SSH client (not server) on hosts that never SSH out:} removes a lateral-movement path, leaves inbound access alone.
+    \item \texttt{find / -perm -4000 -o -perm -2000 2>/dev/null}: SUID/SGID binaries vs. a known-good list; an unexpected one is a ready-made LOLBin.
+\end{itemize}
+
+\section{MALWARE: YARA \& CLAMAV}
+\textbf{Yara}: Malware classification tool.
+\begin{itemize}
+    \item \textit{Setup:} \texttt{sudo apt install yara -y}, \texttt{git clone [rules]}.
+    \item \textit{Usage:} \texttt{yara [rules] [target] [-r] -w}.
+    \item \textit{Ex:} \texttt{yara rules/malware\_index.yar / -r} (Full scan).
+\end{itemize}
+\textbf{ClamAV}: \texttt{apt install clamav}.
+\begin{itemize}
+    \item \texttt{freshclam}: Update signature database.
+    \item \texttt{clamscan}: Run a scan (may fail on low memory).
+\end{itemize}
+
+\section{PROCESSES \& THREAT HUNTING}
+\textbf{ps -aux}: List all running processes. \\
+\textbf{top}: Live resource usage. \\
+\textbf{kill [pid]}: Kill a process. \\
+\textbf{killall [name]}: Kill all by name (e.g. \texttt{killall perl}). \\
+\textbf{Everything in Linux is a file (/proc/[pid]/)}:
+\begin{itemize}
+    \item \texttt{cwd}: Current working dir of process.
+    \item \texttt{cmdline}: Arguments used to run the program.
+    \item \texttt{exe}: The executable (even if deleted from disk).
+    \item \texttt{environ}: Environment variables (look for USER).
+\end{itemize}
+
+\section{AWS NACLS \& SECURITY GROUPS}
+\textbf{AWS NACLs}: Enable GuardDuty + CloudTrail. Check S3 perms and IAM roles. Check EC2 IAM roles. Setup SGs for RDS/Lambda. \\
+\textbf{AWS Security Groups}: Stateful. Only allow ssh and required services in. Only allow https and dns out. Disallow all outbound after updates.
+
+\section{SSHD \& PAM}
+\textbf{Config}: \texttt{/etc/ssh/sshd\_config} (Check \texttt{.d/*.conf} overrides).
+\begin{itemize}
+    \item \texttt{AllowUsers user1 user2}: Limit login access.
+    \item \texttt{PermitRootLogin no}: Disable root SSH.
+    \item \texttt{PermitEmptyPasswords no}: Require passwords for all logins.
+\end{itemize}
+\textbf{PAM}: Config \texttt{/etc/pam.conf}, \texttt{/etc/pam.d}.
+\begin{itemize}
+    \item Check configs for ssh, su. \texttt{dpkg -V} catches changes.
+    \item Look for \textbf{“sufficient”}: Verify if module called is legitimate.
+    \item \textit{Complexity}: \texttt{minlen=8}, \texttt{dcredit=-1}, \texttt{enforce\_for\_root}.
+\end{itemize}
+
+\end{multicols*}
+\end{document}

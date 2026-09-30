@@ -1,0 +1,159 @@
+\documentclass[7pt,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.18in]{geometry}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\definecolor{navy}{RGB}{0, 51, 102}
+\definecolor{linuxc}{RGB}{160, 88, 24}
+\definecolor{winc}{RGB}{45, 95, 140}
+\setlength{\columnsep}{0.25in}
+\setlist{nosep, leftmargin=10pt}
+\titlespacing*{\section}{0pt}{1pt}{0.5pt}
+\setlength{\parindent}{0pt}
+\linespread{0.90}
+
+\titleformat{\section}{\small\bfseries\color{navy}}{\thesection}{0.5em}{}[\titlerule]
+\pagestyle{empty}
+
+\begin{document}
+\textbf{Role Reference: Engineer} \hfill \textit{Last Updated: Aug 2026}
+\raggedcolumns
+\begin{multicols*}{3}
+
+\section{ROLE RESPONSIBILITIES}
+Hardening at round start. Eviction and patching once a threat hunter hands off a confirmed foothold. Restoring a broken service without weakening it. Stripping the tooling red team's playbook depends on, ahead of any foothold.
+
+\section{ORDER OF OPERATIONS}
+\textbf{Round start:} Firewall, user cleanup, package updates, service config, red team tooling audit (below), in that order, per host. \\
+\textbf{Nonessential services:} Start shut down. Restart only once validated. \\
+\textbf{On handoff:} Confirm account, process chain, hole, and scope before starting. Ask if anything is missing. \\
+\textbf{Evict:} Kill session, reset/remove account, remove persistence. \\
+\textbf{Patch:} Fix the actual vulnerability, not just the artifact. Rotate anything possibly compromised. \\
+\textbf{Protect the fix:} Harder to undo than it was to apply.
+
+\section{DENY RED TEAM: SAFE TO STRIP}
+Confirm nothing scored depends on it, then log the removal like any other change.
+\begin{itemize}
+    \item \textbf{Python 2/3, if unused:} Ansible's default connection plugin needs a Python interpreter on the managed node; most red team post-ex and staging scripts assume one too. \texttt{apt remove --purge python3} (or \texttt{chmod 000} the binary and \texttt{apt-mark hold} python3 to keep it pinned) breaks both.
+    \item \textbf{Perl, Ruby, other unused interpreters:} same idea, lower prevalence. Rarely needed by a scored app, often needed by an older exploit or pivot script.
+    \item \textbf{Compilers (gcc, cc, make, build-essential):} rarely needed at runtime. Blocks on-box compilation of a privilege-escalation exploit or custom implant.
+    \item \textbf{netcat/ncat/socat, if unused:} the default pivot and reverse-shell relay. Check startup scripts and cron before removing.
+    \item \textbf{SSH client (not server) on hosts that never SSH out:} removes a lateral-movement path, leaves inbound access alone.
+    \item \textbf{curl/wget, if a service never calls out:} rarely safe to pull, but closes the fetch-and-execute pattern on a locked-down box.
+\end{itemize}
+
+\section{DENY RED TEAM: PROTOCOLS \& AGENTS}
+\begin{itemize}
+    \item \textbf{WinRM/PSRemoting:} transport for Ansible's \texttt{winrm} connection and common Empire/C2 lateral movement. Disable if unused: \texttt{Disable-PSRemoting -Force}, block 5985/5986 at the host firewall.
+    \item \textbf{Admin shares (\texttt{C\$}, \texttt{ADMIN\$}):} what psexec/wmiexec ride in on. Scope to your management host with a firewall rule instead of a blanket disable if you use them yourself.
+    \item \textbf{PowerShell v2:} installable alongside v5+, lacks v5's logging; attackers downgrade to it on purpose. \texttt{Disable-WindowsOptionalFeature -Online} \newline \texttt{-FeatureName MicrosoftWindowsPowerShellV2}.
+    \item \textbf{Outbound access, generally:} cutting default outbound after hardening (Firewall Reference) kills fetch-and-execute, Ansible included.
+    \item Needed by a scored service? Narrow it, don't cut it, and note why in the tracking template.
+\end{itemize}
+
+\section{EVICTION COMMANDS}
+\begin{itemize}
+    \item \textit{\textcolor{linuxc}{Linux:}} \texttt{kill -9 [PID]}. \textit{\textcolor{winc}{Windows:}} \texttt{Stop-Process -Id [PID] -Force}.
+    \item Reset a stolen account's password immediately. Delete an attacker-created account.
+    \item Remove persistence: cron (\texttt{crontab -e}, \texttt{/etc/cron.d}), scheduled tasks, unfamiliar \texttt{authorized\_keys}, any added service/startup entry.
+    \item \texttt{userdel -r [user]} \textcolor{linuxc}{(Linux)} / \texttt{Remove-LocalUser} \textcolor{winc}{(Windows)}: remove an attacker-created account and its home directory.
+    \item Log what you found before deleting it.
+\end{itemize}
+
+\section{PATCHING COMMANDS}
+\begin{itemize}
+    \item Update the vulnerable package: \texttt{apt update \&\& apt upgrade -y} \textcolor{linuxc}{(Debian)}, Windows Update / \texttt{DISM} \textcolor{winc}{(Windows)}.
+    \item Close the specific exposed port or service.
+    \item Fix the misconfiguration, not just its symptom.
+    \item \texttt{debsums -c}: verify installed package files against known-good hashes \textcolor{linuxc}{(Debian)}, to confirm a patched binary is actually clean.
+\end{itemize}
+
+\section{SSH \& REMOTE ACCESS HARDENING}
+\begin{itemize}
+    \item \texttt{/etc/ssh/sshd\_config}: \texttt{PermitRootLogin no}, \texttt{PasswordAuthentication no} once keys are confirmed working, \texttt{AllowUsers [list]}.
+    \item \texttt{systemctl restart sshd} after any config change; test a second session before closing the first.
+    \item \texttt{fail2ban}: auto-ban repeated failed logins. \texttt{apt install fail2ban}, configure a jail for sshd.
+    \item \textcolor{winc}{Windows}: NLA required for RDP, restrict Remote Desktop Users group membership.
+\end{itemize}
+
+\section{FIREWALL REFERENCE}
+\begin{itemize}
+    \item \texttt{ufw allow ssh}, \texttt{ufw allow [port]/tcp}, \texttt{ufw enable}. \textcolor{linuxc}{(Linux)}
+    \item \texttt{firewall-cmd --permanent --add-service=http} then \texttt{--reload} \textcolor{linuxc}{(RHEL family)}.
+    \item \textcolor{winc}{Windows}: \texttt{New-NetFirewallRule}, or \texttt{netsh advfirewall firewall add rule} for the legacy syntax.
+    \item Disallow unnecessary outbound after hardening a host; most legitimate services do not need free outbound access.
+\end{itemize}
+
+\section{PROTECTING A FIX}
+\begin{itemize}
+    \item \texttt{chattr +i [file]}: makes a restored \textcolor{linuxc}{Linux} file immutable, even to root. Remove with \texttt{chattr -i} before intentional edits.
+    \item \texttt{icacls} on \textcolor{winc}{Windows}: lock down write access tighter than default.
+    \item Re-run the account/group baseline after any fix.
+\end{itemize}
+
+\section{BACKUP \& RESTORE}
+\begin{itemize}
+    \item \texttt{rsync -avz [src] [dest]}: fast, incremental-friendly copy. \textcolor{linuxc}{(Linux)}
+    \item \texttt{robocopy [src] [dest] /MIR}: mirrors a directory tree. \textcolor{winc}{(Windows)}
+    \item \texttt{vssadmin list shadows}: check for existing Volume Shadow Copies on \textcolor{winc}{Windows} before assuming nothing is recoverable.
+    \item Always restore to a new location first if time allows, then swap in, rather than overwriting a possibly-still-needed original.
+\end{itemize}
+
+\section{VERIFY}
+\begin{itemize}
+    \item Re-run the file-integrity baseline against the same paths.
+    \item Confirm the scored service is up and responding correctly.
+    \item Watch for the same account, address, or pattern returning.
+\end{itemize}
+
+\section{PATCH MANAGEMENT}
+\begin{itemize}
+    \item \texttt{apt-mark hold [package]}: pin a package version after patching, so an unrelated update does not silently reintroduce a fixed issue.
+    \item \texttt{yum versionlock [package]} (RHEL family): same idea.
+    \item Confirm the patched version actually took: \texttt{dpkg -l [package]} or \texttt{rpm -q [package]} after any update.
+    \item A restart may be required for some patches (kernel, some services) to actually apply; check before assuming a patch is live.
+\end{itemize}
+
+\section{WEB \& DATABASE HARDENING}
+\begin{itemize}
+    \item Disable directory listing: \texttt{autoindex off;} (Nginx) or \texttt{Options -Indexes} (Apache).
+    \item Remove default/sample content shipped with the install; it is the first thing a scanner checks.
+    \item Review database user privileges: an application account should never have superuser rights on the database it uses.
+    \item Confirm the database is not listening on a public interface unless it genuinely needs to be: \texttt{bind-address} in MySQL, \texttt{listen\_addresses} in PostgreSQL.
+\end{itemize}
+
+\section{KERNEL \& OS-LEVEL HARDENING}
+\begin{itemize}
+    \item \texttt{sysctl net.ipv4.ip\_forward}: should be 0 unless the host is genuinely a router.
+    \item \texttt{sysctl kernel.randomize\_va\_space}: confirm ASLR is enabled (value 2).
+    \item Disable unused kernel modules that expand attack surface, if you know the host does not need them.
+    \item \textcolor{winc}{Windows}: disable SMBv1 \newline (\texttt{Disable-WindowsOptionalFeature} \newline \texttt{-Online -FeatureName SMB1Protocol}) and LLMNR via Group Policy, unless still needed.
+\end{itemize}
+
+\section{SANITY CHECKS AFTER ANY CHANGE}
+\begin{itemize}
+    \item Re-test the service from a second session before closing the first, especially after an SSH or RDP config change.
+    \item Confirm the firewall change did not also block something legitimate.
+    \item Time-stamp the change in the tracking template immediately, not after moving to the next task.
+\end{itemize}
+
+\section{TASKS VS. SERVICES}
+\begin{itemize}
+    \item \texttt{systemctl list-units --type=service} \textcolor{linuxc}{(Linux)} or \texttt{Get-Service} \textcolor{winc}{(Windows)}: what is running now.
+    \item Cross-reference against what the host should run.
+    \item Keep a known-good config or backup of anything hardened, in a name and location that is not the obvious first guess.
+\end{itemize}
+
+\section{ONE-LINERS}
+\begin{itemize}
+    \item \texttt{find / -mmin -30 -type f 2>/dev/null}: files touched in the last 30 minutes, a fast recent-change sweep. \textcolor{linuxc}{(Linux)}
+    \item \texttt{Get-ChildItem C:\textbackslash -Recurse | Where} \newline \texttt{LastWriteTime -gt (Get-Date).AddMinutes(-30)}: same idea. \textcolor{winc}{(Windows)}
+    \item \texttt{systemctl show [service] -p ExecStart}: confirm exactly what a service launches, useful when a unit file looks tampered with.
+    \item \texttt{netstat -tulnp | grep LISTEN}: quick view of everything actually listening right now.
+\end{itemize}
+
+\end{multicols*}
+\end{document}
