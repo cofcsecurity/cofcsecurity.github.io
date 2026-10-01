@@ -19,7 +19,7 @@
 \pagestyle{empty}
 
 \begin{document}
-\textbf{Role Reference: Domain Admin} \hfill \textit{Last Updated: Aug 2026}
+\textbf{Role Reference: Domain Admin} \hfill \textit{Last Updated: Sep 2026}
 \raggedcolumns
 \begin{multicols*}{3}
 
@@ -62,7 +62,19 @@ Accounts, groups, GPOs, DNS on the domain controller. Any hole or foothold touch
     \item Direct additions to Domain Admins or similar, outside a normal change. Event ID 4728/4732.
     \item Unconstrained delegation enabled with no real need: \texttt{Get-ADComputer -Filter} \newline \texttt{\{TrustedForDelegation -eq \$true\}}.
     \item A new account plus a privilege change together: one incident, not two.
-    \item Golden/silver ticket suspicion: unusually long-lived Kerberos tickets, or tickets for accounts that no longer exist.
+    \item Golden/silver ticket suspicion: unusually long-lived Kerberos tickets, or tickets for accounts that no longer exist. See GOLDEN TICKET below.
+\end{itemize}
+
+\section{GOLDEN TICKET: RED TEAM FAVORITE}
+Red team forges a Kerberos TGT using the \texttt{krbtgt} account's hash, giving domain-wide access as any user, even a nonexistent one. It survives password resets of the account it impersonates. Only changing \texttt{krbtgt} kills it.
+\begin{itemize}
+    \item \textbf{Prevent the theft:} the hash comes from a DC (DCSync or \texttt{ntds.dit}). Keep Domain Admin logons to DCs only, restrict who holds Replicating Directory Changes rights, and watch Event ID 4662 from non-DC accounts.
+    \item \texttt{Get-ADUser krbtgt -Properties PasswordLastSet}: if it has never been rotated, assume it is exposed.
+    \item \textbf{Reset krbtgt twice} with \texttt{Set-ADAccountPassword krbtgt -Reset} (the old and previous passwords both stay valid, so one reset does nothing). Wait for replication between resets (\texttt{repadmin /replsummary}).
+    \item \textbf{Evict first:} resetting while red team still holds Domain Admin or a DC just lets them steal the new hash. Reset after cleanup, then again after any new DCSync.
+    \item Expect a short disruption: existing tickets are invalidated and users or services may need to reauthenticate.
+    \item \textbf{Detect:} TGS requests (4769) with no prior TGT request (4768), logons (4624) for accounts that do not exist, ticket lifetimes beyond policy, and RC4 (0x17) tickets where AES is enforced.
+    \item Enforce AES for Kerberos and put privileged accounts in \textbf{Protected Users} to shrink what a stolen ticket can do.
 \end{itemize}
 
 \section{DNS ON THE DC}
