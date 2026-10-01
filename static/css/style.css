@@ -604,6 +604,8 @@ a.card:hover {
   font-size: 0.95rem;
 }
 .sched-filter-empty { margin-top: 0.8rem; color: var(--muted); }
+table.schedule tr { scroll-margin-top: 5rem; }
+table.schedule tr:target { background: rgba(212, 175, 55, 0.18); }
 table.schedule tr.is-next { box-shadow: inset 3px 0 0 var(--gold); }
 .table-wrap {
   overflow-x: auto;

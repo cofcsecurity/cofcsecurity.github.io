@@ -63,7 +63,7 @@
           {{ $rowClasses := slice }}
           {{ if .skipped }}{{ $rowClasses = $rowClasses | append "is-skipped" }}{{ end }}
           {{ if $isNext }}{{ $rowClasses = $rowClasses | append "is-next" }}{{ end }}
-          <tr{{ if $rowClasses }} class="{{ delimit $rowClasses " " }}"{{ end }}>
+          <tr id="{{ $mDate.Format "2006-01-02" }}"{{ if $rowClasses }} class="{{ delimit $rowClasses " " }}"{{ end }}>
             <td data-label="#">{{ with .week }}{{ . }}{{ else }}&mdash;{{ end }}</td>
             <td data-label="Day">{{ .day }}</td>
             <td data-label="Date">{{ $mDate.Format "Jan 2, 2006" }}</td>

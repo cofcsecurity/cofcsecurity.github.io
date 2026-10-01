@@ -141,6 +141,7 @@
               {{ end }}
               {{ end }}
               <a class="btn btn-outline" style="border-color:var(--ink); color:var(--ink);" href="{{ "/schedule/" | relURL }}">Full schedule</a>
+              <a class="btn btn-outline" style="border-color:var(--ink); color:var(--ink);" href="{{ printf "/schedule/#%s" ($nDate.Format "2006-01-02") | relURL }}">Meeting details</a>
             </div>
           </div>
         </div>
