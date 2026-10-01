@@ -144,5 +144,21 @@
       });
     });
   })();
+  (function () {
+    // Native hash scrolling can fire before layout settles (Firefox), so re-scroll once loaded.
+    function jump() {
+      var id = decodeURIComponent(location.hash.slice(1));
+      var row = id && document.getElementById(id);
+      if (!row) return;
+      var root = document.documentElement;
+      var prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      row.scrollIntoView({ block: 'start' });
+      root.style.scrollBehavior = prev;
+    }
+    jump();
+    window.addEventListener('load', jump);
+    window.addEventListener('hashchange', jump);
+  })();
 </script>
 {{ end }}
