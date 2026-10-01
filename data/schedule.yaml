@@ -103,17 +103,20 @@ meetings:
     date: 2026-10-06
     start: "17:30"
     end: "19:30"
-    topic: "Web Infrastructure Basics: DNS"
-    notes: "How DNS resolution works; setting up a local DNS server."
-    slides: "slides/13-dns.pptx"
+    topic: "DNS: Basics, Auditing & Configuration Check"
+    notes: "How DNS resolution works; setting up a local DNS server; reviewing domain controller configs and fixing common DNS misconfigurations."
+    slides:
+      - label: "DNS Basics"
+        file: "slides/13-dns.pptx"
+      - label: "DNS Auditing"
+        file: "slides/14-dns-auditing.pptx"
   - week: 14
     day: "Thursday"
     date: 2026-10-08
     start: "17:30"
     end: "19:30"
-    topic: "DNS Auditing & Configuration Check"
-    notes: "Reviewing domain controller configs and fixing common DNS misconfigurations."
-    slides: "slides/14-dns-auditing.pptx"
+    topic: "SIEM Logs & How to Use Them"
+    notes: "Learning how to read and search SIEM logs, with sample logs to work through."
   - day: "Tuesday"
     date: 2026-10-13
     skipped: true

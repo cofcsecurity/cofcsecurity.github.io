@@ -85,7 +85,9 @@
             </td>
             <td data-label="Slides">
               {{ with .slides }}
+              {{ if reflect.IsSlice . }}{{ range $i, $s := . }}{{ if $i }}<br>{{ end }}<a href="{{ $s.file | relURL }}">{{ $s.label | default "Slides" }}</a>{{ end }}{{ else }}
               <a href="{{ . | relURL }}">Slides</a>
+              {{ end }}
               {{ end }}
             </td>
           </tr>
