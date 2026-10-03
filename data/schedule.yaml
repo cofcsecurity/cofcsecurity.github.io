@@ -103,6 +103,13 @@ meetings:
     date: 2026-10-06
     start: "17:30"
     end: "19:30"
+    topic: "SIEM Logs & How to Use Them"
+    notes: "Learning how to read and search SIEM logs, with sample logs to work through."
+  - week: 14
+    day: "Thursday"
+    date: 2026-10-08
+    start: "17:30"
+    end: "19:30"
     topic: "DNS: Basics, Auditing & Configuration Check"
     notes: "How DNS resolution works; setting up a local DNS server; reviewing domain controller configs and fixing common DNS misconfigurations."
     slides:
@@ -110,13 +117,6 @@ meetings:
         file: "slides/13-dns.pptx"
       - label: "DNS Auditing"
         file: "slides/14-dns-auditing.pptx"
-  - week: 14
-    day: "Thursday"
-    date: 2026-10-08
-    start: "17:30"
-    end: "19:30"
-    topic: "SIEM Logs & How to Use Them"
-    notes: "Learning how to read and search SIEM logs, with sample logs to work through."
   - day: "Tuesday"
     date: 2026-10-13
     skipped: true
