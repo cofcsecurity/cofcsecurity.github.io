@@ -47,9 +47,9 @@ meetings:
     date: 2026-09-10
     start: "17:30"
     end: "19:30"
-    topic: "Basic Networking & Communication"
-    notes: "IP addressing, subnets, and network mapping with nmap and Wireshark."
-    slides: "slides/06-computer-networks.pptx"
+    topic: "Basic Host Hardening"
+    notes: "Reviewing accounts and locking down permissions on practice hosts."
+    slides: "slides/08-basic-hardening.pptx"
   - week: 7
     day: "Tuesday"
     date: 2026-09-15
@@ -63,9 +63,9 @@ meetings:
     date: 2026-09-17
     start: "17:30"
     end: "19:30"
-    topic: "Basic Host Hardening"
-    notes: "Reviewing accounts and locking down permissions on practice hosts."
-    slides: "slides/08-basic-hardening.pptx"
+    topic: "Basic Networking & Communication"
+    notes: "IP addressing, subnets, and network mapping with nmap and Wireshark."
+    slides: "slides/06-computer-networks.pptx"
   - week: 9
     day: "Tuesday"
     date: 2026-09-22
