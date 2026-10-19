@@ -201,31 +201,34 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ---
 
-## Meeting 16 — Tue, Oct 20 — Introduction to Active Directory
+## Meeting 16 — Tue, Oct 20 — Introduction to Active Directory & Policy Controls
 
 ![Meeting 16 square graphic](post-16-intro-ad-square.png)
 ![Meeting 16 vertical graphic](post-16-intro-ad-vertical.png)
 
 **Caption:**
 
-> Active Directory manages user accounts and permissions across a huge share of the business world. Most IT and security careers touch it eventually. Did you know AD has run enterprise networks since Windows 2000 — and most Fortune 500 companies still depend on it today? We're covering domains, OUs, and trusts in Windows Server.
+> Active Directory manages user accounts and permissions across a huge share of the business world. Most IT and security careers touch it eventually. Did you know AD has run enterprise networks since Windows 2000 — and most Fortune 500 companies still depend on it today? We're covering domains, OUs, and trusts in Windows Server, then using Group Policy Objects to push security settings across an entire domain at once.
 > ⏰ 5:30 PM 📍 Simons 281
 >
-> #ActiveDirectory #WindowsServer #EnterpriseIT #CougarNation
+> #ActiveDirectory #WindowsServer #GroupPolicy #EnterpriseIT #CougarNation
 
 ---
 
-## Meeting 17 — Thu, Oct 22 — Active Directory Basics & Policy Controls
+## Meeting 17 — Thu, Oct 22 — Club Movie Night: The Amateur
 
-![Meeting 17 square graphic](post-17-ad-policy-square.png)
-![Meeting 17 vertical graphic](post-17-ad-policy-vertical.png)
+![Meeting 17 square graphic](post-17-movie-night-square.png)
+![Meeting 17 vertical graphic](post-17-movie-night-vertical.png)
 
 **Caption:**
 
-> Group Policy Objects, and how security settings get pushed out across an entire domain at once.
-> ⏰ 5:30 PM 📍 Simons 281
+> Movie night. We're screening The Amateur, starring Rami Malek as a CIA cryptographer who leaves the desk, skips the chain of command, and turns his tradecraft into a manhunt. Come for the encryption and surveillance, stay to critique the hacking scenes.
 >
-> #GroupPolicy #ActiveDirectory #WindowsSecurity #CofCLife
+> Thursday, 10/22 5:30 PM to 7:30 PM Simons 281
+>
+> Snacks and beverages will be provided.
+>
+> #CofC #CofCCyber #Cybersecurity #InfoSec #MovieNight #TheAmateur
 
 ---
 

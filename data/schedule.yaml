@@ -134,17 +134,20 @@ meetings:
     date: 2026-10-20
     start: "17:30"
     end: "19:30"
-    topic: "Introduction to Active Directory"
-    notes: "Why orgs centralize user management: Windows Server domains, OUs, and trusts."
-    slides: "slides/16-intro-ad.pptx"
+    topic: "Introduction to Active Directory & Policy Controls"
+    notes: "Why orgs centralize user management: Windows Server domains, OUs, and trusts; using Group Policy Objects to apply security settings across systems."
+    slides:
+      - label: "Intro to AD"
+        file: "slides/16-intro-ad.pptx"
+      - label: "AD Policy Controls"
+        file: "slides/17-ad-policy.pptx"
   - week: 17
     day: "Thursday"
     date: 2026-10-22
     start: "17:30"
     end: "19:30"
-    topic: "Active Directory Basics & Policy Controls"
-    notes: "Using Group Policy Objects to apply security settings across systems."
-    slides: "slides/17-ad-policy.pptx"
+    topic: "Club Movie Night: The Amateur"
+    notes: "Screening The Amateur, starring Rami Malek. Snacks, beverages, and club merch provided."
   - week: 18
     day: "Tuesday"
     date: 2026-10-27
