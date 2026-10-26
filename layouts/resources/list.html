@@ -3,29 +3,20 @@
 <div class="section section-light">
   <div class="container">
     <article class="prose" style="margin-bottom:2rem;">{{ .Content }}</article>
-    <div class="icon-row-list">
-      <div class="icon-row">
-        <span class="icon-circle on-maroon">{{ partial "icon.html" "terminal" }}</span>
-        <div>
-          <h4>Learn Linux and/or Windows Server</h4>
-          <p>Along with Bash or PowerShell, respectively. You'll use these daily.</p>
-        </div>
-      </div>
-      <div class="icon-row">
-        <span class="icon-circle on-teal">{{ partial "icon.html" "network" }}</span>
-        <div>
-          <h4>Learn the basics of networking</h4>
-          <p>Start with the OSI model. It underpins almost everything else in security.</p>
-        </div>
-      </div>
-      <div class="icon-row">
-        <span class="icon-circle on-maroon">{{ partial "icon.html" "users" }}</span>
-        <div>
-          <h4>Interact with the club, ask questions</h4>
-          <p>We want to help. Come to a meeting, or ask on <a href="{{ .Site.Params.discord }}" target="_blank" rel="noopener">Discord</a>.</p>
-        </div>
-      </div>
-    </div>
+    <ol class="what-list">
+      <li>
+        <h3>Learn Linux or Windows Server</h3>
+        <p>Plus Bash or PowerShell to go with it. You'll use one of them every meeting.</p>
+      </li>
+      <li>
+        <h3>Learn basic networking</h3>
+        <p>Start with the OSI model. Most of security sits on top of it.</p>
+      </li>
+      <li>
+        <h3>Ask us things</h3>
+        <p>Come to a meeting, or ask on <a href="{{ .Site.Params.discord }}" target="_blank" rel="noopener">Discord</a>. Nobody minds beginner questions.</p>
+      </li>
+    </ol>
 
     <div class="toc card" style="margin-top:2.5rem;">
       <p class="toc-title">On this page</p>
@@ -132,7 +123,6 @@
 
 <div class="section section-tint">
   <div class="container">
-    <span class="kicker">Competition prep</span>
     <h2 id="guides">Guides &amp; reference sheets</h2>
     <p style="max-width:60ch; margin-top:0.5rem;">Cheat sheets the Defense Team uses during practice and competitions. Print them, or keep them open on a second screen.</p>
     {{ range hugo.Data.guides }}
@@ -140,7 +130,6 @@
     <div class="card-grid" style="margin-top:1rem;">
       {{ range .docs }}
       <div class="card">
-        <span class="icon-circle on-teal" style="margin-bottom:0.7rem;">{{ partial "icon.html" "book" }}</span>
         <h3>{{ .title }}</h3>
         <p>{{ .description }}</p>
         <a class="btn btn-teal" style="margin-top:auto; align-self:flex-start; padding-top:0.8rem;" href="{{ printf "files/%s" .file | relURL }}" target="_blank" rel="noopener">{{ partial "icon.html" "download" }} Download PDF</a>
@@ -156,7 +145,6 @@
 
 <div class="section section-light">
   <div class="container">
-    <span class="kicker">Keep learning</span>
     <h2 id="platforms">Platforms &amp; communities</h2>
     <p style="max-width:60ch; margin-top:0.5rem;">Beyond club meetings, these are where most of us actually put in the hours.</p>
     <div class="card-grid" style="margin-top:1.5rem;">
