@@ -276,6 +276,26 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ---
 
+## Teaser for Meeting 21 — The Bugs That Broke October
+
+Not a meeting. A promo post for the Thu, Nov 5 meeting.
+
+![Meeting 21 teaser vertical graphic](post-21-teaser-awareness-month-vertical.png)
+
+**Caption:**
+
+> October was Cybersecurity Awareness Month. It went great.
+>
+> In one month: a certificate authority whose private key was the number 4, two critical PHP bugs, a compression bug inside Node.js, .NET and Python, and another PHP bug with no patch.
+>
+> We’ll walk through all of it from scratch this Thursday. No security background needed.
+>
+> Thursday, Nov 5, 5:30 PM, Simons Center 281.
+>
+> #CofCCyber #cybersecurity #infosec #collegeofcharleston
+
+---
+
 ## Meeting 21 — Thu, Nov 5 — The Bugs That Broke October
 
 ![Meeting 21 vertical graphic](post-21-bugs-that-broke-october-vertical.png)
