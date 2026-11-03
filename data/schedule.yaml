@@ -222,17 +222,3 @@ meetings:
     date: 2026-11-26
     skipped: true
     notes: "No meeting (Thanksgiving)"
-  - week: 27
-    day: "Tuesday"
-    date: 2026-12-01
-    start: "17:30"
-    end: "19:30"
-    topic: "Open Lab Project Day & Catch-up"
-    notes: "Open work session for hardware setups, scripts, range practice, and strategy review."
-  - week: 28
-    day: "Thursday"
-    date: 2026-12-03
-    start: "17:30"
-    end: "19:30"
-    topic: "End-of-Term Practice Run"
-    notes: "Final two-hour team defense exercise with alumni support."
