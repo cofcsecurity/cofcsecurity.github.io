@@ -276,17 +276,26 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ---
 
-## Meeting 21 — Thu, Nov 5 — Basic Centralized Monitoring
+## Meeting 21 — Thu, Nov 5 — The Bugs That Broke October
 
-![Meeting 21 square graphic](post-21-centralized-monitoring-square.png)
-![Meeting 21 vertical graphic](post-21-centralized-monitoring-vertical.png)
+![Meeting 21 vertical graphic](post-21-bugs-that-broke-october-vertical.png)
+![Meeting 21 story graphic](post-21-bugs-that-broke-october-story.png)
 
 **Caption:**
 
-> Setting up monitoring agents and dashboards with Security Onion and Wazuh.
-> ⏰ 5:30 PM 📍 Simons 281
+> A real certificate authority’s private key was the number 4. If you can count to 4, you could have cracked it.
 >
-> #SecurityOnion #Wazuh #ThreatMonitoring #CofCClubs
+> This Thursday we’ll explain how that happened, along with two other security incidents from October.
+>
+> PHP2Shell: two PHP bugs attackers were exploiting four days before a fix came out.
+>
+> Broccoli2Shell: a bug in Google’s Brotli compression library that ended up inside Node.js, .NET and Python.
+>
+> No security background needed.
+>
+> Thursday, Nov 5, 5:30 PM, Simons Center 281. This replaces the scheduled Basic Centralized Monitoring session. Check our Discord for updates.
+>
+> #cybersecurity #infosec #cofc #collegeofcharleston
 
 ---
 

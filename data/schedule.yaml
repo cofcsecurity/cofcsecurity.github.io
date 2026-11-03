@@ -176,9 +176,9 @@ meetings:
     date: 2026-11-05
     start: "17:30"
     end: "19:30"
-    topic: "Basic Centralized Monitoring"
-    notes: "Setting up monitoring agents (Security Onion/Wazuh) and dashboards."
-    slides: "slides/21-centralized-monitoring.pptx"
+    topic: "The Bugs That Broke October"
+    notes: "A certificate authority's private key that was the number 4, plus PHP2Shell and Broccoli2Shell. No security background needed."
+    slides: "slides/21-bugs-that-broke-october.pptx"
   - week: 22
     day: "Tuesday"
     date: 2026-11-10
