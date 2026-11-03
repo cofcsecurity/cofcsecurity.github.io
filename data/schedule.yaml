@@ -169,9 +169,8 @@ meetings:
     date: 2026-11-03
     start: "17:30"
     end: "19:30"
-    topic: "Introduction to Log Collection"
-    notes: "System logs, Windows Event IDs, and centralized log shipping."
-    slides: "slides/20-log-collection.pptx"
+    topic: "No Meeting: Election Day"
+    notes: "No club meeting tonight. Go vote! Find your polling place and bring a valid photo ID."
   - week: 21
     day: "Thursday"
     date: 2026-11-05
