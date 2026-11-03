@@ -260,17 +260,19 @@ Core tags used throughout: #CofCCyber #CollegeOfCharleston #Cybersecurity #InfoS
 
 ---
 
-## Meeting 20 — Tue, Nov 3 — Introduction to Log Collection
+## Meeting 20 — Tue, Nov 3 — No Meeting: Election Day
 
-![Meeting 20 square graphic](post-20-log-collection-square.png)
-![Meeting 20 vertical graphic](post-20-log-collection-vertical.png)
+![Meeting 20 vertical graphic](post-20-election-day-vertical.png)
+![Meeting 20 story graphic](post-20-election-day-story.png)
 
 **Caption:**
 
-> If someone got into your system tonight, would the logs even show it? We're covering system logs, Windows Event IDs, and shipping logs to a central location. Did you know a handful of Windows Event IDs can tell you almost the whole story of what happened on a machine?
-> ⏰ 5:30 PM 📍 Simons 281
+> No club meeting tonight because it's Election Day. Go vote! Find your polling place and bring a valid photo ID.
 >
-> #LogManagement #WindowsEventIDs #SIEM #CharlestonSC
+> We're back Thursday!
+> ⏰ Thu 5:30 PM 📍 Simons 281
+>
+> #CofCCyber #CollegeOfCharleston #CyberSecurityClub #ElectionDay #GoVote #CofCCougars
 
 ---
 
