@@ -319,17 +319,23 @@ Not a meeting. A promo post for the Thu, Nov 5 meeting.
 
 ---
 
-## Meeting 22 — Tue, Nov 10 — Basic Automation: Scripting
+## Meeting 22 — Tue, Nov 10 — Kali Linux Tools
 
-![Meeting 22 square graphic](post-22-scripting-square.png)
-![Meeting 22 vertical graphic](post-22-scripting-vertical.png)
+![Meeting 22 vertical graphic](post-22-kali-tools-vertical.png)
+![Meeting 22 story graphic](post-22-kali-tools-story.png)
 
 **Caption:**
 
-> Writing diagnostic scripts in Python, Bash, Go, and PowerShell. Automation is what separates a good defender from a great one. What's the one repetitive task you wish you could automate?
-> ⏰ 5:30 PM 📍 Simons 281
+> Kali Linux tools: a practical guide
 >
-> #Python #Bash #PowerShell #Automation #CofCCougars
+> We're covering 28 tools across Kali's 14 categories, from recon and web testing to forensics and reporting. You'll see how each one works and how to use them.
+>
+> 📍 Simons 281
+> 🕠 Tomorrow, Tue 11/10, 5:30 PM
+>
+> Open to anyone curious about security. No experience needed.
+>
+> #CofC #CollegeOfCharleston #Cybersecurity #KaliLinux #InfoSec
 
 ---
 

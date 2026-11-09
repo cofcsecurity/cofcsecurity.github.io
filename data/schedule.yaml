@@ -184,9 +184,13 @@ meetings:
     date: 2026-11-10
     start: "17:30"
     end: "19:30"
-    topic: "Basic Automation: Scripting"
-    notes: "Writing diagnostic scripts in Python, Bash, Go, and PowerShell."
-    slides: "slides/22-scripting.pptx"
+    topic: "Kali Linux Tools: A Practical Guide"
+    notes: "28 tools across Kali's 14 categories, from recon and web testing to forensics and reporting. No experience needed."
+    slides:
+      - label: "Slides"
+        file: "slides/22-kali-tools.pptx"
+      - label: "Cheat sheets (.zip)"
+        file: "files/kali-cheat-sheets.zip"
   - week: 23
     day: "Thursday"
     date: 2026-11-12
